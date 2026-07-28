@@ -1,0 +1,258 @@
+﻿sentence,actual,predicted,confidence,correct
+यह निर्णय मुझे बहुत निराश कर गया।,Negative,Negative,74.39,True
+आपकी सोच हमेशा सकारात्मक रहती है।,Positive,Positive,83.61,True
+यह अनुभव बेहद दुखदायी था।,Negative,Negative,74.4,True
+आपकी सलाह से मेरे सभी संदेह दूर हुए।,Positive,Positive,83.6,True
+यह निर्णय मेरे लिए पूरी तरह बुरा रहा।,Negative,Negative,74.39,True
+आपके विचार बहुत प्रेरणादायक हैं।,Positive,Positive,83.61,True
+आपकी मुस्कान हमेशा उत्साह देती है।,Positive,Positive,83.61,True
+यह योजना एकदम नाकाम रही।,Negative,Negative,74.39,True
+यह अनुभव एकदम व्यर्थ था।,Negative,Negative,74.39,True
+मुझे इसकी पैकिंग अच्छी लगी,Positive,Positive,83.57,True
+तुम्हारी मुस्कान ने आज पूरे दिन को खूबसूरत बना दिया।,Positive,Positive,83.61,True
+वह तिरस्कार भरा व्यवहार मुझे आज भी आहत करता है।,Negative,Negative,74.39,True
+वह यात्रा आनंदमयी और सुकूनभरी रही।,Positive,Positive,83.61,True
+आपकी मदद सदा महत्वपूर्ण रहती है।,Positive,Positive,83.61,True
+मैं रोज़ाना अपने देश के लिए प्रार्थना करता हूं।,Neutral,Neutral,69.71,True
+मुझे इस पर कुछ नहीं कहना।,Neutral,Neutral,69.72,True
+वह यात्रा स्मरणीय अनुभव रही।,Positive,Positive,83.61,True
+मुझे इसमें कोई विचार नहीं है।,Neutral,Neutral,69.7,True
+मुझे इसमें कोई नयापन नहीं दिखा।,Neutral,Neutral,69.72,True
+मुझे इसमें कुछ खास दिलचस्पी नहीं थी।,Neutral,Neutral,69.72,True
+यह निर्णय गलत रहा।,Negative,Negative,74.37,True
+उनकी मदद सराहनीय थी,Positive,Positive,83.6,True
+यह फिल्म इतनी बेकार थी कि मुझे पछतावा हुआ।,Negative,Negative,74.41,True
+मैं इस घटना से बहुत निराश हूं।,Negative,Negative,74.4,True
+वह सेवा प्रशंसनीय रही।,Positive,Positive,83.61,True
+यह प्रोडक्ट उपयोगी है,Positive,Positive,83.6,True
+उसकी बातें इतनी तीखी थीं कि सुनना मुश्किल था।,Negative,Negative,74.39,True
+बैडमिंटन टूर्नामेंट अगले सप्ताह शुरू होगा।,Neutral,Neutral,69.68,True
+वह कार्यक्रम बहुत ही मनोरंजक था।,Positive,Positive,83.61,True
+मैं रोज़ाना दांत साफ करता हूं।,Neutral,Neutral,69.71,True
+मुझे इसमें कोई विशेष असर नहीं हुआ।,Neutral,Neutral,69.73,True
+यह प्रकृति का नजारा बहुत शांत और मनमोहक है।,Positive,Positive,83.61,True
+यह योजना लाभकारी रही।,Positive,Positive,83.6,True
+मुझे वहाँ की बदइंतजामी परेशान कर गई।,Negative,Negative,74.39,True
+मुझे इसमें कोई नया अनुभव नजर नहीं आया।,Neutral,Neutral,69.72,True
+मुझे उसकी हरकतों से दुख हुआ।,Negative,Negative,74.36,True
+मुझे इसमें कोई उत्तेजना महसूस नहीं हुई।,Neutral,Neutral,69.72,True
+आपका साथ हमेशा सुखद रहता है।,Positive,Positive,83.6,True
+मैं इस पर कोई टिप्पणी नहीं करना चाहता।,Neutral,Neutral,69.71,True
+मुझे इसका उपयोग आनंददायक लगा,Positive,Positive,83.61,True
+आपकी सोच हमेशा उत्साह देती है।,Positive,Positive,83.61,True
+यह नया गाना मेरे पसंदीदा गानों में से एक है।,Positive,Positive,83.55,True
+मुझे यह प्रोडक्ट बहुत महंगा लगा।,Negative,Negative,74.39,True
+टेनिस टीम लगातार हार रही है।,Negative,Negative,74.38,True
+उसकी आलोचना ने मुझे कई दिन तक परेशान रखा।,Negative,Negative,74.37,True
+बैडमिंटन टीम ने बेहतरीन जीत दर्ज की।,Positive,Positive,83.6,True
+ऑफर में कोई खास आकर्षण नहीं दिखा,Neutral,Neutral,69.71,True
+आपका आदर मेरे लिए बहुत मायने रखता है।,Positive,Positive,83.61,True
+मुझे इसमें कुछ नया नहीं लगा।,Neutral,Neutral,69.72,True
+तुम्हारी आवाज़ मधुर है।,Positive,Positive,83.6,True
+मैं रोज़ाना अपने लक्ष्य के बारे में सोचता हूं।,Neutral,Neutral,69.71,True
+यह फिल्म देखने लायक है,Positive,Positive,83.6,True
+इस अवसर ने मुझे नई ऊर्जा से भर दिया।,Positive,Positive,83.61,True
+मैं इस स्थिति से हार मान रहा हूं।,Negative,Negative,74.34,True
+आपकी सहायता ने इस कार्य को सफल बनाया।,Positive,Positive,83.61,True
+मुझे उस प्रस्तुति में कोई आकर्षण नहीं लगा।,Negative,Neutral,69.69,False
+तुम्हारा आत्मबल मेरे लिए सदैव प्रेरणा का स्रोत रहा है।,Positive,Positive,83.61,True
+मैं रोज़ाना नहाता हूं।,Neutral,Neutral,69.7,True
+मैं इस विषय पर बाद में बात करूँगा।,Neutral,Neutral,69.71,True
+आपकी प्रशंसा से मुझे ऊर्जा मिली।,Positive,Positive,83.61,True
+यह निर्णय अत्यंत असंतोषजनक रहा।,Negative,Negative,74.39,True
+आपकी तारीफ से मन खुश हो गया।,Positive,Positive,83.6,True
+यह अनुभव तटस्थ रहा।,Neutral,Neutral,69.7,True
+इस पर अभी कोई निश्चित राय नहीं बना पाया हूं।,Neutral,Neutral,69.72,True
+इस योजना से मुझे आशा से ज्यादा लाभ हुआ।,Positive,Positive,83.61,True
+आपकी मुस्कान सदा प्रेरणा देती है।,Positive,Positive,83.61,True
+उनके शब्द दिल को छू गए।,Positive,Positive,83.6,True
+इस पर कोई अंतिम निर्णय लेना जल्दबाज़ी होगी।,Neutral,Neutral,69.71,True
+आपका समर्थन मेरे लिए बहुत महत्वपूर्ण है।,Positive,Positive,83.61,True
+मौसम आज सामान्य है,Neutral,Neutral,69.68,True
+इस प्रोजेक्ट से मैं संतुष्ट नहीं हूँ।,Negative,Negative,74.12,True
+आपकी मदद के लिए दिल से धन्यवाद।,Positive,Positive,83.6,True
+यात्रा की तैयारी में कई दिक्कतें आईं,Negative,Negative,74.33,True
+मुझे यह नई जॉब बहुत स्ट्रेसफुल लगती है।,Negative,Negative,74.4,True
+मुझे यह नई नीति समझ नहीं आ रही।,Negative,Negative,74.38,True
+यह निर्णय पूरी तरह गलत था।,Negative,Negative,74.38,True
+उसका बर्ताव नकारात्मकता से भरा हुआ था।,Negative,Negative,74.37,True
+मेसी ने शानदार प्रदर्शन किया।,Positive,Positive,83.6,True
+उसकी उपेक्षा ने मुझे अकेला और असहाय महसूस कराया।,Negative,Negative,74.38,True
+तुम्हारे आत्मबल से ही मैं कई मुश्किलें पार कर पाया।,Positive,Positive,83.6,True
+मुझे इसमें कोई विशेष बात नजर नहीं आई,Neutral,Neutral,69.72,True
+यह छुट्टी मेरे लिए अविस्मरणीय थी।,Positive,Positive,83.61,True
+इस होटल में सफाई अच्छी थी,Positive,Positive,83.59,True
+तुम्हारा साथ हर समय हिम्मत और प्रेरणा देता है।,Positive,Positive,83.61,True
+यह कंपनी का रवैया बहुत अशिष्ट है।,Negative,Negative,74.39,True
+वह कोर्स बहुत लाभकारी रहा।,Positive,Positive,83.61,True
+इस घटना पर मैं कुछ नहीं कह सकता।,Neutral,Neutral,69.72,True
+मुझे इसमें कोई विशेष बात नहीं लगी,Neutral,Neutral,69.73,True
+मुझे यह बात अच्छी नहीं लगी।,Negative,Negative,74.37,True
+मुझे इसमें कोई विशेष लाभ नहीं मिला,Neutral,Neutral,69.72,True
+इस मामले में मैं तटस्थ ही रहूंगा।,Neutral,Neutral,69.72,True
+यह फिल्म शानदार अनुभव था,Positive,Positive,83.61,True
+वह सेवा समय पर और उत्तम थी।,Positive,Positive,83.6,True
+मैं इस बात से बहुत क्रोधित हूं।,Negative,Negative,74.36,True
+मुझे वहाँ की अव्यवस्था से निराशा हुई।,Negative,Negative,74.4,True
+यह खबर सुनकर बहुत दुख हुआ।,Negative,Negative,74.39,True
+मुझे वहाँ की सफाई पर आपत्ति हुई।,Negative,Negative,74.38,True
+आपके साथ बिताया समय यादगार रहा।,Positive,Positive,83.61,True
+वह सेवा अत्यधिक सराहनीय थी।,Positive,Positive,83.61,True
+इस विषय में कोई भी राय अभी नहीं बन पाई।,Neutral,Neutral,69.72,True
+मुझे इसमें कोई खासियत नहीं दिखी।,Neutral,Neutral,69.71,True
+यह रंग ठीक लग रहा है।,Neutral,Neutral,69.7,True
+यह सेवा पूरी तरह घटिया थी।,Negative,Negative,74.39,True
+यह सेवा पूरी तरह असफल रही।,Negative,Negative,74.4,True
+मुझे वहाँ का माहौल अच्छा नहीं लगा।,Negative,Negative,74.4,True
+कल बारिश होगी या नहीं पता नहीं।,Neutral,Neutral,69.66,True
+यह त्योहार का उत्सव बहुत जीवंत था।,Positive,Positive,83.61,True
+यह प्रोडक्ट उपयोगी नहीं है,Negative,Negative,74.38,True
+यह स्थिति बिल्कुल सामान्य है।,Neutral,Neutral,69.69,True
+यह ऐप बहुत उपयोगी है,Positive,Positive,83.61,True
+मुझे वहाँ का खाना बेस्वाद लगा।,Negative,Negative,74.4,True
+आपका सहयोग मेरे लिए उत्साह का स्रोत है।,Positive,Positive,83.61,True
+मुझे वहाँ की स्थिति खराब लगी।,Negative,Negative,74.4,True
+वह किताब पढ़कर प्रेरणा मिली।,Positive,Positive,83.6,True
+यह जगह स्वर्ग जैसी है।,Positive,Positive,82.36,True
+वह अनुभव अविस्मरणीय था।,Positive,Positive,83.61,True
+बैडमिंटन टीम लगातार हार रही है।,Negative,Negative,74.38,True
+आपका संदेश पढ़कर दिल खुश हो गया।,Positive,Positive,83.61,True
+इस मुद्दे में मेरी कोई विशेष भूमिका नहीं है।,Neutral,Neutral,69.73,True
+यह यात्रा औसत रही।,Neutral,Neutral,69.67,True
+इस पर कुछ भी कहना कठिन लग रहा है।,Neutral,Neutral,69.71,True
+मुझे इस पर कोई विशेष राय नहीं है।,Neutral,Neutral,69.72,True
+यह सेवा बेहद असंतोषजनक थी।,Negative,Negative,74.39,True
+यह निर्णय मेरे विरुद्ध है।,Negative,Negative,74.33,True
+मुझे इसमें कोई नई अनुभूति नहीं हुई।,Neutral,Neutral,69.72,True
+आज बैडमिंटन का मुकाबला रोमांचक और शानदार रहा।,Positive,Positive,83.6,True
+तुम्हारी प्रशंसा सुनकर खुशी हुई।,Positive,Positive,83.6,True
+तुम्हारे समर्थन से ही मैंने मुश्किल हालात को पार किया।,Positive,Positive,83.6,True
+उसका व्यव्हार दुखद था।,Negative,Negative,74.4,True
+यह सूर्यास्त का दृश्य अद्भुत था।,Positive,Positive,83.6,True
+वह प्रस्तुति बेहद शानदार रही।,Positive,Positive,83.61,True
+मुझे वहाँ का खाना अस्वादिष्ट लगा।,Negative,Negative,74.39,True
+यह सेवा बेहद असंतोषजनक साबित हुई।,Negative,Negative,74.4,True
+वह किताब पढ़ना आनंददायक अनुभव था।,Positive,Positive,83.6,True
+मेरी बहन ने अपनी पढ़ाई पूरी की है।,Positive,Neutral,69.58,False
+फैसले को लेकर कुछ अस्पष्टता बनी हुई है,Neutral,Negative,74.01,False
+मुझे इससे कोई भावना महसूस नहीं हुई।,Neutral,Neutral,69.71,True
+इस योजना में कोई नई बात नहीं है,Neutral,Neutral,69.68,True
+मेरे बेटे ने अपनी पहली नौकरी पाई है।,Positive,Positive,83.57,True
+यह अनुभव बहुत ही खराब था।,Negative,Negative,74.39,True
+मुझे वहाँ की सुविधाएं बेकार लगीं।,Negative,Negative,74.39,True
+मैं दोस्तों के साथ बैठता हूं।,Neutral,Neutral,69.7,True
+इस विषय में मैं कोई पक्ष नहीं लेना चाहूंगा।,Neutral,Neutral,69.73,True
+मुझे इसमें कुछ खास नजर नहीं आता।,Neutral,Neutral,69.71,True
+मुझे इससे कोई उत्साह नहीं मिला।,Neutral,Neutral,69.7,True
+इस विषय पर कोई निष्कर्ष नहीं निकला।,Neutral,Neutral,69.71,True
+आपका प्रोत्साहन मेरे लिए वरदान है।,Positive,Positive,83.61,True
+यह यात्रा बहुत आनंददायक थी,Positive,Positive,83.6,True
+यह निर्णय एकदम गलत था।,Negative,Negative,74.38,True
+तुम्हारा स्नेह अनमोल है।,Positive,Positive,83.61,True
+आपका यह सुझाव बहुत अच्छा है।,Positive,Positive,83.61,True
+यह नया उत्पाद मेरी उम्मीदों से बेहतर है।,Positive,Positive,83.6,True
+मेरे नए लैपटॉप की स्क्रीन खराब हो गई।,Negative,Negative,74.38,True
+मुझे यह व्यवस्था परेशान करती है।,Negative,Negative,74.38,True
+मुझे इसमें कोई उत्साह नहीं हुआ।,Neutral,Neutral,69.72,True
+सेवा का अनुभव सामान्य रहा,Neutral,Neutral,69.64,True
+मुझे वहाँ का खाना अच्छा नहीं लगा।,Negative,Negative,74.39,True
+बाज़ार में भीड़ है।,Neutral,Neutral,66.8,True
+यह कार्यशाला मेरे लिए अत्यंत ज्ञानवर्धक रही।,Positive,Positive,83.61,True
+उसकी आलोचना ने मेरी छवि को नुकसान पहुँचाया।,Negative,Negative,74.39,True
+मैं इस समस्या से जूझ रहा हूं।,Negative,Negative,73.82,True
+आपकी सोच मेरे लिए प्रेरणा का स्रोत है।,Positive,Positive,83.61,True
+ऑनलाइन प्लेटफ़ॉर्म की सुविधा सीमित रही,Negative,Negative,74.36,True
+मुझे यह उपहार बेकार लगा।,Negative,Negative,74.4,True
+यह संगीत कार्यक्रम शानदार था।,Positive,Positive,83.61,True
+मुझे यह रेस्टोरेंट का खाना बिल्कुल पसंद नहीं आया।,Negative,Negative,74.39,True
+मैं इस किताब को अपने दोस्त को सुझाऊँगा।,Neutral,Neutral,69.72,True
+यह होटल का कमरा बहुत गंदा था।,Negative,Negative,74.39,True
+फिल्म के संवाद प्रभावशाली थे,Positive,Positive,83.6,True
+यह यात्रा बहुत ही निराशाजनक रही।,Negative,Negative,74.39,True
+उसकी टिप्पणी से माहौल एकदम तनावपूर्ण हो गया।,Negative,Negative,74.4,True
+मैं इस विषय पर तटस्थ हूं।,Neutral,Neutral,69.71,True
+मुझे यह सेवा बहुत धीमी लगी।,Negative,Negative,74.39,True
+आपकी सफलता मुझे प्रसन्न करती है।,Positive,Positive,83.6,True
+आपकी मदद से आत्मविश्वास बढ़ता है।,Positive,Positive,83.61,True
+मुझे इसमें कुछ भी विशेष नजर नहीं आया।,Neutral,Neutral,69.72,True
+मुझे इससे गहरा दुख हुआ।,Negative,Negative,74.38,True
+उसका तिरस्कार भरा व्यवहार दिल को गहरे तक चोट पहुँचा गया।,Negative,Negative,74.4,True
+मैं रोज़ाना अपने दोस्तों से मिलता हूं।,Neutral,Neutral,69.7,True
+आपकी मदद मेरे लिए अमूल्य है।,Positive,Positive,83.61,True
+मुझे इसमें कोई विशेष अनुभूति नहीं हुई।,Neutral,Neutral,69.72,True
+यह निर्णय पूरी तरह नाकाम रहा।,Negative,Negative,74.4,True
+यह ऐप मेरी उम्मीदों पर खरा उतरा,Positive,Positive,83.59,True
+आपकी मदद से काम आसान हो गया।,Positive,Positive,83.61,True
+मुझे इस विषय पर कोई भावना नहीं है।,Neutral,Neutral,69.71,True
+इस मामले पर मैं कुछ भी नहीं सोचता।,Neutral,Neutral,69.72,True
+इस पर कुछ भी कहना उचित नहीं समझता।,Neutral,Neutral,69.71,True
+मुझे यह योजना बिल्कुल पसंद नहीं आई।,Negative,Negative,74.38,True
+आपकी सहायता मेरे लिए अनमोल है।,Positive,Positive,83.61,True
+आज मैंने एक बहुत अच्छी किताब पढ़ी।,Positive,Positive,83.6,True
+मुझे इसमें कोई नवीनता नजर नहीं आई।,Neutral,Neutral,69.72,True
+आपकी मदद से आत्मविश्वास बढ़ा।,Positive,Positive,83.61,True
+यह निर्णय पूरी तरह से असफल साबित हुआ।,Negative,Negative,74.4,True
+मैं रोज़ाना अपने आसपास के लोगों की मदद करता हूं।,Neutral,Neutral,69.71,True
+मेरा इस विषय पर कोई राय नहीं है।,Neutral,Neutral,69.72,True
+इस परिस्थिति को लेकर मेरा नजरिया अब तक स्पष्ट नहीं हुआ है।,Neutral,Neutral,69.72,True
+मुझे यह स्वाद अच्छा नहीं लगा।,Negative,Negative,74.37,True
+आपका यह काम सराहनीय है।,Positive,Positive,83.61,True
+यह अनुभव अविस्मरणीय रहा,Positive,Positive,83.61,True
+मुझे इससे कोई भावना उत्पन्न नहीं हुई।,Neutral,Neutral,69.72,True
+मुझे यह स्थिति बहुत तटस्थ लगी।,Neutral,Neutral,69.68,True
+यह अनुभव पूरी तरह निराशाजनक रहा।,Negative,Negative,74.39,True
+यह जगह देखने में अच्छी लगती है।,Neutral,Positive,83.51,False
+आपकी मुस्कान से आत्मबल मिलता है।,Positive,Positive,83.61,True
+योजना पर काम धीमी गति से हुआ,Negative,Negative,74.38,True
+मुझे वहाँ का खाना बिल्कुल पसंद नहीं आया।,Negative,Negative,74.38,True
+मुझे यह व्यक्ति अच्छा नहीं लगता।,Negative,Negative,74.37,True
+मुझे इसमें कोई प्रेरणा नहीं मिली,Negative,Neutral,69.7,False
+मुझे यह नई नीति समझ में नहीं आई।,Negative,Negative,74.38,True
+उसकी आलोचना से मेरे आत्मबल को गहरी चोट लगी।,Negative,Negative,74.39,True
+यह यात्रा पूरी तरह विफल साबित हुई।,Negative,Negative,74.4,True
+आपकी मदद से यह सब आसान हो गया।,Positive,Positive,83.61,True
+तुम्हारी ईमानदारी हर किसी का दिल जीत लेती है।,Positive,Positive,83.61,True
+इस मुद्दे पर अभी मेरी सोच स्पष्ट नहीं हुई है।,Neutral,Neutral,69.72,True
+खाना औसत दर्जे का था,Neutral,Neutral,69.65,True
+मुझे यह सुझाव पसंद नहीं आया,Negative,Negative,74.36,True
+तुम्हारे प्रयासों में जो लगन है वह दूसरों के लिए उदाहरण है।,Positive,Positive,83.6,True
+मुझे यह स्थिति बहुत असहनीय लग रही है।,Negative,Negative,74.39,True
+डॉक्टर का व्यवहार बहुत ही रूखा था।,Negative,Negative,74.39,True
+इस पर सोचने की अभी जरूरत है।,Neutral,Neutral,69.72,True
+आपकी उपस्थिति ने माहौल को खुशनुमा बना दिया।,Positive,Positive,83.61,True
+आपके विचार सुनकर अच्छा लगा।,Positive,Positive,83.61,True
+तुम्हारा धैर्य हमेशा मुझे चकित करता है।,Positive,Positive,83.61,True
+यह ऐप शानदार है,Positive,Positive,83.61,True
+यह निर्णय पूरी तरह व्यर्थ रहा।,Negative,Negative,74.39,True
+तुम्हारी मदद अमूल्य है।,Positive,Positive,83.61,True
+आपकी सहायता अत्यंत लाभकारी रही।,Positive,Positive,83.61,True
+यह नया पार्क बच्चों के लिए बहुत अच्छा है।,Positive,Positive,83.6,True
+इस विषय पर कोई विचार नहीं बना पाया हूं।,Neutral,Neutral,69.72,True
+यह कार्य असफल रहा।,Negative,Negative,74.39,True
+मुझे वह अनुभव असहज लगा।,Negative,Negative,74.39,True
+यह फिल्म समय और पैसे की पूरी बर्बादी थी।,Negative,Negative,74.4,True
+मुझे इसमें कोई उत्साह नजर नहीं आया।,Neutral,Neutral,69.72,True
+वह अनुभव मेरे लिए बहुत कष्टकारी रहा।,Negative,Negative,74.39,True
+यह फिल्म अत्यंत असंतोषजनक रही।,Negative,Negative,74.39,True
+आपकी सलाह ने मुझे सही रास्ता दिखाया।,Positive,Positive,83.61,True
+तुम्हारी मदद से काम जल्दी हो गया।,Positive,Positive,83.61,True
+तुम्हारी उपलब्धि पर मुझे बेहद गर्व महसूस हो रहा है।,Positive,Positive,83.61,True
+मुझे इसमें कुछ अलग अनुभव नहीं हुआ।,Neutral,Neutral,69.72,True
+वह अनुभव अत्यंत सुखद था।,Positive,Positive,83.61,True
+मुझे यह परिस्थिति बहुत कष्टकारी लग रही है।,Negative,Negative,74.4,True
+योजना से कोई फायदा नहीं हुआ,Negative,Negative,74.35,True
+इस विषय में कुछ भी कहना मेरे लिए कठिन है।,Neutral,Neutral,69.72,True
+मुझे इस मोबाइल की बैटरी लाइफ से निराशा हुई।,Negative,Negative,74.4,True
+यह फिल्म इतनी शानदार थी कि मैंने इसे दो बार देखा।,Positive,Positive,83.59,True
+आपकी सहायता से मुश्किल आसान हुई।,Positive,Positive,83.61,True
+मुझे इस पर कोई राय नहीं बनानी।,Neutral,Neutral,69.72,True
+यह निर्णय नुकसानदेह रहा।,Negative,Negative,74.4,True
+मुझे इसमें कुछ रोचक नहीं लगा।,Neutral,Neutral,69.72,True
+मुझे इससे कोई असर नहीं।,Neutral,Neutral,69.71,True
+यह खाना बहुत खराब था।,Negative,Negative,74.39,True
+आपकी मदद से मुझे हर कदम पर संबल मिला।,Positive,Positive,83.61,True
+आपकी सलाह मेरे लिए अत्यंत लाभकारी रही।,Positive,Positive,83.61,True
+वह यात्रा आनंदमयी रही।,Positive,Positive,83.61,True
+मैं रोज़ाना अपने पड़ोसियों से मिलता हूं।,Neutral,Neutral,69.71,True
+आपका सहयोग हमेशा प्रेरणादायक रहता है।,Positive,Positive,83.61,True
+उसकी बातें मुझे भीतर तक आहत कर गईं।,Negative,Negative,74.39,True

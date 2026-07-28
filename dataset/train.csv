@@ -1,0 +1,2052 @@
+﻿sentence,sentiment,source,label
+उसकी कटुता ने माहौल को नकारात्मक बना दिया।,negative,sentihin,0
+आज मैंने अपनी पसंदीदा जगह देखी।,positive,sentihin,2
+मुझे वहाँ की अव्यवस्था परेशान कर गई।,negative,sentihin,0
+तुम्हारी सादगी दिल को छू गई।,positive,sentihin,2
+इस प्रोजेक्ट में मेरी उम्मीदों पर पानी फिर गया।,negative,sentihin,0
+मुझे यह नया घर बहुत पसंद आया।,positive,sentihin,2
+मैं इस मामले में तटस्थ रहना चाहता हूं।,neutral,sentihin,1
+मुझे इस बस की समय सारिणी समझ नहीं आई।,negative,sentihin,0
+इस अनुभव ने मुझे सकारात्मक सोच दी।,positive,sentihin,2
+इस अनुभव से मैं न तो प्रसन्न हुआ और न ही दुखी।,neutral,sentihin,1
+उसकी हरकतें शर्मनाक थीं।,negative,sentihin,0
+मुझे इसमें कोई खास भावना नहीं है।,neutral,sentihin,1
+वह समीक्षा बहुत सकारात्मक थी।,positive,sentihin,2
+मुझे इसकी गुणवत्ता पर संदेह है,negative,sentihin,0
+यह किताब ज्ञानवर्धक है,positive,sentihin,2
+मुझे इसकी सुविधा पसंद आई,positive,sentihin,2
+यह यात्रा पूरी तरह से असफल रही।,negative,sentihin,0
+सेवा का स्तर संतोषजनक रहा,positive,sentihin,2
+मैं रोज़ाना जल्दी सोता हूं।,neutral,sentihin,1
+आपकी यह सफलता मुझे अभिभूत करती है।,positive,sentihin,2
+आपकी मदद ने मुझे आत्मनिर्भर बनाया।,positive,sentihin,2
+तुम्हारे स्नेहिल व्यवहार ने मेरे मन को बहुत प्रसन्न किया।,positive,sentihin,2
+मेरे लिए यह केवल एक औसत अनुभव था।,neutral,sentihin,1
+मैं इस समस्या से परेशान हूं।,negative,sentihin,0
+कल की बैठक सामान्य रही।,neutral,sentihin,1
+यह सेवा औसत रही।,neutral,sentihin,1
+तुम्हारे विचारों की गहराई हर बार मुझे सोचने पर मजबूर करती है।,positive,sentihin,2
+इस विषय पर मेरी कोई ठोस धारणा नहीं है।,neutral,sentihin,1
+मुझे यह गंध अच्छी नहीं लगती।,negative,sentihin,0
+मुझे इस यात्रा में आनंद आया,positive,sentihin,2
+मैं इस बारे में कोई टिप्पणी नहीं करूंगा।,neutral,sentihin,1
+मुझे यह बात दुखदायी लगी।,negative,sentihin,0
+मुझे वहाँ की सुविधाएं असुविधाजनक लगीं।,negative,sentihin,0
+यह पार्टी बहुत जीवंत और मजेदार थी।,positive,sentihin,2
+यह फिल्म पूरी तरह असफल रही।,negative,sentihin,0
+उसकी बेरुखी ने मेरे दिल में कई सवाल खड़े कर दिए।,negative,sentihin,0
+कंपनी ने अच्छी सुविधा उपलब्ध कराई,positive,sentihin,2
+इससे मेरी भावना पर कोई असर नहीं हुआ।,neutral,sentihin,1
+यह रेस्टोरेंट की सेवा बहुत अव्यवस्थित है।,negative,sentihin,0
+इस विषय को लेकर मैं पूरी तरह निष्पक्ष हूं।,neutral,sentihin,1
+उसकी उपेक्षा ने मेरे आत्मबल को कमजोर किया।,negative,sentihin,0
+मुझे इस मुद्दे पर कोई स्पष्ट भावना नहीं हुई।,neutral,sentihin,1
+वह यात्रा यादगार अनुभव रही।,positive,sentihin,2
+उसकी उपेक्षा से मुझे अपनी अहमियत पर शक होने लगा।,negative,sentihin,0
+मुझे इसमें कुछ नयापन नहीं दिखा।,neutral,sentihin,1
+इस संग्रहालय की प्रदर्शनी बहुत रोचक थी।,positive,sentihin,2
+यह निर्णय मेरे लिए विनाशकारी साबित हुआ।,negative,sentihin,0
+मुझे यह फिल्म निराशाजनक लगी,negative,sentihin,0
+तुम्हारी मेहनत से ही यह असंभव काम संभव हो सका।,positive,sentihin,2
+मैं इस मुद्दे पर तटस्थ रहना चाहता हूं।,neutral,sentihin,1
+तुम्हारा साथ हर परिस्थिति में एक मजबूत सहारा रहा है।,positive,sentihin,2
+मुझे इसका उपयोग सरल लगा,positive,sentihin,2
+यह अनुभव खराब था।,negative,sentihin,0
+खरीद के बाद उत्पाद ने निराश किया,negative,sentihin,0
+यह निर्णय मेरे हिसाब से पूरी तरह गलत था।,negative,sentihin,0
+आज का मौसम बहुत सुहावना है।,positive,sentihin,2
+मुझे इसमें कुछ नयापन नहीं लगा।,neutral,sentihin,1
+तुम्हारे विचार प्रेरणादायक हैं।,positive,sentihin,2
+आज हवा चल रही है।,neutral,sentihin,1
+आपका सहयोग मेरे लिए महत्वपूर्ण है।,positive,sentihin,2
+मुझे इस विषय में कोई राय नहीं है,neutral,sentihin,1
+इस मुद्दे में मेरी कोई खास रुचि नहीं है।,neutral,sentihin,1
+तुम्हारा यह काम मेरे दिल को खुशी से भर देता है।,positive,sentihin,2
+यह खुशी मेरे जीवन में नया रंग भरती है।,positive,sentihin,2
+यह फिल्म मेरे लिए बहुत निराशाजनक रही।,negative,sentihin,0
+मुझे यह नृत्य पसंद आया।,positive,sentihin,2
+रोनाल्डो अगले मैच के लिए टीम में शामिल हैं।,neutral,sports,1
+तुम्हारे बिना यह सफर इतना आसान नहीं होता।,positive,sentihin,2
+मुझे यह माहौल अच्छा नहीं लगता।,negative,sentihin,0
+इस मुद्दे पर मेरी राय अभी तक साफ नहीं है।,neutral,sentihin,1
+मैं इस काम से थक गया हूं।,negative,sentihin,0
+यह घटना मेरे लिए निराशाजनक थी।,negative,sentihin,0
+कंपनी की नीतियों में कुछ विशेष नया नहीं था,neutral,sentihin,1
+आज मंगलवार है।,neutral,sentihin,1
+ऑफिस में आज का दिन बहुत तनावपूर्ण रहा।,negative,sentihin,0
+उसका व्यवहार न सिर्फ अपमानजनक बल्कि निराशाजनक भी रहा।,negative,sentihin,0
+यह होटल औसत दर्जे का था,neutral,sentihin,1
+यह सूर्योदय का दृश्य बहुत खूबसूरत था।,positive,sentihin,2
+मुझे इसमें कोई विचार व्यक्त नहीं करना है।,neutral,sentihin,1
+इस अवसर ने मुझे आत्मविश्वास से भर दिया।,positive,sentihin,2
+मुझे इसमें कोई रोचकता नहीं मिली।,neutral,sentihin,1
+यह सेवा बिल्कुल घटिया थी।,negative,sentihin,0
+मैं रोज़ाना अपने आत्मविश्वास को बढ़ाने की कोशिश करता हूं।,neutral,sentihin,1
+आपका यह काम मेरे लिए प्रेरणा का स्रोत है।,positive,sentihin,2
+आपकी प्रशंसा से खुशी मिली।,positive,sentihin,2
+आपकी मुस्कान दिल को सुकून देती है।,positive,sentihin,2
+यह सेवा अनुभव बहुत खराब रहा।,negative,sentihin,0
+इस विषय पर मैं कोई फैसला नहीं कर पाया हूं।,neutral,sentihin,1
+मैं इस उत्पाद की विशेषताओं से परिचित हूँ।,neutral,sentihin,1
+यह निर्णय असफल रहा।,negative,sentihin,0
+मेरी इसमें कोई दिलचस्पी नहीं है।,neutral,sentihin,1
+तुम्हारा यह नृत्य मनमोहक है।,positive,sentihin,2
+तुम्हारे विचार इतने स्पष्ट हैं कि हर कोई उनसे प्रभावित हो जाता है।,positive,sentihin,2
+तुम्हारे विचारों की गहराई ने मुझे सोचने पर मजबूर कर दिया।,positive,sentihin,2
+इस मुद्दे पर कोई ठोस मत नहीं है।,neutral,sentihin,1
+तुम्हारी विनम्रता में भी गजब की शक्ति है।,positive,sentihin,2
+वह संगीत कार्यक्रम अद्भुत था।,positive,sentihin,2
+यह सबसे बेकार चीज थी जो मैंने देखी।,negative,sentihin,0
+वह प्रस्तुति देखकर आनंद मिला।,positive,sentihin,2
+मैं इस काम से बहुत परेशान हूं।,negative,sentihin,0
+वह पाठ्यक्रम लाभकारी था।,positive,sentihin,2
+मैं इस मुद्दे पर तटस्थ रहूंगा।,neutral,sentihin,1
+क्रिकेट टीम का प्रदर्शन बेहद खराब रहा।,negative,sports,0
+आज गुरुवार है।,neutral,sentihin,1
+उसका बर्ताव मेरे लिए अत्यंत पीड़ादायक रहा।,negative,sentihin,0
+फिल्म की सिनेमाटोग्राफी शानदार रही,positive,sentihin,2
+इस विषय में मेरा रुख अभी अनिर्णीत है।,neutral,sentihin,1
+यह फिल्म एकदम घटिया थी।,negative,sentihin,0
+इस सेवा से मैं बहुत खुश हूं,positive,sentihin,2
+यह कंपनी की नीति बहुत कठोर और अनुचित है।,negative,sentihin,0
+मुझे इसमें कोई समस्या नहीं दिखी,positive,sentihin,2
+आपकी सहायता मेरे लिए प्रेरणा का स्रोत बनी।,positive,sentihin,2
+तुम्हारे द्वारा दिया गया प्रोत्साहन मेरे लिए अनमोल है।,positive,sentihin,2
+तुम्हारे धैर्य ने कठिन समय में भी उम्मीद जगाई।,positive,sentihin,2
+इस विषय पर कोई निश्चित मत नहीं है।,neutral,sentihin,1
+मैं रोज़ाना बागवानी करता हूं।,neutral,sentihin,1
+यह सेवा पूरी तरह से निराशाजनक साबित हुई।,negative,sentihin,0
+मेरे लिए यह कोई बड़ा मुद्दा नहीं है।,neutral,sentihin,1
+मुझे इसमें कोई विचार प्रकट नहीं करना है।,neutral,sentihin,1
+आपकी मदद से मन को शक्ति मिलती है।,positive,sentihin,2
+यह छुट्टी मेरे लिए बहुत ताज़ा थी।,positive,sentihin,2
+यह योजना उत्कृष्ट रही।,positive,sentihin,2
+मुझे इसमें कोई असर महसूस नहीं हुआ।,neutral,sentihin,1
+आपका यह काम बहुत बढ़िया है।,positive,sentihin,2
+इस ऐप ने मेरी मदद नहीं की,negative,sentihin,0
+यह समुद्र तट बहुत साफ और सुंदर है।,positive,sentihin,2
+इस पर मेरी कोई स्पष्ट राय नहीं है।,neutral,sentihin,1
+मैं इस काम से बहुत तनावग्रस्त हूं।,negative,sentihin,0
+इस मुद्दे पर कुछ भी निश्चित रूप से नहीं कह सकता।,neutral,sentihin,1
+इस पर सोचने के लिए मुझे थोड़ा और समय चाहिए।,neutral,sentihin,1
+इस विषय पर तटस्थ रहना ही उचित होगा।,neutral,sentihin,1
+तुम्हारे शब्दों में जो सच्चाई है वह सीधे दिल को छू जाती है।,positive,sentihin,2
+यह सेवा इतनी खराब थी कि मुझे बार बार शिकायत करनी पड़ी।,negative,sentihin,0
+आज बुधवार है।,neutral,sentihin,1
+आपकी मेहनत से यह काम बहुत अच्छे से पूरा हुआ।,positive,sentihin,2
+यह त्योहार का माहौल बहुत जीवंत था।,positive,sentihin,2
+उसके कठोर शब्दों ने मेरे आत्मविश्वास को तोड़ दिया।,negative,sentihin,0
+यह प्रोडक्ट निराशाजनक है,negative,sentihin,0
+आज बैडमिंटन का मैच शाम 7 बजे शुरू होगा।,neutral,sports,1
+आपका साथ पाकर खुद को भाग्यशाली समझता हूं।,positive,sentihin,2
+यह अवसर अत्यंत लाभकारी रहा।,positive,sentihin,2
+यह यात्रा पूरी तरह नाकाम रही।,negative,sentihin,0
+यह सेवा इतनी खराब थी कि मैं दुबारा उपयोग नहीं करूंगा।,negative,sentihin,0
+मुझे इस पर कोई टिप्पणी नहीं करनी है,neutral,sentihin,1
+मुझे यह किताब पढ़कर बहुत निराशा हुई।,negative,sentihin,0
+मेरी इसमें कोई खास दिलचस्पी नहीं है।,neutral,sentihin,1
+पढ़ाई में लगातार असफलता बहुत दुखद है।,negative,sentihin,0
+यह निर्णय पूरी तरह निराशाजनक था।,negative,sentihin,0
+खरीदी गई वस्तु ने आशा के विपरीत प्रदर्शन किया,negative,sentihin,0
+लाइट चली गई थी सब अंधेरा हो गया।,negative,sentihin,0
+उसकी बेरुखी ने मुझे भीतर से बहुत कमजोर कर दिया।,negative,sentihin,0
+आपकी सोच से मन को शक्ति मिलती है।,positive,sentihin,2
+यह उपन्यास पढ़ने में बहुत मजेदार है।,positive,sentihin,2
+इस विषय पर मेरी कोई विशेष राय नहीं है।,neutral,sentihin,1
+मैं रोज़ाना अपने लक्ष्य की दिशा में काम करता हूं।,neutral,sentihin,1
+यह सेवा इतनी खराब थी कि मैं किसी को सुझाव नहीं दूंगा।,negative,sentihin,0
+मुझे इससे कोई प्रतिक्रिया नहीं हुई।,neutral,sentihin,1
+यह नया कैफे बहुत शांत और आरामदायक है।,positive,sentihin,2
+आपकी मुस्कान दिल को प्रसन्न करती है।,positive,sentihin,2
+आपका उत्साह प्रेरणादायक है।,positive,sentihin,2
+वह घटना इतनी दुखद थी कि उसे याद कर भी मन भारी हो जाता है।,negative,sentihin,0
+आपकी मदद हमेशा अनमोल रहती है।,positive,sentihin,2
+यह प्रयास बेहतरीन रहा।,positive,sentihin,2
+मुझे इसमें कोई विशेष रुचि नहीं है।,neutral,sentihin,1
+यह अनुभव अत्यंत असफल रहा।,negative,sentihin,0
+तुम्हारे साथ बिताए हर लम्हे की यादें मेरे लिए अनमोल हैं।,positive,sentihin,2
+यह प्रयास पूरी तरह नाकाम रहा।,negative,sentihin,0
+मैं इस मामले से चिंतित हूं।,negative,sentihin,0
+उसका व्यवहार न केवल असभ्य था बल्कि अत्यधिक अपमानजनक भी।,negative,sentihin,0
+मैं इस घटना से दुखी हूं।,negative,sentihin,0
+उसका व्यव्हार रूखा था।,negative,sentihin,0
+आपका साथ एक तोहफे जैसा है।,positive,sentihin,2
+आपकी मुस्कान से आत्मविश्वास बढ़ता है।,positive,sentihin,2
+मुझे इसमें कोई विशेषता नजर नहीं आई।,neutral,sentihin,1
+यह जीत हमारे लिए गौरव की बात है।,positive,sentihin,2
+मुझे इस विषय पर कोई मजबूत राय नहीं है।,neutral,sentihin,1
+मैं इस विषय पर और जानकारी इकट्ठा करूँगा।,neutral,sentihin,1
+तुम्हारी मदद के बिना यह कार्य संभव नहीं था।,positive,sentihin,2
+इस प्रोडक्ट की गुणवत्ता खराब थी,negative,sentihin,0
+आज मेरे बच्चे ने पहली बार गिटार बजाया।,positive,sentihin,2
+यह कलर कॉम्बिनेशन ठीक लग रहा है।,neutral,sentihin,1
+इस शहर का माहौल बहुत जीवंत है।,positive,sentihin,2
+यह इंटीरियर डिज़ाइन ठीक लग रहा है।,neutral,sentihin,1
+यह समाचार सामान्य लग रहा है।,neutral,sentihin,1
+मुझे यह काम पसंद नहीं है।,negative,sentihin,0
+यह सफलता मेरे सपनों को पूरा करती है।,positive,sentihin,2
+तुम्हारा यह काम मेरे लिए प्रेरणादायक है।,positive,sentihin,2
+यह फिल्म बहुत ही असफल साबित हुई।,negative,sentihin,0
+यह यात्रा पूरी तरह असफल साबित हुई।,negative,sentihin,0
+मुझे वहाँ का व्यवहार अपमानजनक लगा।,negative,sentihin,0
+उसका स्वभाव कठोर है।,negative,sentihin,0
+इस विषय पर मेरा कोई पक्ष नहीं है।,neutral,sentihin,1
+यहां का वातावरण काफी सुकूनदायक है,positive,sentihin,2
+इस मुद्दे पर किसी निष्कर्ष पर पहुँचना अभी मुश्किल है।,neutral,sentihin,1
+यह एक सामान्य दिन जैसा था।,neutral,sentihin,1
+तुम्हारा समर्पण और लगन काबिल ए तारीफ है।,positive,sentihin,2
+मेरे मित्र का नया व्यवसाय बहुत सफल है।,positive,sentihin,2
+यह कार्य मुझे नापसंद है।,negative,sentihin,0
+उसका रवैया अपमानजनक ही नहीं क्रूर भी था।,negative,sentihin,0
+मुझे इसमें कुछ भी खास नहीं लगा।,neutral,sentihin,1
+वह घटना इतनी दर्दनाक थी कि मैं उसे भूलना चाहता हूं।,negative,sentihin,0
+इस बारे में कोई निश्चित मत अभी नहीं बना पाया हूं।,neutral,sentihin,1
+यह जगह देखने लायक है,positive,sentihin,2
+यह फिल्म मेरी उम्मीदों पर खरी नहीं उतरी।,negative,sentihin,0
+आपके शब्द बहुत सुकूनदायक हैं।,positive,sentihin,2
+मुझे इसमें कोई खास अनुभव नहीं हुआ।,neutral,sentihin,1
+यह सेवा बेहद घटिया लगी।,negative,sentihin,0
+वह हादसा मेरी जिंदगी का सबसे कड़वा अनुभव था।,negative,sentihin,0
+मुझे इस प्रस्तुति में मजा आया,positive,sentihin,2
+तुम्हारी विनम्रता दिल को बहुत भा गई।,positive,sentihin,2
+मुझे वहाँ की सुविधाएं खराब लगीं।,negative,sentihin,0
+आपकी सोच से प्रेरणा मिलती है।,positive,sentihin,2
+वह कार्यक्रम अत्यंत मनोरंजक था।,positive,sentihin,2
+उसका स्वर इतना कटु था कि सब स्तब्ध रह गए।,negative,sentihin,0
+तुम्हारे प्रोत्साहन ने मुझे नई राह दिखाई।,positive,sentihin,2
+मुझे यह महक पसंद नहीं है।,negative,sentihin,0
+यह इमारत काफी पुरानी है।,neutral,sentihin,1
+मैं इस मामले में कोई पक्ष नहीं लूंगा।,neutral,sentihin,1
+मैं अपने कार्यालय में काम करता हूं।,neutral,sentihin,1
+यह फिल्म इतनी खराब थी कि मैं अंत तक नहीं देख सका।,negative,sentihin,0
+आपके विचार प्रेरणादायक हैं।,positive,sentihin,2
+मुझे वहाँ की सुविधा पसंद नहीं आई।,negative,sentihin,0
+आपकी सोच मेरे लिए प्रेरणा का स्रोत बनी रहती है।,positive,sentihin,2
+इंटरनेट की खराबी ने काम बिगाड़ दिया।,negative,sentihin,0
+रोहित ने शानदार प्रदर्शन किया।,positive,sports,2
+इस होटल की सेवा बहुत खराब थी।,negative,sentihin,0
+क्रिकेट टीम ने बेहतरीन जीत दर्ज की।,positive,sports,2
+इस पर अपनी कोई स्पष्ट राय मैं नहीं दे सकता।,neutral,sentihin,1
+इस मुद्दे में कोई खास रुचि नहीं है।,neutral,sentihin,1
+मुझे वहाँ की भीड़ से असुविधा हुई।,negative,sentihin,0
+यह सेवा बेहद खराब साबित हुई।,negative,sentihin,0
+मुझे इस विषय पर कोई उत्सुकता नहीं थी।,neutral,sentihin,1
+मुझे इसमें कोई अनुभव नजर नहीं आया।,neutral,sentihin,1
+मैं इस फिल्म के रिव्यू पढ़ना चाहता हूँ।,neutral,sentihin,1
+यह यात्रा अत्यंत सुखद रही।,positive,sentihin,2
+मुझे इस बात से कोई खास फर्क नहीं पड़ा।,neutral,sentihin,1
+आपकी मदद हमेशा प्रशंसनीय है।,positive,sentihin,2
+मैं इस काम से ऊब गया हूं।,negative,sentihin,0
+इस बारे में मैं किसी भी निष्कर्ष पर नहीं पहुँचा हूं।,neutral,sentihin,1
+आपकी मुस्कान प्रेरणा देती है।,positive,sentihin,2
+मुझे इस मुद्दे पर कोई खास राय नहीं है।,neutral,sentihin,1
+यह फैसला अनुचित था,negative,sentihin,0
+यह अनुभव बेहद दुखद रहा।,negative,sentihin,0
+आपकी सोच से नई प्रेरणा मिलती है।,positive,sentihin,2
+उस निर्णय ने मुझे प्रभावित किया,positive,sentihin,2
+मैं इस विषय पर निष्पक्ष हूं।,neutral,sentihin,1
+यह प्रयास सफल नहीं हुआ।,negative,sentihin,0
+इस होटल की कीमतें बहुत ज्यादा हैं।,negative,sentihin,0
+तुम्हारा यह प्रदर्शन असाधारण है।,positive,sentihin,2
+यह अवसर खो गया।,negative,sentihin,0
+मैं रोज़ाना अपने जीवन में शांति और प्रेम फैलाने की कोशिश करता हूं।,neutral,sentihin,1
+इस रेस्तरां का खाना बहुत स्वादिष्ट था।,positive,sentihin,2
+हॉकी टीम लगातार हार रही है।,negative,sports,0
+यह निर्णय निराशाजनक था।,negative,sentihin,0
+मेरी बेटी ने आज पहली बार तैरना सीखा।,positive,sentihin,2
+वह पुस्तक पढ़ना सुखद अनुभव था।,positive,sentihin,2
+मुझे इसमें कोई उत्साह नहीं आया।,neutral,sentihin,1
+मुझे आपके विचार अच्छे लगे,positive,sentihin,2
+इस प्रस्तुति ने मुझे प्रेरित किया,positive,sentihin,2
+यह बात मुझे बुरी लगी।,negative,sentihin,0
+यात्रा ने मन को बहुत सुकून दिया,positive,sentihin,2
+यह खुशखबरी मेरे लिए खुशी की बात है।,positive,sentihin,2
+मुझे यह काम करने में बहुत डर लगता है।,negative,sentihin,0
+यह सेवा मेरे लिए बेहद निराशाजनक रही।,negative,sentihin,0
+यह प्रोडक्ट बेकार था,negative,sentihin,0
+इस पर मेरी राय अधूरी है।,neutral,sentihin,1
+होटल के कमरे बेहद संकरे थे,negative,sentihin,0
+सेवा का स्तर सामान्य था,neutral,sentihin,1
+वह दिन मेरे जीवन के सबसे तकलीफदेह दिनों में से एक था।,negative,sentihin,0
+यह कैमरा बिल्कुल काम नहीं कर रहा।,negative,sentihin,0
+मेरी कार की सर्विस बहुत महंगी थी।,negative,sentihin,0
+उसका व्यवहार बहुत कटु और असंवेदनशील रहा।,negative,sentihin,0
+यह सेवा तटस्थ रही।,neutral,sentihin,1
+ऑर्डर रद्द करना बेहद मुश्किल था,negative,sentihin,0
+इस मुद्दे पर सोच विचार अभी जारी है।,neutral,sentihin,1
+वह गीत बहुत मधुर था।,positive,sentihin,2
+मुझे इसमें कोई विशेष बदलाव नहीं दिखा।,neutral,sentihin,1
+वह फिल्म देखने में बहुत मजा आया।,positive,sentihin,2
+वह फिल्म बेहद शानदार अनुभव था।,positive,sentihin,2
+यह कपड़ा खराब क्वालिटी का है।,negative,sentihin,0
+यह निर्णय मेरे लिए हानिकारक साबित हुआ।,negative,sentihin,0
+आपकी सोच मेरे लिए सकारात्मक प्रेरणा है।,positive,sentihin,2
+तुम्हारे सहयोग ने हर मुश्किल को आसान कर दिया।,positive,sentihin,2
+सेवा में तेजी की कमी महसूस हुई,negative,sentihin,0
+मेरी ट्रेन फिर से देरी से चल रही है।,negative,sentihin,0
+सारा प्लान बिगड़ गया।,negative,sentihin,0
+मेरा नाम राहुल है।,neutral,sentihin,1
+यह प्रोडक्ट की डिलीवरी बहुत देरी से हुई।,negative,sentihin,0
+यह कार का इंजन बहुत शोर मचाता है।,negative,sentihin,0
+मुझे यह कविता पसंद आई।,positive,sentihin,2
+आपके विचार मेरे लिए महत्वपूर्ण हैं।,positive,sentihin,2
+तुम्हारे विचार मन को भा गए।,positive,sentihin,2
+यह अनुभव बिल्कुल असंतोषजनक था।,negative,sentihin,0
+उसका व्यवहार बार बार मुझे अपमानित करता रहा।,negative,sentihin,0
+तुम्हारा आत्मविश्वास अनमोल है।,positive,sentihin,2
+यह अनुभव कष्टदायक था।,negative,sentihin,0
+हॉकी टूर्नामेंट अगले सप्ताह शुरू होगा।,neutral,sports,1
+मैं इस किताब को दोबारा पढ़ना चाहूँगा।,neutral,sentihin,1
+उसका स्वर इतना कटु था कि मैं कुछ कह ही नहीं पाया।,negative,sentihin,0
+कक्षा में पढ़ाई का स्तर काबिल ए तारीफ था,positive,sentihin,2
+आपकी सोच से आत्मबल मिलता है।,positive,sentihin,2
+उसकी बातें कड़वी थीं।,negative,sentihin,0
+मुझे इसमें कोई विशेष बदलाव नहीं लगा।,neutral,sentihin,1
+मैं रोज़ाना नई चीजें सीखता हूं।,neutral,sentihin,1
+आपकी मुस्कान से मन को सुख मिलता है।,positive,sentihin,2
+यह प्रोडक्ट की क्वालिटी बहुत घटिया है।,negative,sentihin,0
+इस यात्रा का अनुभव सुखद रहा,positive,sentihin,2
+यह निर्णय सही नहीं था,negative,sentihin,0
+मुझे इसमें कोई खास बात नहीं लगी।,neutral,sentihin,1
+आपका समर्थन हमेशा महत्वपूर्ण रहता है।,positive,sentihin,2
+यह खबर दुखद रही।,negative,sentihin,0
+मुझे वहाँ का माहौल निराशाजनक लगा।,negative,sentihin,0
+मुझे इसमें कोई टिप्पणी नहीं करनी है।,neutral,sentihin,1
+उसका बर्ताव इतना अप्रत्याशित था कि सब चौंक गए।,negative,sentihin,0
+यह योजना एकदम निरर्थक रही।,negative,sentihin,0
+आपकी सहायता बहुमूल्य रही।,positive,sentihin,2
+उसकी आलोचना मुझे गलत लगी।,negative,sentihin,0
+मुझे इस विषय पर कोई खास उत्सुकता नहीं है।,neutral,sentihin,1
+यह निर्णय पूरी तरह असफल रहा।,negative,sentihin,0
+वह अनुभव इतना बुरा था कि मैं उसे भूलना चाहता हूं।,negative,sentihin,0
+यह फिल्म एकदम घटिया थी और समय की बर्बादी।,negative,sentihin,0
+मुझे यह रेस्टोरेंट का खाना बहुत नमकीन लगा।,negative,sentihin,0
+मैं इस जगह पर पहले भी आ चुका हूँ।,neutral,sentihin,1
+आपकी तारीफ से खुशी मिली।,positive,sentihin,2
+यह ऐप हर दिन काम आता है,positive,sentihin,2
+मुझे यह काम बहुत तनावपूर्ण लगता है।,negative,sentihin,0
+गाड़ी में पेट्रोल खत्म हो गया।,neutral,sentihin,1
+आज मैंने एक नया स्किल सीखा।,positive,sentihin,2
+यह अवसर बेहद सुखद रहा।,positive,sentihin,2
+मैं कल की बैठक के लिए तैयार हूँ।,neutral,sentihin,1
+इस विषय में मेरी कोई पक्की राय नहीं बनी।,neutral,sentihin,1
+तुम्हारे आत्मबल ने हर चुनौती में मुझे सहारा दिया है।,positive,sentihin,2
+इस पर राय देना मेरे लिए उचित नहीं होगा।,neutral,sentihin,1
+मुझे यह काम बहुत निराशाजनक लग रहा है।,negative,sentihin,0
+यह रेसिपी बहुत आसान और स्वादिष्ट है।,positive,sentihin,2
+इस मुद्दे पर मैं कोई पक्ष नहीं ले सकता।,neutral,sentihin,1
+उसकी बातें सुनकर मन भारी हो गया।,negative,sentihin,0
+मुझे यह फिल्म बहुत उबाऊ लगी।,negative,sentihin,0
+उसके ताने सुनकर मेरा मन बहुत आहत हुआ।,negative,sentihin,0
+आपकी मुस्कान मेरे दिन को बना देती है।,positive,sentihin,2
+मुझे इस मोबाइल की कीमत बहुत ज्यादा लगी।,negative,sentihin,0
+आपकी मुस्कान हर दिन खुश कर देती है।,positive,sentihin,2
+यह योजना बेकार साबित हुई।,negative,sentihin,0
+यह अवसर मेरे लिए सुनहरा है।,positive,sentihin,2
+आपकी सोच से मन को नई प्रेरणा मिलती है।,positive,sentihin,2
+वह किताब प्रेरक और रोचक थी।,positive,sentihin,2
+यह निर्णय पूरी तरह से गलत साबित हुआ।,negative,sentihin,0
+यह सेवा इतनी खराब थी कि मैं शिकायत करने पर मजबूर हुआ।,negative,sentihin,0
+इस योजना ने मुझे सकारात्मक सोच दी।,positive,sentihin,2
+यह फिल्म पूरी तरह निराशाजनक रही।,negative,sentihin,0
+मुझे वहाँ की सुविधाएं ठीक नहीं लगीं।,negative,sentihin,0
+उसकी कटुता ने मेरे मन को तोड़ दिया।,negative,sentihin,0
+यह अनुभव मेरे लिए पूरी तरह से निराशाजनक रहा।,negative,sentihin,0
+मैं आज बहुत खुश महसूस कर रहा हूँ।,positive,sentihin,2
+इस फिल्म की पटकथा कमजोर थी,negative,sentihin,0
+आपकी तारीफ से मन प्रफुल्लित हो गया।,positive,sentihin,2
+यह कदम बहुत ही निराशाजनक साबित हुआ।,negative,sentihin,0
+वह किताब बहुत प्रेरणादायक थी।,positive,sentihin,2
+उसकी आलोचना ने मुझे हतोत्साहित कर दिया।,negative,sentihin,0
+आपकी सहायता मेरे लिए वरदान साबित हुई।,positive,sentihin,2
+यह अनुभव पूरी तरह से खराब था।,negative,sentihin,0
+मुझे यह जगह बिल्कुल पसंद नहीं आई।,negative,sentihin,0
+यह निर्णय निराशाजनक रहा।,negative,sentihin,0
+मैं इस मामले में कोई फैसला नहीं लूंगा।,neutral,sentihin,1
+यह सेवा केंद्र बहुत अव्यवस्थित है।,negative,sentihin,0
+इस विषय पर मेरी कोई ठोस राय नहीं बनी है।,neutral,sentihin,1
+मुझे यह स्थिति बहुत सामान्य लगी।,neutral,sentihin,1
+मुझे परीक्षा में बहुत खराब लगा।,negative,sentihin,0
+इस विषय पर मेरी राय स्पष्ट नहीं है इसलिए मैं कुछ भी कहने से बचूंगा।,neutral,sentihin,1
+मुझे इसकी जानकारी नहीं है,neutral,sentihin,1
+मैं इस घटना से आहत हूं।,negative,sentihin,0
+वह अनुभव बेहद सुखद था।,positive,sentihin,2
+मैं रोज़ाना किताब पढ़ता हूं।,neutral,sentihin,1
+आपकी मदद हमेशा सराहनीय रहती है।,positive,sentihin,2
+यह रेस्टोरेंट की सेवा बहुत धीमी और खराब है।,negative,sentihin,0
+इस निर्णय से मुझे बहुत हानि हुई है।,negative,sentihin,0
+टेस्ट में कम नंबर आए थोड़ा बुरा लगा।,negative,sentihin,0
+इस प्रोडक्ट ने निराश किया,negative,sentihin,0
+यह निर्णय अत्यंत असफल साबित हुआ।,negative,sentihin,0
+तुम्हारी प्रेरणा से ही मैं आज यह मुकाम हासिल कर पाया हूं।,positive,sentihin,2
+तुम्हारी मुस्कान मन को भा गई।,positive,sentihin,2
+यह फिल्म पूरी तरह असंतोषजनक रही।,negative,sentihin,0
+उसकी कड़वी बातें लंबे समय तक मन में चुभती रहीं।,negative,sentihin,0
+इस मुद्दे पर सोच विचार अभी चल रहा है।,neutral,sentihin,1
+आज मेरे बच्चे ने अपना पहला कविता लिखा।,positive,sentihin,2
+मुझे यह प्रस्तुति ठीक लगी,neutral,sentihin,1
+मुझे यह स्थिति बहुत निराशाजनक लग रही है।,negative,sentihin,0
+आपका समर्थन मेरे लिए महत्वपूर्ण है।,positive,sentihin,2
+मुझे इसमें कोई विशेषता नहीं दिखी।,neutral,sentihin,1
+उसकी उपेक्षा ने मुझे बहुत अकेला महसूस कराया।,negative,sentihin,0
+उसकी बातें न केवल रूखी थीं बल्कि बेहद कड़वी भी।,negative,sentihin,0
+मुझे वहाँ की भीड़ से असहजता हुई।,negative,sentihin,0
+यह जगह मेरे लिए स्वर्ग है।,positive,sentihin,2
+आपकी बातों से मन हल्का हो गया।,positive,sentihin,2
+आपकी मदद ने मेरे काम को बहुत आसान बना दिया।,positive,sentihin,2
+यह अनुभव एकदम निराशाजनक था।,negative,sentihin,0
+मैं इस विषय पर और जानकारी चाहता हूँ।,neutral,sentihin,1
+यह निर्णय अस्वीकार्य था।,negative,sentihin,0
+आपकी सहायता ने मेरे पूरे कार्य को सरल बना दिया।,positive,sentihin,2
+मेरी मां की तबीयत आज बहुत अच्छी है।,positive,sentihin,2
+तुम्हारा समर्थन हर बार मुझे नई दिशा देता है।,positive,sentihin,2
+यह फिल्म पूरी तरह से निराशाजनक रही।,negative,sentihin,0
+यह कहानी मेरे दिल को छू गई।,positive,sentihin,2
+मुझे इसमें कुछ नया नजर नहीं आया।,neutral,sentihin,1
+यह अनुभव अत्यंत दुखद रहा।,negative,sentihin,0
+मैं इस रेस्तरां में पहले भी खा चुका हूँ।,neutral,sentihin,1
+यह घटना मेरे लिए पीड़ादायक थी।,negative,sentihin,0
+इस दुकान की ग्राहक सेवा बहुत खराब है।,negative,sentihin,0
+इस अनुभव ने मुझे अपने लक्ष्य के प्रति सजग किया।,positive,sentihin,2
+तुम्हारा स्नेह प्रेरणा देता है।,positive,sentihin,2
+मुझे इसका स्वाद बहुत बढ़िया लगा,positive,sentihin,2
+यह निर्णय मेरे लिए बेहद हानिकारक साबित हुआ।,negative,sentihin,0
+यह खबर बहुत निराशाजनक थी।,negative,sentihin,0
+मैं इस मामले पर कोई टिप्पणी नहीं करूँगा।,neutral,sentihin,1
+आज रविवार है।,neutral,sentihin,1
+तुम्हारा सहयोग मेरे हर प्रयास को सफल बनाता है।,positive,sentihin,2
+यह सेवा पूरी तरह विफल साबित हुई।,negative,sentihin,0
+मुझे इसमें कोई बदलाव महसूस नहीं हुआ।,neutral,sentihin,1
+यह यात्रा बेहद निराशाजनक रही।,negative,sentihin,0
+यह अवसर पूरी तरह चूक गया।,negative,sentihin,0
+मुझे उनकी बातें अपमानजनक लगीं।,negative,sentihin,0
+इस मुद्दे पर मेरी सोच अधूरी ही है।,neutral,sentihin,1
+लड़ाई की वजह से पूरा दिन खराब हो गया।,negative,sentihin,0
+आपकी मदद हमेशा सराहनीय होती है।,positive,sentihin,2
+आपकी सोच सदा सकारात्मक प्रेरणा देती है।,positive,sentihin,2
+उसका व्यव्हार कटु था।,negative,sentihin,0
+मौसम आज कुछ सामान्य है।,neutral,sentihin,1
+आपका व्यवहार बहुत प्रेरणादायक है।,positive,sentihin,2
+मुझे इस विषय में कोई खास उत्सुकता नहीं थी।,neutral,sentihin,1
+यह फिल्म अत्यंत मनोरंजक रही।,positive,sentihin,2
+तुम्हारा यह काम मेरे दिल को छूता है।,positive,sentihin,2
+मुझे यह सब साधारण लगा।,neutral,sentihin,1
+मुझे यह सुविधा पसंद नहीं है।,negative,sentihin,0
+आज टेनिस का मुकाबला रोमांचक और शानदार रहा।,positive,sports,2
+मैं कपड़े धोता हूं।,neutral,sentihin,1
+यह नया गाना बहुत भावनात्मक है।,positive,sentihin,2
+मुझे इस विषय में कोई स्पष्ट राय नहीं है,neutral,sentihin,1
+यह योजना पूरी तरह निरर्थक साबित हुई।,negative,sentihin,0
+यह जानकारी मेरे लिए महत्वहीन है।,neutral,sentihin,1
+मुझे इसमें कोई अंतर महसूस नहीं हुआ।,neutral,sentihin,1
+यह निर्णय मेरे लिए निराशाजनक था।,negative,sentihin,0
+मुझे इसमें कोई खास अनुभव नहीं।,neutral,sentihin,1
+ट्रेन तीन घंटे लेट है।,negative,sentihin,0
+मेसी अगले मैच के लिए टीम में शामिल हैं।,neutral,sports,1
+सिंधु ने शानदार प्रदर्शन किया।,positive,sports,2
+मुझे इससे कोई भावनात्मक असर नहीं हुआ।,neutral,sentihin,1
+वह मोबाइल फोन सच में कमाल का है।,positive,sentihin,2
+सेवा का अनुभव औसत रहा,neutral,sentihin,1
+तुम्हारे भरोसे ने मुझे मुश्किल घड़ी में हिम्मत दी और आगे बढ़ने की प्रेरणा दी।,positive,sentihin,2
+मुझे इस जगह में कुछ खास नहीं लगा,neutral,sentihin,1
+आज मेरे पिताजी को प्रमोशन मिला।,positive,sentihin,2
+डिज़ाइन ने ग्राहकों का ध्यान खींचा,positive,sentihin,2
+इस पर मेरी कोई मजबूत भावना नहीं है।,neutral,sentihin,1
+तुम्हारा यह गीत मन को भाता है।,positive,sentihin,2
+यह यात्रा मेरे लिए यादगार रही,positive,sentihin,2
+मैं इस फिल्म को दोस्तों के साथ देखना चाहूँगा।,neutral,sentihin,1
+इस अवसर ने मुझे अपनी क्षमताओं को पहचानने का मौका दिया।,positive,sentihin,2
+आपके शब्दों ने मेरा दिल छू लिया।,positive,sentihin,2
+मुझे यह अनुभव न अच्छा लगा न बुरा।,neutral,sentihin,1
+आज मैंने अपने बचपन का दोस्त मिला।,positive,sentihin,2
+यह निर्णय मुझे ठीक नहीं लगा।,negative,sentihin,0
+मुझे इससे कोई भावनात्मक असर नहीं पड़ा।,neutral,sentihin,1
+मौसम आज सुहावना है,positive,sentihin,2
+मुझे इसमें कोई उत्सुकता महसूस नहीं हुई।,neutral,sentihin,1
+मेरी बेटी ने आज एक सुंदर चित्र बनाया।,positive,sentihin,2
+यह निर्णय बेहद असफल रहा।,negative,sentihin,0
+वह घटना इतनी शर्मनाक थी कि सब चुप हो गए।,negative,sentihin,0
+मुझे इससे कोई विशेष अंतर नहीं पड़ा।,neutral,sentihin,1
+उसकी बातें कटु थीं।,negative,sentihin,0
+उसका रवैया बहुत निराशाजनक था।,negative,sentihin,0
+यह खबर निराशाजनक रही।,negative,sentihin,0
+तुम्हारा सुझाव सच में कमाल का है।,positive,sentihin,2
+यह निर्णय मेरे लिए बहुत हानिकारक रहा।,negative,sentihin,0
+उसका व्यव्हार अनुचित था।,negative,sentihin,0
+इस विषय पर मैं कोई पक्ष नहीं ले रहा हूं।,neutral,sentihin,1
+हॉकी टीम का प्रदर्शन बेहद खराब रहा।,negative,sports,0
+यह अनुभव पूरी तरह असफल था।,negative,sentihin,0
+आपकी सोच सदा नई ऊर्जा देती है।,positive,sentihin,2
+तुम्हारी हंसी सुनकर मन प्रसन्न हो गया।,positive,sentihin,2
+मुझे इसमें कोई रूचि नहीं है।,neutral,sentihin,1
+उसकी उपेक्षा से मन में गहरी कसक रह गई।,negative,sentihin,0
+मेरे विचार इस पर स्पष्ट नहीं हैं।,neutral,sentihin,1
+इस ऐप का इंटरफेस शानदार है,positive,sentihin,2
+वह यात्रा सुखद अनुभव रही।,positive,sentihin,2
+मुझे इसमें कोई खास राय नहीं है।,neutral,sentihin,1
+वह फिल्म शानदार अभिनय से भरपूर थी।,positive,sentihin,2
+इस मुद्दे पर सोच विचार अभी भी जारी है।,neutral,sentihin,1
+मुझे उस अनुभव से निराशा हुई।,negative,sentihin,0
+यह कंप्यूटर बहुत पुराना और अनुपयोगी है।,negative,sentihin,0
+मुझे इसमें कोई विचार नहीं।,neutral,sentihin,1
+आपके साथ हर बात आसान लगती है।,positive,sentihin,2
+मेरा फोन बार बार हैंग हो जाता है।,negative,sentihin,0
+आपके शब्द हमेशा प्रेरणा देते हैं।,positive,sentihin,2
+वह अनुभव दुखद रहा।,negative,sentihin,0
+यह निर्णय अत्यंत असफल रहा।,negative,sentihin,0
+यह योजना औसत रही।,neutral,sentihin,1
+मैं रोज़ाना अपने जीवन में नए अवसर तलाशता हूं।,neutral,sentihin,1
+यह सेवा बहुत महंगी और अनुपयोगी है।,negative,sentihin,0
+यह उपलब्धि मेरे जीवन की सबसे बड़ी खुशी है।,positive,sentihin,2
+सिंधु अगले मैच के लिए टीम में शामिल हैं।,neutral,sports,1
+इस मुद्दे पर कुछ भी स्पष्ट नहीं कहा जा सकता।,neutral,sentihin,1
+तुम्हारे विचारों से खुशी हुई।,positive,sentihin,2
+इस अवसर ने मुझे अपनी क्षमताओं पर विश्वास दिलाया।,positive,sentihin,2
+आपकी सलाह मेरे लिए अमूल्य रही।,positive,sentihin,2
+आपकी मुस्कान से दिन बन जाता है।,positive,sentihin,2
+सेवा को लेकर कोई विशेष राय नहीं बनी,neutral,sentihin,1
+तुम्हारे काम की सादगी में एक अलग ही सुंदरता है।,positive,sentihin,2
+उसका व्यव्हार असभ्य था।,negative,sentihin,0
+तुम्हारी सकारात्मक सोच ने मेरे जीवन में नई ऊर्जा भर दी।,positive,sentihin,2
+इस विषय में मेरी कोई स्पष्ट धारणा नहीं बन पाई है।,neutral,sentihin,1
+मुझे इसमें कोई मत नहीं।,neutral,sentihin,1
+खरीदी गई चीज़ बेकार निकली,negative,sentihin,0
+आपका सुझाव बेहद उपयोगी रहा।,positive,sentihin,2
+यह निर्णय मेरे लिए बेहद खराब रहा।,negative,sentihin,0
+कंपनी की नीतियां थोड़ी उलझनभरी थीं,neutral,sentihin,1
+यह निर्णय पूरी तरह विफल रहा।,negative,sentihin,0
+मैं इस रेस्तरां में फिर से खाना चाहूँगा।,neutral,sentihin,1
+मैं इस स्थिति से निराश हूं।,negative,sentihin,0
+मैं चाय पीता हूं।,neutral,sentihin,1
+आपकी सहायता मेरे लिए अमूल्य रही।,positive,sentihin,2
+इस विषय को लेकर मेरी सोच अब भी अधूरी है।,neutral,sentihin,1
+आपके विचार हमेशा प्रेरणा देते हैं।,positive,sentihin,2
+मुझे इसमें कोई नया अनुभव नहीं मिला।,neutral,sentihin,1
+तुम्हारे प्रोत्साहन ने हर बाधा आसान कर दी।,positive,sentihin,2
+मेरी उम्र पैंतीस साल है।,neutral,sentihin,1
+यह फिल्म समय और पैसे दोनों की बर्बादी थी।,negative,sentihin,0
+यह यात्रा पूरी तरह बेकार थी।,negative,sentihin,0
+मैं इस निर्णय से सहमत भी नहीं हूं असहमत भी नहीं।,neutral,sentihin,1
+मुझे इस विषय में कोई दिलचस्पी नहीं है।,neutral,sentihin,1
+यह सेवा अत्यंत लाभकारी रही।,positive,sentihin,2
+आपकी सोच मेरे लिए प्रेरणादायक है।,positive,sentihin,2
+यह अनुभव पूरी तरह व्यर्थ था।,negative,sentihin,0
+बुमराह अगले मैच के लिए टीम में शामिल हैं।,neutral,sports,1
+वह फिल्म ज्ञानवर्धक थी।,positive,sentihin,2
+उसकी आलोचना अनुचित थी।,negative,sentihin,0
+इस पर मैं तटस्थ ही रहना चाहूंगा।,neutral,sentihin,1
+इस पर कोई अंतिम निष्कर्ष निकालना मेरे लिए संभव नहीं।,neutral,sentihin,1
+इस विषय में मुझे कोई खास दिलचस्पी नहीं है।,neutral,sentihin,1
+मैं रोज़ाना फल खाता हूं।,neutral,sentihin,1
+आपका सहयोग सदा प्रशंसनीय रहेगा।,positive,sentihin,2
+यह सेवा केंद्र बहुत अव्यवस्थित और धीमा है।,negative,sentihin,0
+आपकी मुस्कान सदा सुकून देती है।,positive,sentihin,2
+आपका साथ मेरे लिए खुशी की बात है।,positive,sentihin,2
+यह कंपनी की नीति बहुत जटिल है।,negative,sentihin,0
+मैं बस में सफर करता हूं।,neutral,sentihin,1
+यह जगह बहुत गंदी है।,negative,sentihin,0
+तुम्हारे विचारों में इतनी स्पष्टता है कि हर समस्या का हल मिल जाता है।,positive,sentihin,2
+इस योजना ने मेरी जिंदगी बदल दी।,positive,sentihin,2
+मुझे वहाँ की व्यवस्था बेकार लगी।,negative,sentihin,0
+इस पर मेरी कोई ठोस राय नहीं बन पाई।,neutral,sentihin,1
+मैं इस व्यक्ति से चिढ़ा हुआ हूं।,negative,sentihin,0
+इस विषय में मेरे विचार स्पष्ट नहीं हैं।,neutral,sentihin,1
+रोहित ने मैच जिता दिया।,positive,sports,2
+इस अवसर ने मुझे आत्मविश्वास दिया।,positive,sentihin,2
+यह काम समय पर पूरा नहीं हुआ।,negative,sentihin,0
+फैसला अभी स्पष्ट नहीं है,neutral,sentihin,1
+मुझे इस पर कुछ नहीं कहना है।,neutral,sentihin,1
+आपकी सोच हमेशा सकारात्मक दिशा देती है।,positive,sentihin,2
+यह मिठाई बहुत स्वादिष्ट और मीठी है।,positive,sentihin,2
+आपकी मदद से आत्मबल मिलता है।,positive,sentihin,2
+आपकी सोच मेरे लिए शक्ति का स्रोत है।,positive,sentihin,2
+यह सेवा बहुत महंगी और अनावश्यक है।,negative,sentihin,0
+यह शादी का समारोह बहुत भव्य था।,positive,sentihin,2
+फुटबॉल टीम ने बेहतरीन जीत दर्ज की।,positive,sports,2
+इस विषय में अभी मेरी कोई ठोस धारणा नहीं बन पाई है।,neutral,sentihin,1
+इस पर कुछ भी कहना कठिन है।,neutral,sentihin,1
+आपकी तारीफ से आत्मबल मिलता है।,positive,sentihin,2
+यह निर्णय मेरे लिए अस्वीकार्य था।,negative,sentihin,0
+विराट ने शानदार प्रदर्शन किया।,positive,sports,2
+इस पर कुछ भी कहना मेरे लिए सहज नहीं।,neutral,sentihin,1
+वह यात्रा बेहद सुखद रही।,positive,sentihin,2
+मुझे वहाँ की व्यवस्था असुविधाजनक लगी।,negative,sentihin,0
+उसका व्यवहार हर बार मुझे निराश करता रहा है।,negative,sentihin,0
+टेनिस टीम का प्रदर्शन बेहद खराब रहा।,negative,sports,0
+मैं रोज पांच बजे उठता हूं।,neutral,sentihin,1
+उसकी आलोचना से मैं आहत हूं।,negative,sentihin,0
+रसोई में खाना बन रहा है।,neutral,sentihin,1
+उसके तिरस्कार ने मेरे आत्मसम्मान को गहरी ठेस पहुँचाई।,negative,sentihin,0
+मैं इस जगह के बारे में ज्यादा नहीं जानता।,neutral,sentihin,1
+मुझे यह रंग पसंद नहीं है।,negative,sentihin,0
+आपके साथ यात्रा करना मजेदार था।,positive,sentihin,2
+मुझे इसमें कोई रोचक बात नहीं लगी,neutral,sentihin,1
+आपकी मदद से यह काम संभव हो पाया।,positive,sentihin,2
+मुझे उसकी सलाह से हानि हुई।,negative,sentihin,0
+आपकी मुस्कान से मन को सुकून मिलता है।,positive,sentihin,2
+मुझे यह सॉफ्टवेयर बिल्कुल पसंद नहीं आया।,negative,sentihin,0
+मुझे यह बात बहुत बुरी लगी।,negative,sentihin,0
+यह निर्णय पूरी तरह व्यर्थ था।,negative,sentihin,0
+मैं इस काम से बोर हो गया हूं।,negative,sentihin,0
+मैं इस बारे में कुछ खास नहीं कह सकता।,neutral,sentihin,1
+इस पर विचार करना मेरे लिए आसान नहीं है।,neutral,sentihin,1
+मैं पानी पीता हूं।,neutral,sentihin,1
+आपके सहयोग से मैं बहुत प्रसन्न हूं।,positive,sentihin,2
+मैं पार्क में टहलता हूं।,neutral,sentihin,1
+इस विषय पर कोई मत व्यक्त करना मेरे लिए उचित नहीं होगा।,neutral,sentihin,1
+आपकी बातें दिल को सुकून देती हैं।,positive,sentihin,2
+मेरी बहन ने आज एक नई नौकरी पाई।,positive,sentihin,2
+मुझे यह उपहार बहुत पसंद आया।,positive,sentihin,2
+आपकी मुस्कान से ऊर्जा मिलती है।,positive,sentihin,2
+वह घटना दुखद रही।,negative,sentihin,0
+आपका व्यवहार बहुत सम्मानजनक है।,positive,sentihin,2
+मेसी आसान मौका चूक गया।,negative,sports,0
+उसकी आलोचना अनुचित लगी।,negative,sentihin,0
+यह सेवा एकदम बेकार थी।,negative,sentihin,0
+मुझे इसमें कोई अनुभव महसूस नहीं हुआ।,neutral,sentihin,1
+आपकी मदद से कठिनाई दूर हुई।,positive,sentihin,2
+आपका सहयोग मेरे लिए प्रेरणास्रोत है।,positive,sentihin,2
+यह आयोजन पूरी तरह खराब था।,negative,sentihin,0
+आपकी सोच बहुत सकारात्मक है।,positive,sentihin,2
+मेरे पति ने मुझे एक सुंदर तोहफा दिया।,positive,sentihin,2
+मुझे यह काम बहुत कठिन और जटिल लगता है।,negative,sentihin,0
+यह फैसला बहुत ही दुखद रहा।,negative,sentihin,0
+यात्रा में हर कदम पर सुखद अनुभव मिला,positive,sentihin,2
+मुझे यह आदत छोड़नी चाहिए।,negative,sentihin,0
+मुझे इस होटल की बुकिंग प्रक्रिया से परेशानी हुई।,negative,sentihin,0
+वह पाठ्यक्रम मेरे लिए लाभकारी था।,positive,sentihin,2
+तुम्हारी सकारात्मकता ने मुश्किल घड़ी में मेरा हाथ थामा।,positive,sentihin,2
+उस होटल का खाना लाजवाब था।,positive,sentihin,2
+उसकी बेरुखी ने मुझे अंदर तक दुखी कर दिया।,negative,sentihin,0
+आपका सहयोग मेरे लिए प्रेरणा का स्रोत है।,positive,sentihin,2
+मुझे इसमें कोई नई बात नहीं लगी।,neutral,sentihin,1
+मुझे यह नई नीति समझ नहीं आती।,negative,sentihin,0
+इस विषय पर मेरी राय स्पष्ट नहीं है।,neutral,sentihin,1
+यह व्यवहार अस्वीकार्य है।,negative,sentihin,0
+मुझे यह स्थिति बहुत कष्टकारी लग रही है।,negative,sentihin,0
+मैं रोज़ाना अपने माता पिता को फोन करता हूं।,neutral,sentihin,1
+यह फैसला मेरे लिए बुरा रहा।,negative,sentihin,0
+आज का दिन बहुत शानदार रहा।,positive,sentihin,2
+यह योजना पूरी तरह नाकाम रही।,negative,sentihin,0
+आपका व्यवहार बहुत अच्छा है।,positive,sentihin,2
+उसकी तीखी बातें मुझे बहुत दुखी कर गईं।,negative,sentihin,0
+तुम्हारा आत्मबल कठिनाइयों में भी मजबूत बना रहता है।,positive,sentihin,2
+मैं इस नीति से असंतुष्ट हूं।,negative,sentihin,0
+मुझे इसमें कोई नयी बात नहीं दिखी।,neutral,sentihin,1
+मुझे इसका अनुभव अच्छा लगा,positive,sentihin,2
+मुझे इसमें कोई खास उत्साह नहीं।,neutral,sentihin,1
+बारिश ने सारे प्लान बिगाड़ दिए।,negative,sentihin,0
+मुझे इस उत्पाद की डिलीवरी में देरी हुई।,negative,sentihin,0
+यह संगीत मेरे कानों को सुकून देता है।,positive,sentihin,2
+उसके व्यवहार से मैं नाराज हूं।,negative,sentihin,0
+इस दुकान में सामान की विविधता कम है।,negative,sentihin,0
+मैं इस फिल्म को दोबारा देख सकता हूँ।,neutral,sentihin,1
+मैं रोज़ाना अपने सपनों पर काम करता हूं।,neutral,sentihin,1
+मुझे इसमें कोई पक्ष नहीं लेना है।,neutral,sentihin,1
+तुम्हारा आत्मविश्वास देखकर मेरी भी हिम्मत बढ़ गई।,positive,sentihin,2
+यह सेवा बेहद निराशाजनक साबित हुई।,negative,sentihin,0
+आपकी मुस्कान दिल को छू जाती है।,positive,sentihin,2
+वह हमेशा मेरी मदद करता है।,positive,sentihin,2
+मेरी नौकरी चली गई है।,negative,sentihin,0
+यह निर्णय बेहद निराशाजनक था।,negative,sentihin,0
+आपकी मदद से मन प्रसन्न होता है।,positive,sentihin,2
+इस चर्चा में मेरी कोई भूमिका नहीं है।,neutral,sentihin,1
+मुझे इस विषय में कोई राय नहीं बन पाई,neutral,sentihin,1
+इस योजना ने मुझे आत्मनिर्भर बनाया।,positive,sentihin,2
+मुझे इस ट्रेन की देरी से बहुत परेशानी हुई।,negative,sentihin,0
+मुझे उस होटल की सफाई पसंद नहीं आई।,negative,sentihin,0
+मुझे यह अनुभव साधारण लगा।,neutral,sentihin,1
+यह निर्णय मेरे खिलाफ है।,negative,sentihin,0
+वह शो बहुत प्रेरणादायक था।,positive,sentihin,2
+मुझे इसमें कुछ खास नजर नहीं आया।,neutral,sentihin,1
+यह व्यंजन स्वादिष्ट है।,positive,sentihin,2
+तुम्हारे शब्दों में जो सच्चाई है वह दिल को छू जाती है।,positive,sentihin,2
+मुझे इसमें कोई ताजगी नजर नहीं आई।,neutral,sentihin,1
+मैं बहुत थक गया हूं।,negative,sentihin,0
+इस अनुभव ने मुझे सशक्त और आत्मनिर्भर बनाया।,positive,sentihin,2
+आज दोस्तों से मिलकर बहुत अच्छा लगा।,positive,sentihin,2
+तुम्हारा यह प्रदर्शन शानदार था।,positive,sentihin,2
+आपका यह विचार अत्यंत प्रभावशाली है।,positive,sentihin,2
+आपकी सलाह ने मेरी सोच को नया दृष्टिकोण दिया।,positive,sentihin,2
+आपका समर्थन हमेशा उत्साहवर्धक होता है।,positive,sentihin,2
+इस पर अभी कुछ भी कहना जल्दबाज़ी होगी।,neutral,sentihin,1
+यह योजना बहुत ही खराब थी।,negative,sentihin,0
+ट्रैफिक आज सामान्य है।,neutral,sentihin,1
+आपकी मुस्कान हमेशा खुशी देती है।,positive,sentihin,2
+यह खबर सुनकर मैं खुश हो गया।,positive,sentihin,2
+मुझे इसमें कोई दिलचस्पी नहीं।,neutral,sentihin,1
+सेवा की गुणवत्ता औसत थी,neutral,sentihin,1
+वह कार्यक्रम मनोरंजन से भरपूर था।,positive,sentihin,2
+मुझे उस सलाह से नुकसान हुआ।,negative,sentihin,0
+तुम्हारे शब्दों में जो संवेदनशीलता है वह दिल को छू जाती है।,positive,sentihin,2
+मेरे भाई ने आज एक नई कार खरीदी।,positive,sentihin,2
+मुझे यह प्रस्ताव अस्वीकार्य लगा,negative,sentihin,0
+यह फिल्म पूरी तरह बेकार थी।,negative,sentihin,0
+यह यात्रा एकदम असफल रही।,negative,sentihin,0
+तुम्हारे प्रयासों की ईमानदारी हर किसी को प्रेरित करती है।,positive,sentihin,2
+मुझे यह निर्णय सही नहीं लगा।,negative,sentihin,0
+यह जानकारी मेरे लिए कोई खास महत्व नहीं रखती।,neutral,sentihin,1
+आपकी यह सफलता प्रशंसनीय है।,positive,sentihin,2
+मैं इस विषय पर अपनी राय बाद में दूँगा।,neutral,sentihin,1
+मुझे इस विषय पर तटस्थ रहना है।,neutral,sentihin,1
+इस विषय में मेरी कोई विशेष रुचि नहीं है।,neutral,sentihin,1
+वह व्यवहार अनुचित था।,negative,sentihin,0
+प्रस्तुति में कोई नवीनता नहीं दिखी,neutral,sentihin,1
+मुझे यह काम बहुत बोरिंग लगता है।,negative,sentihin,0
+मैं रोज़ाना अपने कपड़े धोता हूं।,neutral,sentihin,1
+मेरे दोस्त की नई नौकरी बहुत अच्छी है।,positive,sentihin,2
+ऑर्डर समय पर नहीं पहुँचा,negative,sentihin,0
+यह निर्णय मेरे लिए तटस्थ रहा,neutral,sentihin,1
+मुझे इस विषय पर कोई स्पष्ट विचार नहीं आया।,neutral,sentihin,1
+मुझे इसमें कोई नयी बात महसूस नहीं हुई।,neutral,sentihin,1
+इस उत्पाद में गुणवत्ता की कमी महसूस हुई,negative,sentihin,0
+मुझे यह सब सामान्य अनुभव लगा।,neutral,sentihin,1
+यह अनुभव काफी निराशाजनक था।,negative,sentihin,0
+मुझे इसमें कोई विशेष विचार नहीं है।,neutral,sentihin,1
+यह सेवा एकदम घटिया स्तर की थी।,negative,sentihin,0
+वह कार्यक्रम बहुत प्रेरणादायक था।,positive,sentihin,2
+मुझे इसमें कोई उपयोगिता नहीं दिखी,negative,sentihin,0
+यह सेवा पूरी तरह नाकाम रही।,negative,sentihin,0
+आपकी सहायता ने इस काम को सफल बनाया।,positive,sentihin,2
+मुझे वहाँ का खाना उबाऊ लगा।,negative,sentihin,0
+उसका व्यवहार इतना अपमानजनक था कि मैं कुछ कह ही नहीं पाया।,negative,sentihin,0
+वह अनुभव कष्टकारी था।,negative,sentihin,0
+यह सफलता मेरे परिवार के लिए खुशी की बात है।,positive,sentihin,2
+मुझे इसमें कोई बदलाव नजर नहीं आया।,neutral,sentihin,1
+यह शिक्षक बहुत प्रेरक और मददगार है।,positive,sentihin,2
+मुझे इसमें कोई दिलचस्पी नहीं है।,neutral,sentihin,1
+आपका सहयोग मेरे लिए हमेशा महत्वपूर्ण है।,positive,sentihin,2
+इस शहर का सांस्कृतिक माहौल बहुत जीवंत है।,positive,sentihin,2
+यह कहानी बहुत दिलचस्प और रोमांचक है।,positive,sentihin,2
+यह सेवा बेहद असफल रही।,negative,sentihin,0
+आपकी सहायता से मेरा आत्मविश्वास पुनः जागृत हुआ।,positive,sentihin,2
+मुझे यह किताब औसत लगी।,neutral,sentihin,1
+आपकी मुस्कान से मन प्रसन्न होता है।,positive,sentihin,2
+मुझे इस विषय में कोई जानकारी नहीं है।,neutral,sentihin,1
+इस पर सोचने का अभी सही समय नहीं है।,neutral,sentihin,1
+इस मामले में मेरी कोई विशेष रुचि नहीं है।,neutral,sentihin,1
+मैं रोज़ाना अपने जीवन में खुशी ढूंढने की कोशिश करता हूं।,neutral,sentihin,1
+इस प्रोडक्ट से मैं संतुष्ट हूं,positive,sentihin,2
+उसकी नफरत भरी बातें सुनकर दिल बहुत दुखी हुआ।,negative,sentihin,0
+मैं इस जगह के इतिहास के बारे में जानना चाहता हूँ।,neutral,sentihin,1
+मैं इस किताब को जल्दी खत्म करना चाहता हूँ।,neutral,sentihin,1
+आपकी मदद बहुमूल्य रही।,positive,sentihin,2
+यह पूरी तरह से व्यर्थ था।,negative,sentihin,0
+सेवा में कोई उल्लेखनीय बात नहीं थी,neutral,sentihin,1
+आपके प्रयास काबिल ए तारीफ हैं।,positive,sentihin,2
+मैं इस बारे में कोई राय नहीं रखता।,neutral,sentihin,1
+इस विषय को लेकर मेरी कोई मजबूत राय नहीं है।,neutral,sentihin,1
+मुझे इस विषय पर कोई ठोस राय नहीं बन पाई।,neutral,sentihin,1
+मुझे इसमें कोई रुचि नहीं।,neutral,sentihin,1
+तुम्हारे सहयोग से ही मैंने यह काम सफलतापूर्वक पूरा किया।,positive,sentihin,2
+मुझे इसमें कुछ नयापन महसूस नहीं हुआ।,neutral,sentihin,1
+बैडमिंटन टीम का प्रदर्शन बेहद खराब रहा।,negative,sports,0
+आपकी मदद से मुश्किलें आसान होती हैं।,positive,sentihin,2
+यह निर्णय पूरी तरह असंवेदनशील था।,negative,sentihin,0
+यह अवसर बेहतरीन रहा।,positive,sentihin,2
+सेवा में कोई नयापन महसूस नहीं हुआ,neutral,sentihin,1
+मुझे इसमें कोई नयी अनुभूति नहीं हुई।,neutral,sentihin,1
+मेरे पिताजी ने आज एक अच्छी खबर दी।,positive,sentihin,2
+मुझे आपकी सहायता से खुशी हुई,positive,sentihin,2
+यह काम बहुत निराशाजनक साबित हुआ।,negative,sentihin,0
+बस स्टॉप यहां से पास है।,neutral,sentihin,1
+मुझे इसमें कोई असर नहीं दिखा।,neutral,sentihin,1
+मुझे इसमें कोई उत्साह नहीं महसूस हुआ।,neutral,sentihin,1
+वह प्रस्तुति अत्यधिक मनोरंजक थी।,positive,sentihin,2
+मैं इसमें न तो खुशी महसूस कर रहा हूं न दुख।,neutral,sentihin,1
+आपकी मदद मेरे लिए संबल बनी।,positive,sentihin,2
+मुझे इस दुकान की ग्राहक सेवा से निराशा हुई।,negative,sentihin,0
+मुझे इससे कोई फ़र्क नहीं पड़ता।,neutral,sentihin,1
+मुझे इसमें कोई विशेष बात नहीं।,neutral,sentihin,1
+उसका साथ मुझे हमेशा सुकून देता है।,positive,sentihin,2
+यह योजना नुकसानदेह रही।,negative,sentihin,0
+मेरे पिताजी आज बहुत प्रसन्न हैं।,positive,sentihin,2
+आपकी सोच सदा सकारात्मक सोच पैदा करती है।,positive,sentihin,2
+तुम्हारा यह काम शानदार है।,positive,sentihin,2
+तुम्हारे स्नेह ने हमेशा मुश्किल समय में सहारा दिया है।,positive,sentihin,2
+मुझे यह बात सामान्य लगी।,neutral,sentihin,1
+मुझे यह नया फोन बिल्कुल पसंद नहीं आया।,negative,sentihin,0
+आपकी सोच से हमेशा सकारात्मकता मिलती है।,positive,sentihin,2
+मुझे वहाँ का अनुभव असंतोषजनक लगा।,negative,sentihin,0
+तुम्हारी ईमानदारी देखकर मन में सम्मान का भाव जागता है।,positive,sentihin,2
+आपका सहयोग हमेशा याद रहेगा।,positive,sentihin,2
+मुझे यह सामान्य ही लगा।,neutral,sentihin,1
+मुझे इसमें कोई खास असर नहीं हुआ।,neutral,sentihin,1
+उसका चिड़चिड़ा स्वभाव सब पर नकारात्मक असर डालता है।,negative,sentihin,0
+यह उपलब्धि मेरे जीवन की सबसे बड़ी सफलता है।,positive,sentihin,2
+इस अवसर ने मुझे आगे बढ़ने का साहस दिया।,positive,sentihin,2
+यह पार्क बहुत हरा भरा और खुशनुमा है।,positive,sentihin,2
+यह नया रेस्तरां शहर में सबसे अच्छा है।,positive,sentihin,2
+इस विषय में कोई भी पक्ष लेना उचित नहीं समझता।,neutral,sentihin,1
+मुझे उसकी भाषा आपत्तिजनक लगी।,negative,sentihin,0
+मुझे इसमें कोई आकर्षण नहीं मिला,neutral,sentihin,1
+वह घटना इतनी दुखद थी कि दिल भर आया।,negative,sentihin,0
+आपके विचार प्रेरणा से भरे हुए हैं।,positive,sentihin,2
+तुम्हारे आत्मविश्वास से हमेशा सीखने को मिलता है।,positive,sentihin,2
+इस त्योहार ने मुझे बहुत खुशी दी।,positive,sentihin,2
+सेवा का स्तर औसत था,neutral,sentihin,1
+मुझे गुस्सा आ रहा है।,negative,sentihin,0
+आपकी मदद अमूल्य रही।,positive,sentihin,2
+फुटबॉल टीम लगातार हार रही है।,negative,sports,0
+तुम्हारा आत्मविश्वास प्रेरणा देता है।,positive,sentihin,2
+यह अनुभव बेहद असंतोषजनक रहा।,negative,sentihin,0
+वह शो बहुत ही रोचक था।,positive,sentihin,2
+फुटबॉल टूर्नामेंट अगले सप्ताह शुरू होगा।,neutral,sports,1
+वह फिल्म प्रेरणादायक थी।,positive,sentihin,2
+समारोह में बहुत अच्छा माहौल था,positive,sentihin,2
+उसकी बातें सुनकर मन बहुत आहत हो गया।,negative,sentihin,0
+मुझे इससे कोई फर्क नहीं पड़ा।,neutral,sentihin,1
+यह प्रयास लाभकारी रहा।,positive,sentihin,2
+इस रेस्तरां में बहुत भीड़ थी।,negative,sentihin,0
+यह सफलता मेरी मेहनत का नतीजा है।,positive,sentihin,2
+फोन बार बार डिसकनेक्ट हो रहा है।,negative,sentihin,0
+टेनिस टूर्नामेंट अगले सप्ताह शुरू होगा।,neutral,sports,1
+तुम्हारा प्रेम अतुल्य है।,positive,sentihin,2
+यह योजना पूरी तरह फेल हो गई।,negative,sentihin,0
+आपकी मुस्कान मेरे दिन को सुंदर बनाती है।,positive,sentihin,2
+मुझे इस विषय में कोई खास दिलचस्पी नहीं है।,neutral,sentihin,1
+तुम्हारे विचार मुझे हर दिन कुछ नया सिखाते हैं।,positive,sentihin,2
+आपकी मुस्कान आत्मविश्वास जगाती है।,positive,sentihin,2
+यह गाना मेरे दिल को छू गया।,positive,sentihin,2
+मुझे यह नियम गलत लगता है।,negative,sentihin,0
+मैं इस उत्पाद के बारे में और जानना चाहता हूँ।,neutral,sentihin,1
+उसकी चुप्पी ने माहौल को और भी ज्यादा तनावपूर्ण बना दिया।,negative,sentihin,0
+मुझे यह नीति गलत लगती है।,negative,sentihin,0
+मुझे सिरदर्द हो रहा है।,negative,sentihin,0
+मैं इस बात से नाराज़ हूं।,negative,sentihin,0
+मुझे इस विषय पर कोई स्पष्ट राय नहीं बन पाई।,neutral,sentihin,1
+आज फुटबॉल का मुकाबला रोमांचक और शानदार रहा।,positive,sports,2
+तुम्हारे शब्द सुकूनदायक हैं।,positive,sentihin,2
+तुम्हारी तारीफ सुनकर अच्छा लगा।,positive,sentihin,2
+यह नया गाना दिल को छू लेता है।,positive,sentihin,2
+आपकी तारीफ मेरे आत्मबल को बढ़ाती है।,positive,sentihin,2
+सड़क जाम में फंसकर बहुत चिढ़ हुई।,negative,sentihin,0
+आपकी सोच से मन को ऊर्जा मिलती है।,positive,sentihin,2
+तुम्हारे विचार हमेशा सकारात्मक ऊर्जा देते हैं।,positive,sentihin,2
+मेरे दादाजी की तबीयत आज बहुत अच्छी है।,positive,sentihin,2
+यह होटल की सेवा बहुत खराब है।,negative,sentihin,0
+मैं इस पर कोई भावना नहीं रखता।,neutral,sentihin,1
+यह स्थिति सामान्य लग रही है।,neutral,sentihin,1
+इस ऐप ने मेरी मदद की,positive,sentihin,2
+इस विषय पर मैं तटस्थ रहना पसंद करूंगा।,neutral,sentihin,1
+मेरे नए हेडफोन्स की ध्वनि बहुत खराब है।,negative,sentihin,0
+मुझे इसका स्वाद पसंद नहीं आया,negative,sentihin,0
+इस मुद्दे पर मैं कुछ नहीं कह सकता।,neutral,sentihin,1
+तुम्हारा यह काम मेरे लिए प्रेरणा का स्रोत है।,positive,sentihin,2
+उसकी बेरुखी ने कई सवाल खड़े कर दिए।,negative,sentihin,0
+आज मैंने एक प्रेरणादायक कहानी सुनी।,positive,sentihin,2
+इस मामले पर सोचने के लिए और समय चाहिए।,neutral,sentihin,1
+बुमराह ने मैच जिता दिया।,positive,sports,2
+वह फिल्म देख कर मन प्रसन्न हुआ।,positive,sentihin,2
+मैं खाना बनाता हूं।,neutral,sentihin,1
+मुझे इससे कोई खास अनुभव नहीं हुआ।,neutral,sentihin,1
+मेरे नाना नानी आज हमारे घर आए।,positive,sentihin,2
+आपकी सोच हमेशा नई दिशा देती है।,positive,sentihin,2
+तुम्हारे स्नेह और अपनत्व ने मेरे दिल को छू लिया है।,positive,sentihin,2
+तुम्हारे शब्द सुकून देते हैं।,positive,sentihin,2
+यह यात्रा अत्यंत निराशाजनक रही।,negative,sentihin,0
+इस रेस्तरां का खाना लाजवाब है,positive,sentihin,2
+आज का अनुभव पूरी तरह से खराब रहा।,negative,sentihin,0
+यह योजना असफल हो गई।,negative,sentihin,0
+वह फिल्म मनोरंजक और ज्ञानवर्धक थी।,positive,sentihin,2
+यह प्रोडक्ट की गुणवत्ता बहुत खराब है।,negative,sentihin,0
+यह निर्णय बहुत ही असंतोषजनक साबित हुआ।,negative,sentihin,0
+मुझे इसमें कुछ खास नहीं दिखा।,neutral,sentihin,1
+इस फूल की खुशबू बहुत मनमोहक है।,positive,sentihin,2
+मुझे इस विषय पर कोई खास विचार नहीं आया।,neutral,sentihin,1
+वह किताब पढ़कर प्रसन्नता हुई।,positive,sentihin,2
+आज हॉकी का मुकाबला रोमांचक और शानदार रहा।,positive,sports,2
+मुझे इसमें कोई नयापन महसूस नहीं हुआ।,neutral,sentihin,1
+उसके शब्द इतने अपमानजनक थे कि मैं कुछ पल को स्तब्ध रह गया।,negative,sentihin,0
+मुझे इस विषय में कोई विशेष रुचि नहीं है,neutral,sentihin,1
+मुझे यह प्रोडक्ट बहुत घटिया लगा।,negative,sentihin,0
+मुझे इसमें कुछ विशेष नजर नहीं आया।,neutral,sentihin,1
+आपकी मदद हमेशा प्रशंसनीय रहती है।,positive,sentihin,2
+यह प्रयास अत्यंत सफल रहा।,positive,sentihin,2
+यह जूता टाइट है।,negative,sentihin,0
+यह अनुभव अत्यंत निराशाजनक रहा।,negative,sentihin,0
+मुझे इसमें कुछ भी अप्रत्याशित नहीं।,neutral,sentihin,1
+उसका बर्ताव बार बार मुझे अपमानित करता रहा।,negative,sentihin,0
+उसकी कड़वी बातों ने मुझे भीतर से तोड़ दिया।,negative,sentihin,0
+तुम्हारा आत्मविश्वास देखकर मेरे मन में भी उत्साह जागता है।,positive,sentihin,2
+पुस्तक का विषय काफी रोचक लगा,positive,sentihin,2
+इस विषय पर मेरी कोई मजबूत राय नहीं बन पाई।,neutral,sentihin,1
+मुझे इस बस की सेवा से बहुत परेशानी हुई।,negative,sentihin,0
+आपके शब्दों से बहुत हिम्मत मिली।,positive,sentihin,2
+मुझे इसमें कोई फर्क महसूस नहीं हुआ।,neutral,sentihin,1
+मुझे इस विषय में कोई गहराई महसूस नहीं हुई।,neutral,sentihin,1
+फिल्म की लंबाई बहुत अधिक थी,negative,sentihin,0
+यह अनुभव पूरी तरह विफल साबित हुआ।,negative,sentihin,0
+खराब सेवाओं ने पूरे अनुभव को बर्बाद कर दिया,negative,sentihin,0
+यह अनुभव पूरी तरह बेकार रहा।,negative,sentihin,0
+आपका यह विचार क्रांतिकारी है।,positive,sentihin,2
+मुझे इसमें कोई खास फर्क नहीं दिखा।,neutral,sentihin,1
+यह पुरस्कार मेरे लिए सम्मान की बात है।,positive,sentihin,2
+यह सेवा बेहद बेकार साबित हुई।,negative,sentihin,0
+इस गाने को सुनकर मन प्रसन्न हो गया।,positive,sentihin,2
+मुझे इससे कुछ लेना देना नहीं।,neutral,sentihin,1
+यह अनुभव सामान्य रहा।,neutral,sentihin,1
+मुझे इस विषय में कोई भावना नहीं है।,neutral,sentihin,1
+मुझे इसमें कुछ खास नहीं मिला।,neutral,sentihin,1
+मुझे इसमें कोई नई बात नजर नहीं आई,neutral,sentihin,1
+मुझे यह काम बहुत कठिन लग रहा है।,negative,sentihin,0
+उसने सार्वजनिक रूप से मुझे शर्मिंदा कर दिया।,negative,sentihin,0
+मुझे इसमें कोई आकर्षण महसूस नहीं हुआ।,neutral,sentihin,1
+इस विषय में मेरी कोई ठोस राय नहीं बन पाई है।,neutral,sentihin,1
+आज मैं बहुत खुश हूं।,positive,sentihin,2
+मुझे इसमें कुछ खास समझ नहीं आया।,neutral,sentihin,1
+सेवा के बारे में कोई ठोस राय नहीं है,neutral,sentihin,1
+तुम्हारी हर बात में सच्चाई और विश्वास झलकता है।,positive,sentihin,2
+मुझे यह प्रस्तुति उबाऊ लगी।,negative,sentihin,0
+मुझे इसमें कुछ अलग नहीं लगा।,neutral,sentihin,1
+तुम्हारा व्यवहार बहुत सराहनीय है।,positive,sentihin,2
+इस सेवा से मैं असंतुष्ट हूं,negative,sentihin,0
+इस ऐप का उपयोग आसान था,positive,sentihin,2
+मुझे इस विषय में कोई रुचि नहीं है।,neutral,sentihin,1
+यह निर्णय पूरी तरह असफल साबित हुआ।,negative,sentihin,0
+मुझे इसमें कोई नयी बात नजर नहीं आई।,neutral,sentihin,1
+मुझे इसमें कुछ नया अनुभव नहीं हुआ।,neutral,sentihin,1
+यह प्रयास पूरी तरह से असफल रहा।,negative,sentihin,0
+तुम्हारी मदद के बिना यह काम संभव नहीं था।,positive,sentihin,2
+इस सेवा का अनुभव इतना खराब था कि मैं किसी को सुझाव नहीं दूंगा।,negative,sentihin,0
+यह सेवा बहुत महंगी और बेकार है।,negative,sentihin,0
+मुझे यह काम बहुत बोरिंग और मुश्किल लगता है।,negative,sentihin,0
+यह फिल्म काफी अच्छी थी,positive,sentihin,2
+आपके सहयोग से सब आसान हुआ।,positive,sentihin,2
+उसकी उपेक्षा से मन में कई सवाल पैदा हो गए।,negative,sentihin,0
+इस शहर की सड़कें बहुत सुंदर हैं।,positive,sentihin,2
+मेरा इंटरनेट कनेक्शन बार बार टूट रहा है।,negative,sentihin,0
+यह अनुभव शानदार था,positive,sentihin,2
+मैं इस मामले पर अपनी राय बाद में दूँगा।,neutral,sentihin,1
+तुम्हारे प्रोत्साहन से हर चुनौती आसान लगने लगी है।,positive,sentihin,2
+मुझे यह स्थिति बहुत डरावनी लग रही है।,negative,sentihin,0
+वह प्रस्तुति बहुत सराहनीय थी।,positive,sentihin,2
+आपका व्यवहार बहुत ही प्रशंसनीय है।,positive,sentihin,2
+मेरी पत्नी ने आज एक नई रेसिपी बनाई।,positive,sentihin,2
+इस पर मेरा रुख अब तक पूरी तरह तय नहीं हो पाया है।,neutral,sentihin,1
+मुझे इसमें कोई विशेष बदलाव महसूस नहीं हुआ।,neutral,sentihin,1
+तुम्हारा समर्थन मेरे लिए बहुत मायने रखता है।,positive,sentihin,2
+यह फिल्म अत्यंत निराशाजनक साबित हुई।,negative,sentihin,0
+मैं इस व्यक्ति से निराश हूं।,negative,sentihin,0
+यह निर्णय मेरे लिए कठिन था,neutral,sentihin,1
+एप्लिकेशन का इंटरफेस सहज और सुंदर है,positive,sentihin,2
+काम में लगातार बाधाएं आ रही हैं।,negative,sentihin,0
+मुझे इसमें कोई खास बदलाव नहीं लगा।,neutral,sentihin,1
+मौसम आज सामान्य है।,neutral,sentihin,1
+यह यात्रा काफी निराशाजनक रही।,negative,sentihin,0
+यह निर्णय पूरी तरह गलत निकला।,negative,sentihin,0
+मौसम की खराबी ने मूड खराब कर दिया।,negative,sentihin,0
+उसका क्रोधित चेहरा देखकर सभी घबरा गए।,negative,sentihin,0
+यह निर्णय अत्यंत असंतोषजनक था।,negative,sentihin,0
+आपका समर्थन मेरी ताकत है।,positive,sentihin,2
+यह निर्णय पूरी तरह गलत साबित हुआ।,negative,sentihin,0
+मुझे वहाँ की व्यवस्था उबाऊ लगी।,negative,sentihin,0
+यह सफलता मेरे लिए गौरव की बात है।,positive,sentihin,2
+मुझे इस बारे में कोई ठोस राय नहीं बन पाई।,neutral,sentihin,1
+यह उत्पाद मेरे काम का नहीं था,negative,sentihin,0
+इस पर अपनी राय देना मेरे लिए उचित नहीं होगा।,neutral,sentihin,1
+आपकी मदद से मनोबल बढ़ा।,positive,sentihin,2
+यह होटल का कमरा बहुत गंदा और अंधकारमय था।,negative,sentihin,0
+यह संगीत समारोह अविस्मरणीय था।,positive,sentihin,2
+इस अनुभव ने मुझे अंदर से सशक्त किया।,positive,sentihin,2
+उसकी कठोरता ने मुझे बहुत दुखी किया।,negative,sentihin,0
+मैं रोज़ाना सब्जी खाता हूं।,neutral,sentihin,1
+यह निर्णय एकदम असंतोषजनक साबित हुआ।,negative,sentihin,0
+मैं दस बजे सो जाता हूं।,neutral,sentihin,1
+आज का दिन बहुत ही व्यर्थ गया।,negative,sentihin,0
+आपकी मदद मेरे लिए अनमोल है।,positive,sentihin,2
+मुझे वहाँ का वातावरण खराब लगा।,negative,sentihin,0
+यह अनुभव पूरी तरह विफल रहा।,negative,sentihin,0
+मुझे इस बारे में कोई राय नहीं है।,neutral,sentihin,1
+यह सेवा पूरी तरह बेकार साबित हुई।,negative,sentihin,0
+इस पर टिप्पणी करना मेरे लिए कठिन होगा।,neutral,sentihin,1
+तुम्हारे साथ बिताया समय मेरी सबसे प्यारी यादों में शामिल है।,positive,sentihin,2
+यह अवसर विशेष रहा।,positive,sentihin,2
+आपकी सलाह अमूल्य रही।,positive,sentihin,2
+मुझे इसका स्वाद बहुत अच्छा लगा,positive,sentihin,2
+तुम्हारे आत्मविश्वास ने मुझे भी मजबूत बनाया है।,positive,sentihin,2
+तुम्हारा साथ सुखद है।,positive,sentihin,2
+उसका तीखा लहजा सबको खल गया।,negative,sentihin,0
+इस विषय पर मेरी कोई स्पष्ट राय नहीं है।,neutral,sentihin,1
+मैं रोज़ाना अपने दोस्तों के साथ चैट करता हूं।,neutral,sentihin,1
+यह खुशी मेरे जीवन में नई उमंग भरती है।,positive,sentihin,2
+इस दुकान की कीमतें बहुत ज्यादा हैं।,negative,sentihin,0
+यह बस की सेवा बहुत अनियमित है।,negative,sentihin,0
+मुझे वहाँ की सेवा असंतोषजनक लगी।,negative,sentihin,0
+यात्रा के दौरान कोई कठिनाई नहीं हुई,positive,sentihin,2
+मेरा फोन खराब हो गया है।,negative,sentihin,0
+मैं रोज़ाना अपने बालों में तेल लगाता हूं।,neutral,sentihin,1
+आज क्रिकेट का मुकाबला रोमांचक और शानदार रहा।,positive,sports,2
+यह प्रोडक्ट बेकार है,negative,sentihin,0
+आपकी मदद मेरे लिए सदैव महत्वपूर्ण है।,positive,sentihin,2
+इस खबर को सुनकर मुझे न तो खुशी हुई न ही दुख।,neutral,sentihin,1
+रेस्तरां की मेन्यू में विविधता थी,positive,sentihin,2
+तुम्हारा आत्मबल हर परिस्थिति में मजबूती देता है।,positive,sentihin,2
+मैं इस विषय से नाखुश हूं।,negative,sentihin,0
+नीरज ने शानदार प्रदर्शन किया।,positive,sports,2
+यह अनुभव साधारण रहा।,neutral,sentihin,1
+यह घटना बहुत ही हृदय विदारक थी।,negative,sentihin,0
+इस कहानी ने मुझे बहुत प्रेरित किया।,positive,sentihin,2
+मौसम ने सफर को और सुंदर बना दिया,positive,sentihin,2
+नीरज अगले मैच के लिए टीम में शामिल हैं।,neutral,sports,1
+मुझे यह व्यवहार अपमानजनक लगता है।,negative,sentihin,0
+मैं इस व्यक्ति से परेशान हूं।,negative,sentihin,0
+मैं इस व्यक्ति से बहुत निराश हूं।,negative,sentihin,0
+मुझे यह नौकरी से बहुत परेशानी हो रही है।,negative,sentihin,0
+इस योजना ने मुझे उम्मीद से ज्यादा लाभ पहुंचाया।,positive,sentihin,2
+आज मैंने अपनी पसंदीदा डिश खाई।,positive,sentihin,2
+आपकी मदद हमेशा महत्व रखती है।,positive,sentihin,2
+यह अनुभव बहुत ही बुरा रहा।,negative,sentihin,0
+यह कार की कंडिशन बहुत खराब है।,negative,sentihin,0
+मुझे इस जगह से कोई शिकायत नहीं है,neutral,sentihin,1
+इस पर राय देने से मैं बचना चाहूंगा।,neutral,sentihin,1
+मुझे इसमें कोई रोचक बात नहीं दिखी।,neutral,sentihin,1
+यह वेबसाइट बहुत धीमी है।,negative,sentihin,0
+उसके रवैये ने मेरे आत्म सम्मान को ठेस पहुँचाई।,negative,sentihin,0
+रोहित अगले मैच के लिए टीम में शामिल हैं।,neutral,sports,1
+मुझे इस पर कोई विशेष विचार नहीं है।,neutral,sentihin,1
+आज टेनिस का मैच शाम 7 बजे शुरू होगा।,neutral,sports,1
+आपकी मुस्कान हमेशा प्रेरणा देती है।,positive,sentihin,2
+आज मैंने एक मजेदार खेल खेला।,positive,sentihin,2
+सेवा की गति धीमी लगी,negative,sentihin,0
+मुझे इसमें कोई विशेष बदलाव नहीं हुआ।,neutral,sentihin,1
+मैं रोज़ाना अपने बगीचे में फूल देखता हूं।,neutral,sentihin,1
+यह फिल्म बहुत उबाऊ और लंबी थी।,negative,sentihin,0
+आज सोमवार है।,neutral,sentihin,1
+यह अनुभव बेहद निराशाजनक था।,negative,sentihin,0
+यह फूलों का बगीचा बहुत सुगंधित है।,positive,sentihin,2
+आपकी मदद के लिए मैं आभारी हूं।,positive,sentihin,2
+मुझे इसमें कुछ खास अनुभव नहीं हुआ।,neutral,sentihin,1
+यह यात्रा पूरी तरह निराशाजनक रही।,negative,sentihin,0
+मेरा मूड खराब है।,negative,sentihin,0
+आपकी उपस्थिति से माहौल अच्छा होता है।,positive,sentihin,2
+आपकी सोच हमेशा प्रेरणा का स्रोत रहती है।,positive,sentihin,2
+आपकी सोच में हमेशा सकारात्मकता झलकती है।,positive,sentihin,2
+उसके शब्द दिल छू लेने वाले थे।,positive,sentihin,2
+उसके कठोर शब्द सुनकर मैं पूरी तरह हताश हो गया।,negative,sentihin,0
+मैं इस किताब को अपने भाई को उपहार दूँगा।,neutral,sentihin,1
+आपकी सहायता से यह काम संभव हो पाया।,positive,sentihin,2
+सेवा बहुत ही संतोषजनक रही,positive,sentihin,2
+तुम्हारी बातों से सुकून और आत्मविश्वास दोनों मिलता है।,positive,sentihin,2
+यह फिल्म पूरी तरह असफल साबित हुई।,negative,sentihin,0
+यह निर्णय बहुत ही निराशाजनक रहा।,negative,sentihin,0
+तुम्हारे प्रयासों ने पूरे समूह को प्रेरित किया है।,positive,sentihin,2
+कबड्डी टीम का प्रदर्शन बेहद खराब रहा।,negative,sports,0
+मुझे उस व्यक्ति पर भरोसा नहीं हुआ।,negative,sentihin,0
+मैं आज बहुत खुश हूं।,positive,sentihin,2
+तुम्हारा आत्मविश्वास प्रेरणादायक है।,positive,sentihin,2
+मुझे यह घटना सामान्य लगी।,neutral,sentihin,1
+वह फिल्म देखकर मन खुश हुआ।,positive,sentihin,2
+मुझे इसमें कोई विशेष बात महसूस नहीं हुई।,neutral,sentihin,1
+आपकी तारीफ सुनकर मन प्रसन्न हो गया।,positive,sentihin,2
+यह अनुभव पूरी तरह बेकार था।,negative,sentihin,0
+आज मेरे बच्चे ने स्कूल में पुरस्कार जीता।,positive,sentihin,2
+प्रस्तुति में स्पष्टता की कमी रही,negative,sentihin,0
+यह छुट्टी बहुत आनंदमय और यादगार थी।,positive,sentihin,2
+इस होटल की सफाई खराब थी,negative,sentihin,0
+आज हॉकी का मैच शाम 7 बजे शुरू होगा।,neutral,sports,1
+सेवा का अनुभव औसत ही रहा,neutral,sentihin,1
+यह नया गाना बहुत लोकप्रिय हो रहा है।,positive,sentihin,2
+यह दुकान का व्यवहार बहुत अशिष्ट था।,negative,sentihin,0
+मैं सुबह योग करता हूं।,neutral,sentihin,1
+वह पुस्तक ज्ञानवर्धक थी।,positive,sentihin,2
+यह अनुभव अत्यंत असंतोषजनक रहा।,negative,sentihin,0
+वह प्रस्तुति बहुत प्रभावशाली रही।,positive,sentihin,2
+मुझे इसमें कोई रुचि नहीं है,neutral,sentihin,1
+मुझे इस विषय पर कोई बात नहीं करनी।,neutral,sentihin,1
+मुझे यह अनुभव निराशाजनक लगा।,negative,sentihin,0
+तुम्हारा व्यवहार बहुत प्रशंसनीय है।,positive,sentihin,2
+यह दिन मेरे लिए यादगार रहेगा।,positive,sentihin,2
+इस पर कुछ भी कहना मेरे लिए कठिन होगा।,neutral,sentihin,1
+आपके विचार मेरे लिए प्रेरणा हैं।,positive,sentihin,2
+मैं इस बारे में कोई राय नहीं दे सकता।,neutral,sentihin,1
+इस उपलब्धि पर मुझे गर्व महसूस हो रहा है।,positive,sentihin,2
+मुझे इस निर्णय से कोई फर्क नहीं पड़ा।,neutral,sentihin,1
+तुम्हारे साथ बिताया हर दिन मेरे जीवन का अनमोल हिस्सा है।,positive,sentihin,2
+यह ऐप बहुत धीमा और अनुपयोगी है।,negative,sentihin,0
+वह परिस्थिति इतनी अपमानजनक थी कि शब्द नहीं मिलते।,negative,sentihin,0
+आपका प्रेम हमेशा संबल देता है।,positive,sentihin,2
+तुम्हारा प्रेम हर परिस्थिति में मेरा संबल बनता है।,positive,sentihin,2
+मुझे इसमें कोई दिक्कत नहीं हुई,positive,sentihin,2
+मैं इस स्थिति से डरा हुआ हूं।,negative,sentihin,0
+वह फिल्म अत्यंत प्रेरणादायक थी।,positive,sentihin,2
+यह खुशी मेरे चेहरे पर मुस्कान ले आती है।,positive,sentihin,2
+इस योजना से मुझे उम्मीद से अधिक लाभ मिला।,positive,sentihin,2
+मैं इस बारे में कुछ नहीं कह सकता।,neutral,sentihin,1
+वह होटल का कमरा बहुत आरामदायक था।,positive,sentihin,2
+मैं इस विषय में कोई पक्ष नहीं लूंगा।,neutral,sentihin,1
+उसकी तीखी नजरों ने मुझे बहुत असहज कर दिया।,negative,sentihin,0
+मुझे इस विषय पर कोई विशेष विचार नहीं हैं।,neutral,sentihin,1
+मैं रोज़ाना अपने स्वास्थ्य का ध्यान रखता हूं।,neutral,sentihin,1
+यह मौसम न गर्म है न ठंडा।,neutral,sentihin,1
+मुझे वहाँ की व्यवस्था पसंद नहीं आई।,negative,sentihin,0
+मुझे इसमें कोई विशेष असर नहीं दिखा।,neutral,sentihin,1
+उसकी तीखी आलोचना ने मुझे दुखी किया।,negative,sentihin,0
+यह निर्णय मेरे लिए सहज था,neutral,sentihin,1
+मुझे इसमें कोई नयापन नजर नहीं आया।,neutral,sentihin,1
+आपकी उपस्थिति सकारात्मक ऊर्जा लाती है।,positive,sentihin,2
+यह दिन मेरे लिए खुशी का दिन है।,positive,sentihin,2
+इस पर कोई राय देना उचित नहीं होगा।,neutral,sentihin,1
+मुझे यह काम करने में डर लगता है।,negative,sentihin,0
+वह किताब पढ़कर अच्छा अनुभव हुआ।,positive,sentihin,2
+मुझे यह बात बहुत दुखदायी लगी।,negative,sentihin,0
+यह निर्णय मेरे लिए पूरी तरह से निराशाजनक रहा।,negative,sentihin,0
+यह खुशी मेरे चेहरे पर चमक लाती है।,positive,sentihin,2
+टेनिस टीम ने बेहतरीन जीत दर्ज की।,positive,sports,2
+यह अनुभव बेहद खराब था।,negative,sentihin,0
+यह बगीचा बहुत हरा भरा और शांत है।,positive,sentihin,2
+आज का दिन बहुत खुशी से बीता।,positive,sentihin,2
+आपकी सोच हमेशा उत्साहवर्धक रहती है।,positive,sentihin,2
+आपकी तारीफें सुनकर बहुत खुशी हुई।,positive,sentihin,2
+मैं इस बात से बहुत चिंतित हूं।,negative,sentihin,0
+यह फिल्म बेहद शानदार थी।,positive,sentihin,2
+यह सेवा बहुत घटिया है।,negative,sentihin,0
+मैं रोज़ाना कुछ नया करने की कोशिश करता हूं।,neutral,sentihin,1
+प्रोडक्ट की गुणवत्ता ने प्रभावित किया,positive,sentihin,2
+तुम्हारी सहनशीलता और विनम्रता से मैं प्रभावित हूं।,positive,sentihin,2
+यह त्योहार की तैयारी बहुत अच्छी थी।,positive,sentihin,2
+इस छुट्टी का मज़ा बहुत आया।,positive,sentihin,2
+मुझे इसमें कोई विशेष बात नहीं दिखी,neutral,sentihin,1
+यह निर्णय तटस्थ रहा,neutral,sentihin,1
+यह मौसम आज सामान्य है।,neutral,sentihin,1
+मेरी मां ने आज एक सुंदर पेंटिंग बनाई।,positive,sentihin,2
+वह दिन मेरे जीवन के सबसे उदास दिनों में शामिल है।,negative,sentihin,0
+आपकी यह सफलता मुझे गर्व से भर देती है।,positive,sentihin,2
+आपकी सोच हमेशा सकारात्मक ऊर्जा देती है।,positive,sentihin,2
+यह खबर सुनकर मुझे दुख हुआ।,negative,sentihin,0
+यह काम व्यर्थ हो गया।,negative,sentihin,0
+इस मुद्दे पर मैं किसी पक्ष में नहीं रहना चाहता।,neutral,sentihin,1
+तुम्हारे शब्दों ने मुझे खुश कर दिया।,positive,sentihin,2
+मुझे वहाँ की सेवा निराशाजनक लगी।,negative,sentihin,0
+आज मेरे बच्चे ने अपना पहला गोल किया।,positive,sentihin,2
+मेरी पत्नी ने आज एक स्वादिष्ट खाना बनाया।,positive,sentihin,2
+उसकी उपेक्षा दुखद थी।,negative,sentihin,0
+मुझे इसमें कोई खास दिलचस्पी नहीं है।,neutral,sentihin,1
+आपकी तारीफ सुनकर खुशी हुई।,positive,sentihin,2
+इस पर विचार करने का अभी सही समय नहीं है।,neutral,sentihin,1
+यह निर्णय मेरे लिए निराशाजनक रहा।,negative,sentihin,0
+उसकी मदद से मेरा काम आसान हो गया।,positive,sentihin,2
+मुझे इस फिल्म की कहानी कमजोर लगी,negative,sentihin,0
+मेरा घर यहां से दो किलोमीटर दूर है।,neutral,sentihin,1
+तुम्हारा साथ बहुत खास है।,positive,sentihin,2
+आपकी मदद ने हर मुश्किल आसान कर दी।,positive,sentihin,2
+रेस्तरां की सजावट देखने लायक है,positive,sentihin,2
+तुम्हारी मेहनत से हर काम में निखार आ जाता है।,positive,sentihin,2
+यह पहाड़ों का दृश्य अविस्मरणीय था।,positive,sentihin,2
+मुझे यह काम करने में बहुत दिक्कत हो रही है।,negative,sentihin,0
+तुम्हारा यह काम मेरे लिए अनमोल है।,positive,sentihin,2
+यह पुस्तक मेरे दिल को छू गई।,positive,sentihin,2
+मैं इस किताब को अपने दोस्तों को सुझाऊँगा।,neutral,sentihin,1
+मुझे इसमें कुछ कहने की आवश्यकता नहीं।,neutral,sentihin,1
+मुझे यह परिस्थिति कष्टकारी लगती है।,negative,sentihin,0
+यह ऐप मेरे लिए फायदेमंद रहा,positive,sentihin,2
+आपकी सहायता सराहनीय रही।,positive,sentihin,2
+इस पर बोलना मेरे लिए सहज नहीं होगा।,neutral,sentihin,1
+मुझे इसमें कोई खास बात नहीं लगी,neutral,sentihin,1
+यह ऐप औसत दर्जे का है,neutral,sentihin,1
+तुम्हारे द्वारा दी गई छोटी सी मुस्कान ने दिन बना दिया।,positive,sentihin,2
+मुझे इससे कोई समस्या नहीं।,neutral,sentihin,1
+आज फुटबॉल का मैच शाम 7 बजे शुरू होगा।,neutral,sports,1
+यह योजना असफल साबित हुई।,negative,sentihin,0
+मैं आपसे मिलकर बहुत खुश हूं।,positive,sentihin,2
+यह प्रोडक्ट बेकार है।,negative,sentihin,0
+यह निर्णय पूरी तरह गलत और असंवेदनशील रहा।,negative,sentihin,0
+इस विषय पर मैं कोई टिप्पणी नहीं करना चाहूंगा।,neutral,sentihin,1
+आपके सहयोग से मेरा आत्मविश्वास बढ़ा।,positive,sentihin,2
+मुझे इसमें कोई खास रुचि नहीं हुई।,neutral,sentihin,1
+आपकी सलाह हमेशा उपयोगी रहती है।,positive,sentihin,2
+यह उपहार मेरे दिल के बहुत करीब है।,positive,sentihin,2
+प्रदर्शन में कोई कमी नजर नहीं आई,positive,sentihin,2
+यह कार की परफॉर्मेंस बहुत खराब है।,negative,sentihin,0
+मुझे इस बारे में कुछ भी नहीं कहना है।,neutral,sentihin,1
+यह निर्णय पूरी तरह बेकार साबित हुआ।,negative,sentihin,0
+मुझे इसमें कोई टिप्पणी नहीं है।,neutral,sentihin,1
+आज मैंने एक अच्छी फिल्म देखी।,positive,sentihin,2
+मुझे यह सामान्य अनुभव लगा।,neutral,sentihin,1
+यह चित्र बहुत सुंदर है।,positive,sentihin,2
+यह संगीत कार्यक्रम बहुत शानदार था।,positive,sentihin,2
+वह सेवा अत्यंत उत्कृष्ट थी।,positive,sentihin,2
+इस कंपनी का भविष्य उज्ज्वल है।,positive,sentihin,2
+यह मामला सामान्य लग रहा है।,neutral,sentihin,1
+यह फूलों की खुशबू बहुत मनमोहक है।,positive,sentihin,2
+मुझे इस विषय में कोई रुचि नहीं।,neutral,sentihin,1
+मुझे इसका संगीत अच्छा लगा,positive,sentihin,2
+आपकी मदद मेरे लिए प्रेरणादायक रहती है।,positive,sentihin,2
+आज की सेवा से मैं पूरी तरह असंतुष्ट हूं।,negative,sentihin,0
+यह फिल्म देखकर मुझे बहुत पछतावा हुआ।,negative,sentihin,0
+मुझे इस विषय में कोई जानकारी नहीं है,neutral,sentihin,1
+मुझे इस पर कोई भावनाएँ नहीं हैं।,neutral,sentihin,1
+आपके विचार हमेशा उत्साह देते हैं।,positive,sentihin,2
+तुम्हारे विचार इतने प्रेरक हैं कि निराशा भी दूर हो जाती है।,positive,sentihin,2
+आपकी मदद के लिए मैं दिल से आभारी हूं।,positive,sentihin,2
+तुम्हारा यह सुझाव बेहतरीन है।,positive,sentihin,2
+तुम्हारे शब्दों में जो अपनापन है वह दुर्लभ है।,positive,sentihin,2
+इस दुकान की वापसी नीति बहुत जटिल है।,negative,sentihin,0
+इस प्रश्न पर मेरी कोई प्रतिक्रिया नहीं है।,neutral,sentihin,1
+यह निर्णय बेहद असंतोषजनक रहा।,negative,sentihin,0
+वह सफर बहुत रोमांचक रहा।,positive,sentihin,2
+यह खबर सामान्य लग रही है।,neutral,sentihin,1
+उसकी बातों से मैं हतोत्साहित हुआ।,negative,sentihin,0
+आपकी मदद हमेशा अमूल्य रहती है।,positive,sentihin,2
+तुम्हारी मेहनत काबिले तारीफ है।,positive,sentihin,2
+उसका व्यवहार अशिष्ट था।,negative,sentihin,0
+यह प्रयास पूरी तरह असफल रहा।,negative,sentihin,0
+वह सैर बेहद सुकून भरी थी।,positive,sentihin,2
+इस पर फैसला लेना अभी सही नहीं होगा।,neutral,sentihin,1
+मुझे इसमें कोई कमी नजर नहीं आई,positive,sentihin,2
+आपका व्यवहार सच में प्रेरणादायक है।,positive,sentihin,2
+इस सेवा से मुझे बहुत फायदा हुआ,positive,sentihin,2
+वह व्यवहार सभी के लिए अपमानजनक साबित हुआ।,negative,sentihin,0
+मुझे इस विषय में कोई खास दिलचस्पी नहीं थी।,neutral,sentihin,1
+इस रेस्तरां का खाना लाजवाब है।,positive,sentihin,2
+यह अनुभव बहुत ही कष्टदायक रहा।,negative,sentihin,0
+आपकी बातों से ऊर्जा मिलती है।,positive,sentihin,2
+मैं इस मामले में कोई राय नहीं रखता।,neutral,sentihin,1
+मुझे इसमें कोई उत्साह नहीं दिखा।,neutral,sentihin,1
+मैं रोज़ाना अखबार पढ़ता हूं।,neutral,sentihin,1
+मुझे इसमें कुछ अलग महसूस नहीं हुआ।,neutral,sentihin,1
+मैं रोज़ाना सात घंटे सोता हूं।,neutral,sentihin,1
+वह होटल में सेवाएं बेहतरीन थीं।,positive,sentihin,2
+मुझे इसमें कोई विशेष रूचि नहीं।,neutral,sentihin,1
+मुझे इसमें कुछ खास नहीं लगा।,negative,sentihin,0
+इस टैक्सी ड्राइवर ने मुझसे ज्यादा पैसे लिए।,negative,sentihin,0
+यह योजना पूरी तरह फेल रही।,negative,sentihin,0
+मैं इस विषय पर मौन रहूंगा।,neutral,sentihin,1
+तुम्हारी सोच और नजरिया दूसरों से बिलकुल अलग है।,positive,sentihin,2
+आपकी सोच से नई ऊर्जा मिलती है।,positive,sentihin,2
+यह पहाड़ों की हवा बहुत ताजी और स्वच्छ है।,positive,sentihin,2
+मुझे इससे कोई विशेष प्रतिक्रिया नहीं हुई।,neutral,sentihin,1
+तुम्हारे विचार इतने स्पष्ट और प्रेरक हैं कि सुनकर अच्छा लगता है।,positive,sentihin,2
+आपकी प्रेरणा से बहुत कुछ सीखा।,positive,sentihin,2
+यह समुद्र तट बहुत शांत और सुंदर है।,positive,sentihin,2
+मुझे इसमें कोई असुविधा नहीं हुई,positive,sentihin,2
+सेवा का अनुभव अच्छा रहा,positive,sentihin,2
+वह व्यक्ति बहुत रूखा व्यवहार करता है।,negative,sentihin,0
+इस फिल्म का अंत निराशाजनक था,negative,sentihin,0
+तुम्हारा यह उपहार अनमोल है।,positive,sentihin,2
+इस मामले में मेरी सोच अभी अधूरी है।,neutral,sentihin,1
+मैं दोस्तों के साथ गेम खेलता हूं।,neutral,sentihin,1
+कंपनी ने अपेक्षाओं से बढ़कर सेवा दी,positive,sentihin,2
+इस पर चर्चा करना मेरे लिए सहज नहीं है।,neutral,sentihin,1
+उसके तिरस्कार ने मेरा आत्मबल तोड़ दिया।,negative,sentihin,0
+इस प्रयास ने मेरे आत्मविश्वास को बढ़ाया।,positive,sentihin,2
+वह यात्रा बहुत आनंददायक रही।,positive,sentihin,2
+मुझे वहाँ की भीड़ परेशान कर गई।,negative,sentihin,0
+मुझे इस पर कोई भरोसा नहीं है,negative,sentihin,0
+मैं रोज़ाना जीवन के छोटे छोटे सुखों का आनंद लेता हूं।,neutral,sentihin,1
+यह होटल का स्टाफ बहुत अशिष्ट था।,negative,sentihin,0
+इस योजना ने मेरे आत्मबल को बढ़ाया।,positive,sentihin,2
+इस बारे में मैं कुछ नहीं कह सकता।,neutral,sentihin,1
+तुम्हारा आत्मविश्वास और धैर्य सचमुच प्रेरणादायक हैं।,positive,sentihin,2
+तुम्हारे सहयोग के बिना यह सफलता संभव नहीं थी।,positive,sentihin,2
+आपकी यह सोच मेरे लिए प्रेरणादायक है।,positive,sentihin,2
+यह कहानी बहुत प्रेरणादायक और दिलचस्प है।,positive,sentihin,2
+यह फिल्म बहुत निराशाजनक रही।,negative,sentihin,0
+कार्यशाला में उत्साहजनक माहौल रहा,positive,sentihin,2
+उसकी आलोचना ने मेरे आत्म सम्मान को चोट पहुँचाई।,negative,sentihin,0
+आपकी मदद से मेरा आत्मविश्वास लौट आया।,positive,sentihin,2
+आपकी सलाह ने मुझे सही दिशा में आगे बढ़ाया।,positive,sentihin,2
+यह कार्यक्रम उबाऊ था,negative,sentihin,0
+आज ठंड है।,neutral,sentihin,1
+रोहित आसान मौका चूक गया।,negative,sports,0
+यह रेस्तरां अद्भुत खाना परोसता है,positive,sentihin,2
+यह खाना बिल्कुल बेस्वाद है।,negative,sentihin,0
+उसकी बेरुखी ने मन को गहरे तक दुखी किया।,negative,sentihin,0
+स्कूल सुबह नौ बजे शुरू होता है।,neutral,sentihin,1
+यह फिल्म इतनी खराब थी कि समय की बर्बादी लगी।,negative,sentihin,0
+तुम्हारा समर्थन प्रेरणा देता है।,positive,sentihin,2
+वह अनुभव मेरे लिए दुखद रहा।,negative,sentihin,0
+मुझे इसका डिजाइन आकर्षक लगा,positive,sentihin,2
+आपका समर्थन हमेशा मेरे साथ रहा है।,positive,sentihin,2
+मैं रोज़ाना अपने दिल की आवाज़ सुनता हूं।,neutral,sentihin,1
+यह फिल्म अद्भुत है,positive,sentihin,2
+मैं रोज़ाना डायरी लिखता हूं।,neutral,sentihin,1
+आपके सहयोग से मुझे हर कदम पर प्रोत्साहन मिला।,positive,sentihin,2
+ट्रेन में बहुत भीड़ थी और असुविधाजनक थी।,negative,sentihin,0
+उसकी आलोचना से मन में निराशा घर कर गई।,negative,sentihin,0
+इस अवसर ने मेरी सोच में बदलाव लाया।,positive,sentihin,2
+आपकी मुस्कान में सच्चाई झलकती है।,positive,sentihin,2
+वो व्यवहार अस्वीकार्य था।,negative,sentihin,0
+यह निर्णय दुखद रहा।,negative,sentihin,0
+मुझे इसमें कोई रुचि नहीं रही,neutral,sentihin,1
+मुझे इससे कोई लेना देना नहीं।,neutral,sentihin,1
+मुझे इसमें कोई प्रभाव नहीं दिखा।,neutral,sentihin,1
+यह अवसर सुखद रहा।,positive,sentihin,2
+आपकी सोच हमेशा प्रेरणा देती है।,positive,sentihin,2
+मुझे इससे कोई खास फर्क महसूस नहीं हुआ।,neutral,sentihin,1
+आज कबड्डी का मैच शाम 7 बजे शुरू होगा।,neutral,sports,1
+यह अनुभव अत्यधिक निराशाजनक साबित हुआ।,negative,sentihin,0
+मैं रोज़ाना अपने सपनों के बारे में सोचता हूं।,neutral,sentihin,1
+यह निर्णय बहुत बुरा रहा।,negative,sentihin,0
+इस विषय पर मेरी स्थिति तटस्थ ही है।,neutral,sentihin,1
+उसकी बातों से मुझे गुस्सा आया।,negative,sentihin,0
+तुम्हारा यह प्रयास सराहनीय है।,positive,sentihin,2
+यह प्रकृति का नजारा बहुत मनमोहक है।,positive,sentihin,2
+यह प्रकृति का नजारा बहुत सुंदर है।,positive,sentihin,2
+यह अनुभव बेहद दुखद था।,negative,sentihin,0
+इस पहल से मुझे भविष्य के लिए प्रेरणा मिली।,positive,sentihin,2
+यह खरीददारी पूरी तरह व्यर्थ रही।,negative,sentihin,0
+यह निर्णय पूरी तरह अस्वीकार्य था।,negative,sentihin,0
+आपका समर्थन मेरे लिए सदा प्रेरणा है।,positive,sentihin,2
+आपकी मुस्कान सदा सकारात्मक प्रेरणा देती है।,positive,sentihin,2
+मुझे इसमें कोई प्रतिक्रिया नहीं है।,neutral,sentihin,1
+इस विषय में मेरी कोई राय नहीं है।,neutral,sentihin,1
+मैं इस बारे में कोई राय नहीं दूंगा।,neutral,sentihin,1
+मुझे वहाँ का व्यवहार खराब लगा।,negative,sentihin,0
+वह फिल्म सुखद अनुभव रही।,positive,sentihin,2
+आज छुट्टी है।,neutral,sentihin,1
+यह यात्रा अत्यंत असफल साबित हुई।,negative,sentihin,0
+इस यात्रा में काफी समस्याएं हुईं,negative,sentihin,0
+आपकी मदद से मन को प्रसन्नता मिलती है।,positive,sentihin,2
+आपका सहयोग मेरे लिए प्रेरक है।,positive,sentihin,2
+इस विषय में कोई खास आकर्षण महसूस नहीं होता।,neutral,sentihin,1
+आपकी मुस्कान हमेशा प्रसन्नता देती है।,positive,sentihin,2
+आपका सहयोग मेरे लिए अनमोल है।,positive,sentihin,2
+मुझे इसमें कोई भावना महसूस नहीं हुई।,neutral,sentihin,1
+यह अनुभव निराशाजनक था।,negative,sentihin,0
+तुम्हारा साथ हर मुश्किल को आसान बना देता है।,positive,sentihin,2
+मेरी मां का बनाया खाना हमेशा स्वादिष्ट होता है।,positive,sentihin,2
+वह क्षण मेरे लिए बेहद अपमानजनक साबित हुआ।,negative,sentihin,0
+मुझे इसमें कोई प्रतिक्रिया नहीं।,neutral,sentihin,1
+आपका मेल पढ़कर अच्छा लगा।,positive,sentihin,2
+इस बस की सीटें बहुत असहज थीं।,negative,sentihin,0
+मेरी कार आज फिर खराब हो गई।,negative,sentihin,0
+कार्यशाला से बहुत कुछ सीखने को मिला,positive,sentihin,2
+इस पर बोलने से मैं फिलहाल बचना चाहता हूं।,neutral,sentihin,1
+यह सेवा एकदम असंतोषजनक रही।,negative,sentihin,0
+यह खरीददारी बेहद निराशाजनक थी।,negative,sentihin,0
+आपकी मदद मेरे लिए महत्वपूर्ण है।,positive,sentihin,2
+यह पार्क बच्चों के लिए बहुत सुरक्षित है।,positive,sentihin,2
+वह हादसा मेरी यादों में एक कड़वी घटना बनकर रह गया।,negative,sentihin,0
+यह उपहार मेरे लिए अनमोल है।,positive,sentihin,2
+तुम्हारा प्रेम अद्वितीय है।,positive,sentihin,2
+मैं साइकिल चलाता हूं।,neutral,sentihin,1
+मुझे इससे कोई भावना नहीं जुड़ी।,neutral,sentihin,1
+खाना ताजगी से भरा था,positive,sentihin,2
+तुम्हारी मुस्कान मेरे दिन को रोशन कर देती है।,positive,sentihin,2
+यह अवसर उत्कृष्ट रहा।,positive,sentihin,2
+मैं रोज़ाना अपने जीवन में संतुलन बनाए रखने की कोशिश करता हूं।,neutral,sentihin,1
+यह उपहार मेरे लिए खुशी की बात है।,positive,sentihin,2
+यह निर्णय पूरी तरह असंतोषजनक रहा।,negative,sentihin,0
+यह किताब अद्भुत है।,positive,sentihin,2
+यह निर्णय बहुत ही बेकार था।,negative,sentihin,0
+बच्चे पार्क में खेल रहे हैं।,neutral,sentihin,1
+मैं आज बहुत प्रसन्न हूं।,positive,sentihin,2
+इस किताब में कुछ नया नहीं था,negative,sentihin,0
+आपकी मुस्कान बहुत सुंदर है।,positive,sentihin,2
+तुम्हारी मुस्कान मन को नई उम्मीद देती है।,positive,sentihin,2
+आज का मौसम कुछ खास नहीं है बस सामान्य सा ही लग रहा है।,neutral,sentihin,1
+इस योजना का लाभ मेरे पूरे परिवार को मिला।,positive,sentihin,2
+मुझे उनकी बातें कुछ ठीक नहीं लगीं।,negative,sentihin,0
+तुम्हारे स्नेह की ऊष्मा से मन प्रसन्न हो जाता है।,positive,sentihin,2
+फिल्म के दृश्य अद्भुत थे,positive,sentihin,2
+यह यात्रा पूरी तरह थकाने वाली थी।,negative,sentihin,0
+आपका यह उपकार मेरे लिए अविस्मरणीय है।,positive,sentihin,2
+वह उत्पाद अत्यंत उपयोगी साबित हुआ।,positive,sentihin,2
+मेरी इसमें कोई विशेष राय नहीं है।,neutral,sentihin,1
+कबड्डी टूर्नामेंट अगले सप्ताह शुरू होगा।,neutral,sports,1
+यह निर्णय अस्वीकार्य रहा।,negative,sentihin,0
+मुझे इसमें कोई आकर्षण नजर नहीं आया।,neutral,sentihin,1
+यह ऐप बहुत मददगार है,positive,sentihin,2
+इस विषय पर कोई ठोस विचार नहीं है।,neutral,sentihin,1
+मुझे इससे कोई विशेष अनुभूति नहीं हुई।,neutral,sentihin,1
+मुझे यह रेस्टोरेंट का माहौल पसंद नहीं आया।,negative,sentihin,0
+आपकी बातों ने मेरी सोच बदल दी।,positive,sentihin,2
+मुझे इसमें कोई खामी नहीं दिखी,positive,sentihin,2
+यह फिल्म देखना समय की बर्बादी थी,negative,sentihin,0
+आपके शब्द मेरे लिए प्रेरणा हैं।,positive,sentihin,2
+मुझे आपके विचार बहुत अच्छे लगे।,positive,sentihin,2
+मुझे इसमें कोई उत्साह महसूस नहीं हुआ।,neutral,sentihin,1
+तुम्हारा यह व्यवहार सुंदर है।,positive,sentihin,2
+यह फिल्म शानदार थी,positive,sentihin,2
+आपकी सराहना बहुत आत्मविश्वास देती है।,positive,sentihin,2
+इस पर मेरी कोई टिप्पणी नहीं है।,neutral,sentihin,1
+यह सेवा इतनी निराशाजनक थी कि मुझे पछतावा हुआ।,negative,sentihin,0
+मुझे तुम्हारे व्यवहार से ठेस पहुँची।,negative,sentihin,0
+आपके प्रोत्साहन से आत्मविश्वास मिला।,positive,sentihin,2
+वह व्याख्यान अत्यंत ज्ञानवर्धक था।,positive,sentihin,2
+मुझे इस विषय पर कोई विशेष रुचि महसूस नहीं हुई।,neutral,sentihin,1
+आपके समर्थन ने मुझे कठिन समय में संभाल लिया।,positive,sentihin,2
+मुझे उनकी बातें कष्टदायक लगीं।,negative,sentihin,0
+यह अवसर बेहद लाभकारी रहा।,positive,sentihin,2
+मुझे इससे कोई खास अनुभूति नहीं हुई।,neutral,sentihin,1
+आपकी मदद सदा सराहनीय रहती है।,positive,sentihin,2
+उसका बेरुखी से किया व्यवहार बहुत दुखदायी था।,negative,sentihin,0
+मुझे इसमें कोई अंतर नहीं लगा।,neutral,sentihin,1
+आपका व्यवहार सराहनीय है।,positive,sentihin,2
+इस विषय पर किसी भी निष्कर्ष पर पहुँचना मुश्किल लग रहा है।,neutral,sentihin,1
+तुम्हारी मुस्कान प्यारी है।,positive,sentihin,2
+उसकी बातों ने मेरे मन को गहरे तक आहत किया।,negative,sentihin,0
+यह ऐप साधारण है,neutral,sentihin,1
+आपकी सहायता से मेरा आत्मविश्वास कई गुना बढ़ा।,positive,sentihin,2
+यह रेस्टोरेंट का खाना बिल्कुल बेस्वाद था।,negative,sentihin,0
+मेरी उड़ान रद्द होने से मैं बहुत परेशान हूँ।,negative,sentihin,0
+इस अवसर ने मेरी सोच को नई दिशा दी।,positive,sentihin,2
+यह उत्पाद खरीदकर मुझे पछताना पड़ा।,negative,sentihin,0
+तुम्हारी हंसी दिल जीत लेती है।,positive,sentihin,2
+यह सेवा पूरी तरह असंतोषजनक रही।,negative,sentihin,0
+वह कार्यक्रम अत्यंत रोचक था।,positive,sentihin,2
+मुझे इसमें कुछ अनोखा नहीं लगा।,neutral,sentihin,1
+फैसले ने कोई खास प्रभाव नहीं डाला,neutral,sentihin,1
+यह योजना बेकार रही।,negative,sentihin,0
+यह ऐप बहुत धीमा और बग्स से भरा है।,negative,sentihin,0
+यह किताब सामान्य ज्ञान के लिए ठीक है।,neutral,sentihin,1
+मैं इस मामले में कोई हस्तक्षेप नहीं करूंगा।,neutral,sentihin,1
+यह फिल्म मनोरंजक थी,positive,sentihin,2
+तुम्हारा आत्मबल प्रेरित करता है।,positive,sentihin,2
+तुम्हारे विचारों की सकारात्मकता प्रेरणादायक है।,positive,sentihin,2
+तुम्हारे विचारों से मैं प्रेरित हूं।,positive,sentihin,2
+ऑनलाइन सपोर्ट ने जल्दी समाधान दिया,positive,sentihin,2
+यह घटना दुखद थी।,negative,sentihin,0
+मुझे इसमें कुछ नया महसूस नहीं हुआ।,neutral,sentihin,1
+हॉकी टीम ने बेहतरीन जीत दर्ज की।,positive,sports,2
+वह प्रस्तुति देखकर खुशी हुई।,positive,sentihin,2
+इस पर बोलना मेरे लिए उपयुक्त नहीं होगा।,neutral,sentihin,1
+मैं फोन पर बात करता हूं।,neutral,sentihin,1
+यह सेवा बेहद निराशाजनक थी।,negative,sentihin,0
+यह अनुभव बहुत ही निराशाजनक रहा।,negative,sentihin,0
+यह निर्णय बेहद असफल साबित हुआ।,negative,sentihin,0
+यह सेवा उम्मीद से कहीं बेहतर थी।,positive,sentihin,2
+यह छुट्टी मेरे लिए बहुत यादगार थी।,positive,sentihin,2
+विराट अगले मैच के लिए टीम में शामिल हैं।,neutral,sports,1
+यह निर्णय एकदम असफल साबित हुआ।,negative,sentihin,0
+मुझे इसमें कोई अलग बात नहीं।,neutral,sentihin,1
+तुम्हारी मेहनत सराहनीय है।,positive,sentihin,2
+तुम्हारे विचार सुनकर हमेशा नई दृष्टि मिलती है।,positive,sentihin,2
+आपकी मुस्कान सदा आत्मबल देती है।,positive,sentihin,2
+मुझे इसमें कुछ नया नहीं दिखा।,neutral,sentihin,1
+तुम्हारे प्रेरक विचार हमेशा मुझे नई राह दिखाते हैं।,positive,sentihin,2
+मुझे इसमें कोई विशेष अंतर नहीं लगा।,neutral,sentihin,1
+यह योजना पूरी तरह असफल रही।,negative,sentihin,0
+आपकी तारीफ से दिल खुश होता है।,positive,sentihin,2
+मैं इस परिस्थिति से हताश हूं।,negative,sentihin,0
+मुझे इससे कोई विशेष भावनात्मक अनुभव नहीं हुआ।,neutral,sentihin,1
+यह सेवा पूरी तरह विफल रही।,negative,sentihin,0
+यह अनुभव इतना खराब था कि मैं फिर दोबारा नहीं आऊंगा।,negative,sentihin,0
+मुझे इसमें कोई बदलाव नहीं चाहिए,neutral,sentihin,1
+मुझे यह नई जॉब बहुत चुनौतीपूर्ण लगती है।,negative,sentihin,0
+यह रेस्टोरेंट की सेवा बहुत धीमी है।,negative,sentihin,0
+मुझे इसका रंग पसंद आया,positive,sentihin,2
+वह परिस्थिति इतनी कठिन थी कि संभालना मुश्किल हो गया।,negative,sentihin,0
+मुझे वहाँ की व्यवस्था कष्टदायक लगी।,negative,sentihin,0
+आज मैंने एक पुराने दोस्त से बात की।,positive,sentihin,2
+इस प्रोडक्ट से मैं असंतुष्ट हूं,negative,sentihin,0
+वह प्रस्तुति बहुत शानदार रही।,positive,sentihin,2
+यह फिल्म एकदम असफल रही।,negative,sentihin,0
+आपकी सहायता से मनोबल बढ़ता है।,positive,sentihin,2
+यह निर्णय मेरे लिए पूर्ण रूप से नकारात्मक रहा।,negative,sentihin,0
+उसके शब्दों में कड़वाहट साफ झलकती थी।,negative,sentihin,0
+यह सेवा बेहद असंतोषजनक रही।,negative,sentihin,0
+आपकी मुस्कान से आत्मबल बढ़ता है।,positive,sentihin,2
+मैं इस विषय से बहुत तनावग्रस्त हूं।,negative,sentihin,0
+यह फिल्म बेहद निराशाजनक रही।,negative,sentihin,0
+मुझे यह प्रोडक्ट बिल्कुल पसंद नहीं आया।,negative,sentihin,0
+फुटबॉल टीम का प्रदर्शन बेहद खराब रहा।,negative,sports,0
+सिंधु ने मैच जिता दिया।,positive,sports,2
+मुझे इससे कोई खास असर महसूस नहीं हुआ।,neutral,sentihin,1
+मेरा इस मुद्दे पर कोई पक्ष नहीं है।,neutral,sentihin,1
+यह प्रयास व्यर्थ गया।,negative,sentihin,0
+मैं रोज़ाना अपने जीवन में संतुलन बनाने की कोशिश करता हूं।,neutral,sentihin,1
+उसका बर्ताव किसी को भी दुखी कर सकता था।,negative,sentihin,0
+आज अभ्यास सत्र आयोजित किया गया।,neutral,sports,1
+तुम्हारा आत्मबल दूसरों के लिए भी प्रेरणा है।,positive,sentihin,2
+आपकी छोटी सी मुस्कान दिन बना देती है।,positive,sentihin,2
+यह फैसला मेरे लिए सामान्य था।,neutral,sentihin,1
+आपकी हंसी से मन प्रसन्न हो जाता है।,positive,sentihin,2
+आपकी मदद से मैं हर बाधा पार कर सका।,positive,sentihin,2
+रास्ते में मौसम खुशगवार था,positive,sentihin,2
+वह उत्पाद मेरी उम्मीदों पर खरा उतरा।,positive,sentihin,2
+यह अनुभव इतना बुरा था कि मैं किसी को नहीं बताना चाहूंगा।,negative,sentihin,0
+रोनाल्डो आसान मौका चूक गया।,negative,sports,0
+आपकी मुस्कान से सुकून मिलता है।,positive,sentihin,2
+यह डिज़ाइन साधारण लग रहा है।,neutral,sentihin,1
+आपकी तारीफ से मन को ऊर्जा मिलती है।,positive,sentihin,2
+आपका अनुभव सुनकर अच्छा लगा।,positive,sentihin,2
+आपकी मदद से कठिनाइयाँ दूर हुईं।,positive,sentihin,2
+मुझे इसमें कुछ खास नहीं दिखा,neutral,sentihin,1
+उसकी कठोर बातें मेरे लिए बहुत अपमानजनक थीं।,negative,sentihin,0
+तुम्हारे शब्द मेरे लिए अमूल्य हैं।,positive,sentihin,2
+मैं इस मुद्दे पर कोई बात नहीं करूंगा।,neutral,sentihin,1
+वह सैर बहुत आनंददायक थी।,positive,sentihin,2
+मैं इस बारे में निष्पक्ष हूं।,neutral,sentihin,1
+मुझे यह काम बहुत थकाऊ लगता है।,negative,sentihin,0
+इस मुद्दे पर मैं तटस्थ रहूंगा।,neutral,sentihin,1
+यह रेस्टोरेंट की सेवा बहुत निराशाजनक है।,negative,sentihin,0
+इस व्यक्ति की मेहनत सफल हुई है।,positive,sentihin,2
+मेरे नए जूतों की गुणवत्ता बहुत खराब है।,negative,sentihin,0
+मुझे यह नई नीति समझ नहीं आई।,negative,sentihin,0
+आपका सहयोग हमेशा सराहनीय है।,positive,sentihin,2
+यह निर्णय ठीक लग रहा है।,neutral,sentihin,1
+वह सेवा अत्यंत प्रशंसनीय रही।,positive,sentihin,2
+यह सेवा एकदम बेकार साबित हुई।,negative,sentihin,0
+मुझे इसमें कोई बदलाव नहीं दिखा।,neutral,sentihin,1
+सेवा का स्तर संतोषजनक था,positive,sentihin,2
+यह फिल्म निराशाजनक और बेमतलब थी।,negative,sentihin,0
+मुझे यह व्यवहार अच्छा नहीं लगा।,negative,sentihin,0
+मेरी बेटी ने डांस कॉम्पिटिशन जीता है।,positive,sentihin,2
+मैं इस परिस्थिति से डरा हुआ हूं।,negative,sentihin,0
+उसकी टिप्पणियाँ मेरे आत्मसम्मान को ठेस पहुँचाती रहीं।,negative,sentihin,0
+वह होटल की सेवा प्रशंसनीय थी।,positive,sentihin,2
+उसका तिरस्कार बार बार सहन करना आसान नहीं रहा।,negative,sentihin,0
+आपकी सोच से सकारात्मकता मिलती है।,positive,sentihin,2
+इस मुद्दे को लेकर मेरा मन पूरी तरह तटस्थ है।,neutral,sentihin,1
+यह अनुभव औसत रहा।,neutral,sentihin,1
+कबड्डी टीम लगातार हार रही है।,negative,sports,0
+आपकी बातें हमेशा प्रोत्साहन देती हैं।,positive,sentihin,2
+वह यात्रा मेरे लिए यादगार बन गई।,positive,sentihin,2
+मैं इस विषय पर और अध्ययन करूँगा।,neutral,sentihin,1
+यह अनुभव मेरे लिए निराशाजनक रहा,negative,sentihin,0
+इस यात्रा ने मुझे खुश किया,positive,sentihin,2
+यह यात्रा मेरे लिए जीवन का एक सुंदर अनुभव रही।,positive,sentihin,2
+मैं फिल्म देखता हूं।,neutral,sentihin,1
+इस विषय पर मेरी कोई ठोस धारणा नहीं बनी।,neutral,sentihin,1
+आपके विचार बहुत सकारात्मक हैं।,positive,sentihin,2
+यह काम बहुत मुश्किल और थकाऊ है।,negative,sentihin,0
+मुझे इसमें कोई खास बदलाव महसूस नहीं हुआ।,neutral,sentihin,1
+यह योजना असफल रही।,negative,sentihin,0
+तुम्हारी मदद के लिए धन्यवाद।,positive,sentihin,2
+वह फिल्म बहुत ही रोचक थी।,positive,sentihin,2
+मैं दो बजे खाना खाता हूं।,neutral,sentihin,1
+मुझे इसमें कोई उत्तेजना नहीं हुई।,neutral,sentihin,1
+यह प्रोडक्ट खराब था,negative,sentihin,0
+इस निर्णय से कार्य में कोई सुधार नहीं हुआ,negative,sentihin,0
+उसकी नफरत भरी बातें सुनकर दुख हुआ।,negative,sentihin,0
+यह खरीददारी एकदम बेकार थी।,negative,sentihin,0
+आज मैंने एक सुंदर सपना देखा।,positive,sentihin,2
+मैं इस विषय पर कोई टिप्पणी नहीं करना चाहता।,neutral,sentihin,1
+यह कार्य बेकार साबित हुआ।,negative,sentihin,0
+वह दिन मेरे लिए बेहद अपमानजनक साबित हुआ।,negative,sentihin,0
+यह फिल्म मेरे जीवन की सबसे बेहतरीन फिल्मों में से एक थी।,positive,sentihin,2
+आज गर्मी है।,neutral,sentihin,1
+मुझे इस बारे में कुछ खास महसूस नहीं हुआ।,neutral,sentihin,1
+मुझे यह काम करने में कठिनाई हो रही है।,negative,sentihin,0
+आपकी मदद सदा आत्मबल बढ़ाती है।,positive,sentihin,2
+यह संगीत कार्यक्रम बहुत मधुर था।,positive,sentihin,2
+मुझे वहाँ की गंदगी से दुख हुआ।,negative,sentihin,0
+मुझे यह नई फिल्म बहुत निराशाजनक लगी।,negative,sentihin,0
+मुझे इसमें कोई नई जानकारी नहीं मिली।,neutral,sentihin,1
+यह यात्रा बेहद खास थी,positive,sentihin,2
+वह मेरी जिंदगी का खास हिस्सा है।,positive,sentihin,2
+मुझे यह काम बहुत बेकार लगता है।,negative,sentihin,0
+मुझे यह काम करने में बहुत कठिनाई हो रही है।,negative,sentihin,0
+आपकी मदद के लिए धन्यवाद।,positive,sentihin,2
+नीरज ने मैच जिता दिया।,positive,sports,2
+मैं इस विषय पर कुछ खास नहीं सोचता।,neutral,sentihin,1
+मुझे यह व्यवस्था बहुत खराब लगती है।,negative,sentihin,0
+मुझे इसमें कोई ख़ास अनुभव नहीं हुआ।,neutral,sentihin,1
+मुझे इसमें कोई खास फर्क नहीं लगा।,neutral,sentihin,1
+यह पूरी तरह निराशाजनक था।,negative,sentihin,0
+यह निर्णय बेहद दुखदायी था।,negative,sentihin,0
+आपकी मुस्कान से प्रेरणा मिलती है।,positive,sentihin,2
+यह फिल्म एकदम घटिया और असफल रही।,negative,sentihin,0
+उत्पाद खरीदकर संतुष्टि मिली,positive,sentihin,2
+इस पर बोलने से मैं फिलहाल परहेज करना चाहूंगा।,neutral,sentihin,1
+वह प्रस्तुति अत्यधिक प्रेरणादायक रही।,positive,sentihin,2
+तुम्हारा यह विचार शानदार है।,positive,sentihin,2
+यह यात्रा पूरी तरह विफल रही।,negative,sentihin,0
+मुझे इससे कोई विशेष भावना महसूस नहीं हुई।,neutral,sentihin,1
+मुझे यह खाना पसंद नहीं आया।,negative,sentihin,0
+काम की अधिकता से बहुत तनाव हो रहा है।,negative,sentihin,0
+मुझे इसका प्रदर्शन प्रभावशाली लगा,positive,sentihin,2
+यह फिल्म पूरी तरह बेकार साबित हुई।,negative,sentihin,0
+मुझे इस होटल में खाने की गुणवत्ता से शिकायत है।,negative,sentihin,0
+इस विषय पर मेरी कोई राय नहीं है।,neutral,sentihin,1
+मुझे इस विषय पर कोई खास भावना नहीं हुई।,neutral,sentihin,1
+मुझे यह बात समझ नहीं आई।,negative,sentihin,0
+आपकी मुस्कान से मन को खुशी मिलती है।,positive,sentihin,2
+वह दिन मेरे लिए बेहद दुखदायी रहा।,negative,sentihin,0
+मुझे इस पर भरोसा नहीं है,negative,sentihin,0
+मेरे बच्चे की परीक्षा में अच्छे अंक आए हैं।,positive,sentihin,2
+तुम्हारे मीठे शब्दों ने मेरी सारी थकान को दूर कर दिया।,positive,sentihin,2
+मुझे वहाँ की स्थिति कष्टदायक लगी।,negative,sentihin,0
+मैं इस मामले में तटस्थ रहूंगा।,neutral,sentihin,1
+यह अनुभव मेरे लिए पूरी तरह से बुरा था।,negative,sentihin,0
+आपकी यह सोच बहुत गहरी है।,positive,sentihin,2
+मुझे वहाँ का माहौल बोझिल लगा।,negative,sentihin,0
+मुझे इससे कोई विशेष फर्क नहीं पड़ा।,neutral,sentihin,1
+खरीदारी का अनुभव औसत रहा,neutral,sentihin,1
+यह किताब प्रेरक है,positive,sentihin,2
+आपकी मदद ने मेरे जीवन में सकारात्मक बदलाव लाया।,positive,sentihin,2
+मैं रोज़ाना अपने गुरु को प्रणाम करता हूं।,neutral,sentihin,1
+मुझे इसकी कीमत अधिक लगी,negative,sentihin,0
+मेरे दादाजी आज बहुत बेहतर महसूस कर रहे हैं।,positive,sentihin,2
+वह कार्यक्रम अत्यंत रोचक रहा।,positive,sentihin,2
+तुम्हारे साथ समय बिताना सुखद है।,positive,sentihin,2
+मुझे इसमें कोई राय नहीं है।,neutral,sentihin,1
+यह निर्णय बेहद निराशाजनक रहा।,negative,sentihin,0
+मुझे इसमें कोई प्रतिक्रिया नहीं देनी है।,neutral,sentihin,1
+पुस्तक ने कोई गहरी छाप नहीं छोड़ी,neutral,sentihin,1
+तुम्हारा सहयोग हमेशा याद रहेगा।,positive,sentihin,2
+मुझे यह यात्रा बहुत थकाऊ लगी।,negative,sentihin,0
+वह पुस्तक ज्ञानवर्धक और उपयोगी रही।,positive,sentihin,2
+आपका समर्थन हमेशा मेरी ताकत रहा है।,positive,sentihin,2
+पुस्तक पढ़ने लायक नहीं लगी,negative,sentihin,0
+यह निर्णय पूरी तरह निराशाजनक रहा।,negative,sentihin,0
+मुझे इस विषय पर कोई विशेष उत्साह नहीं था।,neutral,sentihin,1
+यह बच्चों का खेल बहुत रोचक था।,positive,sentihin,2
+मुझे यह स्थिति असहनीय लग रही है।,negative,sentihin,0
+मुझे इसमें कोई खास लाभ नहीं मिला,neutral,sentihin,1
+यह खरीदारी बहुत बुरी रही।,negative,sentihin,0
+यह किताब बहुत प्रेरणादायक है।,positive,sentihin,2
+इस विषय पर फिलहाल मेरी कोई ठोस राय नहीं बन पाई।,neutral,sentihin,1
+आपका समर्थन मेरे लिए आत्मबल है।,positive,sentihin,2
+वह अनुभव बहुत ही रोचक था।,positive,sentihin,2
+वह निर्णय मेरे लिए सही रहा।,positive,sentihin,2
+इस मुद्दे पर मेरी स्थिति तटस्थ ही बनी हुई है।,neutral,sentihin,1
+इस मुद्दे पर तटस्थ रहना ही सही होगा।,neutral,sentihin,1
+यह ऐप उपयोग में आसान है,positive,sentihin,2
+सेवा की गति धीमी थी,negative,sentihin,0
+आपका साथ बहुत सुकूनदायक है।,positive,sentihin,2
+पैकेजिंग से कोई खास प्रभाव नहीं पड़ा,neutral,sentihin,1
+आपकी बातें आत्मविश्वास जगाती हैं।,positive,sentihin,2
+आपकी सोच से आत्मबल बढ़ता है।,positive,sentihin,2
+तुम्हारे मुस्कराते चेहरे को देखना ही सुकून देता है।,positive,sentihin,2
+मुझे इसमें कोई दिक्कत नहीं आई,positive,sentihin,2
+आपकी मदद से मुझे बहुत राहत मिली।,positive,sentihin,2
+मुझे यह परिस्थिति असहनीय लग रही है।,negative,sentihin,0
+यह संगीत मेरे कानों को अच्छा लगता है।,positive,sentihin,2
+मेरे दोस्त का नया घर बहुत सुंदर है।,positive,sentihin,2
+आपकी मुस्कान सदा आत्मबल बढ़ाती है।,positive,sentihin,2
+इस मोबाइल की बैटरी लाइफ बहुत खराब है।,negative,sentihin,0
+आपका स्नेह मेरे लिए बहुत मायने रखता है।,positive,sentihin,2
+यह हवा बहुत ठंडी और सुखद है।,positive,sentihin,2
+यह खबर मेरे लिए मायने नहीं रखती।,neutral,sentihin,1
+आज मैंने एक रोचक किताब पढ़ी।,positive,sentihin,2
+इस होटल का खाना खराब था,negative,sentihin,0
+यह घर का साइज़ ठीक है।,neutral,sentihin,1
+फिल्म का संगीत दिल छू लेने वाला था,positive,sentihin,2
+आज सर्दी है।,neutral,sentihin,1
+आपका सहयोग हमेशा महत्वपूर्ण होता है।,positive,sentihin,2
+वह दिन मेरी जिंदगी का सबसे दुखद दिन था।,negative,sentihin,0
+उसकी नकारात्मक बातें सुनकर आत्मविश्वास डगमगाने लगता है।,negative,sentihin,0
+वह स्थान बहुत सुंदर था।,positive,sentihin,2
+मैं इस व्यक्ति से बहुत चिढ़ा हुआ हूं।,negative,sentihin,0
+वह यात्रा बहुत प्रेरणादायक रही।,positive,sentihin,2
+तुम्हारे विचारों में जो गहराई है वह दुर्लभ है।,positive,sentihin,2
+इस पर विचार करने का अभी सही समय नहीं लग रहा।,neutral,sentihin,1
+मैं इस मुद्दे पर कोई पक्ष नहीं लूंगा।,neutral,sentihin,1
+तुम्हारे विचारों की गहराई हर बार नया दृष्टिकोण देती है।,positive,sentihin,2
+मुझे इसमें कोई भावना उत्पन्न नहीं हुई।,neutral,sentihin,1
+मुझे वहाँ का खाना पसंद नहीं आया।,negative,sentihin,0
+आज की हार से प्रशंसक निराश हैं।,negative,sports,0
+तुम्हारी विनम्रता ने मुझे बहुत प्रभावित किया है।,positive,sentihin,2
+मुझे इस बारे में कोई खास विचार नहीं आया।,neutral,sentihin,1
+तुम्हारे विचार हमेशा सकारात्मक ऊर्जा से भरपूर रहते हैं।,positive,sentihin,2
+मुझे वहाँ की स्थिति से असुविधा हुई।,negative,sentihin,0
+आपकी सोच सदा सकारात्मक ऊर्जा देती है।,positive,sentihin,2
+आज मौसम ठीक है।,neutral,sentihin,1
+मुझे इसमें कोई विशेष बात नजर नहीं आई।,neutral,sentihin,1
+यह किताब पढ़ने लायक है,positive,sentihin,2
+उसकी बातें सुनकर मेरे मन में गहरी निराशा भर गई।,negative,sentihin,0
+यह निर्णय बहुत ही खराब निकला।,negative,sentihin,0
+मुझे वहाँ की व्यवस्था खराब लगी।,negative,sentihin,0
+वह हमेशा सकारात्मक सोचता है।,positive,sentihin,2
+मुझे यह सब सामान्य लगा।,neutral,sentihin,1
+यह घटना बहुत कष्टकारी रही।,negative,sentihin,0
+आपकी सोच हमेशा सकारात्मक प्रेरणा देती है।,positive,sentihin,2
+तुम्हारे विचार इतने सकारात्मक हैं कि निराशा भी भाग जाती है।,positive,sentihin,2
+मुझे यह आवाज़ परेशान करती है।,negative,sentihin,0
+इस विषय पर मेरी कोई खास राय नहीं है।,neutral,sentihin,1
+यह सेवा एकदम निराशाजनक थी।,negative,sentihin,0
+यह फूलों का बगीचा बहुत मनमोहक है।,positive,sentihin,2
+यह रंग देखने में ठीक लग रहा है।,neutral,sentihin,1
+आपका फोन कॉल बहुत राहत भरा था।,positive,sentihin,2
+मुझे इसमें कोई मत नहीं है।,neutral,sentihin,1
+मुझे वहाँ की भीड़ पसंद नहीं आई।,negative,sentihin,0
+यह मेरी दृष्टि में सामान्य बात है।,neutral,sentihin,1
+यह निर्णय अत्यंत निराशाजनक रहा।,negative,sentihin,0
+यह सेवा बहुत धीमी और निराशाजनक है।,negative,sentihin,0
+इस सेवा से मैं संतुष्ट हूं,positive,sentihin,2
+यह यात्रा एकदम विफल रही।,negative,sentihin,0
+उसकी कटुता से हर कोई असहज हो गया।,negative,sentihin,0
+मुझे इसमें कोई खास बदलाव नहीं दिखा।,neutral,sentihin,1
+इस दुकान का स्टाफ बहुत असभ्य था।,negative,sentihin,0
+मुझे इससे कोई आपत्ति नहीं है।,neutral,sentihin,1
+मैं इस विषय पर कोई राय नहीं रखता।,neutral,sentihin,1
+मुझे उस पर विश्वास नहीं हुआ।,negative,sentihin,0
+संगठन का रवैया सहयोगपूर्ण रहा,positive,sentihin,2
+तुम्हारे प्रयास सराहनीय हैं।,positive,sentihin,2
+नीरज आसान मौका चूक गया।,negative,sports,0
+मुझे इससे कोई विशेष प्रभाव महसूस नहीं हुआ।,neutral,sentihin,1
+मुझे वहाँ की सफाई खराब लगी।,negative,sentihin,0
+मुझे इसमें कुछ कहने की इच्छा नहीं।,neutral,sentihin,1
+इस मुद्दे पर मेरी कोई स्पष्ट राय नहीं है।,neutral,sentihin,1
+इस ट्रेन की सीटें बहुत असुविधाजनक हैं।,negative,sentihin,0
+बिना किसी कारण के डांट सुनकर बहुत बुरा लगा।,negative,sentihin,0
+मुझे इससे कोई खास प्रेरणा नहीं मिली।,neutral,sentihin,1
+मुझे यह तरीका गलत लगता है।,negative,sentihin,0
+यह प्रस्तुति औसत थी,neutral,sentihin,1
+तुम्हारे साथ समय बिताना आनंददायक है।,positive,sentihin,2
+यह यात्रा बेहद असंतोषजनक रही।,negative,sentihin,0
+यह अनुभव बहुत दुखदायी था।,negative,sentihin,0
+इस यात्रा ने मुझे बहुत कुछ सिखाया।,positive,sentihin,2
+तुम्हारे स्नेह और अपनापन ने हर मुश्किल को आसान कर दिया।,positive,sentihin,2
+यह योजना बिल्कुल बेकार थी।,negative,sentihin,0
+उसका व्यवहार मुझे बार बार हतोत्साहित कर रहा है।,negative,sentihin,0
+यह फिल्म बहुत अच्छी थी।,positive,sentihin,2
+यह यात्रा बहुत खराब रही।,negative,sentihin,0
+मैं इस स्थिति से बहुत दुखी हूं।,negative,sentihin,0
+मैं रोज़ाना अपने जीवन में सकारात्मक बदलाव लाने की कोशिश करता हूं।,neutral,sentihin,1
+उसकी आलोचना अनुचित रही।,negative,sentihin,0
+मुझे इस विषय में कोई खास भावना नहीं हुई।,neutral,sentihin,1
+आपकी मदद सदा प्रेरणादायक रहती है।,positive,sentihin,2
+आपकी मुस्कान से नई ऊर्जा मिलती है।,positive,sentihin,2
+यह फिल्म समय की बर्बादी थी।,negative,sentihin,0
+उसका व्यव्हार असभ्य रहा।,negative,sentihin,0
+यह खाना बहुत स्वादिष्ट और पौष्टिक है।,positive,sentihin,2
+यह निर्णय अनुचित लगा,negative,sentihin,0
+इस विषय में कुछ भी कहना मेरे लिए सहज नहीं है।,neutral,sentihin,1
+आपके सहयोग से मेरा आत्मबल बढ़ा।,positive,sentihin,2
+मैं पुस्तक पढ़ता हूं।,neutral,sentihin,1
+आपकी सोच से मन को प्रसन्नता मिलती है।,positive,sentihin,2
+मुझे इससे कोई विशेष भावनात्मक प्रतिक्रिया नहीं हुई।,neutral,sentihin,1
+मुझे इसमें कोई भावना नहीं है।,neutral,sentihin,1
+तुम्हारा यह प्रदर्शन मेरे लिए गर्व की बात है।,positive,sentihin,2
+उसकी चुप्पी ने सबको उलझन में डाल दिया।,negative,sentihin,0
+यह सेवा मेरी उम्मीदों से बहुत कमतर रही।,negative,sentihin,0
+यह सेवा सामान्य रही।,neutral,sentihin,1
+मुझे नहीं लगता इसमें कुछ खास था।,neutral,sentihin,1
+यह घटना बहुत दुखदायी थी।,negative,sentihin,0
+इस होटल में सुविधाएं कम थीं,negative,sentihin,0
+इस पर कोई अंतिम निष्कर्ष निकालना मुश्किल है।,neutral,sentihin,1
+इस अवसर ने मुझे अपनी क्षमताओं पर भरोसा दिलाया।,positive,sentihin,2
+मुझे इस मुद्दे पर कोई खास प्रतिक्रिया नहीं है।,neutral,sentihin,1
+यह योजना निराशाजनक रही।,negative,sentihin,0
+उसका चिड़चिड़ा व्यवहार सभी को असहज कर देता है।,negative,sentihin,0
+यह दिन बहुत थका देने वाला रहा।,negative,sentihin,0
+मैं इस बात से बहुत दुखी हूं।,negative,sentihin,0
+मैं इस किताब के लेखक से मिलना चाहता हूँ।,neutral,sentihin,1
+मुझे इस फैसले पर दुख है।,negative,sentihin,0
+आपकी मदद से मुश्किलें आसान हुईं।,positive,sentihin,2
+सेवा की स्थिति खराब थी,negative,sentihin,0
+मैं इस उत्पाद के फीचर्स से संतुष्ट हूँ।,neutral,sentihin,1
+मैं रोज़ाना दूध पीता हूं।,neutral,sentihin,1
+इस दुकान में सामान की गुणवत्ता कम है।,negative,sentihin,0
+आपका प्रोत्साहन हमेशा मनोबल बढ़ाता है।,positive,sentihin,2
+यह अनुभव बेकार साबित हुआ।,negative,sentihin,0
+बुमराह आसान मौका चूक गया।,negative,sports,0
+यह सेवा बेहद घटिया थी।,negative,sentihin,0
+मुझे यह व्यवस्था गलत लगती है।,negative,sentihin,0
+इस मुद्दे पर मैं कोई फैसला नहीं ले पा रहा हूं।,neutral,sentihin,1
+उसकी बातें अपमानजनक थीं।,negative,sentihin,0
+यह अवसर व्यर्थ हो गया।,negative,sentihin,0
+यह सफलता बहुत सुखद है।,positive,sentihin,2
+यह सेवा इतनी खराब थी कि मुझे निराशा हुई।,negative,sentihin,0
+तुम्हारी सादगी और सच्चाई दिल को बहुत भाती है।,positive,sentihin,2
+इस प्रोडक्ट ने मेरी उम्मीदें तोड़ी,negative,sentihin,0
+इस सेवा ने मेरे काम को अत्यधिक सरल बनाया।,positive,sentihin,2
+यह यात्रा बहुत ही असफल रही।,negative,sentihin,0
+यह अनुभव पूरी तरह निराशाजनक था।,negative,sentihin,0
+मुझे इस पर कोई टिप्पणी नहीं करनी।,neutral,sentihin,1
+वह यात्रा सुखद और अविस्मरणीय रही।,positive,sentihin,2
+यह अनुभव पूरी तरह असफल साबित हुआ।,negative,sentihin,0
+वह परिस्थिति इतनी अपमानजनक थी कि शब्द नहीं मिल रहे।,negative,sentihin,0
+इस पर अभी कोई निष्कर्ष निकालना जल्दबाजी होगी।,neutral,sentihin,1
+उसका रूखा व्यवहार सबको असहज कर देता है।,negative,sentihin,0
+विराट ने मैच जिता दिया।,positive,sports,2
+तुम्हारी ईमानदारी ने हमेशा मेरा भरोसा कायम रखा है।,positive,sentihin,2
+तुम्हारे साथ बिताया समय हमेशा याद रहेगा।,positive,sentihin,2
+मैं रोज़ाना अपने जीवन में नई चुनौतियों का सामना करता हूं।,neutral,sentihin,1
+यह कमरा बहुत छोटा है।,negative,sentihin,0
+आपकी सोच बहुत प्रेरक है।,positive,sentihin,2
+आपकी मुस्कान से खुशी मिलती है।,positive,sentihin,2
+तुम्हारे विचारों में इतनी स्पष्टता है कि हर कोई तुम्हारी सराहना करता है।,positive,sentihin,2
+मैं रोज़ाना अपने आप को बेहतर बनाने की कोशिश करता हूं।,neutral,sentihin,1
+यह त्योहार बहुत धूमधाम से मनाया गया।,positive,sentihin,2
+यह उत्पाद मेरी अपेक्षाओं पर खरा नहीं उतरा।,negative,sentihin,0
+आपकी मुस्कान से मन को प्रसन्नता मिलती है।,positive,sentihin,2
+उसने मेरी मदद करके दिल जीत लिया।,positive,sentihin,2
+मुझे इससे कोई ठोस प्रतिक्रिया नहीं हुई।,neutral,sentihin,1
+तुम्हारा साथ अनमोल है।,positive,sentihin,2
+मैंने इतनी खराब सेवा पहले कभी नहीं देखी।,negative,sentihin,0
+इस योजना से मैं असहमत हूँ।,negative,sentihin,0
+यह नया रेस्तरां बहुत लोकप्रिय हो रहा है।,positive,sentihin,2
+यह कार बहुत महंगी और अनुपयोगी है।,negative,sentihin,0
+आपकी तारीफ से आत्मविश्वास बढ़ता है।,positive,sentihin,2
+मुझे वहाँ का व्यवहार अस्वीकार्य लगा।,negative,sentihin,0
+मुझे इसमें कोई दिलचस्पी नहीं है,neutral,sentihin,1
+यह निर्णय मेरी उम्मीदों पर खरा नहीं उतरा।,negative,sentihin,0
+यह अनुभव सुखद रहा,positive,sentihin,2
+उसके कटु शब्द मेरे आत्मसम्मान को ठेस पहुँचाते हैं।,negative,sentihin,0
+यह निर्णय मेरे लिए उचित था,positive,sentihin,2
+आपकी सोच हमेशा उत्साह बढ़ाती है।,positive,sentihin,2
+यह यात्रा बेहद थकाऊ और बेकार रही।,negative,sentihin,0
+मुझे इस होटल की साफ सफाई से शिकायत है।,negative,sentihin,0
+वह फिल्म देखकर खुशी हुई।,positive,sentihin,2
+तुम्हारा प्रेम अमूल्य है।,positive,sentihin,2
+मुझे वहाँ की भीड़ असहज लगी।,negative,sentihin,0
+मुझे इससे कोई अंतर नहीं पड़ा।,neutral,sentihin,1
+यह कंपनी की नीति बहुत कठोर है।,negative,sentihin,0
+आज का दिन सामान्य रहा।,neutral,sentihin,1
+यह यात्रा अविस्मरणीय थी।,positive,sentihin,2
+यह ऐप उपयोगी नहीं है,negative,sentihin,0
+मुझे इस मुद्दे पर कोई ठोस विचार नहीं है।,neutral,sentihin,1
+आपने बहुत अच्छा काम किया है।,positive,sentihin,2
+यह यात्रा पूरी तरह व्यर्थ रही।,negative,sentihin,0
+मुझे वहाँ का अनुभव खराब लगा।,negative,sentihin,0
+वह बात बहुत कष्टकारी थी।,negative,sentihin,0
+मुझे इससे कोई भावना नहीं हुई।,neutral,sentihin,1
+मुझे यह यात्रा बहुत थकाऊ और लंबी लगी।,negative,sentihin,0
+मुझे यह काम बहुत कठिन लगता है।,negative,sentihin,0
+दीवार पर तस्वीर लगी है।,neutral,sentihin,1
+आपकी मुस्कान मन को खुशी देती है।,positive,sentihin,2
+आपका सहयोग प्रेरणा देता है।,positive,sentihin,2
+मैं इस विषय पर ज्यादा नहीं बोलना चाहता।,neutral,sentihin,1
+तुम्हारे साथ बिताया हर पल मुझे यादगार लगता है और दिल को सुकून देता है।,positive,sentihin,2
+यह सेवा औसत दर्जे की रही।,neutral,sentihin,1
+यह अनुभव पूरी तरह बेकार साबित हुआ।,negative,sentihin,0
+इस प्रयास ने मुझे भविष्य में बेहतर करने की प्रेरणा दी।,positive,sentihin,2
+मुझे यह सेवा बहुत निराशाजनक लगी।,negative,sentihin,0
+इस अवसर ने मुझे भविष्य के लिए प्रेरित किया।,positive,sentihin,2
+मुझे वहाँ की सुविधाएं घटिया लगीं।,negative,sentihin,0
+इस निर्णय पर मेरी कोई राय नहीं है।,neutral,sentihin,1
+मैं इस हालत से दुखी हूं।,negative,sentihin,0
+वह यात्रा आनंददायक अनुभव रही।,positive,sentihin,2
+वह जगह बहुत सुंदर और शांत थी।,positive,sentihin,2
+यह सेवा उम्मीद से बहुत खराब थी।,negative,sentihin,0
+मुझे यह सब कुछ सामान्य लगा।,neutral,sentihin,1
+आपकी तारीफ से मन को शक्ति मिलती है।,positive,sentihin,2
+आपके प्रोत्साहन से मन प्रसन्न होता है।,positive,sentihin,2
+इस पर कोई अंतिम निर्णय लेना कठिन होगा।,neutral,sentihin,1
+मैं रोज़ाना सफाई करता हूं।,neutral,sentihin,1
+आपकी मदद से कार्य सरल हुआ।,positive,sentihin,2
+सेवा का स्तर उम्मीदों से कम रहा,negative,sentihin,0
+तुम्हारी मुस्कान से हर परेशानी छोटी लगने लगती है।,positive,sentihin,2
+बहुत गुस्सा आया।,negative,sentihin,0
+आपका स्वागत है।,positive,sentihin,2
+यह प्रयास बेहद सफल रहा।,positive,sentihin,2
+यह प्रोडक्ट बहुत घटिया है,negative,sentihin,0
+मैं इस काम से तंग आ गया हूं।,negative,sentihin,0
+आपकी मुस्कान सुकून देती है।,positive,sentihin,2
+वह पुस्तक पढ़कर मुझे आनंद मिला।,positive,sentihin,2
+आज बारिश होने की संभावना है।,neutral,sentihin,1
+उसकी बातें सुनकर मन में गहरी उदासी छा गई।,negative,sentihin,0
+उसके व्यवहार से मेरे मन में कड़वाहट भर गई।,negative,sentihin,0
+आज का मौसम बहुत सुहाना है।,positive,sentihin,2
+तुम्हारी दोस्ती अनमोल है।,positive,sentihin,2
+यह किताब ठीक ठाक है।,neutral,sentihin,1
+बाहर बारिश हो रही है।,neutral,sentihin,1
+आपकी सलाह बहुत काम की है।,positive,sentihin,2
+मुझे यह नई फिल्म बहुत उबाऊ लगी।,negative,sentihin,0
+उसकी बातें सुनकर मन में निराशा भर गई।,negative,sentihin,0
+यह बच्चों का खेल बहुत मजेदार था।,positive,sentihin,2
+यह अवसर लाभकारी रहा।,positive,sentihin,2
+यह संगीत मेरे दिल को छूता है।,positive,sentihin,2
+आपकी मुस्कान मेरे लिए प्रेरणा है।,positive,sentihin,2
+मैं इस मुद्दे पर कोई टिप्पणी नहीं करूंगा।,neutral,sentihin,1
+यह यात्रा थकानभरी रही।,negative,sentihin,0
+यह निर्णय नुकसानदायक रहा।,negative,sentihin,0
+आपकी सोच प्रेरणा से भरी हुई है।,positive,sentihin,2
+मुझे इसका स्वाद बेकार लगा,negative,sentihin,0
+इस मामले में कोई निष्कर्ष पर पहुँचना कठिन है।,neutral,sentihin,1
+मुझे इस मुद्दे पर कोई विशेष भावना नहीं है।,neutral,sentihin,1
+यह योजना बेहद सफल रही।,positive,sentihin,2
+यह योजना पूरी तरह व्यर्थ साबित हुई।,negative,sentihin,0
+यह यात्रा पूरी तरह असफल थी।,negative,sentihin,0
+मुझे इसमें कोई आनंद नहीं आया।,neutral,sentihin,1
+आपकी सोच हमेशा मन को प्रफुल्लित करती है।,positive,sentihin,2
+मुझे इससे कोई विशेष अनुभव नहीं हुआ।,neutral,sentihin,1
+मुझे इसमें कोई विशेष आकर्षण नहीं लगा।,neutral,sentihin,1
+मुझे यह खबर सुनकर दुख हुआ।,negative,sentihin,0
+आज क्रिकेट का मैच शाम 7 बजे शुरू होगा।,neutral,sports,1
+वह यात्रा स्मरणीय रही।,positive,sentihin,2
+यह संगीत मेरे मन को शांत करता है।,positive,sentihin,2
+यह उपलब्धि गर्व की बात है।,positive,sentihin,2
+आपकी सोच हमेशा नई प्रेरणा देती है।,positive,sentihin,2
+यह समाचार मुझे खुशी दे रहा है।,positive,sentihin,2
+आपकी मुस्कान सदा खुशी देती है।,positive,sentihin,2
+मेरे माता पिता का स्वास्थ्य आज बेहतर है।,positive,sentihin,2
+सेवा की धीमी प्रक्रिया ने सबका समय खराब किया,negative,sentihin,0
+मुझे यह सब तटस्थ लगा।,neutral,sentihin,1
+मैं रोज़ाना अपनी मां का खाना खाता हूं।,neutral,sentihin,1
+मैं इस काम से बहुत तंग आ गया हूं।,negative,sentihin,0
+आपकी तारीफ सुनकर अच्छा लगा।,positive,sentihin,2
+मुझे इससे कोई भावनात्मक प्रतिक्रिया नहीं हुई।,neutral,sentihin,1
+यह निर्णय बेकार था।,negative,sentihin,0
+मुझे इसमें कोई खास असर महसूस नहीं हुआ।,neutral,sentihin,1
+मैं कल दिल्ली जाऊंगा।,neutral,sentihin,1
+आपके विचार से प्रेरणा मिलती है।,positive,sentihin,2
+मुझे इसमें कोई नवीनता नहीं मिली।,neutral,sentihin,1
+यह प्रयास व्यर्थ रहा।,negative,sentihin,0
+यह प्रयास सफल रहा।,positive,sentihin,2
+आपकी सहायता ने मेरे आत्मविश्वास को बल दिया।,positive,sentihin,2
+वह फिल्म उम्मीद से कहीं बेहतर थी।,positive,sentihin,2
+यह यात्रा पूरी तरह बेकार रही।,negative,sentihin,0
+उसकी कड़वी बातों से मन में उदासी छा गई।,negative,sentihin,0
+मुझे इसमें कोई भावना नहीं आई।,neutral,sentihin,1
+इस विषय पर मेरे विचार तटस्थ हैं।,neutral,sentihin,1
+मैं रोज़ाना अपने माता पिता का सम्मान करता हूं।,neutral,sentihin,1
+उसकी आलोचना से दुख हुआ।,negative,sentihin,0
+मुझे आपकी बातों से खुशी हुई।,positive,sentihin,2
+आपकी मदद मेरे लिए सदा महत्वपूर्ण रहेगी।,positive,sentihin,2
+यह फिल्म बेहद निराशाजनक साबित हुई।,negative,sentihin,0
+इस विषय पर मेरी राय नहीं है।,neutral,sentihin,1
+आज मैंने अपने पसंदीदा गाने सुने।,positive,sentihin,2
+इस सेवा का अनुभव बेकार रहा,negative,sentihin,0
+यह व्यंजन स्वादिष्ट और लाजवाब है।,positive,sentihin,2
+मुझे इससे कोई विशेष फर्क नहीं।,neutral,sentihin,1
+मुझे यह आदत बुरी लगती है।,negative,sentihin,0
+खाना स्वाद में बेहतरीन था,positive,sentihin,2
+इस मुद्दे पर कोई निष्कर्ष अभी तक नहीं निकला।,neutral,sentihin,1
+वह फिल्म देख कर खुशी हुई।,positive,sentihin,2
+यह सेवा एकदम खराब थी और भरोसे के लायक नहीं।,negative,sentihin,0
+तुम्हारा समर्थन हमेशा प्रेरणादायक होता है।,positive,sentihin,2
+यह ऐप काफी उपयोगी है,positive,sentihin,2
+रोनाल्डो ने मैच जिता दिया।,positive,sports,2
+इस विषय पर मैं अनिश्चित हूं,neutral,sentihin,1
+इस योजना ने मेरे काम को सहज बना दिया।,positive,sentihin,2
+उसकी बेरुखी ने मुझे आत्ममंथन के लिए मजबूर किया।,negative,sentihin,0
+यह निर्णय मेरे लिए अत्यंत दुखद रहा।,negative,sentihin,0
+आपका व्यवहार दिल को छू गया।,positive,sentihin,2
+यह सफलता मेरे कड़े परिश्रम का फल है।,positive,sentihin,2
+इस पार्क में समय बिताना बहुत अच्छा लगता है।,positive,sentihin,2
+यह रंग संयोजन ठीक लग रहा है।,neutral,sentihin,1
+आपका समर्थन हमेशा प्रेरणादायक होता है।,positive,sentihin,2
+मुझे यह जीत खुशी दे रही है।,positive,sentihin,2
+यह निर्णय पूरी तरह असंतोषजनक था।,negative,sentihin,0
+आपके प्रयासों की जितनी प्रशंसा करूं उतनी कम है।,positive,sentihin,2
+यह निर्णय पूरी तरह निराशाजनक साबित हुआ।,negative,sentihin,0
+क्रिकेट टीम लगातार हार रही है।,negative,sports,0
+यह योजना केवल कागजों पर अच्छी लगती है असल में नहीं।,negative,sentihin,0
+तुम्हारा यह हुनर कमाल का है।,positive,sentihin,2
+तुम्हारा यह काम प्रशंसनीय है।,positive,sentihin,2
+वेब साइट का डिज़ाइन काफी पुराना लगा,negative,sentihin,0
+इस मुद्दे पर मेरी सोच अभी अधूरी है।,neutral,sentihin,1
+तुम्हारा स्नेह मेरे जीवन की सबसे बड़ी ताकत है।,positive,sentihin,2
+मुझे वहाँ का अनुभव अच्छा नहीं लगा।,negative,sentihin,0
+इस कंपनी का काम बहुत बेहतरीन है।,positive,sentihin,2
+यह निर्णय अत्यंत नुकसानदेह साबित हुआ।,negative,sentihin,0
+उसकी तीखी टिप्पणियों ने माहौल को नकारात्मक बना दिया।,negative,sentihin,0
+यह निर्णय बेहद असंतोषजनक था।,negative,sentihin,0
+यह सूर्यास्त का दृश्य बहुत रोमांटिक था।,positive,sentihin,2
+यह फोन साधारण है,neutral,sentihin,1
+मुझे इसमें कोई खास अनुभूति नहीं हुई।,neutral,sentihin,1
+रोनाल्डो ने शानदार प्रदर्शन किया।,positive,sports,2
+मैं इस बारे में कुछ नहीं कहना चाहता।,neutral,sentihin,1
+तुम्हारे प्रयास सफल रहे।,positive,sentihin,2
+मुझे तुम्हारा साथ अच्छा लगता है।,positive,sentihin,2
+उसका क्रोधित स्वर सबके सामने मुझे शर्मिंदा कर गया।,negative,sentihin,0
+मुझे इसमें कोई नया अनुभव महसूस नहीं हुआ।,neutral,sentihin,1
+मुझे इसमें कोई उत्सुकता नहीं हुई।,neutral,sentihin,1
+यह नया पार्क बहुत अच्छा डिज़ाइन किया गया है।,positive,sentihin,2
+मुझे इसमें कोई विशेष उत्सुकता नहीं हुई।,neutral,sentihin,1
+मुझे इसमें कोई उत्सुकता नहीं लगी।,neutral,sentihin,1
+यह सेवा बेहद घटिया रही।,negative,sentihin,0
+मुझे इससे कोई नयी अनुभूति नहीं हुई।,neutral,sentihin,1
+मुझे यह जगह बहुत शोर शराबे वाली लगी।,negative,sentihin,0
+मुझे वहाँ की गंदगी से निराशा हुई।,negative,sentihin,0
+ऑनलाइन खरीददारी सरल और तेज थी,positive,sentihin,2
+यह मामला देखने में साधारण लगता है।,neutral,sentihin,1
+तुम्हारा सहारा मेरे लिए बहुत महत्वपूर्ण रहा है।,positive,sentihin,2
+मुझे यह खाना बिल्कुल पसंद नहीं आया।,negative,sentihin,0
+यह योजना असफल होने के कारण मुझे काफी नुकसान हुआ।,negative,sentihin,0
+यह कविता बहुत भावुक और सुंदर है।,positive,sentihin,2
+मुझे इसमें कुछ विशेष महसूस नहीं हुआ।,neutral,sentihin,1
+यात्रा के अनुभव पर कोई विशेष राय नहीं बन पाई,neutral,sentihin,1
+मैं इसमें कोई खास अंतर नहीं देख पाया।,neutral,sentihin,1
+मुझे इससे कोई नई अनुभूति नहीं हुई।,neutral,sentihin,1
+इस फिल्म की कहानी प्रेरक थी,positive,sentihin,2
+मुझे वहाँ का व्यवहार अशिष्ट लगा।,negative,sentihin,0
+मुझे इसकी जानकारी सीमित है,neutral,sentihin,1
+मैं इस विषय पर कुछ नहीं कहना चाहता।,neutral,sentihin,1
+मुझे वहाँ की सफाई पसंद नहीं आई।,negative,sentihin,0
+फिल्म में कहानी में दम नहीं था,negative,sentihin,0
+मुझे वहाँ का वातावरण पसंद नहीं आया।,negative,sentihin,0
+इस सफलता के लिए बधाई।,positive,sentihin,2
+आपका समर्थन मेरे लिए प्रेरणा है।,positive,sentihin,2
+तुम्हारी मेहनत प्रेरणादायक है।,positive,sentihin,2
+मुझे इसमें कोई विशेषता महसूस नहीं हुई।,neutral,sentihin,1
+यह सेवा मेरे लिए पूरी तरह निराशाजनक रही।,negative,sentihin,0
+मुझे इस विषय में कोई मत नहीं।,neutral,sentihin,1
+उसका रूखा व्यवहार हर किसी को दुखी कर गया।,negative,sentihin,0
+तुम्हारे आत्मबल ने मेरे अंदर साहस भरा।,positive,sentihin,2
+यह निर्णय बहुत ही असंतोषजनक था।,negative,sentihin,0
+मुझे इसमें कोई कठिनाई नहीं हुई,positive,sentihin,2
+मुझे उसकी आलोचना ठीक नहीं लगी।,negative,sentihin,0
+वह प्रस्तुति अत्यंत मनोरंजक रही।,positive,sentihin,2
+मैं रोज़ाना अपने परिवार के साथ समय बिताता हूं।,neutral,sentihin,1
+आपकी सलाह ने मेरी समस्या तुरंत सुलझा दी।,positive,sentihin,2
+मैं रोज़ाना अपने जीवन में सकारात्मकता लाने की कोशिश करता हूं।,neutral,sentihin,1
+तुम्हारे विचार सुनकर दिल को सुकून मिलता है।,positive,sentihin,2
+मैं रोज़ाना अपने पालतू जानवर के साथ खेलता हूं।,neutral,sentihin,1
+तुम्हारे साथ बिताया समय हमेशा यादगार रहेगा।,positive,sentihin,2
+यह निर्णय पूरी तरह विफल साबित हुआ।,negative,sentihin,0
+इस जगह की खूबसूरती अद्वितीय है,positive,sentihin,2
+तुम्हारी प्रशंसा सुनकर मन में संतोष और गर्व का अनुभव होता है।,positive,sentihin,2
+तुम्हारा आत्मविश्वास प्रेरित करता है।,positive,sentihin,2
+यह सेवा पूरी तरह असंतोषजनक थी।,negative,sentihin,0
+दुकान में सब्जियां मिलती हैं।,neutral,sentihin,1
+यह योजना एकदम असफल रही।,negative,sentihin,0
+मुझे इसका कोई फायदा नहीं हुआ,negative,sentihin,0
+मैं कंप्यूटर पर काम करता हूं।,neutral,sentihin,1
+मुझे यह जगह डरावनी लगती है।,negative,sentihin,0
+यह यात्रा सफल रही,positive,sentihin,2
+यह मामला देखने में साधारण है।,neutral,sentihin,1
+इस विषय पर मेरी राय स्पष्ट नहीं है,neutral,sentihin,1
+मुझे वहाँ की व्यवस्था असंतोषजनक लगी।,negative,sentihin,0
+आपके विचार बहुत ही प्रेरक हैं।,positive,sentihin,2
+मुझे इसका डिज़ाइन साधारण लगा,neutral,sentihin,1
+यह सेवा बिल्कुल बेकार थी।,negative,sentihin,0
+यह होटल बहुत महंगा है।,negative,sentihin,0
+यह निर्णय बहुत निराशाजनक साबित हुआ।,negative,sentihin,0
+मुझे इसमें कोई उत्सुकता नहीं।,neutral,sentihin,1
+मुझे इसमें कोई विशेष आकर्षण नहीं मिला।,neutral,sentihin,1
+मुझे यह उपहार पसंद आया।,positive,sentihin,2
+आपका सहयोग मेरे लिए बहुत प्रेरक है।,positive,sentihin,2
+सेमिनार में कई उपयोगी बातें साझा की गईं,positive,sentihin,2
+इस मुद्दे पर मेरी कोई खास भावना नहीं है।,neutral,sentihin,1
+इस ट्रेन में कोई सुविधा नहीं थी।,negative,sentihin,0
+मैं रोज़ाना व्यायाम करता हूं।,neutral,sentihin,1
+यह सेवा इतनी घटिया थी कि मैं दोबारा उपयोग नहीं करूंगा।,negative,sentihin,0
+तुम्हारा यह प्रस्ताव शानदार है।,positive,sentihin,2
+वह प्रस्तुति अद्भुत रही।,positive,sentihin,2
+इस पर अपनी कोई राय नहीं बन पाई है।,neutral,sentihin,1
+वह फिल्म देखना सुखद अनुभव था।,positive,sentihin,2
+तुम्हारे विचार सुनकर अच्छा लगा।,positive,sentihin,2
+मुझे वहाँ का माहौल उबाऊ लगा।,negative,sentihin,0
+मुझे इस पर कोई प्रतिक्रिया नहीं देनी।,neutral,sentihin,1
+मैं रोज़ाना अपने आसपास की सफाई करता हूं।,neutral,sentihin,1
+इस विषय में मेरी राय अभी बनी नहीं है।,neutral,sentihin,1
+आपकी मदद से मन को शांति मिलती है।,positive,sentihin,2
+मुझे इसमें कुछ नया समझ नहीं आया।,neutral,sentihin,1
+आज शुक्रवार है।,neutral,sentihin,1
+आपकी सहायता से मेरा आत्मविश्वास मजबूत हुआ।,positive,sentihin,2
+यह समारोह यादगार रहा।,positive,sentihin,2
+आपका प्रोत्साहन मेरे लिए अमूल्य है।,positive,sentihin,2
+मुझे यह सेवा बहुत निराशाजनक और धीमी लगी।,negative,sentihin,0
+यह निर्णय मेरे लिए सामान्य था।,neutral,sentihin,1
+कबड्डी टीम ने बेहतरीन जीत दर्ज की।,positive,sports,2
+आपका सहयोग सदा सराहनीय रहेगा।,positive,sentihin,2
+तुम्हारा यह काम मेरे दिल को छू गया है।,positive,sentihin,2
+योजना का क्रियान्वयन अच्छा रहा,positive,sentihin,2
+मुझे इसमें कोई आकर्षण नहीं लगा।,neutral,sentihin,1
+इस फिल्म ने मेरा दिल छू लिया।,positive,sentihin,2
+उसका व्यवहार सभी के लिए अपमानजनक साबित हुआ।,negative,sentihin,0
+मुझे इस विषय पर कोई सोच नहीं है।,neutral,sentihin,1
+उसकी उपेक्षा ने मेरे आत्म सम्मान को गहरा आघात पहुँचाया।,negative,sentihin,0
+यह यात्रा थकाऊ थी,negative,sentihin,0
+यह अनुभव मेरे लिए पूरी तरह बुरा था।,negative,sentihin,0
+यह सेवा बहुत खराब है।,negative,sentihin,0
+सेवा की प्रक्रिया उलझनभरी थी,negative,sentihin,0
+मैं रोज़ाना अपने जीवन में खुशी के पल ढूंढता हूं।,neutral,sentihin,1
+मुझे वह सुझाव व्यर्थ लगा।,negative,sentihin,0
+आपके विचार सुनकर प्रेरणा मिली।,positive,sentihin,2
+मुझे यह विषय सामान्य लगा।,neutral,sentihin,1
+वह अनुभव इतना बुरा था कि याद भी नहीं करना चाहता।,negative,sentihin,0
+मैं कॉफी पीता हूं।,neutral,sentihin,1
+मैं इसे नकारात्मक या सकारात्मक नहीं मानता।,neutral,sentihin,1
+मैं इस विषय में कोई दखल नहीं दूंगा।,neutral,sentihin,1
+आपकी सोच मेरे लिए उत्साह का स्रोत है।,positive,sentihin,2
+मुझे वहाँ की व्यवस्था घटिया लगी।,negative,sentihin,0
+इस प्रोडक्ट की कीमत काफी ज्यादा है,negative,sentihin,0
+तुम्हारे उत्साह ने मेरी थकी हुई आत्मा को नई ऊर्जा दी।,positive,sentihin,2
+यह प्रोडक्ट बेहतरीन है,positive,sentihin,2
+मैं रोज़ाना टहलने जाता हूं।,neutral,sentihin,1
+मुझे वहाँ का माहौल तनावपूर्ण लगा।,negative,sentihin,0
+वह यात्रा बहुत ही सुखद थी।,positive,sentihin,2
+वह रेस्तरां बहुत अच्छा था।,positive,sentihin,2
+मुझे इसमें कोई नया अनुभव नहीं हुआ।,neutral,sentihin,1
+फिल्म का क्लाइमैक्स बेहद रोमांचक था,positive,sentihin,2
+मुझे इसमें कोई अनुभव नहीं हुआ।,neutral,sentihin,1
+तुम्हारी प्रशंसा में शब्द कम पड़ जाते हैं।,positive,sentihin,2
+आपकी सलाह ने मेरी मदद की।,positive,sentihin,2

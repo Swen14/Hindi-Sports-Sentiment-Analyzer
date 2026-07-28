@@ -1,0 +1,16 @@
+﻿text,expected,predicted,confidence,correct
+भारत ने शानदार प्रदर्शन करते हुए मैच जीत लिया।,Positive,Positive,83.58,True
+खिलाड़ी ने बेहतरीन पारी खेली।,Positive,Positive,83.6,True
+टीम की जीत से प्रशंसक बहुत खुश हैं।,Positive,Positive,83.6,True
+भारत ने फाइनल में शानदार वापसी की।,Positive,Positive,83.6,True
+गेंदबाज ने शानदार प्रदर्शन किया।,Positive,Positive,83.6,True
+टीम की खराब बल्लेबाजी के कारण हार हुई।,Negative,Negative,74.37,True
+खिलाड़ी का प्रदर्शन बेहद निराशाजनक रहा।,Negative,Negative,74.37,True
+भारत लगातार तीसरा मैच हार गया।,Negative,Negative,74.36,True
+टीम ने आसान मौके गंवा दिए।,Negative,Negative,74.35,True
+चोट के कारण खिलाड़ी टूर्नामेंट से बाहर हो गया।,Negative,Negative,74.33,True
+मैच रविवार शाम सात बजे शुरू होगा।,Neutral,Neutral,69.64,True
+भारत और ऑस्ट्रेलिया के बीच मैच मुंबई में खेला जाएगा।,Neutral,Neutral,69.63,True
+टीम की घोषणा कल की जाएगी।,Neutral,Neutral,69.66,True
+टूर्नामेंट में कुल आठ टीमें भाग लेंगी।,Neutral,Neutral,69.3,True
+मैच का प्रसारण शाम छह बजे से होगा।,Neutral,Neutral,69.65,True
