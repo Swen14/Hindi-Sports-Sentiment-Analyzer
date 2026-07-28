@@ -1,6 +1,48 @@
+# -----------------------------
+# Logs
+# -----------------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# -----------------------------
+# Node / Vite
+# -----------------------------
 node_modules/
 dist/
+dist-ssr/
+*.local
+
+# -----------------------------
+# Python
+# -----------------------------
+venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 .env
-.vscode/
+.pytest_cache/
+
+# -----------------------------
+# Ignore model files
+# -----------------------------
+model/checkpoints/
+model/muril_sentiment_model/
+
+# -----------------------------
+# Editor
+# -----------------------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

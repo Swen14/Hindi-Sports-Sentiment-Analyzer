@@ -1,4 +1,6 @@
+# -----------------------------
 # Logs
+# -----------------------------
 logs
 *.log
 npm-debug.log*
@@ -7,15 +9,37 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# -----------------------------
+# Node / Vite
+# -----------------------------
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# -----------------------------
+# Python
+# -----------------------------
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.pytest_cache/
+
+# -----------------------------
+# Model files (keep locally)
+# -----------------------------
+model/checkpoints/
+model/muril_sentiment_model/
+
+# -----------------------------
+# Editor files
+# -----------------------------
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
