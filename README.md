@@ -10,24 +10,23 @@ The application features a modern frontend built with **Vite + Preact** and a **
 
 Sentiment analysis for Indian languages remains more challenging than English due to limited high-quality datasets and linguistic diversity. This project focuses specifically on **Hindi sports content**, enabling users to analyze news headlines, match reactions, and sports-related comments.
 
-Instead of using external AI APIs, the application performs inference locally using a fine-tuned **MuRIL** model.
+Instead of using external AI APIs, the application performs inference locally using a fine-tuned MuRIL model.
 
 ---
 
 # ✨ Features
 
-* Analyze Hindi sports-related text
-* Classify sentiment into:
-
-  * 😊 Positive
-  * 😐 Neutral
-  * 😞 Negative
-* Fine-tuned MuRIL transformer model
-* FastAPI backend for prediction
-* Modern responsive interface using Vite + Preact
-* Confidence score for predictions
-* Example Hindi sports sentences
-* Clean and intuitive user interface
+- Analyze Hindi sports-related text
+- Classify sentiment into:
+  - 😊 Positive
+  - 😐 Neutral
+  - 😞 Negative
+- Fine-tuned MuRIL transformer model
+- FastAPI backend
+- Modern responsive interface built with Vite + Preact
+- Confidence score for predictions
+- Example Hindi sports sentences
+- Clean and intuitive user interface
 
 ---
 
@@ -35,57 +34,58 @@ Instead of using external AI APIs, the application performs inference locally us
 
 ## Frontend
 
-* Vite
-* Preact
-* JavaScript
-* HTML5
-* CSS3
+- Vite
+- Preact
+- JavaScript
+- HTML5
+- CSS3
 
 ## Backend
 
-* FastAPI
-* Python
-* Uvicorn
+- FastAPI
+- Python
+- Uvicorn
 
 ## Machine Learning
 
-* PyTorch
-* Hugging Face Transformers
-* MuRIL (`google/muril-base-cased`)
-* Scikit-learn
-* Pandas
-* NumPy
+- PyTorch
+- Hugging Face Transformers
+- MuRIL (`google/muril-base-cased`)
+- Scikit-learn
+- Pandas
+- NumPy
 
 ## Version Control
 
-* Git
-* GitHub
+- Git
+- GitHub
 
 ---
 
 # 🤖 Model
 
-This project uses Google's **MuRIL (Multilingual Representations for Indian Languages)** transformer model.
-
-Base Model:
+Base Model
 
 ```text
 google/muril-base-cased
 ```
 
-The model has been fine-tuned for three-class sentiment classification:
+The model has been fine-tuned for three sentiment classes:
 
-* Positive
-* Neutral
-* Negative
+- Positive
+- Neutral
+- Negative
 
 ---
 
 # 📂 Dataset
 
-The project is trained using the **SentiHin-2500** Hindi sentiment dataset.
+The model is trained using two datasets:
 
-The dataset is processed and prepared for three-class sentiment classification before fine-tuning the transformer model.
+- **SentiHin-2500** – Public Hindi sentiment dataset.
+- **Custom Hindi Sports Sentiment Dataset** – A manually created dataset containing Hindi sports-related sentences labeled as Positive, Negative, and Neutral to improve domain-specific performance.
+
+Both datasets are cleaned, preprocessed, and combined before fine-tuning the MuRIL model.
 
 ---
 
@@ -124,6 +124,7 @@ Hindi-Sports-Sentiment-Analyzer/
 ├── backend/
 ├── dataset/
 ├── model/
+├── screenshots/
 ├── README.md
 └── .gitignore
 ```
@@ -132,10 +133,10 @@ Hindi-Sports-Sentiment-Analyzer/
 
 # 🚀 Installation
 
-## Clone the Repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Hindi-Sports-Sentiment-Analyzer.git
+git clone https://github.com/Swen14/Hindi-Sports-Sentiment-Analyzer.git
 ```
 
 ```bash
@@ -148,15 +149,19 @@ cd Hindi-Sports-Sentiment-Analyzer
 python -m venv venv
 ```
 
-Windows
+Activate (Windows)
 
 ```bash
 venv\Scripts\activate
 ```
 
+Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
+
+Run FastAPI
 
 ```bash
 uvicorn app:app --reload
@@ -168,7 +173,7 @@ Backend
 http://127.0.0.1:8000
 ```
 
-API Docs
+API Documentation
 
 ```text
 http://127.0.0.1:8000/docs
@@ -202,7 +207,7 @@ http://localhost:5173
 
 ## POST `/predict`
 
-Example Request
+### Example Request
 
 ```json
 {
@@ -210,7 +215,7 @@ Example Request
 }
 ```
 
-Example Response
+### Example Response
 
 ```json
 {
@@ -223,79 +228,37 @@ Example Response
 
 # 💡 Example Predictions
 
-| Input                              | Prediction |
-| ---------------------------------- | ---------- |
-| भारतीय टीम ने शानदार जीत हासिल की। | Positive   |
-| टीम का प्रदर्शन बहुत खराब रहा।     | Negative   |
-| मैच कल शाम सात बजे शुरू होगा।      | Neutral    |
+| Input | Prediction |
+|--------|------------|
+| भारतीय टीम ने शानदार जीत हासिल की। | Positive |
+| टीम का प्रदर्शन बहुत खराब रहा। | Negative |
+| मैच कल शाम सात बजे शुरू होगा। | Neutral |
 
 ---
 
 # 📸 Screenshots
 
-> Add screenshots after completing the project.
-
-### 1. Home Page
-
-```
-screenshots/home-page.png
-```
-
-### 2. Positive Prediction
-
-```
-screenshots/positive-prediction.png
-```
-
-### 3. Negative Prediction
-
-```
-screenshots/negative-prediction.png
-```
-
-### 4. Neutral Prediction
-
-```
-screenshots/neutral-prediction.png
-```
-
-### 5. Loading State
-
-```
-screenshots/loading-state.png
-```
-
-### 6. Mobile View (Optional)
-
-```
-screenshots/mobile-view.png
-```
-
-Example Markdown:
-
-```markdown
-## Screenshots
-
-### Home Page
+## Home Page
 
 ![Home Page](screenshots/home-page.png)
 
-### Positive Prediction
+---
+
+## Positive Prediction
 
 ![Positive Prediction](screenshots/positive-prediction.png)
 
-### Negative Prediction
+---
+
+## Negative Prediction
 
 ![Negative Prediction](screenshots/negative-prediction.png)
 
-### Neutral Prediction
+---
+
+## Neutral Prediction
 
 ![Neutral Prediction](screenshots/neutral-prediction.png)
-
-### Loading State
-
-![Loading State](screenshots/loading-state.png)
-```
 
 ---
 
@@ -306,9 +269,3 @@ Example Markdown:
 B.E. Computer Science Engineering
 
 St. Francis Institute of Technology, Mumbai
-
----
-
-# 📄 License
-
-This project is intended for educational and research purposes.
