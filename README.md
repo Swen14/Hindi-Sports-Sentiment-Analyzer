@@ -4,20 +4,25 @@ A web-based **Natural Language Processing (NLP)** application that analyzes **Hi
 
 The application features a modern frontend built with **Vite + Preact** and a **FastAPI** backend serving the fine-tuned model for real-time sentiment prediction.
 
+In addition to Hindi input, the application can also process many **Hindi-English (code-mixed)** sports sentences through MuRIL's multilingual capabilities.
+
 ---
 
 # 📌 Project Overview
 
-Sentiment analysis for Indian languages remains more challenging than English due to limited high-quality datasets and linguistic diversity. This project focuses specifically on **Hindi sports content**, enabling users to analyze news headlines, match reactions, and sports-related comments.
+Sentiment analysis for Indian languages remains more challenging than English due to limited high-quality datasets and linguistic diversity.
 
-Instead of using external AI APIs, the application performs inference locally using a fine-tuned MuRIL model.
+This project focuses specifically on **Hindi sports content**, enabling users to analyze news headlines, match reactions, and sports-related comments.
+
+Instead of relying on external AI APIs, the application performs inference locally using a fine-tuned MuRIL transformer model.
 
 ---
 
 # ✨ Features
 
 - Analyze Hindi sports-related text
-- Classify sentiment into:
+- Supports many Hindi-English (code-mixed) sports sentences
+- Classifies sentiment into:
   - 😊 Positive
   - 😐 Neutral
   - 😞 Negative
@@ -64,7 +69,7 @@ Instead of using external AI APIs, the application performs inference locally us
 
 # 🤖 Model
 
-Base Model
+**Base Model**
 
 ```text
 google/muril-base-cased
@@ -76,6 +81,8 @@ The model has been fine-tuned for three sentiment classes:
 - Neutral
 - Negative
 
+MuRIL is designed specifically for Indian languages, making it well suited for Hindi NLP tasks while also handling many code-mixed Hindi-English inputs.
+
 ---
 
 # 📂 Dataset
@@ -83,16 +90,16 @@ The model has been fine-tuned for three sentiment classes:
 The model is trained using two datasets:
 
 - **SentiHin-2500** – Public Hindi sentiment dataset.
-- **Custom Hindi Sports Sentiment Dataset** – A manually created dataset containing Hindi sports-related sentences labeled as Positive, Negative, and Neutral to improve domain-specific performance.
+- **Custom Hindi Sports Sentiment Dataset** – A manually created dataset containing Hindi sports-related sentences labeled as **Positive**, **Negative**, and **Neutral** to improve domain-specific performance.
 
-Both datasets are cleaned, preprocessed, and combined before fine-tuning the MuRIL model.
+The datasets are cleaned, preprocessed, and combined before fine-tuning the MuRIL model.
 
 ---
 
 # ⚙️ Project Workflow
 
 ```text
-User enters Hindi sports text
+User enters Hindi or Hindi-English sports text
         │
         ▼
 Frontend (Vite + Preact)
@@ -144,6 +151,8 @@ cd Hindi-Sports-Sentiment-Analyzer
 ```
 
 ## Backend
+
+Create a virtual environment
 
 ```bash
 python -m venv venv
@@ -211,7 +220,7 @@ http://localhost:5173
 
 ```json
 {
-  "text": "भारतीय टीम ने शानदार प्रदर्शन किया।"
+  "text": "India ne aaj shandaar jeet hasil ki."
 }
 ```
 
@@ -231,8 +240,11 @@ http://localhost:5173
 | Input | Prediction |
 |--------|------------|
 | भारतीय टीम ने शानदार जीत हासिल की। | Positive |
+| India ne shandaar jeet hasil ki. | Positive |
 | टीम का प्रदर्शन बहुत खराब रहा। | Negative |
+| Team ka performance bahut kharab tha. | Negative |
 | मैच कल शाम सात बजे शुरू होगा। | Neutral |
+| Match kal shaam 7 baje shuru hoga. | Neutral |
 
 ---
 
