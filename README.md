@@ -1,6 +1,6 @@
 # 🏏 Hindi Sports Sentiment Analyzer using MuRIL
 
-A web-based **Natural Language Processing (NLP)** application that analyzes **Hindi sports-related text** and classifies its sentiment as **Positive**, **Negative**, or **Neutral** using a **fine-tuned MuRIL (Multilingual Representations for Indian Languages)** transformer model.
+A web-based **Natural Language Processing (NLP)** application that analyzes **Hindi sports-related text** and classifies its sentiment as **Positive**, **Negative**, or **Neutral** using a fine-tuned **MuRIL (Multilingual Representations for Indian Languages)** transformer model.
 
 The application features a modern frontend built with **Vite + Preact** and a **FastAPI** backend serving the fine-tuned model for real-time sentiment prediction.
 
@@ -73,13 +73,11 @@ Base Model:
 google/muril-base-cased
 ```
 
-The model has been fine-tuned for **three-class sentiment classification**:
+The model has been fine-tuned for three-class sentiment classification:
 
 * Positive
 * Neutral
 * Negative
-
-MuRIL is specifically designed for Indian languages, making it well suited for Hindi NLP tasks.
 
 ---
 
@@ -95,23 +93,23 @@ The dataset is processed and prepared for three-class sentiment classification b
 
 ```text
 User enters Hindi sports text
-            │
-            ▼
+        │
+        ▼
 Frontend (Vite + Preact)
-            │
-            ▼
+        │
+        ▼
 FastAPI Backend
-            │
-            ▼
+        │
+        ▼
 MuRIL Tokenizer
-            │
-            ▼
+        │
+        ▼
 Fine-tuned MuRIL Model
-            │
-            ▼
+        │
+        ▼
 Sentiment Prediction
-            │
-            ▼
+        │
+        ▼
 Positive / Neutral / Negative + Confidence Score
 ```
 
@@ -123,23 +121,10 @@ Positive / Neutral / Negative + Confidence Score
 Hindi-Sports-Sentiment-Analyzer/
 │
 ├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
-│
 ├── backend/
-│   ├── app.py
-│   ├── requirements.txt
-│   ├── model_loader.py
-│   └── prediction.py
-│
 ├── dataset/
-│
 ├── model/
-│
 ├── README.md
-│
 └── .gitignore
 ```
 
@@ -157,17 +142,11 @@ git clone https://github.com/YOUR_USERNAME/Hindi-Sports-Sentiment-Analyzer.git
 cd Hindi-Sports-Sentiment-Analyzer
 ```
 
----
-
-## Backend Setup
-
-Create a virtual environment:
+## Backend
 
 ```bash
 python -m venv venv
 ```
-
-Activate it:
 
 Windows
 
@@ -175,25 +154,21 @@ Windows
 venv\Scripts\activate
 ```
 
-Install dependencies:
-
 ```bash
 pip install -r requirements.txt
 ```
-
-Run the FastAPI server:
 
 ```bash
 uvicorn app:app --reload
 ```
 
-Backend:
+Backend
 
 ```text
 http://127.0.0.1:8000
 ```
 
-Swagger API Docs:
+API Docs
 
 ```text
 http://127.0.0.1:8000/docs
@@ -201,25 +176,21 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## Frontend Setup
+## Frontend
 
 ```bash
 cd frontend
 ```
 
-Install packages:
-
 ```bash
 npm install
 ```
-
-Run the application:
 
 ```bash
 npm run dev
 ```
 
-Frontend:
+Frontend
 
 ```text
 http://localhost:5173
@@ -229,7 +200,7 @@ http://localhost:5173
 
 # 📡 API
 
-## POST /predict
+## POST `/predict`
 
 Example Request
 
@@ -260,84 +231,71 @@ Example Response
 
 ---
 
-# 📊 Current Project Status
-
-* ✅ Project finalized
-* ✅ Frontend developed
-* ✅ GitHub repository created
-* ✅ FastAPI backend configured
-* ✅ MuRIL model integrated
-* ✅ Dataset added
-* ⏳ Model fine-tuning in progress
-* ⏳ Model evaluation
-* ⏳ Frontend and backend integration
-* ⏳ Deployment
-
----
-
-# 🔮 Future Improvements
-
-* Support Hindi-English code-mixed text
-* Expand the sports-specific dataset
-* Add attention visualization for predictions
-* Deploy using Docker
-* Compare MuRIL with IndicBERT
-* Add batch prediction support
-* Support additional Indian languages
-* Add prediction history
-* Improve handling of sarcasm and figurative language
-
----
-
-# ⚠️ Limitations
-
-* Optimized primarily for Hindi sports-related text
-* Performance depends on the quality and diversity of the training dataset
-* Sarcasm and highly contextual statements may be difficult to classify
-* Code-mixed text may reduce prediction quality
-
----
-
 # 📸 Screenshots
 
-Add screenshots here after deployment.
+> Add screenshots after completing the project.
 
-```text
-Home Page
+### 1. Home Page
 
-Prediction Result
-
-Positive Example
-
-Negative Example
+```
+screenshots/home-page.png
 ```
 
----
+### 2. Positive Prediction
 
-# 🎯 Learning Outcomes
+```
+screenshots/positive-prediction.png
+```
 
-This project demonstrates practical experience with:
+### 3. Negative Prediction
 
-* Natural Language Processing
-* Transformer fine-tuning
-* Hugging Face Transformers
-* MuRIL
-* FastAPI
-* Vite + Preact
-* Model serving
-* REST API development
-* Git and GitHub
-* End-to-end ML application development
+```
+screenshots/negative-prediction.png
+```
 
----
+### 4. Neutral Prediction
 
-# 🙏 Acknowledgements
+```
+screenshots/neutral-prediction.png
+```
 
-* Google Research (MuRIL)
-* Hugging Face
-* PyTorch
-* FastAPI
-* SentiHin Dataset Contributors
+### 5. Loading State
+
+```
+screenshots/loading-state.png
+```
+
+### 6. Mobile View (Optional)
+
+```
+screenshots/mobile-view.png
+```
+
+Example Markdown:
+
+```markdown
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home-page.png)
+
+### Positive Prediction
+
+![Positive Prediction](screenshots/positive-prediction.png)
+
+### Negative Prediction
+
+![Negative Prediction](screenshots/negative-prediction.png)
+
+### Neutral Prediction
+
+![Neutral Prediction](screenshots/neutral-prediction.png)
+
+### Loading State
+
+![Loading State](screenshots/loading-state.png)
+```
 
 ---
 
@@ -353,4 +311,4 @@ St. Francis Institute of Technology, Mumbai
 
 # 📄 License
 
-This project is intended for educational and research purposes. You may add an MIT License if you plan to make the project open source.
+This project is intended for educational and research purposes.
