@@ -46,3 +46,4 @@ model/muril_sentiment_model/
 *.njsproj
 *.sln
 *.sw?
+.env
