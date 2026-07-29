@@ -1,17 +1,32 @@
 import { useState } from "react";
 import "./App.css";
 
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:5000/predict";
+
 function App() {
   const [text, setText] = useState("");
   const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const analyzeSentiment = async () => {
+  const examples = [
+    "भारतीय टीम ने शानदार जीत हासिल की।",
+    "टीम का प्रदर्शन बहुत निराशाजनक था।",
+    "मैच कल शाम सात बजे शुरू होगा।",
+  ];
+
+  const handleAnalyze = async () => {
     const cleanedText = text.trim();
 
     if (!cleanedText) {
-      setError("Please enter a Hindi sports sentence.");
+      setError("Please enter some Hindi sports text.");
+      setResult(null);
+      return;
+    }
+
+    if (cleanedText.length < 3) {
+      setError("Please enter a longer sentence.");
       setResult(null);
       return;
     }
@@ -21,7 +36,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/predict", {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,157 +46,301 @@ function App() {
         }),
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.detail || "Prediction failed.");
+        let message = "The server returned an invalid response.";
+
+        try {
+          const errorData = await response.json();
+
+          message =
+            errorData.detail ||
+            errorData.message ||
+            errorData.error ||
+            message;
+        } catch {
+          // Use the default message if the response is not JSON.
+        }
+
+        throw new Error(message);
       }
 
-      setResult(data);
+      const data = await response.json();
+
+      if (!data.sentiment) {
+        throw new Error("The prediction response does not contain sentiment.");
+      }
+
+      setResult({
+        sentiment: data.sentiment,
+        confidence: data.confidence,
+      });
     } catch (err) {
+      console.error("Prediction error:", err);
+
       setError(
-        err.message || "Could not connect to the backend."
+        err.message ||
+          "Prediction failed. Make sure the backend server is running."
       );
     } finally {
       setLoading(false);
     }
   };
 
-  const clearAll = () => {
+  const handleClear = () => {
     setText("");
     setResult(null);
     setError("");
   };
 
-  const getEmoji = (sentiment) => {
-    if (sentiment === "Positive") return "🏆";
-    if (sentiment === "Negative") return "📉";
-    return "⚖️";
+  const handleExample = (example) => {
+    setText(example);
+    setResult(null);
+    setError("");
   };
 
+  const getSentimentDetails = (sentiment) => {
+    const normalizedSentiment = String(sentiment || "")
+      .trim()
+      .toLowerCase();
+
+    if (
+      normalizedSentiment === "positive" ||
+      normalizedSentiment === "सकारात्मक"
+    ) {
+      return {
+        label: "Positive",
+        icon: "😊",
+        className: "positive",
+        message: "The entered text expresses a positive sentiment.",
+      };
+    }
+
+    if (
+      normalizedSentiment === "negative" ||
+      normalizedSentiment === "नकारात्मक"
+    ) {
+      return {
+        label: "Negative",
+        icon: "😞",
+        className: "negative",
+        message: "The entered text expresses a negative sentiment.",
+      };
+    }
+
+    return {
+      label: "Neutral",
+      icon: "😐",
+      className: "neutral",
+      message: "The entered text expresses a neutral sentiment.",
+    };
+  };
+
+  const sentimentDetails = result
+    ? getSentimentDetails(result.sentiment)
+    : null;
+
+  const getConfidencePercentage = (confidence) => {
+    const value = Number(confidence);
+
+    if (!Number.isFinite(value)) {
+      return null;
+    }
+
+    const percentage = value <= 1 ? value * 100 : value;
+
+    return Math.min(Math.max(percentage, 0), 100);
+  };
+
+  const confidencePercentage = result
+    ? getConfidencePercentage(result.confidence)
+    : null;
+
   return (
-    <main className="app-page">
+    <div className="app-page">
       <div className="background-glow glow-one"></div>
       <div className="background-glow glow-two"></div>
 
-      <section className="analyzer-card">
-        <div className="brand-badge">
-          <span>⚡</span>
-          MuRIL Powered
+      <header className="navbar">
+        <div className="brand">
+          <div className="brand-icon">HS</div>
+
+          <div className="brand-text">
+            <h1>Hindi Sports Sentiment Analyzer</h1>
+            <p>Sports text sentiment classification</p>
+          </div>
         </div>
 
-        <header className="hero">
-          <h1>
-            Hindi Sports
-            <span> Sentiment Analyzer</span>
-          </h1>
+        <div className="system-status">
+          <span className="status-dot"></span>
+          System Ready
+        </div>
+      </header>
+
+      <main className="main-content">
+        <section className="hero-section">
+          <div className="hero-badge">Hindi Sports Sentiment Analysis</div>
+
+          <h2>Understand the sentiment behind Hindi sports text</h2>
 
           <p>
-            Analyse Hindi sports comments and instantly classify them
-            as positive, negative, or neutral.
+            Enter a Hindi sports-related sentence, news headline, comment or
+            reaction to classify it as positive, negative or neutral.
           </p>
-        </header>
+        </section>
 
-        <div className="input-card">
-          <label htmlFor="sportsText">
-            Enter Hindi sports text
-          </label>
+        <section className="analyzer-card">
+          <div className="input-header">
+            <div>
+              <h3>Enter Hindi Sports Text</h3>
+
+              <p>
+                Write a Hindi sports headline, statement, comment or reaction.
+              </p>
+            </div>
+
+            <span className="character-count">{text.length}/500</span>
+          </div>
 
           <textarea
-            id="sportsText"
             value={text}
-            onChange={(event) =>
-              setText(event.target.value)
-            }
-            placeholder="उदाहरण: भारत ने शानदार जीत हासिल की।"
+            onChange={(event) => {
+              setText(event.target.value);
+              setError("");
+            }}
+            placeholder="Example: भारतीय टीम ने शानदार प्रदर्शन किया।"
             maxLength={500}
+            rows={7}
             disabled={loading}
           />
 
-          <div className="input-footer">
-            <span>Hindi and Hinglish supported</span>
-            <span>{text.length}/500</span>
+          <div className="example-section">
+            <p className="example-title">Try an example:</p>
+
+            <div className="example-list">
+              {examples.map((example) => (
+                <button
+                  key={example}
+                  type="button"
+                  className="example-button"
+                  onClick={() => handleExample(example)}
+                  disabled={loading}
+                >
+                  {example}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="action-buttons">
-          <button
-            className="analyze-button"
-            onClick={analyzeSentiment}
-            disabled={loading}
-          >
-            {loading ? (
-              <>
-                <span className="spinner"></span>
-                Analysing sentiment
-              </>
-            ) : (
-              <>
-                <span>✨</span>
-                Analyse Sentiment
-              </>
-            )}
-          </button>
+          {error && (
+            <div className="error-message" role="alert">
+              {error}
+            </div>
+          )}
 
-          <button
-            className="clear-button"
-            onClick={clearAll}
-            disabled={loading || (!text && !result)}
-          >
-            Clear
-          </button>
-        </div>
+          <div className="button-row">
+            <button
+              type="button"
+              className="clear-button"
+              onClick={handleClear}
+              disabled={loading || (!text && !result && !error)}
+            >
+              Clear
+            </button>
 
-        {error && (
-          <div className="error-box">
-            <span>⚠️</span>
-            {error}
+            <button
+              type="button"
+              className="analyze-button"
+              onClick={handleAnalyze}
+              disabled={loading || !text.trim()}
+            >
+              {loading ? (
+                <>
+                  <span className="spinner"></span>
+                  Analyzing...
+                </>
+              ) : (
+                "Analyze Sentiment"
+              )}
+            </button>
           </div>
+        </section>
+
+        {result && sentimentDetails && (
+          <section className={`result-card ${sentimentDetails.className}`}>
+            <div className="result-icon">{sentimentDetails.icon}</div>
+
+            <div className="result-content">
+              <p className="result-heading">Detected Sentiment</p>
+
+              <h3>{sentimentDetails.label}</h3>
+
+              <p className="result-message">
+                {sentimentDetails.message}
+              </p>
+
+              {confidencePercentage !== null && (
+                <div className="confidence-section">
+                  <div className="confidence-header">
+                    <span>Confidence Score</span>
+
+                    <strong>{confidencePercentage.toFixed(2)}%</strong>
+                  </div>
+
+                  <div className="confidence-track">
+                    <div
+                      className="confidence-fill"
+                      style={{
+                        width: `${confidencePercentage}%`,
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
         )}
 
-        {result && (
-          <div
-            className={`result-card ${result.sentiment.toLowerCase()}`}
-          >
-            <div className="result-heading">
-              <div className="sentiment-icon">
-                {getEmoji(result.sentiment)}
-              </div>
+        <section className="information-grid">
+          <article className="info-card">
+            <div className="info-icon">😊</div>
 
-              <div>
-                <span className="result-label">
-                  Detected sentiment
-                </span>
-                <h2>{result.sentiment}</h2>
-              </div>
+            <h3>Positive</h3>
 
-              <div className="confidence-score">
-                {result.confidence}%
-              </div>
-            </div>
+            <p>
+              Represents victory, praise, excitement, confidence and strong
+              performance.
+            </p>
+          </article>
 
-            <div className="confidence-bar">
-              <div
-                className="confidence-progress"
-                style={{
-                  width: `${result.confidence}%`,
-                }}
-              ></div>
-            </div>
+          <article className="info-card">
+            <div className="info-icon">😐</div>
 
-            <div className="analysed-text">
-              <span>Analysed text</span>
-              <p>{result.text}</p>
-            </div>
-          </div>
-        )}
+            <h3>Neutral</h3>
 
-        <footer>
-          Fine-tuned using Google MuRIL for Hindi sentiment
-          classification
-        </footer>
-      </section>
-    </main>
+            <p>
+              Represents factual sports information without a strong positive
+              or negative opinion.
+            </p>
+          </article>
+
+          <article className="info-card">
+            <div className="info-icon">😞</div>
+
+            <h3>Negative</h3>
+
+            <p>
+              Represents defeat, disappointment, criticism and poor
+              performance.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <p>Hindi Sports Sentiment Analyzer</p>
+        <span>Academic Natural Language Processing Project</span>
+      </footer>
+    </div>
   );
 }
 
