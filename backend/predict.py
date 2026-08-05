@@ -4,40 +4,42 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-MODEL_PATH = PROJECT_ROOT / "model" / "muril_sentiment_model"
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_PATH = BASE_DIR / "model" / "muril_sentiment_model"
 
-ID_TO_LABEL = {
-    0: "Negative",
-    1: "Neutral",
-    2: "Positive"
-}
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-
-tokenizer = AutoTokenizer.from_pretrained(
-    MODEL_PATH,
-    use_fast=False
-)
-
-model = AutoModelForSequenceClassification.from_pretrained(
-    MODEL_PATH
-)
-
-device = torch.device(
-    "cuda" if torch.cuda.is_available() else "cpu"
-)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
 
 model.to(device)
 model.eval()
 
+print("Model loaded successfully.")
+print("Device:", device)
 
-def predict_sentiment(text):
+label_map = {
+    int(key): value
+    for key, value in model.config.id2label.items()
+}
+
+while True:
+    text = input("\nEnter text for sentiment analysis (or type exit): ").strip()
+
+    if text.lower() == "exit":
+        print("Program stopped.")
+        break
+
+    if not text:
+        print("Please enter some text.")
+        continue
+
     inputs = tokenizer(
         text,
         return_tensors="pt",
         truncation=True,
         padding=True,
-        max_length=128
+        max_length=128,
     )
 
     inputs = {
@@ -47,43 +49,21 @@ def predict_sentiment(text):
 
     with torch.no_grad():
         outputs = model(**inputs)
+        probabilities = torch.softmax(outputs.logits, dim=1)
 
-    probabilities = torch.softmax(
-        outputs.logits,
-        dim=-1
+        predicted_id = int(
+            torch.argmax(probabilities, dim=1).item()
+        )
+
+        confidence = float(
+            probabilities[0][predicted_id].item()
+        )
+
+    sentiment = label_map.get(
+        predicted_id,
+        f"Unknown-{predicted_id}",
     )
 
-    predicted_id = torch.argmax(
-        probabilities,
-        dim=-1
-    ).item()
-
-    confidence = probabilities[0][predicted_id].item()
-
-    return {
-        "text": text,
-        "sentiment": ID_TO_LABEL[predicted_id],
-        "confidence": round(confidence * 100, 2)
-    }
-
-
-test_sentences = [
-    "भारत ने शानदार जीत हासिल की।",
-    "टीम का प्रदर्शन बेहद खराब रहा।",
-    "मैच शाम सात बजे शुरू होगा।",
-    "खिलाड़ी ने बेहतरीन प्रदर्शन किया।",
-    "टीम लगातार मैच हार रही है।"
-]
-
-
-print("Model loaded successfully.")
-print("Device:", device)
-print()
-
-for sentence in test_sentences:
-    result = predict_sentiment(sentence)
-
-    print("Text:", result["text"])
-    print("Sentiment:", result["sentiment"])
-    print("Confidence:", result["confidence"], "%")
-    print("-" * 50)
+    print("\nText:", text)
+    print("Sentiment:", sentiment)
+    print("Confidence:", round(confidence * 100, 2), "%")
