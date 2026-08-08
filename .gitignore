@@ -1,48 +1,139 @@
-# -----------------------------
-# Logs
-# -----------------------------
-logs
-*.log
+# ============================================================
+# PYTHON
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+
+# ============================================================
+# PYTHON / IDE CACHE
+# ============================================================
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+
+# ============================================================
+# FRONTEND / NODE
+# ============================================================
+
+frontend/node_modules/
+node_modules/
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-# -----------------------------
-# Node / Vite
-# -----------------------------
-node_modules/
+frontend/dist/
 dist/
-dist-ssr/
-*.local
 
-# -----------------------------
-# Python
-# -----------------------------
-venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+
+# ============================================================
+# ENVIRONMENT / SECRETS
+# ============================================================
+
 .env
-.pytest_cache/
+.env.*
+!.env.example
 
-# -----------------------------
-# Ignore model files
-# -----------------------------
-model/checkpoints/
-model/muril_sentiment_model/
+*.key
+*.pem
 
-# -----------------------------
-# Editor
-# -----------------------------
-.vscode/*
-!.vscode/extensions.json
+
+# ============================================================
+# IDE / EDITOR
+# ============================================================
+
+.vscode/
 .idea/
+
+*.swp
+*.swo
+
+
+# ============================================================
+# OPERATING SYSTEM
+# ============================================================
+
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+desktop.ini
+
+
+# ============================================================
+# LARGE MACHINE LEARNING MODEL FILES
+# ============================================================
+
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+
+# ============================================================
+# ORIGINAL MURIL MODEL
+# Keep large trained weights out of GitHub
+# ============================================================
+
+model/checkpoints/
+
+model/muril_sentiment_model/*.bin
+model/muril_sentiment_model/*.safetensors
+model/muril_sentiment_model/*.pt
+model/muril_sentiment_model/*.pth
+
+
+# ============================================================
+# RESEARCH MODEL OUTPUTS
+# ============================================================
+
+research/muril/best_model/
+research/muril/output/
+
+research/indicbert_v2/best_model/
+research/indicbert_v2/output/
+
+research/xlm_roberta/best_model/
+research/xlm_roberta/output/
+
+
+# ============================================================
+# TRAINING CHECKPOINTS
+# ============================================================
+
+research/*/checkpoint-*/
+research/*/checkpoints/
+
+
+# ============================================================
+# HUGGING FACE CACHE
+# ============================================================
+
+.cache/
+huggingface/
+.huggingface/
+
+
+# ============================================================
+# TEMPORARY FILES
+# ============================================================
+
+*.tmp
+*.temp
+*.log
+~$*

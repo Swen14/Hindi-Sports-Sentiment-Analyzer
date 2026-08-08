@@ -1,0 +1,25 @@
+MuRIL Research Results
+======================
+
+Accuracy: 0.9967
+Macro Precision: 0.9967
+Macro Recall: 0.9967
+Macro F1: 0.9967
+
+Classification Report
+---------------------
+              precision    recall  f1-score   support
+
+    Negative     0.9950    0.9950    0.9950       400
+     Neutral     1.0000    0.9950    0.9975       400
+    Positive     0.9950    1.0000    0.9975       400
+
+    accuracy                         0.9967      1200
+   macro avg     0.9967    0.9967    0.9967      1200
+weighted avg     0.9967    0.9967    0.9967      1200
+
+Confusion Matrix
+----------------
+[[398   0   2]
+ [  2 398   0]
+ [  0   0 400]]
