@@ -1,126 +1,202 @@
-from pathlib import Path
-
-import torch
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+
 from pydantic import BaseModel
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-
-app = FastAPI(
-    title="Hindi Sports Sentiment API",
-    version="1.0.0",
+from .model_loader import (
+    predict_sentiment,
+    MODEL_PATHS
 )
 
 
+# ============================================================
+# FASTAPI
+# ============================================================
+
+app = FastAPI(
+
+    title="Hindi Sports Sentiment Analyzer",
+
+    description=(
+        "Hindi / Hinglish Sports Sentiment Analyzer "
+        "with selectable transformer models."
+    ),
+
+    version="3.0"
+)
+
+
+# ============================================================
+# CORS
+# ============================================================
+
 app.add_middleware(
+
     CORSMiddleware,
+
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000"
     ],
+
     allow_credentials=True,
+
     allow_methods=["*"],
-    allow_headers=["*"],
+
+    allow_headers=["*"]
 )
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-MODEL_PATH = BASE_DIR / "model" / "muril_sentiment_model"
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-
-tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-
-model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
-model.to(device)
-model.eval()
-
-
-label_map = {
-    int(key): value.capitalize()
-    for key, value in model.config.id2label.items()
-}
-
+# ============================================================
+# REQUEST MODEL
+# ============================================================
 
 class SentimentRequest(BaseModel):
+
     text: str
 
+    model: str = "old_muril"
+
+
+# ============================================================
+# HOME
+# ============================================================
 
 @app.get("/")
-def root():
+def home():
+
     return {
-        "message": "Hindi Sports Sentiment API is running",
-        "device": str(device),
+
+        "message":
+            "Hindi Sports Sentiment Analyzer API",
+
+        "available_models":
+            list(MODEL_PATHS.keys()),
+
+        "default_model":
+            "old_muril",
+
+        "labels": {
+
+            "0": "Negative",
+
+            "1": "Neutral",
+
+            "2": "Positive"
+        }
     }
 
+
+# ============================================================
+# AVAILABLE MODELS
+# ============================================================
+
+@app.get("/models")
+def models():
+
+    return {
+
+        "models": [
+
+            {
+                "id": "old_muril",
+                "name": "Original MuRIL"
+            },
+
+            {
+                "id": "research_muril",
+                "name": "Research MuRIL"
+            },
+
+            {
+                "id": "indicbert_v2",
+                "name": "IndicBERT v2"
+            },
+
+            {
+                "id": "xlm_roberta",
+                "name": "XLM-RoBERTa"
+            }
+
+        ]
+    }
+
+
+# ============================================================
+# HEALTH
+# ============================================================
 
 @app.get("/health")
-def health_check():
+def health():
+
     return {
-        "status": "ok",
-        "device": str(device),
-        "cuda_available": torch.cuda.is_available(),
+
+        "status":
+            "running",
+
+        "available_models":
+            list(MODEL_PATHS.keys())
     }
 
 
-@app.post("/predict")
-def predict_sentiment(request: SentimentRequest):
-    text = request.text.strip()
+# ============================================================
+# PREDICT
+# ============================================================
 
-    if not text:
-        raise HTTPException(
-            status_code=400,
-            detail="Please enter a Hindi sports sentence.",
-        )
+@app.post("/predict")
+def predict(
+    request: SentimentRequest
+):
 
     try:
-        inputs = tokenizer(
-            text,
-            return_tensors="pt",
-            truncation=True,
-            padding=True,
-            max_length=128,
+
+        if not request.text.strip():
+
+            raise HTTPException(
+
+                status_code=400,
+
+                detail="Text cannot be empty."
+            )
+
+
+        if request.model not in MODEL_PATHS:
+
+            raise HTTPException(
+
+                status_code=400,
+
+                detail=(
+                    f"Invalid model. "
+                    f"Available models: "
+                    f"{list(MODEL_PATHS.keys())}"
+                )
+            )
+
+
+        result = predict_sentiment(
+
+            request.text,
+
+            request.model
         )
 
-        inputs = {
-            key: value.to(device)
-            for key, value in inputs.items()
-        }
 
-        with torch.no_grad():
-            outputs = model(**inputs)
+        return result
 
-            probabilities = torch.softmax(
-                outputs.logits,
-                dim=1,
-            )
 
-            predicted_id = int(
-                torch.argmax(
-                    probabilities,
-                    dim=1,
-                ).item()
-            )
+    except HTTPException:
 
-            confidence = float(
-                probabilities[0][predicted_id].item()
-            )
+        raise
 
-        sentiment = label_map.get(
-            predicted_id,
-            f"Unknown-{predicted_id}",
-        )
 
-        return {
-            "text": text,
-            "sentiment": sentiment,
-            "confidence": round(confidence * 100, 2),
-        }
+    except Exception as e:
 
-    except Exception as error:
         raise HTTPException(
+
             status_code=500,
-            detail=f"Prediction failed: {str(error)}",
+
+            detail=str(e)
         )

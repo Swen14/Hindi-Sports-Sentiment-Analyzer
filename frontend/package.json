@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@preact/preset-vite": "^2.10.2",
-    "preact": "^10.27.1"
+    "preact": "^10.29.8",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "vite": "^7.1.3"
+    "@vitejs/plugin-react": "^5.2.0",
+    "vite": "^7.3.6"
   }
 }
