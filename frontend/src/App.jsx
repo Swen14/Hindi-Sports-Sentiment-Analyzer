@@ -1,48 +1,63 @@
 import { useState } from "react";
-import "./app.css";
+import "./App.css";
+import ModelEvaluation from "./ModelEvaluation";
 
 
 function App() {
 
   const [text, setText] = useState("");
-
   const [selectedModel, setSelectedModel] =
     useState("old_muril");
 
   const [result, setResult] = useState(null);
-
   const [loading, setLoading] = useState(false);
-
   const [error, setError] = useState("");
 
+
+  // ============================================================
+  // MODEL NAMES
+  // ============================================================
 
   const getModelName = (model) => {
 
     const modelNames = {
-      old_muril: "Original MuRIL",
-      research_muril: "Research MuRIL",
-      indicbert_v2: "IndicBERT v2",
-      xlm_roberta: "XLM-RoBERTa",
+
+      old_muril:
+        "Original MuRIL",
+
+      research_muril:
+        "Research MuRIL",
+
+      indicbert_v2:
+        "IndicBERT v2",
+
+      xlm_roberta:
+        "XLM-RoBERTa"
+
     };
 
     return modelNames[model] || model;
   };
 
 
+  // ============================================================
+  // SENTIMENT ANALYSIS
+  // ============================================================
+
   const analyzeSentiment = async () => {
 
     if (!text.trim()) {
 
-      setError("Please enter a sports comment.");
+      setError(
+        "Please enter a sports comment."
+      );
 
       return;
     }
 
 
     setLoading(true);
-
     setError("");
-
     setResult(null);
 
 
@@ -54,29 +69,33 @@ function App() {
           method: "POST",
 
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
           },
 
           body: JSON.stringify({
             text: text,
-            model: selectedModel,
-          }),
+            model: selectedModel
+          })
         }
       );
 
 
-      const data = await response.json();
+      const data =
+        await response.json();
 
 
       if (!response.ok) {
 
         throw new Error(
-          data.detail || "Prediction failed."
+          data.detail ||
+          "Prediction failed."
         );
+
       }
 
 
       setResult(data);
+
 
     } catch (err) {
 
@@ -84,7 +103,7 @@ function App() {
 
       setError(
         err.message ||
-          "Could not connect to the backend."
+        "Could not connect to the backend."
       );
 
     } finally {
@@ -92,29 +111,44 @@ function App() {
       setLoading(false);
 
     }
+
   };
 
+
+  // ============================================================
+  // CLEAR
+  // ============================================================
 
   const clearAll = () => {
 
     setText("");
-
     setResult(null);
-
     setError("");
 
   };
 
 
+  // ============================================================
+  // CTRL + ENTER
+  // ============================================================
+
   const handleKeyDown = (e) => {
 
-    if (e.ctrlKey && e.key === "Enter") {
+    if (
+      e.ctrlKey &&
+      e.key === "Enter"
+    ) {
 
       analyzeSentiment();
 
     }
+
   };
 
+
+  // ============================================================
+  // RENDER
+  // ============================================================
 
   return (
 
@@ -122,6 +156,10 @@ function App() {
 
       <main className="sentiment-card">
 
+
+        {/* ====================================================
+            RESEARCH BADGE
+            ==================================================== */}
 
         <div className="research-badge">
 
@@ -132,6 +170,10 @@ function App() {
         </div>
 
 
+        {/* ====================================================
+            HEADER
+            ==================================================== */}
+
         <header className="app-header">
 
           <h1>
@@ -140,25 +182,28 @@ function App() {
 
           <p className="subtitle">
 
-            Analyze Hindi and Hinglish sports comments
-            using transformer-based language models.
+            Analyze Hindi and Hinglish sports
+            comments using transformer-based
+            language models.
 
           </p>
 
         </header>
 
 
+        {/* ====================================================
+            MODEL SELECTION
+            ==================================================== */}
+
         <div className="input-group">
 
           <label htmlFor="model">
-
             Select Language Model
-
           </label>
+
 
           <select
             id="model"
-
             value={selectedModel}
 
             onChange={(e) => {
@@ -168,8 +213,8 @@ function App() {
               );
 
               setResult(null);
-
               setError("");
+
             }}
           >
 
@@ -194,39 +239,38 @@ function App() {
         </div>
 
 
+        {/* ====================================================
+            SPORTS COMMENT
+            ==================================================== */}
+
         <div className="input-group">
 
           <label htmlFor="text">
-
             Sports Comment
-
           </label>
+
 
           <textarea
             id="text"
-
             rows="6"
-
             value={text}
-
             maxLength={500}
 
-            placeholder="Enter a Hindi or Hinglish sports comment..."
+            placeholder=
+              "Enter a Hindi or Hinglish sports comment..."
 
             onChange={(e) => {
 
-              setText(
-                e.target.value
-              );
+              setText(e.target.value);
 
               if (error) {
-
                 setError("");
-
               }
+
             }}
 
             onKeyDown={handleKeyDown}
+
           />
 
 
@@ -245,11 +289,14 @@ function App() {
         </div>
 
 
+        {/* ====================================================
+            BUTTONS
+            ==================================================== */}
+
         <div className="button-container">
 
           <button
             className="analyze-button"
-
             onClick={analyzeSentiment}
 
             disabled={
@@ -258,18 +305,15 @@ function App() {
             }
           >
 
-            {
-              loading
-                ? "Analyzing..."
-                : "Analyze Sentiment"
-            }
+            {loading
+              ? "Analyzing..."
+              : "Analyze Sentiment"}
 
           </button>
 
 
           <button
             className="clear-button"
-
             onClick={clearAll}
 
             disabled={
@@ -285,103 +329,124 @@ function App() {
         </div>
 
 
-        {
-          error && (
+        {/* ====================================================
+            ERROR
+            ==================================================== */}
 
-            <div className="error-box">
+        {error && (
+
+          <div className="error-box">
+
+            <strong>
+              Analysis failed
+            </strong>
+
+            <div className="error-message">
+              {error}
+            </div>
+
+          </div>
+
+        )}
+
+
+        {/* ====================================================
+            LOADING
+            ==================================================== */}
+
+        {loading && (
+
+          <div className="loading-box">
+
+            <div className="loading-title">
+
+              Running sentiment analysis...
+
+            </div>
+
+            <div className="loading-subtitle">
+
+              Using{" "}
+
+              {getModelName(
+                selectedModel
+              )}
+
+            </div>
+
+          </div>
+
+        )}
+
+
+        {/* ====================================================
+            SENTIMENT RESULT
+            ==================================================== */}
+
+        {result && !loading && (
+
+          <section className="result-box">
+
+            <h2>
+              Analysis Result
+            </h2>
+
+
+            <div className="result-row">
+
+              <span>
+                Sentiment
+              </span>
 
               <strong>
-                Analysis failed
+                {result.sentiment}
               </strong>
 
-              <div className="error-message">
+            </div>
 
-                {error}
 
-              </div>
+            <div className="result-row">
+
+              <span>
+                Confidence
+              </span>
+
+              <strong>
+                {result.confidence}%
+              </strong>
 
             </div>
 
-          )
-        }
 
+            <div className="result-row">
 
-        {
-          loading && (
+              <span>
+                Model Used
+              </span>
 
-            <div className="loading-box">
-
-              <div className="loading-title">
-
-                Running sentiment analysis...
-
-              </div>
-
-              <div className="loading-subtitle">
-
-                Using {getModelName(selectedModel)}
-
-              </div>
+              <strong>
+                {getModelName(
+                  result.model
+                )}
+              </strong>
 
             </div>
 
-          )
-        }
+          </section>
+
+        )}
 
 
-        {
-          result && !loading && (
+        {/* ====================================================
+            MODEL EVALUATION
+            ==================================================== */}
 
-            <section className="result-box">
-
-              <h2>
-                Analysis Result
-              </h2>
+        <ModelEvaluation />
 
 
-              <div className="result-row">
-
-                <span>
-                  Sentiment
-                </span>
-
-                <strong>
-                  {result.sentiment}
-                </strong>
-
-              </div>
-
-
-              <div className="result-row">
-
-                <span>
-                  Confidence
-                </span>
-
-                <strong>
-                  {result.confidence}%
-                </strong>
-
-              </div>
-
-
-              <div className="result-row">
-
-                <span>
-                  Model Used
-                </span>
-
-                <strong>
-                  {getModelName(result.model)}
-                </strong>
-
-              </div>
-
-            </section>
-
-          )
-        }
-
+        {/* ====================================================
+            FOOTER
+            ==================================================== */}
 
         <footer className="app-footer">
 
@@ -401,6 +466,7 @@ function App() {
     </div>
 
   );
+
 }
 
 
