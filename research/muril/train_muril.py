@@ -13,6 +13,8 @@ from transformers import (
     DataCollatorWithPadding
 )
 
+from sklearn.model_selection import train_test_split
+
 from sklearn.metrics import (
     accuracy_score,
     precision_recall_fscore_support,
@@ -25,45 +27,213 @@ from sklearn.metrics import (
 # 1. PATHS
 # ============================================================
 
-DATA_PATH = "../../dataset/Research_12000.csv"
+# Project root = NLP-Project
+PROJECT_ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..")
+)
+
+DATA_PATH = os.path.join(
+    PROJECT_ROOT,
+    "dataset",
+    "NLP_Project_Final_Dataset.csv"
+)
 
 MODEL_NAME = "google/muril-base-cased"
 
-OUTPUT_DIR = "./output"
-BEST_MODEL_DIR = "./best_model"
+OUTPUT_DIR = os.path.join(
+    os.path.dirname(__file__),
+    "output"
+)
+
+BEST_MODEL_DIR = os.path.join(
+    os.path.dirname(__file__),
+    "best_model"
+)
 
 
 # ============================================================
-# 2. LOAD DATA
+# 2. LOAD NEW DATASET
 # ============================================================
+
+print("\n==============================================")
+print("LOADING NEW HINDI SPORTS DATASET")
+print("==============================================")
 
 df = pd.read_csv(DATA_PATH)
 
 print("\nDataset loaded successfully")
+print("Dataset path:", DATA_PATH)
 print("Total rows:", len(df))
 
-print("\nSplit counts:")
-print(df["split"].value_counts())
+print("\nColumns:")
+print(df.columns.tolist())
 
 print("\nSentiment counts:")
 print(df["sentiment"].value_counts())
 
-
-train_df = df[df["split"] == "train"].copy()
-val_df = df[df["split"] == "validation"].copy()
-test_df = df[df["split"] == "test"].copy()
+print("\nSport counts:")
+print(df["sport"].value_counts())
 
 
-print("\nTrain:", len(train_df))
+# ============================================================
+# 3. LABEL MAPPING
+# ============================================================
+
+label_map = {
+    "नकारात्मक": 0,
+    "तटस्थ": 1,
+    "सकारात्मक": 2
+}
+
+df["label"] = df["sentiment"].map(label_map)
+
+
+# Check for invalid labels
+if df["label"].isna().any():
+    print("\nERROR: Unknown sentiment labels found:")
+    print(df[df["label"].isna()]["sentiment"].unique())
+    raise ValueError("Dataset contains sentiment labels not present in label_map.")
+
+
+# ============================================================
+# 4. CLEAN DATA
+# ============================================================
+
+df["text"] = df["text"].astype(str).str.strip()
+
+df = df.dropna(subset=["text", "label"])
+
+print("\nRows after cleaning:", len(df))
+
+
+# ============================================================
+# 5. REMOVE EXACT DUPLICATES
+# ============================================================
+
+before_duplicates = len(df)
+
+df = df.drop_duplicates(
+    subset=["text"]
+).reset_index(drop=True)
+
+removed_duplicates = before_duplicates - len(df)
+
+print("Duplicate rows removed:", removed_duplicates)
+print("Final dataset size:", len(df))
+
+
+# ============================================================
+# 6. CREATE FIXED 80/10/10 SPLIT
+# ============================================================
+
+print("\n==============================================")
+print("CREATING FIXED TRAIN / VALIDATION / TEST SPLIT")
+print("==============================================")
+
+
+# First:
+# 80% train
+# 20% temporary
+
+train_df, temp_df = train_test_split(
+    df,
+    test_size=0.20,
+    stratify=df["label"],
+    random_state=42
+)
+
+
+# Then:
+# 10% validation
+# 10% test
+
+val_df, test_df = train_test_split(
+    temp_df,
+    test_size=0.50,
+    stratify=temp_df["label"],
+    random_state=42
+)
+
+
+# Reset indexes
+train_df = train_df.reset_index(drop=True)
+val_df = val_df.reset_index(drop=True)
+test_df = test_df.reset_index(drop=True)
+
+
+print("\nSplit sizes:")
+print("Train:", len(train_df))
 print("Validation:", len(val_df))
 print("Test:", len(test_df))
 
 
+print("\nTrain sentiment distribution:")
+print(train_df["sentiment"].value_counts())
+
+print("\nValidation sentiment distribution:")
+print(val_df["sentiment"].value_counts())
+
+print("\nTest sentiment distribution:")
+print(test_df["sentiment"].value_counts())
+
+
 # ============================================================
-# 3. LOAD TOKENIZER
+# 7. SAVE FIXED SPLITS
 # ============================================================
 
-print("\nLoading fresh MuRIL tokenizer...")
+dataset_dir = os.path.join(
+    PROJECT_ROOT,
+    "dataset"
+)
+
+train_split_path = os.path.join(
+    dataset_dir,
+    "final_train.csv"
+)
+
+val_split_path = os.path.join(
+    dataset_dir,
+    "final_validation.csv"
+)
+
+test_split_path = os.path.join(
+    dataset_dir,
+    "final_test.csv"
+)
+
+
+train_df.to_csv(
+    train_split_path,
+    index=False,
+    encoding="utf-8-sig"
+)
+
+val_df.to_csv(
+    val_split_path,
+    index=False,
+    encoding="utf-8-sig"
+)
+
+test_df.to_csv(
+    test_split_path,
+    index=False,
+    encoding="utf-8-sig"
+)
+
+
+print("\nFixed datasets saved:")
+print(train_split_path)
+print(val_split_path)
+print(test_split_path)
+
+
+# ============================================================
+# 8. LOAD TOKENIZER
+# ============================================================
+
+print("\n==============================================")
+print("LOADING MuRIL TOKENIZER")
+print("==============================================")
 
 tokenizer = AutoTokenizer.from_pretrained(
     MODEL_NAME
@@ -71,7 +241,7 @@ tokenizer = AutoTokenizer.from_pretrained(
 
 
 # ============================================================
-# 4. PYTORCH DATASET
+# 9. PYTORCH DATASET
 # ============================================================
 
 class SentimentDataset(Dataset):
@@ -83,16 +253,13 @@ class SentimentDataset(Dataset):
 
         self.tokenizer = tokenizer
 
-
     def __len__(self):
 
         return len(self.texts)
 
-
     def __getitem__(self, index):
 
         text = str(self.texts[index])
-
         label = int(self.labels[index])
 
         encoding = self.tokenizer(
@@ -123,14 +290,15 @@ test_dataset = SentimentDataset(
 
 
 # ============================================================
-# 5. LOAD FRESH MuRIL MODEL
+# 10. LOAD FRESH MuRIL MODEL
 # ============================================================
 
-print("\nLoading fresh MuRIL model...")
+print("\n==============================================")
+print("LOADING FRESH MuRIL MODEL")
+print("==============================================")
 
 model = AutoModelForSequenceClassification.from_pretrained(
     MODEL_NAME,
-
     num_labels=3,
 
     id2label={
@@ -148,7 +316,7 @@ model = AutoModelForSequenceClassification.from_pretrained(
 
 
 # ============================================================
-# 6. DATA COLLATOR
+# 11. DATA COLLATOR
 # ============================================================
 
 data_collator = DataCollatorWithPadding(
@@ -157,7 +325,7 @@ data_collator = DataCollatorWithPadding(
 
 
 # ============================================================
-# 7. METRICS
+# 12. METRICS
 # ============================================================
 
 def compute_metrics(eval_pred):
@@ -190,7 +358,7 @@ def compute_metrics(eval_pred):
 
 
 # ============================================================
-# 8. TRAINING SETTINGS
+# 13. TRAINING SETTINGS
 # ============================================================
 
 training_args = TrainingArguments(
@@ -230,7 +398,7 @@ training_args = TrainingArguments(
 
 
 # ============================================================
-# 9. TRAINER
+# 14. TRAINER
 # ============================================================
 
 trainer = Trainer(
@@ -250,7 +418,7 @@ trainer = Trainer(
 
 
 # ============================================================
-# 10. DEVICE CHECK
+# 15. DEVICE CHECK
 # ============================================================
 
 print("\n==============================================")
@@ -262,6 +430,16 @@ if torch.cuda.is_available():
     print("GPU detected:")
     print(torch.cuda.get_device_name(0))
 
+    print(
+        "CUDA memory:",
+        round(
+            torch.cuda.get_device_properties(0).total_memory
+            / (1024 ** 3),
+            2
+        ),
+        "GB"
+    )
+
 else:
 
     print("WARNING: GPU not detected")
@@ -269,7 +447,7 @@ else:
 
 
 # ============================================================
-# 11. TRAIN
+# 16. TRAIN
 # ============================================================
 
 print("\n==============================================")
@@ -280,10 +458,12 @@ trainer.train()
 
 
 # ============================================================
-# 12. SAVE BEST MODEL
+# 17. SAVE BEST MODEL
 # ============================================================
 
-print("\nSaving best model...")
+print("\n==============================================")
+print("SAVING BEST MuRIL MODEL")
+print("==============================================")
 
 trainer.save_model(
     BEST_MODEL_DIR
@@ -293,9 +473,12 @@ tokenizer.save_pretrained(
     BEST_MODEL_DIR
 )
 
+print("\nBest model saved to:")
+print(BEST_MODEL_DIR)
+
 
 # ============================================================
-# 13. FINAL TEST
+# 18. FINAL TEST SET EVALUATION
 # ============================================================
 
 print("\n==============================================")
@@ -321,13 +504,9 @@ accuracy = accuracy_score(
 
 
 precision, recall, f1, _ = precision_recall_fscore_support(
-
     true_labels,
-
     predictions,
-
     average="macro",
-
     zero_division=0
 )
 
@@ -335,7 +514,9 @@ precision, recall, f1, _ = precision_recall_fscore_support(
 print("\nFINAL RESULTS")
 print("--------------------------------")
 
-print(f"Accuracy        : {accuracy:.4f}")
+print(
+    f"Accuracy        : {accuracy:.4f}"
+)
 
 print(
     f"Macro Precision : {precision:.4f}"
@@ -351,7 +532,7 @@ print(
 
 
 # ============================================================
-# 14. CLASSIFICATION REPORT
+# 19. CLASSIFICATION REPORT
 # ============================================================
 
 print("\nCLASSIFICATION REPORT")
@@ -376,7 +557,7 @@ print(report)
 
 
 # ============================================================
-# 15. CONFUSION MATRIX
+# 20. CONFUSION MATRIX
 # ============================================================
 
 print("\nCONFUSION MATRIX")
@@ -391,10 +572,14 @@ print(cm)
 
 
 # ============================================================
-# 16. SAVE RESULTS
+# 21. SAVE RESULTS
 # ============================================================
 
-results_dir = "../results"
+results_dir = os.path.join(
+    os.path.dirname(__file__),
+    "..",
+    "results"
+)
 
 os.makedirs(
     results_dir,
@@ -420,6 +605,26 @@ with open(
 
     f.write(
         "======================\n\n"
+    )
+
+    f.write(
+        "Dataset: NLP_Project_Final_Dataset.csv\n"
+    )
+
+    f.write(
+        "Total Dataset Size: 10000\n"
+    )
+
+    f.write(
+        "Train Size: 8000\n"
+    )
+
+    f.write(
+        "Validation Size: 1000\n"
+    )
+
+    f.write(
+        "Test Size: 1000\n\n"
     )
 
     f.write(
@@ -464,4 +669,6 @@ with open(
 print("\nResults saved to:")
 print(results_path)
 
-print("\nMuRIL experiment completed.")
+print("\n==============================================")
+print("MuRIL EXPERIMENT COMPLETED")
+print("==============================================")

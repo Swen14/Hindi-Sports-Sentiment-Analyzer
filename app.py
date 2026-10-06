@@ -8,8 +8,21 @@ from pydantic import BaseModel, Field
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-MODEL_PATH = PROJECT_ROOT / "model" / "muril_sentiment_model"
+PROJECT_ROOT = Path(__file__).resolve().parent
+
+
+def resolve_model_path(primary_path: Path, fallback_path: Path | None = None) -> Path:
+    if primary_path.exists():
+        return primary_path
+    if fallback_path is not None and fallback_path.exists():
+        return fallback_path
+    return primary_path
+
+
+MODEL_PATH = resolve_model_path(
+    PROJECT_ROOT / "model" / "muril_sentiment_model",
+    PROJECT_ROOT / "research" / "muril" / "best_model"
+)
 
 ID_TO_LABEL = {
     0: "Negative",

@@ -1,25 +1,30 @@
 XLM-RoBERTa Research Results
-===========================
+============================
 
-Accuracy: 0.9950
-Macro Precision: 0.9950
-Macro Recall: 0.9950
-Macro F1: 0.9950
+Model: FacebookAI/xlm-roberta-base
+Train Samples: 8000
+Validation Samples: 1000
+Test Samples: 1000
+
+Accuracy: 0.9990
+Macro Precision: 0.9990
+Macro Recall: 0.9990
+Macro F1: 0.9990
 
 Classification Report
 ---------------------
               precision    recall  f1-score   support
 
-    Negative     0.9975    0.9925    0.9950       400
-     Neutral     0.9975    0.9925    0.9950       400
-    Positive     0.9901    1.0000    0.9950       400
+    Negative     1.0000    0.9970    0.9985       334
+     Neutral     0.9970    1.0000    0.9985       333
+    Positive     1.0000    1.0000    1.0000       333
 
-    accuracy                         0.9950      1200
-   macro avg     0.9950    0.9950    0.9950      1200
-weighted avg     0.9950    0.9950    0.9950      1200
+    accuracy                         0.9990      1000
+   macro avg     0.9990    0.9990    0.9990      1000
+weighted avg     0.9990    0.9990    0.9990      1000
 
 Confusion Matrix
 ----------------
-[[397   1   2]
- [  1 397   2]
- [  0   0 400]]
+[[333   1   0]
+ [  0 333   0]
+ [  0   0 333]]
