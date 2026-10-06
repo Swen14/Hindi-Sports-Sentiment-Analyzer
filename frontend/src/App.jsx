@@ -1,4 +1,24 @@
 import { useState } from "react";
+import {
+  Activity,
+  BarChart3,
+  BrainCircuit,
+  CheckCircle2,
+  ChevronDown,
+  CircleDot,
+  Cpu,
+  Eraser,
+  Gauge,
+  LayoutDashboard,
+  MessageSquareText,
+  Microscope,
+  Network,
+  Play,
+  Sparkles,
+  Target,
+  Zap,
+} from "lucide-react";
+
 import "./App.css";
 import ModelEvaluation from "./ModelEvaluation";
 
@@ -6,37 +26,52 @@ import ModelEvaluation from "./ModelEvaluation";
 function App() {
 
   const [text, setText] = useState("");
-  const [selectedModel, setSelectedModel] =
-    useState("old_muril");
+  const [selectedModel, setSelectedModel] = useState("old_muril");
 
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const [activeSection, setActiveSection] =
+    useState("analysis");
 
-  // ============================================================
-  // MODEL NAMES
-  // ============================================================
+
+  const modelNames = {
+
+    old_muril: "Original MuRIL",
+
+    research_muril: "Research MuRIL",
+
+    indicbert_v2: "IndicBERT v2",
+
+    xlm_roberta: "XLM-RoBERTa",
+
+  };
+
 
   const getModelName = (model) => {
 
-    const modelNames = {
-
-      old_muril:
-        "Original MuRIL",
-
-      research_muril:
-        "Research MuRIL",
-
-      indicbert_v2:
-        "IndicBERT v2",
-
-      xlm_roberta:
-        "XLM-RoBERTa"
-
-    };
-
     return modelNames[model] || model;
+
+  };
+
+
+  const scrollToSection = (section) => {
+
+    setActiveSection(section);
+
+    const element =
+      document.getElementById(section);
+
+    if (element) {
+
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+    }
+
   };
 
 
@@ -53,6 +88,7 @@ function App() {
       );
 
       return;
+
     }
 
 
@@ -69,13 +105,14 @@ function App() {
           method: "POST",
 
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
 
           body: JSON.stringify({
             text: text,
-            model: selectedModel
-          })
+            model: selectedModel,
+          }),
+
         }
       );
 
@@ -95,7 +132,6 @@ function App() {
 
 
       setResult(data);
-
 
     } catch (err) {
 
@@ -147,319 +183,983 @@ function App() {
 
 
   // ============================================================
-  // RENDER
+  // RESULT COLOR
   // ============================================================
+
+  const getSentimentClass = (sentiment) => {
+
+    if (!sentiment) {
+      return "";
+    }
+
+    const value =
+      sentiment.toLowerCase();
+
+    if (
+      value.includes("positive") ||
+      value.includes("सकारात्मक")
+    ) {
+
+      return "positive";
+
+    }
+
+    if (
+      value.includes("negative") ||
+      value.includes("नकारात्मक")
+    ) {
+
+      return "negative";
+
+    }
+
+    return "neutral";
+
+  };
+
 
   return (
 
-    <div className="app-container">
+    <div className="dashboard-shell">
 
-      <main className="sentiment-card">
+      {/* ========================================================
+          BACKGROUND EFFECTS
+          ======================================================== */}
+
+      <div className="background-grid"></div>
+
+      <div className="ambient-glow glow-one"></div>
+
+      <div className="ambient-glow glow-two"></div>
 
 
-        {/* ====================================================
-            RESEARCH BADGE
-            ==================================================== */}
+      {/* ========================================================
+          SIDEBAR
+          ======================================================== */}
 
-        <div className="research-badge">
+      <aside className="sidebar">
 
-          <span className="research-dot"></span>
+        <div className="brand">
 
-          NLP Research Interface
+          <div className="brand-icon">
+
+            <BrainCircuit size={25} />
+
+          </div>
+
+          <div>
+
+            <div className="brand-name">
+              SPORT<span>AI</span>
+            </div>
+
+            <div className="brand-subtitle">
+              NLP RESEARCH
+            </div>
+
+          </div>
 
         </div>
 
 
-        {/* ====================================================
-            HEADER
-            ==================================================== */}
+        <div className="sidebar-line"></div>
 
-        <header className="app-header">
 
-          <h1>
-            Hindi Sports Sentiment Analyzer
-          </h1>
+        <nav className="sidebar-nav">
 
-          <p className="subtitle">
+          <button
+            className={
+              activeSection === "overview"
+                ? "nav-item active"
+                : "nav-item"
+            }
+            onClick={() =>
+              scrollToSection("overview")
+            }
+          >
 
-            Analyze Hindi and Hinglish sports
-            comments using transformer-based
-            language models.
+            <LayoutDashboard size={18} />
 
-          </p>
+            <span>
+              Overview
+            </span>
+
+          </button>
+
+
+          <button
+            className={
+              activeSection === "analysis"
+                ? "nav-item active"
+                : "nav-item"
+            }
+            onClick={() =>
+              scrollToSection("analysis")
+            }
+          >
+
+            <MessageSquareText size={18} />
+
+            <span>
+              Sentiment Analysis
+            </span>
+
+          </button>
+
+
+          <button
+            className={
+              activeSection === "performance"
+                ? "nav-item active"
+                : "nav-item"
+            }
+            onClick={() =>
+              scrollToSection("performance")
+            }
+          >
+
+            <BarChart3 size={18} />
+
+            <span>
+              Model Performance
+            </span>
+
+          </button>
+
+
+          <button
+            className="nav-item"
+            onClick={() =>
+              scrollToSection("models")
+            }
+          >
+
+            <Cpu size={18} />
+
+            <span>
+              Research Models
+            </span>
+
+          </button>
+
+        </nav>
+
+
+        <div className="sidebar-bottom">
+
+          <div className="system-status">
+
+            <span className="status-pulse"></span>
+
+            <div>
+
+              <strong>
+                System Online
+              </strong>
+
+              <small>
+                Backend connected
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <div className="sidebar-version">
+
+            v3.0 · Hindi Sports NLP
+
+          </div>
+
+        </div>
+
+      </aside>
+
+
+      {/* ========================================================
+          MAIN CONTENT
+          ======================================================== */}
+
+      <main className="main-content">
+
+
+        {/* ======================================================
+            TOP HEADER
+            ====================================================== */}
+
+        <header className="topbar">
+
+          <div>
+
+            <div className="topbar-eyebrow">
+
+              <CircleDot size={13} />
+
+              AI SENTIMENT INTELLIGENCE
+
+            </div>
+
+            <h1>
+              Hindi Sports
+              <span> Sentiment Analyzer</span>
+            </h1>
+
+          </div>
+
+
+          <div className="topbar-right">
+
+            <div className="live-indicator">
+
+              <span></span>
+
+              LIVE
+
+            </div>
+
+
+            <div className="topbar-model">
+
+              <Cpu size={15} />
+
+              {getModelName(selectedModel)}
+
+            </div>
+
+          </div>
 
         </header>
 
 
-        {/* ====================================================
-            MODEL SELECTION
-            ==================================================== */}
+        {/* ======================================================
+            OVERVIEW
+            ====================================================== */}
 
-        <div className="input-group">
+        <section
+          id="overview"
+          className="dashboard-section overview-section"
+        >
 
-          <label htmlFor="model">
-            Select Language Model
-          </label>
+          <div className="section-heading">
 
+            <div>
 
-          <select
-            id="model"
-            value={selectedModel}
+              <div className="section-kicker">
+                <Sparkles size={14} />
+                OVERVIEW
+              </div>
 
-            onChange={(e) => {
+              <h2>
+                Sentiment intelligence for
+                <span> sports conversations.</span>
+              </h2>
 
-              setSelectedModel(
-                e.target.value
-              );
+              <p>
+                Analyze Hindi and Hinglish sports
+                comments using transformer-based
+                language models.
+              </p>
 
-              setResult(null);
-              setError("");
-
-            }}
-          >
-
-            <option value="old_muril">
-              Original MuRIL
-            </option>
-
-            <option value="research_muril">
-              Research MuRIL
-            </option>
-
-            <option value="indicbert_v2">
-              IndicBERT v2
-            </option>
-
-            <option value="xlm_roberta">
-              XLM-RoBERTa
-            </option>
-
-          </select>
-
-        </div>
-
-
-        {/* ====================================================
-            SPORTS COMMENT
-            ==================================================== */}
-
-        <div className="input-group">
-
-          <label htmlFor="text">
-            Sports Comment
-          </label>
-
-
-          <textarea
-            id="text"
-            rows="6"
-            value={text}
-            maxLength={500}
-
-            placeholder=
-              "Enter a Hindi or Hinglish sports comment..."
-
-            onChange={(e) => {
-
-              setText(e.target.value);
-
-              if (error) {
-                setError("");
-              }
-
-            }}
-
-            onKeyDown={handleKeyDown}
-
-          />
-
-
-          <div className="textarea-meta">
-
-            <span>
-              Ctrl + Enter to analyze
-            </span>
-
-            <span>
-              {text.length}/500
-            </span>
-
-          </div>
-
-        </div>
-
-
-        {/* ====================================================
-            BUTTONS
-            ==================================================== */}
-
-        <div className="button-container">
-
-          <button
-            className="analyze-button"
-            onClick={analyzeSentiment}
-
-            disabled={
-              loading ||
-              !text.trim()
-            }
-          >
-
-            {loading
-              ? "Analyzing..."
-              : "Analyze Sentiment"}
-
-          </button>
-
-
-          <button
-            className="clear-button"
-            onClick={clearAll}
-
-            disabled={
-              loading ||
-              (!text && !result)
-            }
-          >
-
-            Clear
-
-          </button>
-
-        </div>
-
-
-        {/* ====================================================
-            ERROR
-            ==================================================== */}
-
-        {error && (
-
-          <div className="error-box">
-
-            <strong>
-              Analysis failed
-            </strong>
-
-            <div className="error-message">
-              {error}
             </div>
 
           </div>
 
-        )}
 
+          <div className="overview-grid">
 
-        {/* ====================================================
-            LOADING
-            ==================================================== */}
+            <div className="overview-card">
 
-        {loading && (
+              <div className="overview-card-icon">
+                <MessageSquareText size={21} />
+              </div>
 
-          <div className="loading-box">
+              <div>
 
-            <div className="loading-title">
+                <span>
+                  INPUT LANGUAGE
+                </span>
 
-              Running sentiment analysis...
+                <strong>
+                  Hindi + Hinglish
+                </strong>
+
+              </div>
 
             </div>
 
-            <div className="loading-subtitle">
 
-              Using{" "}
+            <div className="overview-card">
 
-              {getModelName(
-                selectedModel
+              <div className="overview-card-icon">
+                <Network size={21} />
+              </div>
+
+              <div>
+
+                <span>
+                  ARCHITECTURES
+                </span>
+
+                <strong>
+                  4 Transformer Models
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div className="overview-card">
+
+              <div className="overview-card-icon">
+                <Target size={21} />
+              </div>
+
+              <div>
+
+                <span>
+                  TASK
+                </span>
+
+                <strong>
+                  3-Class Sentiment
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div className="overview-card">
+
+              <div className="overview-card-icon">
+                <Activity size={21} />
+              </div>
+
+              <div>
+
+                <span>
+                  OUTPUT
+                </span>
+
+                <strong>
+                  Sentiment + Confidence
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* ======================================================
+            SENTIMENT ANALYSIS
+            ====================================================== */}
+
+        <section
+          id="analysis"
+          className="dashboard-section"
+        >
+
+          <div className="section-heading">
+
+            <div>
+
+              <div className="section-kicker">
+                <Zap size={14} />
+                LIVE ANALYSIS
+              </div>
+
+              <h2>
+                Analyze a sports comment
+              </h2>
+
+              <p>
+                Select a language model and enter
+                a Hindi or Hinglish sports comment.
+              </p>
+
+            </div>
+
+            <div className="section-badge">
+
+              <span></span>
+
+              READY
+
+            </div>
+
+          </div>
+
+
+          <div className="analysis-layout">
+
+
+            {/* INPUT PANEL */}
+
+            <div className="glass-panel analysis-panel">
+
+              <div className="panel-header">
+
+                <div>
+
+                  <span className="panel-label">
+                    INPUT CONFIGURATION
+                  </span>
+
+                  <h3>
+                    Sentiment Analysis
+                  </h3>
+
+                </div>
+
+                <div className="panel-icon">
+                  <MessageSquareText size={20} />
+                </div>
+
+              </div>
+
+
+              {/* MODEL */}
+
+              <div className="field">
+
+                <label htmlFor="model">
+                  LANGUAGE MODEL
+                </label>
+
+                <div className="select-wrapper">
+
+                  <Cpu size={17} />
+
+                  <select
+                    id="model"
+                    value={selectedModel}
+                    onChange={(e) => {
+
+                      setSelectedModel(
+                        e.target.value
+                      );
+
+                      setResult(null);
+                      setError("");
+
+                    }}
+                  >
+
+                    <option value="old_muril">
+                      Original MuRIL
+                    </option>
+
+                    <option value="research_muril">
+                      Research MuRIL
+                    </option>
+
+                    <option value="indicbert_v2">
+                      IndicBERT v2
+                    </option>
+
+                    <option value="xlm_roberta">
+                      XLM-RoBERTa
+                    </option>
+
+                  </select>
+
+                  <ChevronDown
+                    size={16}
+                    className="select-arrow"
+                  />
+
+                </div>
+
+              </div>
+
+
+              {/* TEXT */}
+
+              <div className="field">
+
+                <div className="field-label-row">
+
+                  <label htmlFor="text">
+                    SPORTS COMMENT
+                  </label>
+
+                  <span>
+                    Hindi / Hinglish
+                  </span>
+
+                </div>
+
+
+                <textarea
+                  id="text"
+                  value={text}
+                  maxLength={500}
+                  placeholder="Enter a Hindi or Hinglish sports comment..."
+                  onChange={(e) => {
+
+                    setText(e.target.value);
+
+                    if (error) {
+                      setError("");
+                    }
+
+                  }}
+                  onKeyDown={handleKeyDown}
+                />
+
+                <div className="textarea-footer">
+
+                  <span>
+                    CTRL + ENTER TO ANALYZE
+                  </span>
+
+                  <span>
+                    {text.length}/500
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              {/* BUTTONS */}
+
+              <div className="action-row">
+
+                <button
+                  className="primary-button"
+                  onClick={analyzeSentiment}
+                  disabled={
+                    loading ||
+                    !text.trim()
+                  }
+                >
+
+                  {loading ? (
+
+                    <>
+                      <span className="button-spinner"></span>
+                      ANALYZING...
+                    </>
+
+                  ) : (
+
+                    <>
+                      <Play size={17} fill="currentColor" />
+                      ANALYZE SENTIMENT
+                    </>
+
+                  )}
+
+                </button>
+
+
+                <button
+                  className="secondary-button"
+                  onClick={clearAll}
+                  disabled={
+                    loading ||
+                    (!text && !result)
+                  }
+                >
+
+                  <Eraser size={17} />
+
+                  CLEAR
+
+                </button>
+
+              </div>
+
+
+              {/* ERROR */}
+
+              {error && (
+
+                <div className="error-box">
+
+                  <strong>
+                    ANALYSIS FAILED
+                  </strong>
+
+                  <span>
+                    {error}
+                  </span>
+
+                </div>
+
+              )}
+
+            </div>
+
+
+            {/* RESULT PANEL */}
+
+            <div className="glass-panel result-panel">
+
+              <div className="panel-header">
+
+                <div>
+
+                  <span className="panel-label">
+                    MODEL OUTPUT
+                  </span>
+
+                  <h3>
+                    Analysis Result
+                  </h3>
+
+                </div>
+
+                <div className="panel-icon">
+                  <Gauge size={20} />
+                </div>
+
+              </div>
+
+
+              {loading && (
+
+                <div className="empty-state">
+
+                  <div className="analysis-orbit">
+
+                    <div></div>
+
+                  </div>
+
+                  <strong>
+                    Processing comment
+                  </strong>
+
+                  <span>
+                    Running {getModelName(selectedModel)}
+                  </span>
+
+                </div>
+
+              )}
+
+
+              {!loading && !result && (
+
+                <div className="empty-state">
+
+                  <div className="empty-icon">
+
+                    <BrainCircuit size={31} />
+
+                  </div>
+
+                  <strong>
+                    Awaiting input
+                  </strong>
+
+                  <span>
+                    Your sentiment prediction
+                    will appear here.
+                  </span>
+
+                </div>
+
+              )}
+
+
+              {result && !loading && (
+
+                <div className="result-content">
+
+                  <div
+                    className={
+                      `sentiment-display ${
+                        getSentimentClass(
+                          result.sentiment
+                        )
+                      }`
+                    }
+                  >
+
+                    <div className="sentiment-icon">
+
+                      <CheckCircle2 size={25} />
+
+                    </div>
+
+                    <div>
+
+                      <span>
+                        DETECTED SENTIMENT
+                      </span>
+
+                      <strong>
+                        {result.sentiment}
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+
+                  <div className="confidence-section">
+
+                    <div className="confidence-header">
+
+                      <span>
+                        CONFIDENCE
+                      </span>
+
+                      <strong>
+                        {result.confidence}%
+                      </strong>
+
+                    </div>
+
+                    <div className="confidence-track">
+
+                      <div
+                        className="confidence-fill"
+                        style={{
+                          width:
+                            `${result.confidence}%`,
+                        }}
+                      ></div>
+
+                    </div>
+
+                  </div>
+
+
+                  <div className="result-details">
+
+                    <div>
+
+                      <span>
+                        MODEL
+                      </span>
+
+                      <strong>
+                        {getModelName(
+                          result.model
+                        )}
+                      </strong>
+
+                    </div>
+
+                    <div>
+
+                      <span>
+                        INPUT
+                      </span>
+
+                      <strong>
+                        {text.length} characters
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
               )}
 
             </div>
 
           </div>
 
-        )}
+        </section>
 
 
-        {/* ====================================================
-            SENTIMENT RESULT
-            ==================================================== */}
+        {/* ======================================================
+            MODEL PERFORMANCE
+            ====================================================== */}
 
-        {result && !loading && (
+        <section
+          id="performance"
+          className="dashboard-section performance-section"
+        >
 
-          <section className="result-box">
+          <ModelEvaluation />
 
-            <h2>
-              Analysis Result
-            </h2>
+        </section>
 
 
-            <div className="result-row">
+        {/* ======================================================
+            RESEARCH MODELS
+            ====================================================== */}
 
-              <span>
-                Sentiment
+        <section
+          id="models"
+          className="dashboard-section"
+        >
+
+          <div className="section-heading">
+
+            <div>
+
+              <div className="section-kicker">
+
+                <Microscope size={14} />
+
+                RESEARCH MODELS
+
+              </div>
+
+              <h2>
+                Transformer model suite
+              </h2>
+
+              <p>
+                Compare the models integrated
+                into the sentiment analysis pipeline.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div className="model-grid">
+
+            <div className="model-card">
+
+              <div className="model-number">
+                01
+              </div>
+
+              <div className="model-card-icon">
+                <BrainCircuit size={21} />
+              </div>
+
+              <h3>
+                Original MuRIL
+              </h3>
+
+              <p>
+                Baseline multilingual representation
+                model optimized for Indian languages.
+              </p>
+
+              <span className="model-tag">
+                BASELINE
               </span>
-
-              <strong>
-                {result.sentiment}
-              </strong>
 
             </div>
 
 
-            <div className="result-row">
+            <div className="model-card featured">
 
-              <span>
-                Confidence
+              <div className="model-number">
+                02
+              </div>
+
+              <div className="model-card-icon">
+                <Sparkles size={21} />
+              </div>
+
+              <h3>
+                Research MuRIL
+              </h3>
+
+              <p>
+                Fine-tuned MuRIL model trained for
+                the Hindi sports sentiment task.
+              </p>
+
+              <span className="model-tag">
+                FINE-TUNED
               </span>
-
-              <strong>
-                {result.confidence}%
-              </strong>
 
             </div>
 
 
-            <div className="result-row">
+            <div className="model-card">
 
-              <span>
-                Model Used
+              <div className="model-number">
+                03
+              </div>
+
+              <div className="model-card-icon">
+                <Network size={21} />
+              </div>
+
+              <h3>
+                IndicBERT v2
+              </h3>
+
+              <p>
+                Indic-language transformer evaluated
+                on the same sentiment benchmark.
+              </p>
+
+              <span className="model-tag">
+                RESEARCH
               </span>
-
-              <strong>
-                {getModelName(
-                  result.model
-                )}
-              </strong>
 
             </div>
 
-          </section>
 
-        )}
+            <div className="model-card">
+
+              <div className="model-number">
+                04
+              </div>
+
+              <div className="model-card-icon">
+                <Cpu size={21} />
+              </div>
+
+              <h3>
+                XLM-RoBERTa
+              </h3>
+
+              <p>
+                Multilingual transformer evaluated
+                for cross-lingual sports sentiment.
+              </p>
+
+              <span className="model-tag">
+                RESEARCH
+              </span>
+
+            </div>
+
+          </div>
+
+        </section>
 
 
-        {/* ====================================================
-            MODEL EVALUATION
-            ==================================================== */}
-
-        <ModelEvaluation />
-
-
-        {/* ====================================================
+        {/* ======================================================
             FOOTER
-            ==================================================== */}
+            ====================================================== */}
 
-        <footer className="app-footer">
+        <footer className="dashboard-footer">
 
-          Hindi & Hinglish Sports Sentiment Analysis
+          <div>
 
-          <span className="footer-dot">
-            •
+            <BrainCircuit size={17} />
+
+            <span>
+              HINDI SPORTS SENTIMENT ANALYZER
+            </span>
+
+          </div>
+
+          <span>
+            MuRIL · IndicBERT v2 · XLM-RoBERTa
           </span>
 
-          MuRIL · IndicBERT v2 · XLM-RoBERTa
+          <span>
+            NLP RESEARCH INTERFACE · v3.0
+          </span>
 
         </footer>
-
 
       </main>
 
