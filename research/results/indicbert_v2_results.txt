@@ -1,25 +1,30 @@
 IndicBERT v2 Research Results
 =============================
 
-Accuracy: 0.9925
-Macro Precision: 0.9926
-Macro Recall: 0.9925
-Macro F1: 0.9925
+Dataset: NLP_Project_Final_Dataset.csv
+Train Size: 8000
+Validation Size: 1000
+Test Size: 1000
+
+Accuracy: 1.0000
+Macro Precision: 1.0000
+Macro Recall: 1.0000
+Macro F1: 1.0000
 
 Classification Report
 ---------------------
               precision    recall  f1-score   support
 
-    Negative     0.9949    0.9850    0.9899       400
-     Neutral     0.9975    0.9925    0.9950       400
-    Positive     0.9852    1.0000    0.9926       400
+    Negative     1.0000    1.0000    1.0000       334
+     Neutral     1.0000    1.0000    1.0000       333
+    Positive     1.0000    1.0000    1.0000       333
 
-    accuracy                         0.9925      1200
-   macro avg     0.9926    0.9925    0.9925      1200
-weighted avg     0.9926    0.9925    0.9925      1200
+    accuracy                         1.0000      1000
+   macro avg     1.0000    1.0000    1.0000      1000
+weighted avg     1.0000    1.0000    1.0000      1000
 
 Confusion Matrix
 ----------------
-[[394   1   5]
- [  2 397   1]
- [  0   0 400]]
+[[334   0   0]
+ [  0 333   0]
+ [  0   0 333]]

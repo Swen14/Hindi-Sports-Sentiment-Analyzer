@@ -22,7 +22,14 @@ from sklearn.metrics import (
 
 
 # ============================================================
-# 1. MODEL INFORMATION
+# 1. PROJECT PATH
+# ============================================================
+
+PROJECT_ROOT = r"C:\Users\Swen\Desktop\NLP-Project"
+
+
+# ============================================================
+# 2. MODEL INFORMATION
 # ============================================================
 
 MODEL_CHOICE = "xlm_roberta"
@@ -31,18 +38,63 @@ MODEL_NAME = "FacebookAI/xlm-roberta-base"
 
 
 # ============================================================
-# 2. PATHS
+# 3. PATHS
 # ============================================================
 
-DATA_PATH = "../../dataset/Research_12000.csv"
+TRAIN_PATH = os.path.join(
+    PROJECT_ROOT,
+    "dataset",
+    "final_train.csv"
+)
 
-OUTPUT_DIR = "./output"
+VAL_PATH = os.path.join(
+    PROJECT_ROOT,
+    "dataset",
+    "final_validation.csv"
+)
 
-BEST_MODEL_DIR = "./best_model"
+TEST_PATH = os.path.join(
+    PROJECT_ROOT,
+    "dataset",
+    "final_test.csv"
+)
+
+OUTPUT_DIR = os.path.join(
+    PROJECT_ROOT,
+    "research",
+    "xlm_roberta",
+    "output"
+)
+
+BEST_MODEL_DIR = os.path.join(
+    PROJECT_ROOT,
+    "research",
+    "xlm_roberta",
+    "best_model"
+)
+
+RESULTS_DIR = os.path.join(
+    PROJECT_ROOT,
+    "research",
+    "results"
+)
+
+RESULTS_PATH = os.path.join(
+    RESULTS_DIR,
+    "xlm_roberta_results.txt"
+)
 
 
 # ============================================================
-# 3. SHOW MODEL SELECTION
+# 4. CREATE DIRECTORIES
+# ============================================================
+
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(RESULTS_DIR, exist_ok=True)
+
+
+# ============================================================
+# 5. MODEL INFORMATION
 # ============================================================
 
 print("\n==============================================")
@@ -56,33 +108,101 @@ print("==============================================\n")
 
 
 # ============================================================
-# 4. LOAD DATASET
+# 6. LOAD FIXED DATASET SPLITS
 # ============================================================
 
-df = pd.read_csv(DATA_PATH)
+print("Loading fixed dataset splits...")
 
-print("Dataset loaded successfully")
-print("Total rows:", len(df))
-
-print("\nSplit counts:")
-print(df["split"].value_counts())
-
-print("\nSentiment counts:")
-print(df["sentiment"].value_counts())
+train_df = pd.read_csv(TRAIN_PATH)
+val_df = pd.read_csv(VAL_PATH)
+test_df = pd.read_csv(TEST_PATH)
 
 
-train_df = df[df["split"] == "train"].copy()
-val_df = df[df["split"] == "validation"].copy()
-test_df = df[df["split"] == "test"].copy()
+print("\nDataset loaded successfully")
 
-
-print("\nTrain:", len(train_df))
-print("Validation:", len(val_df))
-print("Test:", len(test_df))
+print("Train      :", len(train_df))
+print("Validation :", len(val_df))
+print("Test       :", len(test_df))
 
 
 # ============================================================
-# 5. LOAD TOKENIZER
+# 7. VALIDATE DATASET
+# ============================================================
+
+required_columns = [
+    "text",
+    "sentiment",
+    "label"
+]
+
+for dataframe_name, dataframe in [
+    ("Train", train_df),
+    ("Validation", val_df),
+    ("Test", test_df)
+]:
+
+    missing_columns = [
+        column
+        for column in required_columns
+        if column not in dataframe.columns
+    ]
+
+    if missing_columns:
+
+        raise ValueError(
+            f"{dataframe_name} dataset is missing columns: "
+            f"{missing_columns}"
+        )
+
+
+print("\nRequired columns verified.")
+
+
+# ============================================================
+# 8. SHOW SENTIMENT DISTRIBUTION
+# ============================================================
+
+print("\nSentiment distribution:")
+
+print("\nTrain:")
+print(train_df["sentiment"].value_counts())
+
+print("\nValidation:")
+print(val_df["sentiment"].value_counts())
+
+print("\nTest:")
+print(test_df["sentiment"].value_counts())
+
+
+# ============================================================
+# 9. VERIFY LABELS
+# ============================================================
+
+expected_labels = {0, 1, 2}
+
+for dataframe_name, dataframe in [
+    ("Train", train_df),
+    ("Validation", val_df),
+    ("Test", test_df)
+]:
+
+    actual_labels = set(
+        dataframe["label"].unique()
+    )
+
+    if not actual_labels.issubset(expected_labels):
+
+        raise ValueError(
+            f"Unexpected labels found in {dataframe_name}: "
+            f"{actual_labels}"
+        )
+
+
+print("\nLabels verified: 0, 1, 2")
+
+
+# ============================================================
+# 10. LOAD TOKENIZER
 # ============================================================
 
 print("\nLoading fresh XLM-RoBERTa tokenizer...")
@@ -93,14 +213,19 @@ tokenizer = AutoTokenizer.from_pretrained(
 
 
 # ============================================================
-# 6. PYTORCH DATASET
+# 11. PYTORCH DATASET
 # ============================================================
 
 class SentimentDataset(Dataset):
 
-    def __init__(self, dataframe, tokenizer):
+    def __init__(
+        self,
+        dataframe,
+        tokenizer
+    ):
 
         self.texts = dataframe["text"].tolist()
+
         self.labels = dataframe["label"].tolist()
 
         self.tokenizer = tokenizer
@@ -122,11 +247,8 @@ class SentimentDataset(Dataset):
         )
 
         encoding = self.tokenizer(
-
             text,
-
             truncation=True,
-
             max_length=128
         )
 
@@ -152,7 +274,7 @@ test_dataset = SentimentDataset(
 
 
 # ============================================================
-# 7. LOAD FRESH XLM-ROBERTA MODEL
+# 12. LOAD FRESH XLM-ROBERTA MODEL
 # ============================================================
 
 print("\nLoading fresh XLM-RoBERTa model...")
@@ -178,7 +300,7 @@ model = AutoModelForSequenceClassification.from_pretrained(
 
 
 # ============================================================
-# 8. DATA COLLATOR
+# 13. DATA COLLATOR
 # ============================================================
 
 data_collator = DataCollatorWithPadding(
@@ -187,7 +309,7 @@ data_collator = DataCollatorWithPadding(
 
 
 # ============================================================
-# 9. METRICS
+# 14. METRICS
 # ============================================================
 
 def compute_metrics(eval_pred):
@@ -204,15 +326,13 @@ def compute_metrics(eval_pred):
         predictions
     )
 
-    precision, recall, f1, _ = precision_recall_fscore_support(
-
-        labels,
-
-        predictions,
-
-        average="macro",
-
-        zero_division=0
+    precision, recall, f1, _ = (
+        precision_recall_fscore_support(
+            labels,
+            predictions,
+            average="macro",
+            zero_division=0
+        )
     )
 
     return {
@@ -228,7 +348,7 @@ def compute_metrics(eval_pred):
 
 
 # ============================================================
-# 10. TRAINING SETTINGS
+# 15. TRAINING SETTINGS
 # ============================================================
 
 training_args = TrainingArguments(
@@ -268,7 +388,7 @@ training_args = TrainingArguments(
 
 
 # ============================================================
-# 11. TRAINER
+# 16. TRAINER
 # ============================================================
 
 trainer = Trainer(
@@ -288,7 +408,7 @@ trainer = Trainer(
 
 
 # ============================================================
-# 12. DEVICE INFORMATION
+# 17. DEVICE INFORMATION
 # ============================================================
 
 print("\n==============================================")
@@ -298,10 +418,7 @@ print("==============================================")
 if torch.cuda.is_available():
 
     print("GPU detected:")
-
-    print(
-        torch.cuda.get_device_name(0)
-    )
+    print(torch.cuda.get_device_name(0))
 
 else:
 
@@ -310,7 +427,7 @@ else:
 
 
 # ============================================================
-# 13. START TRAINING
+# 18. START TRAINING
 # ============================================================
 
 print("\n==============================================")
@@ -321,7 +438,7 @@ trainer.train()
 
 
 # ============================================================
-# 14. SAVE BEST MODEL
+# 19. SAVE BEST MODEL
 # ============================================================
 
 print("\nSaving best XLM-RoBERTa model...")
@@ -336,7 +453,7 @@ tokenizer.save_pretrained(
 
 
 # ============================================================
-# 15. FINAL TEST SET
+# 20. FINAL TEST SET
 # ============================================================
 
 print("\n==============================================")
@@ -348,9 +465,7 @@ prediction_output = trainer.predict(
 )
 
 predictions = np.argmax(
-
     prediction_output.predictions,
-
     axis=-1
 )
 
@@ -358,7 +473,7 @@ true_labels = prediction_output.label_ids
 
 
 # ============================================================
-# 16. FINAL METRICS
+# 21. FINAL METRICS
 # ============================================================
 
 accuracy = accuracy_score(
@@ -366,15 +481,13 @@ accuracy = accuracy_score(
     predictions
 )
 
-precision, recall, f1, _ = precision_recall_fscore_support(
-
-    true_labels,
-
-    predictions,
-
-    average="macro",
-
-    zero_division=0
+precision, recall, f1, _ = (
+    precision_recall_fscore_support(
+        true_labels,
+        predictions,
+        average="macro",
+        zero_division=0
+    )
 )
 
 
@@ -399,7 +512,7 @@ print(
 
 
 # ============================================================
-# 17. CLASSIFICATION REPORT
+# 22. CLASSIFICATION REPORT
 # ============================================================
 
 print("\nCLASSIFICATION REPORT")
@@ -424,7 +537,7 @@ print(report)
 
 
 # ============================================================
-# 18. CONFUSION MATRIX
+# 23. CONFUSION MATRIX
 # ============================================================
 
 print("\nCONFUSION MATRIX")
@@ -439,32 +552,13 @@ print(cm)
 
 
 # ============================================================
-# 19. SAVE RESULTS
+# 24. SAVE RESULTS
 # ============================================================
 
-results_dir = "../results"
-
-os.makedirs(
-    results_dir,
-    exist_ok=True
-)
-
-results_path = os.path.join(
-
-    results_dir,
-
-    "xlm_roberta_results.txt"
-)
-
-
 with open(
-
-    results_path,
-
+    RESULTS_PATH,
     "w",
-
     encoding="utf-8"
-
 ) as f:
 
     f.write(
@@ -472,7 +566,23 @@ with open(
     )
 
     f.write(
-        "===========================\n\n"
+        "============================\n\n"
+    )
+
+    f.write(
+        f"Model: {MODEL_NAME}\n"
+    )
+
+    f.write(
+        f"Train Samples: {len(train_df)}\n"
+    )
+
+    f.write(
+        f"Validation Samples: {len(val_df)}\n"
+    )
+
+    f.write(
+        f"Test Samples: {len(test_df)}\n\n"
     )
 
     f.write(
@@ -499,9 +609,7 @@ with open(
         "---------------------\n"
     )
 
-    f.write(
-        report
-    )
+    f.write(report)
 
     f.write(
         "\nConfusion Matrix\n"
@@ -516,11 +624,15 @@ with open(
     )
 
 
-print("\nResults saved to:")
+# ============================================================
+# 25. COMPLETION
+# ============================================================
 
-print(
-    results_path
-)
+print("\nResults saved to:")
+print(RESULTS_PATH)
+
+print("\nBest model saved to:")
+print(BEST_MODEL_DIR)
 
 print(
     "\nXLM-RoBERTa experiment completed."

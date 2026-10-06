@@ -11,12 +11,25 @@ from transformers import (
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
+def resolve_model_path(primary_path: Path, fallback_path: Path | None = None) -> Path:
+    if primary_path.exists():
+        return primary_path
+    if fallback_path is not None and fallback_path.exists():
+        return fallback_path
+    return primary_path
+
+
 MODEL_PATHS = {
 
-    "old_muril":
+    "old_muril": resolve_model_path(
         PROJECT_ROOT
         / "model"
         / "muril_sentiment_model",
+        PROJECT_ROOT
+        / "research"
+        / "muril"
+        / "best_model"
+    ),
 
     "research_muril":
         PROJECT_ROOT
