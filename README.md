@@ -10,7 +10,7 @@ In addition to Hindi input, the application can also process many **Hindi-Englis
 
 # 📌 Project Overview
 
-Sentiment analysis for Indian languages remains more challenging than English due to limited high-quality datasets and linguistic diversity.
+Sentiment analysis for Indian languages remains more challenging than English due to limited High-quality datasets and linguistic diversity.
 
 This project focuses specifically on **Hindi sports content**, enabling users to analyze news headlines, match reactions, and sports-related comments.
 
