@@ -1,5 +1,17 @@
 import { useEffect, useState } from "react";
 
+import {
+  BarChart3,
+  ChevronDown,
+  CircleAlert,
+  Crosshair,
+  LoaderCircle,
+  Radar,
+  RefreshCw,
+  Target,
+  Trophy,
+} from "lucide-react";
+
 
 function ModelEvaluation() {
 
@@ -28,7 +40,7 @@ function ModelEvaluation() {
       "IndicBERT v2",
 
     xlm_roberta:
-      "XLM-RoBERTa"
+      "XLM-RoBERTa",
 
   };
 
@@ -86,22 +98,12 @@ function ModelEvaluation() {
   };
 
 
-  // ============================================================
-  // INITIAL LOAD
-  // ============================================================
-
   useEffect(() => {
 
-    loadEvaluation(
-      selectedModel
-    );
+    loadEvaluation(selectedModel);
 
   }, []);
 
-
-  // ============================================================
-  // MODEL CHANGE
-  // ============================================================
 
   const handleModelChange = (e) => {
 
@@ -114,10 +116,6 @@ function ModelEvaluation() {
 
   };
 
-
-  // ============================================================
-  // FORMAT PERCENT
-  // ============================================================
 
   const formatPercent = (value) => {
 
@@ -138,7 +136,7 @@ function ModelEvaluation() {
 
 
   // ============================================================
-  // ROC SVG
+  // ROC GRAPH
   // ============================================================
 
   const drawRoc = (rocData) => {
@@ -148,13 +146,13 @@ function ModelEvaluation() {
     }
 
 
-    const width = 600;
-    const height = 380;
+    const width = 700;
+    const height = 400;
 
     const left = 70;
-    const right = 30;
+    const right = 25;
     const top = 25;
-    const bottom = 60;
+    const bottom = 55;
 
     const graphWidth =
       width - left - right;
@@ -165,8 +163,13 @@ function ModelEvaluation() {
 
     const convertPoints = (points) => {
 
-      if (!points || points.length === 0) {
+      if (
+        !points ||
+        points.length === 0
+      ) {
+
         return "";
+
       }
 
 
@@ -217,8 +220,6 @@ function ModelEvaluation() {
         />
 
 
-        {/* Random classifier */}
-
         <line
           x1={left}
           y1={height - bottom}
@@ -227,8 +228,6 @@ function ModelEvaluation() {
           className="roc-random"
         />
 
-
-        {/* Negative */}
 
         {rocData.negative && (
 
@@ -242,8 +241,6 @@ function ModelEvaluation() {
         )}
 
 
-        {/* Neutral */}
-
         {rocData.neutral && (
 
           <polyline
@@ -255,8 +252,6 @@ function ModelEvaluation() {
 
         )}
 
-
-        {/* Positive */}
 
         {rocData.positive && (
 
@@ -270,11 +265,9 @@ function ModelEvaluation() {
         )}
 
 
-        {/* Axis labels */}
-
         <text
           x={width / 2}
-          y={height - 15}
+          y={height - 12}
           textAnchor="middle"
           className="roc-label"
         >
@@ -283,35 +276,35 @@ function ModelEvaluation() {
 
 
         <text
-          x="18"
+          x="17"
           y={height / 2}
           textAnchor="middle"
-          transform={`rotate(-90 18 ${
-            height / 2
-          })`}
+          transform={
+            `rotate(-90 17 ${height / 2})`
+          }
           className="roc-label"
         >
           True Positive Rate
         </text>
 
 
-        {/* Tick labels */}
-
         <text
-          x={left - 5}
+          x={left - 4}
           y={height - bottom + 20}
           className="roc-tick"
         >
           0
         </text>
 
+
         <text
-          x={width - right - 5}
+          x={width - right - 4}
           y={height - bottom + 20}
           className="roc-tick"
         >
           1
         </text>
+
 
         <text
           x={left - 20}
@@ -320,6 +313,7 @@ function ModelEvaluation() {
         >
           1
         </text>
+
 
         <text
           x={left - 20}
@@ -336,139 +330,243 @@ function ModelEvaluation() {
   };
 
 
-  // ============================================================
-  // UI
-  // ============================================================
-
   return (
 
-    <section className="evaluation-section">
+    <div className="evaluation-wrapper">
 
 
-      <div className="evaluation-header">
+      {/* ======================================================
+          HEADER
+          ====================================================== */}
 
-        <span className="evaluation-label">
-          MODEL EVALUATION
-        </span>
+      <div className="evaluation-top">
 
-        <h2>
-          Model Performance
-        </h2>
+        <div>
 
-        <p>
-          Precision, recall, F1 score, accuracy,
-          confusion matrix and ROC-AUC evaluation.
-        </p>
+          <div className="section-kicker">
+
+            <BarChart3 size={14} />
+
+            MODEL EVALUATION
+
+          </div>
+
+          <h2>
+            Model Performance
+          </h2>
+
+          <p>
+            Compare transformer models using
+            accuracy, precision, recall, F1,
+            confusion matrix and ROC-AUC.
+          </p>
+
+        </div>
+
+
+        <div className="evaluation-live">
+
+          <span></span>
+
+          BENCHMARK ACTIVE
+
+        </div>
 
       </div>
 
 
-      {/* MODEL SELECTOR */}
+      {/* ======================================================
+          MODEL SELECTOR
+          ====================================================== */}
 
       <div className="evaluation-selector">
 
-        <label htmlFor="evaluation-model">
+        <div>
 
-          Select Model
-
-        </label>
-
-
-        <select
-          id="evaluation-model"
-          value={selectedModel}
-          onChange={handleModelChange}
-        >
-
-          <option value="old_muril">
-            Original MuRIL
-          </option>
-
-          <option value="research_muril">
-            Research MuRIL
-          </option>
-
-          <option value="indicbert_v2">
-            IndicBERT v2
-          </option>
-
-          <option value="xlm_roberta">
-            XLM-RoBERTa
-          </option>
-
-        </select>
-
-      </div>
-
-
-      {/* LOADING */}
-
-      {loading && (
-
-        <div className="evaluation-loading">
-
-          Evaluating{" "}
+          <span>
+            SELECT LANGUAGE MODEL
+          </span>
 
           <strong>
             {modelNames[selectedModel]}
           </strong>
 
-          ...
+        </div>
+
+
+        <div className="evaluation-select-wrapper">
+
+          <Target size={17} />
+
+          <select
+            id="evaluation-model"
+            value={selectedModel}
+            onChange={handleModelChange}
+          >
+
+            <option value="old_muril">
+              Original MuRIL
+            </option>
+
+            <option value="research_muril">
+              Research MuRIL
+            </option>
+
+            <option value="indicbert_v2">
+              IndicBERT v2
+            </option>
+
+            <option value="xlm_roberta">
+              XLM-RoBERTa
+            </option>
+
+          </select>
+
+          <ChevronDown
+            size={16}
+          />
+
+        </div>
+
+
+        <button
+          className="refresh-button"
+          onClick={() =>
+            loadEvaluation(selectedModel)
+          }
+          disabled={loading}
+          title="Refresh evaluation"
+        >
+
+          <RefreshCw
+            size={17}
+            className={
+              loading
+                ? "spin"
+                : ""
+            }
+          />
+
+        </button>
+
+      </div>
+
+
+      {/* ======================================================
+          LOADING
+          ====================================================== */}
+
+      {loading && (
+
+        <div className="evaluation-loading">
+
+          <LoaderCircle
+            size={22}
+            className="spin"
+          />
+
+          <div>
+
+            <strong>
+              Loading evaluation
+            </strong>
+
+            <span>
+              Running benchmark for{" "}
+              {modelNames[selectedModel]}
+            </span>
+
+          </div>
 
         </div>
 
       )}
 
 
-      {/* ERROR */}
+      {/* ======================================================
+          ERROR
+          ====================================================== */}
 
       {error && !loading && (
 
         <div className="evaluation-error">
 
-          <strong>
-            Evaluation failed
-          </strong>
+          <CircleAlert size={21} />
 
-          <p>
-            {error}
-          </p>
+          <div>
+
+            <strong>
+              Evaluation unavailable
+            </strong>
+
+            <p>
+              {error}
+            </p>
+
+          </div>
 
         </div>
 
       )}
 
 
-      {/* RESULTS */}
+      {/* ======================================================
+          RESULTS
+          ====================================================== */}
 
       {evaluation && !loading && (
 
         <div className="evaluation-results">
 
 
-          <div className="evaluation-model-name">
+          {/* CURRENT MODEL */}
 
-            <span>
-              Currently Selected Model
-            </span>
+          <div className="selected-model-banner">
 
-            <strong>
-              {modelNames[selectedModel]}
-            </strong>
+            <div className="selected-model-icon">
+
+              <Trophy size={20} />
+
+            </div>
+
+            <div>
+
+              <span>
+                CURRENTLY SELECTED MODEL
+              </span>
+
+              <strong>
+                {modelNames[selectedModel]}
+              </strong>
+
+            </div>
+
+            <div className="benchmark-pill">
+
+              <span></span>
+
+              EVALUATED
+
+            </div>
 
           </div>
 
 
           {/* ==================================================
-              MAIN METRICS
+              METRICS
               ================================================== */}
 
           <div className="metric-grid">
 
+
             <div className="metric-card">
 
+              <div className="metric-icon">
+                <Target size={18} />
+              </div>
+
               <span>
-                Accuracy
+                ACCURACY
               </span>
 
               <strong>
@@ -482,8 +580,12 @@ function ModelEvaluation() {
 
             <div className="metric-card">
 
+              <div className="metric-icon">
+                <Crosshair size={18} />
+              </div>
+
               <span>
-                Precision
+                MACRO PRECISION
               </span>
 
               <strong>
@@ -497,8 +599,12 @@ function ModelEvaluation() {
 
             <div className="metric-card">
 
+              <div className="metric-icon">
+                <Radar size={18} />
+              </div>
+
               <span>
-                Recall
+                MACRO RECALL
               </span>
 
               <strong>
@@ -510,50 +616,20 @@ function ModelEvaluation() {
             </div>
 
 
-            <div className="metric-card">
+            <div className="metric-card highlight">
+
+              <div className="metric-icon">
+                <Trophy size={18} />
+              </div>
 
               <span>
-                F1 Score
+                MACRO F1
               </span>
 
               <strong>
                 {formatPercent(
                   evaluation.macro_f1
                 )}
-              </strong>
-
-            </div>
-
-          </div>
-
-
-          {/* ==================================================
-              DATASET INFO
-              ================================================== */}
-
-          <div className="evaluation-info">
-
-            <div>
-
-              <span>
-                Test Samples
-              </span>
-
-              <strong>
-                {evaluation.test_samples}
-              </strong>
-
-            </div>
-
-
-            <div>
-
-              <span>
-                Dataset
-              </span>
-
-              <strong>
-                {evaluation.dataset}
               </strong>
 
             </div>
@@ -569,9 +645,23 @@ function ModelEvaluation() {
 
             <div className="evaluation-panel">
 
-              <h3>
-                Classification Report
-              </h3>
+              <div className="evaluation-panel-header">
+
+                <div>
+
+                  <span>
+                    DETAILED METRICS
+                  </span>
+
+                  <h3>
+                    Classification Report
+                  </h3>
+
+                </div>
+
+                <BarChart3 size={20} />
+
+              </div>
 
 
               <div className="table-wrapper">
@@ -692,9 +782,23 @@ function ModelEvaluation() {
 
             <div className="evaluation-panel">
 
-              <h3>
-                Confusion Matrix
-              </h3>
+              <div className="evaluation-panel-header">
+
+                <div>
+
+                  <span>
+                    ERROR ANALYSIS
+                  </span>
+
+                  <h3>
+                    Confusion Matrix
+                  </h3>
+
+                </div>
+
+                <Crosshair size={20} />
+
+              </div>
 
 
               <div className="table-wrapper">
@@ -734,13 +838,15 @@ function ModelEvaluation() {
                         <tr key={index}>
 
                           <td>
+
                             {
                               [
                                 "Negative",
                                 "Neutral",
-                                "Positive"
+                                "Positive",
                               ][index]
                             }
+
                           </td>
 
                           <td>
@@ -777,19 +883,31 @@ function ModelEvaluation() {
 
           {evaluation.roc_auc && (
 
-            <div className="evaluation-panel">
+            <div className="evaluation-panel roc-panel">
 
-              <h3>
-                ROC Curve
-              </h3>
+              <div className="evaluation-panel-header">
 
-              <p className="evaluation-description">
+                <div>
 
-                One-vs-rest ROC curves for
-                Negative, Neutral and Positive
-                sentiment classes.
+                  <span>
+                    CLASSIFICATION ANALYSIS
+                  </span>
 
-              </p>
+                  <h3>
+                    ROC Curve
+                  </h3>
+
+                  <p>
+                    One-vs-rest ROC curves for
+                    Negative, Neutral and Positive
+                    sentiment classes.
+                  </p>
+
+                </div>
+
+                <Radar size={20} />
+
+              </div>
 
 
               <div className="roc-container">
@@ -803,14 +921,17 @@ function ModelEvaluation() {
 
               <div className="roc-legend">
 
+
                 <div>
 
                   <span className="legend-dot negative-dot"></span>
 
-                  Negative
+                  <span>
+                    Negative
+                  </span>
 
                   <strong>
-                    AUC:{" "}
+                    AUC{" "}
                     {Number(
                       evaluation.roc_auc.negative
                     ).toFixed(4)}
@@ -823,10 +944,12 @@ function ModelEvaluation() {
 
                   <span className="legend-dot neutral-dot"></span>
 
-                  Neutral
+                  <span>
+                    Neutral
+                  </span>
 
                   <strong>
-                    AUC:{" "}
+                    AUC{" "}
                     {Number(
                       evaluation.roc_auc.neutral
                     ).toFixed(4)}
@@ -839,16 +962,19 @@ function ModelEvaluation() {
 
                   <span className="legend-dot positive-dot"></span>
 
-                  Positive
+                  <span>
+                    Positive
+                  </span>
 
                   <strong>
-                    AUC:{" "}
+                    AUC{" "}
                     {Number(
                       evaluation.roc_auc.positive
                     ).toFixed(4)}
                   </strong>
 
                 </div>
+
 
               </div>
 
@@ -860,7 +986,7 @@ function ModelEvaluation() {
 
       )}
 
-    </section>
+    </div>
 
   );
 

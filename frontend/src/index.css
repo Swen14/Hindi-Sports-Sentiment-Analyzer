@@ -1,31 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap");
 
 :root {
-  font-family: "Inter", "Noto Sans Devanagari", Arial, sans-serif;
+  font-family:
+    "Inter",
+    "Noto Sans Devanagari",
+    Arial,
+    sans-serif;
+
   font-synthesis: none;
+
   text-rendering: optimizeLegibility;
-  background: #080d19;
+
+  color-scheme: dark;
+
+  background: #050914;
 }
 
 html {
   margin: 0;
   padding: 0;
+
   min-width: 320px;
   min-height: 100%;
-  background: #080d19;
+
+  background: #050914;
 }
 
 body {
   margin: 0;
   padding: 0;
+
   min-width: 320px;
   min-height: 100vh;
-  background: #080d19;
+
+  background: #050914;
 }
 
 button,
 textarea,
-input {
+input,
+select {
   font: inherit;
 }
 
