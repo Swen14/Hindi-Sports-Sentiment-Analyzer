@@ -15,7 +15,7 @@ A full-stack NLP application that classifies **Hindi sports comments** as **Posi
 - **Model selector** to run the same input through different transformer models
 - **Model evaluation dashboard** showing accuracy, macro precision, recall and F1, confusion matrix, and ROC curves with AUC
 - **Research models overview** comparing the integrated architectures
-- **One model in memory at a time.** The backend unloads the previous model before loading a new one, to save RAM/VRAM.
+- **One model in memory at a Time.** The backend unloads the previous model before loading a new one, to save RAM/VRAM.
 - GPU is used automatically when available (CUDA), with CPU fallback
 
 ---
