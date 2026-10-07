@@ -20,6 +20,32 @@ A full-stack NLP application that classifies **Hindi sports comments** as **Posi
 
 ---
 
+## 📸 Screenshots
+
+### Dashboard
+
+![Dashboard overview](screenshots/home-page.png)
+
+### Live Sentiment Analysis
+
+| Positive | Negative | Neutral |
+|---|---|---|
+| ![Positive prediction](screenshots/positive-prediction.png) | ![Negative prediction](screenshots/negative-prediction.png) | ![Neutral prediction](screenshots/neutral-prediction.png) |
+
+### Model Evaluation Dashboard
+
+![Model performance metrics](screenshots/model-performance.png)
+
+![Confusion matrix](screenshots/confusion-matrix.png)
+
+![ROC curves](screenshots/roc-curve.png)
+
+### Research Models
+
+![Research model suite](screenshots/research-models.png)
+
+---
+
 ## 🤖 Models
 
 | UI name | Model ID (API) | Base model | Weights path |
@@ -102,11 +128,20 @@ Near-perfect scores here **do not mean the models will be near-perfect on real-w
 
 - **No exact duplicates** between the train and test sets.
 - The sentences follow **repeated clause templates**. Every test sentence shares at least one clause with the training set, and **628 of 1,000 test sentences are built entirely from clauses that also appear in training**.
-- Some sentences contain **sentiment emojis** (for example 😞), which directly reveal the label.
+- The whole dataset is assembled from about **142 action phrases and 75 outcome phrases**, and **each phrase always carries the same label**. For example, *"रन गति गिर गई"* is always Negative.
+- **"नहीं" appears only in Negative sentences**, about 32% of them.
+- **Emojis map one-to-one to labels:** 😞 appears only in Negative sentences, and 😀 👏 🏎 only in Positive ones.
 
-The test set is therefore very close to the training distribution, and these results mainly measure performance on **in-distribution, template-style sentences**. A realistic estimate would need a test set of real, independently collected sports comments, such as social media posts or match commentary, ideally including Romanized Hindi.
+So a model can reach near-perfect accuracy by memorizing about 200 phrases, without understanding the sentence. These results mainly measure performance on **in-distribution, template-style sentences**. A realistic estimate needs a test set of real, independently collected sports comments, including Romanized Hindi. That is work in progress.
 
-The evaluation dashboard in the UI (`GET /evaluation/{model}`) evaluates the research models on `Research_12000.csv`, a different dataset from the one listed above. Its numbers can therefore differ from the table.
+### Evaluation dashboard numbers
+
+The dashboard (`GET /evaluation/{model}`) uses different evaluation files from the table above:
+
+- **Original MuRIL** (which currently loads the Research MuRIL weights) is evaluated on `dataset/test.csv`, 1,150 samples from the earlier dataset. It scores **82.78% accuracy and 83.12% macro-F1**, with per-class ROC-AUC of 0.93 (Negative), 0.93 (Neutral), and 0.86 (Positive). These are the numbers in the screenshots.
+- The **research models** are evaluated on `Research_12000.csv`.
+
+The drop from about 100% to about 83% on a different dataset is consistent with the template effect described above.
 
 ---
 
@@ -131,6 +166,7 @@ NLP-Project/
 │   ├── xlm_roberta/          # train_xlm_roberta.py + best_model/
 │   └── results/              # Test-set metrics for each model
 ├── dataset/                  # CSV datasets and train/val/test splits
+├── screenshots/              # README images
 ├── app.py                    # Legacy single-model API (MuRIL only)
 └── README.md
 ```
@@ -233,7 +269,9 @@ npm run dev
 ## 🧭 Limitations & Future Work
 
 - **Evaluation realism:** Build an independent test set of real sports comments to measure generalization (see [Results](#-results)).
-- **Romanized Hindi (Hinglish):** The UI accepts it, but the training data is Devanagari. There is no transliteration step, and Hinglish performance has not been evaluated.
+- **Romanized Hindi (Hinglish):** The UI accepts it, but the training data is Devanagari, and there is no transliteration step. In manual testing, a clearly negative Romanized comment was predicted **Positive with 98% confidence**:
+
+  ![Romanized Hindi failure case](screenshots/romanized-failure.png)
 - **Sports slang:** Phrases such as *"maar di"* (meaning a big win) are not explicitly handled.
 - **Original MuRIL weights** are not in the repository (see [Models](#-models)).
 
@@ -241,15 +279,15 @@ npm run dev
 
 ## 🛠 Tech Stack
 
-**Frontend:** React 19, Vite, lucide-react
-**Backend:** FastAPI, Uvicorn, Python
-**ML:** PyTorch, Hugging Face Transformers, scikit-learn, pandas, NumPy
-**Tooling:** Git, GitHub, Git LFS
+- **Frontend:** React 19, Vite, lucide-react
+- **Backend:** FastAPI, Uvicorn, Python
+- **ML:** PyTorch, Hugging Face Transformers, scikit-learn, pandas, NumPy
+- **Tooling:** Git, GitHub, Git LFS
 
 ---
 
 ## 👨‍💻 Author
 
-**Swen Lemos**
-B.Tech, Computer Science Engineering
+**Swen Lemos**<br>
+B.Tech, Computer Science Engineering<br>
 St. Francis Institute of Technology, Mumbai
