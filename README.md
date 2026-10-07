@@ -1,283 +1,255 @@
-# 🏏 Hindi Sports Sentiment Analyzer using MuRIL
+# 🏏 Hindi Sports Sentiment Analyzer
 
-A web-based **Natural Language Processing (NLP)** application that analyzes **Hindi sports-related text** and classifies its sentiment as **Positive**, **Negative**, or **Neutral** using a fine-tuned **MuRIL (Multilingual Representations for Indian Languages)** transformer model.
+A full-stack NLP application that classifies **Hindi sports comments** as **Positive**, **Neutral**, or **Negative**, and compares several fine-tuned multilingual transformer models on the same task.
 
-The application features a modern frontend built with **Vite + Preact** and a **FastAPI** backend serving the fine-tuned model for real-time sentiment prediction.
-
-In addition to Hindi input, the application can also process many **Hindi-English (code-mixed)** sports sentences through MuRIL's multilingual capabilities.
-
----
-
-# 📌 Project Overview
-
-Sentiment analysis for Indian languages remains more challenging than English due to limited High-quality datasets and linguistic diversity.
-
-This project focuses specifically on **Hindi sports content**, enabling users to analyze news headlines, match reactions, and sports-related comments.
-
-Instead of relying on external AI APIs, the application performs inference locally using a fine-tuned MuRIL transformer model.
+- **Frontend:** React + Vite dashboard for live analysis, model selection, and model evaluation
+- **Backend:** FastAPI service that loads the selected model and serves predictions and evaluation metrics
+- **Models:** MuRIL, IndicBERT v2, and XLM-RoBERTa, each fine-tuned for 3-class sentiment
+- **Inference:** runs locally. No external AI APIs are used.
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-- Analyze Hindi sports-related text
-- Supports many Hindi-English (code-mixed) sports sentences
-- Classifies sentiment into:
-  - 😊 Positive
-  - 😐 Neutral
-  - 😞 Negative
-- Fine-tuned MuRIL transformer model
-- FastAPI backend
-- Modern responsive interface built with Vite + Preact
-- Confidence score for predictions
-- Example Hindi sports sentences
-- Clean and intuitive user interface
+- **Live sentiment analysis** of Hindi sports comments, returning the label and a confidence score
+- **Model selector** to run the same input through different transformer models
+- **Model evaluation dashboard** showing accuracy, macro precision, recall and F1, confusion matrix, and ROC curves with AUC
+- **Research models overview** comparing the integrated architectures
+- **One model in memory at a time.** The backend unloads the previous model before loading a new one, to save RAM/VRAM.
+- GPU is used automatically when available (CUDA), with CPU fallback
 
 ---
 
-# 🛠 Tech Stack
+## 🤖 Models
 
-## Frontend
+| UI name | Model ID (API) | Base model | Weights path |
+|---|---|---|---|
+| Original MuRIL | `old_muril` | `google/muril-base-cased` | `model/muril_sentiment_model` (falls back to `research/muril/best_model`) |
+| Research MuRIL | `research_muril` | `google/muril-base-cased` | `research/muril/best_model` |
+| IndicBERT v2 | `indicbert_v2` | IndicBERT v2 | `research/indicbert_v2/best_model` |
+| XLM-RoBERTa | `xlm_roberta` | `FacebookAI/xlm-roberta-base` | `research/xlm_roberta/best_model` |
 
-- Vite
-- Preact
-- JavaScript
-- HTML5
-- CSS3
+> **Note:** The original MuRIL weights (`model/muril_sentiment_model`) are not included in this repository. When that folder is missing, **`old_muril` loads the Research MuRIL weights**, so both MuRIL options return identical predictions.
 
-## Backend
+Model weights (`model.safetensors`, about 1 GB each) are stored with **Git LFS**.
 
-- FastAPI
-- Python
-- Uvicorn
+**Label mapping**
 
-## Machine Learning
-
-- PyTorch
-- Hugging Face Transformers
-- MuRIL (`google/muril-base-cased`)
-- Scikit-learn
-- Pandas
-- NumPy
-
-## Version Control
-
-- Git
-- GitHub
+| ID | Label |
+|---|---|
+| 0 | Negative |
+| 1 | Neutral |
+| 2 | Positive |
 
 ---
 
-# 🤖 Model
+## 📂 Dataset
 
-**Base Model**
+The current research models are trained on `dataset/NLP_Project_Final_Dataset.csv`.
+
+| Property | Value |
+|---|---|
+| Total samples | 10,000 |
+| Split | 80% train / 10% validation / 10% test |
+| Files | `final_train.csv` (8,000), `final_validation.csv` (1,000), `final_test.csv` (1,000) |
+| Columns | `text`, `sentiment` (Hindi label), `sport`, `label` (0/1/2) |
+| Sports | Cricket, Football, Kabaddi, Badminton, Formula One (roughly balanced) |
+| Class balance | Balanced (test set: 334 / 333 / 333) |
+| Script | Devanagari Hindi |
+
+Older datasets used in earlier project stages (`SentiHin`-based `combined_dataset.csv`, `sports_dataset.csv`, `Research_12000.csv`) are kept in `dataset/` for reference.
+
+---
+
+## ⚙️ Pipeline
 
 ```text
-google/muril-base-cased
+User enters a Hindi sports comment (React UI)
+        │
+        ▼
+POST /predict  { text, model }        (FastAPI)
+        │
+        ▼
+Load selected model + tokenizer (cached; previous model unloaded)
+        │
+        ▼
+Tokenization  (max_length = 128, truncation)
+        │
+        ▼
+Transformer forward pass → softmax
+        │
+        ▼
+Sentiment (Negative / Neutral / Positive) + confidence %
 ```
 
-The model has been fine-tuned for three sentiment classes:
-
-- Positive
-- Neutral
-- Negative
-
-MuRIL is designed specifically for Indian languages, making it well suited for Hindi NLP tasks while also handling many code-mixed Hindi-English inputs.
+`backend/preprocess.py` provides a text-cleaning function that removes URLs, HTML tags, @mentions, and extra whitespace. At inference time, the API passes the input text straight to the model's tokenizer.
 
 ---
 
-# 📂 Dataset
+## 📊 Results
 
-The model is trained using two datasets:
+Results on the held-out test split (1,000 samples), from `research/results/`:
 
-- **SentiHin-2500** – Public Hindi sentiment dataset.
-- **Custom Hindi Sports Sentiment Dataset** – A manually created dataset containing Hindi sports-related sentences labeled as **Positive**, **Negative**, and **Neutral** to improve domain-specific performance.
+| Model | Accuracy | Macro Precision | Macro Recall | Macro F1 |
+|---|---|---|---|---|
+| Research MuRIL | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| IndicBERT v2 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| XLM-RoBERTa | 0.9990 | 0.9990 | 0.9990 | 0.9990 |
 
-The datasets are cleaned, preprocessed, and combined before fine-tuning the MuRIL model.
+### ⚠️ How to read these numbers
+
+Near-perfect scores here **do not mean the models will be near-perfect on real-world sports comments.** An analysis of the dataset shows:
+
+- **No exact duplicates** between the train and test sets.
+- The sentences follow **repeated clause templates**. Every test sentence shares at least one clause with the training set, and **628 of 1,000 test sentences are built entirely from clauses that also appear in training**.
+- Some sentences contain **sentiment emojis** (for example 😞), which directly reveal the label.
+
+The test set is therefore very close to the training distribution, and these results mainly measure performance on **in-distribution, template-style sentences**. A realistic estimate would need a test set of real, independently collected sports comments, such as social media posts or match commentary, ideally including Romanized Hindi.
+
+The evaluation dashboard in the UI (`GET /evaluation/{model}`) evaluates the research models on `Research_12000.csv`, a different dataset from the one listed above. Its numbers can therefore differ from the table.
 
 ---
 
-# ⚙️ Project Workflow
+## 📁 Project Structure
 
 ```text
-User enters Hindi or Hindi-English sports text
-        │
-        ▼
-Frontend (Vite + Preact)
-        │
-        ▼
-FastAPI Backend
-        │
-        ▼
-MuRIL Tokenizer
-        │
-        ▼
-Fine-tuned MuRIL Model
-        │
-        ▼
-Sentiment Prediction
-        │
-        ▼
-Positive / Neutral / Negative + Confidence Score
-```
-
----
-
-# 📁 Project Structure
-
-```text
-Hindi-Sports-Sentiment-Analyzer/
-│
-├── frontend/
+NLP-Project/
 ├── backend/
-├── dataset/
-├── model/
-├── screenshots/
-├── README.md
-└── .gitignore
+│   ├── main.py               # FastAPI app (multi-model prediction + evaluation API)
+│   ├── model_loader.py       # Model paths, loading/unloading, prediction
+│   ├── evaluation.py         # Evaluation helpers
+│   ├── preprocess.py         # Text cleaning
+│   ├── train_model.py        # Original MuRIL training script
+│   └── ...                   # Dataset download / tokenization / test scripts
+├── frontend/
+│   └── src/
+│       ├── App.jsx           # Dashboard: overview, live analysis, research models
+│       └── ModelEvaluation.jsx  # Metrics, confusion matrix, ROC curves
+├── research/
+│   ├── muril/                # train_muril.py + best_model/
+│   ├── indicbert_v2/         # train_indicbert_v2.py + best_model/
+│   ├── xlm_roberta/          # train_xlm_roberta.py + best_model/
+│   └── results/              # Test-set metrics for each model
+├── dataset/                  # CSV datasets and train/val/test splits
+├── app.py                    # Legacy single-model API (MuRIL only)
+└── README.md
 ```
 
 ---
 
-# 🚀 Installation
+## 🚀 Run Locally (Windows PowerShell)
 
-## Clone Repository
+### Prerequisites
 
-```bash
+- Python 3.10+
+- Node.js 18+
+- Git and **Git LFS** (`git lfs install`). Without Git LFS you get pointer files instead of model weights.
+
+### 1. Clone
+
+```powershell
+git lfs install
 git clone https://github.com/Swen14/Hindi-Sports-Sentiment-Analyzer.git
-```
-
-```bash
 cd Hindi-Sports-Sentiment-Analyzer
 ```
 
-## Backend
+### 2. Backend
 
-Create a virtual environment
+Run these from the **project root**, not from inside `backend/`:
 
-```bash
+```powershell
 python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install fastapi uvicorn torch transformers scikit-learn pandas numpy sentencepiece
+uvicorn backend.main:app --reload
 ```
 
-Activate (Windows)
+- API: `http://127.0.0.1:8000`
+- Interactive docs: `http://127.0.0.1:8000/docs`
 
-```bash
-venv\Scripts\activate
-```
+> The backend uses a relative import (`from .model_loader import ...`), so start it as `backend.main:app` from the project root.
 
-Install dependencies
+### 3. Frontend
 
-```bash
-pip install -r requirements.txt
-```
+Open a second terminal:
 
-Run FastAPI
-
-```bash
-uvicorn app:app --reload
-```
-
-Backend
-
-```text
-http://127.0.0.1:8000
-```
-
-API Documentation
-
-```text
-http://127.0.0.1:8000/docs
-```
-
----
-
-## Frontend
-
-```bash
+```powershell
 cd frontend
-```
-
-```bash
 npm install
-```
-
-```bash
 npm run dev
 ```
 
-Frontend
-
-```text
-http://localhost:5173
-```
+- UI: `http://localhost:5173`
 
 ---
 
-# 📡 API
+## 📡 API
 
-## POST `/predict`
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/` | API info, available models, label map |
+| GET | `/models` | List of selectable models |
+| GET | `/health` | Health check |
+| POST | `/predict` | Predict sentiment for a text with a chosen model |
+| GET | `/evaluation/{model_name}` | Metrics, confusion matrix, and ROC data for a model |
 
-### Example Request
+### `POST /predict`
+
+**Request**
 
 ```json
 {
-  "text": "India ne aaj shandaar jeet hasil ki."
+  "text": "भारतीय टीम ने शानदार जीत हासिल की।",
+  "model": "research_muril"
 }
 ```
 
-### Example Response
+`model` is optional and defaults to `old_muril`.
+
+**Response format**
 
 ```json
 {
   "sentiment": "Positive",
-  "confidence": 0.94
+  "confidence": 97.42,
+  "model": "research_muril"
 }
 ```
 
+`confidence` is a percentage (0–100). The values above show the shape of the response, not a recorded result.
+
 ---
 
-# 💡 Example Predictions
+## 💡 Example Inputs
 
-| Input | Prediction |
-|--------|------------|
+| Input | Expected sentiment |
+|---|---|
 | भारतीय टीम ने शानदार जीत हासिल की। | Positive |
-| India ne shandaar jeet hasil ki. | Positive |
 | टीम का प्रदर्शन बहुत खराब रहा। | Negative |
-| Team ka performance bahut kharab tha. | Negative |
 | मैच कल शाम सात बजे शुरू होगा। | Neutral |
-| Match kal shaam 7 baje shuru hoga. | Neutral |
 
 ---
 
-# 📸 Screenshots
+## 🧭 Limitations & Future Work
 
-## Home Page
-
-![Home Page](screenshots/home-page.png)
-
----
-
-## Positive Prediction
-
-![Positive Prediction](screenshots/positive-prediction.png)
+- **Evaluation realism:** Build an independent test set of real sports comments to measure generalization (see [Results](#-results)).
+- **Romanized Hindi (Hinglish):** The UI accepts it, but the training data is Devanagari. There is no transliteration step, and Hinglish performance has not been evaluated.
+- **Sports slang:** Phrases such as *"maar di"* (meaning a big win) are not explicitly handled.
+- **Original MuRIL weights** are not in the repository (see [Models](#-models)).
 
 ---
 
-## Negative Prediction
+## 🛠 Tech Stack
 
-![Negative Prediction](screenshots/negative-prediction.png)
-
----
-
-## Neutral Prediction
-
-![Neutral Prediction](screenshots/neutral-prediction.png)
+**Frontend:** React 19, Vite, lucide-react
+**Backend:** FastAPI, Uvicorn, Python
+**ML:** PyTorch, Hugging Face Transformers, scikit-learn, pandas, NumPy
+**Tooling:** Git, GitHub, Git LFS
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Swen Lemos**
-
-B.E. Computer Science Engineering
-
+B.Tech, Computer Science Engineering
 St. Francis Institute of Technology, Mumbai
