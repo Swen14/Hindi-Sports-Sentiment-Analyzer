@@ -1,0 +1,53 @@
+{
+  "model_key": "indicbert_v2",
+  "base_model": "ai4bharat/IndicBERTv2-MLM-only",
+  "train_size": 2976,
+  "validation_size": 372,
+  "test_size": 372,
+  "hyperparameters": {
+    "epochs": 5,
+    "learning_rate": 2e-05,
+    "train_batch_size": 8,
+    "eval_batch_size": 16,
+    "weight_decay": 0.01,
+    "max_length": 128,
+    "seed": 42
+  },
+  "training_minutes": 6.4,
+  "best_val_macro_f1": 0.7271,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 0.7143,
+      "val_accuracy": 0.7876,
+      "val_loss": 0.5776
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 0.6995,
+      "val_accuracy": 0.7608,
+      "val_loss": 0.5943
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 0.7271,
+      "val_accuracy": 0.7796,
+      "val_loss": 0.7299
+    },
+    {
+      "epoch": 4,
+      "val_macro_f1": 0.7091,
+      "val_accuracy": 0.7608,
+      "val_loss": 0.8867
+    },
+    {
+      "epoch": 5,
+      "val_macro_f1": 0.7244,
+      "val_accuracy": 0.7742,
+      "val_loss": 0.9803
+    }
+  ],
+  "test_accuracy": 0.7769,
+  "test_macro_f1": 0.7358,
+  "parameters": 278043651
+}

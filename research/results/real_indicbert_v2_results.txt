@@ -1,0 +1,31 @@
+IndicBERT v2 Real-World Results
+========================================
+
+Dataset: dataset/real_world (manually verified YouTube comments)
+Base model: ai4bharat/IndicBERTv2-MLM-only
+Train Size: 2976
+Validation Size: 372
+Test Size: 372
+
+Accuracy: 0.7769
+Macro Precision: 0.7326
+Macro Recall: 0.7401
+Macro F1: 0.7358
+
+Classification Report
+---------------------
+              precision    recall  f1-score   support
+
+    Negative     0.8323    0.8081    0.8201       172
+     Neutral     0.5286    0.5873    0.5564        63
+    Positive     0.8370    0.8248    0.8309       137
+
+    accuracy                         0.7769       372
+   macro avg     0.7326    0.7401    0.7358       372
+weighted avg     0.7826    0.7769    0.7794       372
+
+Confusion Matrix
+----------------
+[[139  21  12]
+ [ 16  37  10]
+ [ 12  12 113]]

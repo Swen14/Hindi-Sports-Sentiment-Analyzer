@@ -1,0 +1,31 @@
+XLM-RoBERTa Real-World Results
+========================================
+
+Dataset: dataset/real_world (manually verified YouTube comments)
+Base model: FacebookAI/xlm-roberta-base
+Train Size: 2976
+Validation Size: 372
+Test Size: 372
+
+Accuracy: 0.7608
+Macro Precision: 0.7148
+Macro Recall: 0.7117
+Macro F1: 0.7129
+
+Classification Report
+---------------------
+              precision    recall  f1-score   support
+
+    Negative     0.8118    0.8023    0.8070       172
+     Neutral     0.5424    0.5079    0.5246        63
+    Positive     0.7902    0.8248    0.8071       137
+
+    accuracy                         0.7608       372
+   macro avg     0.7148    0.7117    0.7129       372
+weighted avg     0.7582    0.7608    0.7592       372
+
+Confusion Matrix
+----------------
+[[138  19  15]
+ [ 16  32  15]
+ [ 16   8 113]]

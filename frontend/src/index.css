@@ -1,48 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
-  font-family:
-    "Inter",
-    "Noto Sans Devanagari",
-    Arial,
-    sans-serif;
+  --bg: #07090f;
+  --bg-elevated: #0d111b;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-strong: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #eef1f8;
+  --text-dim: #9aa3b8;
+  --text-faint: #636c82;
 
-  font-synthesis: none;
+  --violet: #a78bfa;
+  --violet-soft: rgba(167, 139, 250, 0.14);
+  --teal: #2dd4bf;
+  --teal-soft: rgba(45, 212, 191, 0.14);
+  --accent: #60a5fa;
 
-  text-rendering: optimizeLegibility;
+  --positive: #34d399;
+  --negative: #fb7185;
+  --neutral: #fbbf24;
 
+  --radius: 18px;
+  --radius-sm: 12px;
+
+  font-family: "Inter", "Noto Sans Devanagari", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
   color-scheme: dark;
-
-  background: #050914;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-html {
-  margin: 0;
-  padding: 0;
+* { box-sizing: border-box; }
 
-  min-width: 320px;
-  min-height: 100%;
-
-  background: #050914;
-}
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 
 body {
   margin: 0;
-  padding: 0;
-
   min-width: 320px;
   min-height: 100vh;
-
-  background: #050914;
+  background: var(--bg);
 }
 
-button,
-textarea,
-input,
-select {
-  font: inherit;
-}
+button, textarea, input, select { font: inherit; color: inherit; }
 
-#root {
-  min-height: 100vh;
-}
+#root { min-height: 100vh; }
