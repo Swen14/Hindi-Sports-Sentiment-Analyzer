@@ -1,0 +1,24 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 1.0,
+      "val_accuracy": 1.0,
+      "val_loss": 0.0181
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 1.0,
+      "val_accuracy": 1.0,
+      "val_loss": 0.0044
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 1.0,
+      "val_accuracy": 1.0,
+      "val_loss": 0.0029
+    }
+  ],
+  "training_minutes": null,
+  "parameters": 237558531
+}

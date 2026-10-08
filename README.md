@@ -1,89 +1,138 @@
 # 🏏 Hindi Sports Sentiment Analyzer
 
-A full-stack NLP application that classifies **Hindi sports comments** as **Positive**, **Neutral**, or **Negative**, and compares several fine-tuned multilingual transformer models on the same task.
+A full-stack NLP application that classifies **Hindi sports comments** as **Positive**, **Neutral**, or **Negative**. It compares three multilingual transformer architectures, each fine-tuned **twice**: once on **synthetic (AI-generated) data** and once on **real-world YouTube comments**.
 
-- **Frontend:** React + Vite dashboard for live analysis, model selection, and model evaluation
-- **Backend:** FastAPI service that loads the selected model and serves predictions and evaluation metrics
-- **Models:** MuRIL, IndicBERT v2, and XLM-RoBERTa, each fine-tuned for 3-class sentiment
+- **Frontend:** React + Vite. Live analysis, a model lab to inspect every model and its parameters, and a side-by-side comparison
+- **Backend:** FastAPI service that loads the selected model and serves predictions and cached evaluation metrics
+- **Models:** MuRIL, IndicBERT v2, and XLM-RoBERTa × 2 training datasets = **6 fine-tuned models**
 - **Inference:** runs locally. No external AI APIs are used.
 
 ---
 
 ## ✨ Features
 
-- **Live sentiment analysis** of Hindi sports comments, returning the label and a confidence score
-- **Model selector** to run the same input through different transformer models
-- **Model evaluation dashboard** showing accuracy, macro precision, recall and F1, confusion matrix, and ROC curves with AUC
-- **Research models overview** comparing the integrated architectures
-- **One model in memory at a time.** The backend unloads the previous model before loading a new one, to save RAM/VRAM.
-- GPU is used automatically when available (CUDA), with CPU fallback
+- **Live sentiment analysis** with label, confidence and per-class probabilities
+- **Run all 6 models at once** on the same comment to see where synthetic-data and real-data models disagree
+- **Model lab:** pick any of the 6 models, grouped by training data, and see the architecture, parameter count, training data, hyperparameters, validation history, and full evaluation
+- **Cross-domain evaluation:** test every model on its own test set *and* on the other dataset's test set
+- **Evaluation details:** accuracy, macro precision / recall / F1, per-class metrics, confusion matrix and ROC curves with AUC
+- **Comparison view:** macro F1 of all 6 models on both test sets
+- **One model in memory at a time.** The backend unloads the previous model before loading the next, to save RAM/VRAM. GPU is used automatically (CUDA), with CPU fallback.
 
 ---
 
 ## 📸 Screenshots
 
-### Dashboard
+### Overview
 
-![Dashboard overview](screenshots/home-page.png)
+![Home page](screenshots/home-page.jpg)
 
-### Live Sentiment Analysis
+### Live analysis: all 6 models on a sarcastic comment
 
-| Positive | Negative | Neutral |
-|---|---|---|
-| ![Positive prediction](screenshots/positive-prediction.png) | ![Negative prediction](screenshots/negative-prediction.png) | ![Neutral prediction](screenshots/neutral-prediction.png) |
+The comment *"वाह क्या बैटिंग है, फिर से जीरो पर आउट 😂"* ("What batting, out for zero again 😂") is sarcastic. All three synthetic-data models predict **Positive**; all three real-data models correctly predict **Negative**.
 
-### Model Evaluation Dashboard
+![All models on one comment](screenshots/live-analysis-all-models.jpg)
 
-![Model performance metrics](screenshots/model-performance.png)
+### Model lab
 
-![Confusion matrix](screenshots/confusion-matrix.png)
+![Model lab](screenshots/model-lab.jpg)
 
-![ROC curves](screenshots/roc-curve.png)
+![Model evaluation](screenshots/model-evaluation.jpg)
 
-### Research Models
+### Comparison
 
-![Research model suite](screenshots/research-models.png)
+![Comparison](screenshots/comparison.jpg)
 
 ---
 
 ## 🤖 Models
 
-| UI name | Model ID (API) | Base model | Weights path |
-|---|---|---|---|
-| Original MuRIL | `old_muril` | `google/muril-base-cased` | `model/muril_sentiment_model` (falls back to `research/muril/best_model`) |
-| Research MuRIL | `research_muril` | `google/muril-base-cased` | `research/muril/best_model` |
-| IndicBERT v2 | `indicbert_v2` | IndicBERT v2 | `research/indicbert_v2/best_model` |
-| XLM-RoBERTa | `xlm_roberta` | `FacebookAI/xlm-roberta-base` | `research/xlm_roberta/best_model` |
+| Model ID (API) | Architecture | Base model | Trained on | Weights path |
+|---|---|---|---|---|
+| `research_muril` | MuRIL | `google/muril-base-cased` | Synthetic | `research/muril/best_model` |
+| `indicbert_v2` | IndicBERT v2 | `ai4bharat/IndicBERTv2-MLM-only` | Synthetic | `research/indicbert_v2/best_model` |
+| `xlm_roberta` | XLM-RoBERTa | `FacebookAI/xlm-roberta-base` | Synthetic | `research/xlm_roberta/best_model` |
+| `real_muril` | MuRIL | `google/muril-base-cased` | Real-world | `research/real_world/muril/best_model` |
+| `real_indicbert_v2` | IndicBERT v2 | `ai4bharat/IndicBERTv2-MLM-only` | Real-world | `research/real_world/indicbert_v2/best_model` |
+| `real_xlm_roberta` | XLM-RoBERTa | `FacebookAI/xlm-roberta-base` | Real-world | `research/real_world/xlm_roberta/best_model` |
 
-> **Note:** The original MuRIL weights (`model/muril_sentiment_model`) are not included in this repository. When that folder is missing, **`old_muril` loads the Research MuRIL weights**, so both MuRIL options return identical predictions.
+All model metadata (architecture, hyperparameters, dataset sizes) lives in `backend/model_registry.py`. Model weights (`model.safetensors`, about 1 GB each) are stored with **Git LFS**.
 
-Model weights (`model.safetensors`, about 1 GB each) are stored with **Git LFS**.
+> The legacy API ID `old_muril` still works and loads the synthetic MuRIL weights, but it is no longer shown in the UI.
 
-**Label mapping**
+**Label mapping:** `0` = Negative, `1` = Neutral, `2` = Positive
 
-| ID | Label |
-|---|---|
-| 0 | Negative |
-| 1 | Neutral |
-| 2 | Positive |
+### Training setup
+
+| | Synthetic models | Real-world models |
+|---|---|---|
+| Epochs | 3 | 5 (smaller dataset) |
+| Learning rate | 2e-5 | 2e-5 |
+| Batch size (train / eval) | 8 / 16 | 8 / 16 |
+| Weight decay | 0.01 | 0.01 |
+| Max sequence length | 128 | 128 |
+| Optimizer | AdamW, linear decay, fp16 | AdamW, linear decay, fp16 |
+| Model selection | Best validation macro F1 | Best validation macro F1 |
+
+Real-world training took about 6–7 minutes per model on an RTX 3050 (6 GB).
 
 ---
 
-## 📂 Dataset
+## 📂 Datasets
 
-The current research models are trained on `dataset/NLP_Project_Final_Dataset.csv`.
+### Synthetic dataset
+
+`dataset/NLP_Project_Final_Dataset.csv`: 10,000 AI-generated Devanagari sentences (cricket, football, kabaddi, badminton, Formula One), balanced classes, split 8,000 / 1,000 / 1,000 (`final_train.csv`, `final_validation.csv`, `final_test.csv`).
+
+The sentences are built from repeated templates: about **142 action phrases and 75 outcome phrases**, and **each phrase always carries the same label**. 628 of the 1,000 test sentences consist entirely of clauses that also appear in training. Emojis and "नहीं" also map almost one-to-one to labels.
+
+### Real-world dataset
+
+`dataset/real_world/`: **3,720 real Hindi (Devanagari) comments** from 171 YouTube sports videos (cricket, kabaddi, hockey, wrestling, athletics, badminton, football), collected with the official YouTube Data API v3.
 
 | Property | Value |
 |---|---|
-| Total samples | 10,000 |
-| Split | 80% train / 10% validation / 10% test |
-| Files | `final_train.csv` (8,000), `final_validation.csv` (1,000), `final_test.csv` (1,000) |
-| Columns | `text`, `sentiment` (Hindi label), `sport`, `label` (0/1/2) |
-| Sports | Cricket, Football, Kabaddi, Badminton, Formula One (roughly balanced) |
-| Class balance | Balanced (test set: 334 / 333 / 333) |
-| Script | Devanagari Hindi |
+| Collected | 4,074 Hindi comments (usernames not stored) |
+| Labeled | Positive / Negative / Neutral / Spam, then manually verified |
+| After removing spam | 3,720 comments |
+| Split (stratified) | 2,976 train / 372 validation / 372 test |
+| Class balance | 46% Negative, 37% Positive, 17% Neutral |
 
-Older datasets used in earlier project stages (`SentiHin`-based `combined_dataset.csv`, `sports_dataset.csv`, `Research_12000.csv`) are kept in `dataset/` for reference.
+Labeling rules: praise and celebration → Positive. Criticism, abuse, and taunts at opponents → Negative. "Who's watching in 2026", facts and questions → Neutral. Off-topic, promotional and non-Hindi comments → Spam (removed).
+
+> **Comment text is not included in this repository.** YouTube's terms don't allow republishing comment text in bulk, so the repo only contains `dataset/real_world/real_world_labels.csv` (comment ID, video ID, topic, label, split). Rebuild the full dataset with your own API key:
+>
+> ```powershell
+> $env:YT_API_KEY = "YOUR_KEY"
+> python data_collection\rebuild_real_world_dataset.py
+> ```
+>
+> Comments deleted since collection are skipped.
+
+---
+
+## 📊 Results
+
+Every model is evaluated on **both** test sets (`research/evaluate_all.py`). Macro F1 weights the three classes equally.
+
+| Model | Trained on | Synthetic test acc. | Synthetic test F1 | Real-world test acc. | Real-world test F1 |
+|---|---|---|---|---|---|
+| MuRIL | Synthetic | 100.0% | 100.0% | 54.8% | 44.6% |
+| IndicBERT v2 | Synthetic | 100.0% | 100.0% | 60.2% | 55.9% |
+| XLM-RoBERTa | Synthetic | 99.9% | 99.9% | 56.5% | 44.6% |
+| MuRIL | Real-world | 68.1% | 64.9% | 75.5% | 70.8% |
+| **IndicBERT v2** | **Real-world** | 62.6% | 61.8% | **77.7%** | **73.6%** |
+| XLM-RoBERTa | Real-world | 72.7% | 72.0% | 76.1% | 71.3% |
+
+### Key findings
+
+1. **The synthetic test score is misleading.** Models trained on synthetic data score ~100% on their own test set but only **44.6–55.9% macro F1** on real comments. They learned the templates, not sentiment.
+2. **Real data generalizes better.** Models trained on 2,976 real comments reach **70.8–73.6% macro F1** on real comments, and still **61.8–72.0%** on the synthetic test set they never saw.
+3. **Best real-world model: IndicBERT v2 (real-world data)**, 77.7% accuracy and 73.6% macro F1.
+4. **Neutral is the hardest class** (F1 ≈ 0.56 for the best model): it is the smallest class, and many "neutral" comments carry mild emotion.
+5. **Sarcasm** breaks the synthetic models (see the screenshot above), while the real-data models handle common sarcastic patterns.
+
+Full reports: `research/results/*_results.txt` (classification reports, confusion matrices) and `research/results/evaluation/*.json` (cached metrics and ROC data used by the UI).
 
 ---
 
@@ -99,49 +148,14 @@ POST /predict  { text, model }        (FastAPI)
 Load selected model + tokenizer (cached; previous model unloaded)
         │
         ▼
-Tokenization  (max_length = 128, truncation)
+Tokenization (max_length = 128, truncation)
         │
         ▼
 Transformer forward pass → softmax
         │
         ▼
-Sentiment (Negative / Neutral / Positive) + confidence %
+Sentiment (Negative / Neutral / Positive) + confidence + class probabilities
 ```
-
-`backend/preprocess.py` provides a text-cleaning function that removes URLs, HTML tags, @mentions, and extra whitespace. At inference time, the API passes the input text straight to the model's tokenizer.
-
----
-
-## 📊 Results
-
-Results on the held-out test split (1,000 samples), from `research/results/`:
-
-| Model | Accuracy | Macro Precision | Macro Recall | Macro F1 |
-|---|---|---|---|---|
-| Research MuRIL | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| IndicBERT v2 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| XLM-RoBERTa | 0.9990 | 0.9990 | 0.9990 | 0.9990 |
-
-### ⚠️ How to read these numbers
-
-Near-perfect scores here **do not mean the models will be near-perfect on real-world sports comments.** An analysis of the dataset shows:
-
-- **No exact duplicates** between the train and test sets.
-- The sentences follow **repeated clause templates**. Every test sentence shares at least one clause with the training set, and **628 of 1,000 test sentences are built entirely from clauses that also appear in training**.
-- The whole dataset is assembled from about **142 action phrases and 75 outcome phrases**, and **each phrase always carries the same label**. For example, *"रन गति गिर गई"* is always Negative.
-- **"नहीं" appears only in Negative sentences**, about 32% of them.
-- **Emojis map one-to-one to labels:** 😞 appears only in Negative sentences, and 😀 👏 🏎 only in Positive ones.
-
-So a model can reach near-perfect accuracy by memorizing about 200 phrases, without understanding the sentence. These results mainly measure performance on **in-distribution, template-style sentences**. A realistic estimate needs a test set of real, independently collected sports comments, including Romanized Hindi. That is work in progress.
-
-### Evaluation dashboard numbers
-
-The dashboard (`GET /evaluation/{model}`) uses different evaluation files from the table above:
-
-- **Original MuRIL** (which currently loads the Research MuRIL weights) is evaluated on `dataset/test.csv`, 1,150 samples from the earlier dataset. It scores **82.78% accuracy and 83.12% macro-F1**, with per-class ROC-AUC of 0.93 (Negative), 0.93 (Neutral), and 0.86 (Positive). These are the numbers in the screenshots.
-- The **research models** are evaluated on `Research_12000.csv`.
-
-The drop from about 100% to about 83% on a different dataset is consistent with the template effect described above.
 
 ---
 
@@ -150,25 +164,25 @@ The drop from about 100% to about 83% on a different dataset is consistent with 
 ```text
 NLP-Project/
 ├── backend/
-│   ├── main.py               # FastAPI app (multi-model prediction + evaluation API)
-│   ├── model_loader.py       # Model paths, loading/unloading, prediction
-│   ├── evaluation.py         # Evaluation helpers
-│   ├── preprocess.py         # Text cleaning
-│   ├── train_model.py        # Original MuRIL training script
-│   └── ...                   # Dataset download / tokenization / test scripts
-├── frontend/
-│   └── src/
-│       ├── App.jsx           # Dashboard: overview, live analysis, research models
-│       └── ModelEvaluation.jsx  # Metrics, confusion matrix, ROC curves
+│   ├── main.py               # FastAPI app (models, prediction, evaluation)
+│   ├── model_registry.py     # The 6 models: paths, architecture, training metadata
+│   ├── model_loader.py       # Loading/unloading models, prediction
+│   ├── benchmark.py          # Evaluation on a test set + JSON cache
+│   └── ...                   # Older preprocessing / training utilities
+├── frontend/src/
+│   ├── App.jsx               # Layout, navigation, hero
+│   ├── api.js                # API client
+│   └── components/           # LiveAnalysis, ModelLab, ModelPicker, EvaluationView, Comparison
 ├── research/
-│   ├── muril/                # train_muril.py + best_model/
-│   ├── indicbert_v2/         # train_indicbert_v2.py + best_model/
-│   ├── xlm_roberta/          # train_xlm_roberta.py + best_model/
-│   └── results/              # Test-set metrics for each model
-├── dataset/                  # CSV datasets and train/val/test splits
-├── screenshots/              # README images
-├── app.py                    # Legacy single-model API (MuRIL only)
-└── README.md
+│   ├── muril/ indicbert_v2/ xlm_roberta/     # Synthetic-data training scripts + weights
+│   ├── real_world/
+│   │   ├── train_real_world.py               # Trains all 3 models on real-world data
+│   │   └── muril/ indicbert_v2/ xlm_roberta/ # Weights + training_info.json
+│   ├── evaluate_all.py       # Evaluates all 6 models on both test sets
+│   └── results/              # Text reports + evaluation/*.json cache
+├── data_collection/          # YouTube collection, labeling sheets, dataset rebuild
+├── dataset/                  # Synthetic CSVs + real_world/ (labels only in the repo)
+└── screenshots/
 ```
 
 ---
@@ -191,7 +205,7 @@ cd Hindi-Sports-Sentiment-Analyzer
 
 ### 2. Backend
 
-Run these from the **project root**, not from inside `backend/`:
+Run these from the **project root**:
 
 ```powershell
 python -m venv venv
@@ -203,11 +217,7 @@ uvicorn backend.main:app --reload
 - API: `http://127.0.0.1:8000`
 - Interactive docs: `http://127.0.0.1:8000/docs`
 
-> The backend uses a relative import (`from .model_loader import ...`), so start it as `backend.main:app` from the project root.
-
 ### 3. Frontend
-
-Open a second terminal:
 
 ```powershell
 cd frontend
@@ -216,6 +226,15 @@ npm run dev
 ```
 
 - UI: `http://localhost:5173`
+- The API address can be changed with `VITE_API_BASE` in `frontend/.env`.
+
+### 4. Retrain and re-evaluate (optional)
+
+```powershell
+# needs dataset/real_world/real_*.csv (see "Real-world dataset")
+python research\real_world\train_real_world.py --model all
+python research\evaluate_all.py
+```
 
 ---
 
@@ -223,57 +242,41 @@ npm run dev
 
 | Method | Endpoint | Description |
 |---|---|---|
-| GET | `/` | API info, available models, label map |
-| GET | `/models` | List of selectable models |
-| GET | `/health` | Health check |
+| GET | `/` | API info, model IDs, label map |
+| GET | `/health` | Health check and models whose weights are present |
+| GET | `/models` | All 6 models with architecture, training parameters and scores, plus dataset groups and test sets |
+| GET | `/models/{model_id}` | One model's details |
 | POST | `/predict` | Predict sentiment for a text with a chosen model |
-| GET | `/evaluation/{model_name}` | Metrics, confusion matrix, and ROC data for a model |
+| GET | `/evaluation/{model_id}?test_set=own\|synthetic\|real` | Metrics, confusion matrix and ROC data (cached) |
 
 ### `POST /predict`
 
-**Request**
-
 ```json
-{
-  "text": "भारतीय टीम ने शानदार जीत हासिल की।",
-  "model": "research_muril"
-}
+{ "text": "भारतीय टीम ने शानदार जीत हासिल की।", "model": "real_indicbert_v2" }
 ```
 
-`model` is optional and defaults to `old_muril`.
-
-**Response format**
+`model` is optional and defaults to `real_muril`. Response format (values are illustrative):
 
 ```json
 {
   "sentiment": "Positive",
   "confidence": 97.42,
-  "model": "research_muril"
+  "probabilities": { "Negative": 1.2, "Neutral": 1.38, "Positive": 97.42 },
+  "model": "real_indicbert_v2"
 }
 ```
-
-`confidence` is a percentage (0–100). The values above show the shape of the response, not a recorded result.
-
----
-
-## 💡 Example Inputs
-
-| Input | Expected sentiment |
-|---|---|
-| भारतीय टीम ने शानदार जीत हासिल की। | Positive |
-| टीम का प्रदर्शन बहुत खराब रहा। | Negative |
-| मैच कल शाम सात बजे शुरू होगा। | Neutral |
 
 ---
 
 ## 🧭 Limitations & Future Work
 
-- **Evaluation realism:** Build an independent test set of real sports comments to measure generalization (see [Results](#-results)).
-- **Romanized Hindi (Hinglish):** The UI accepts it, but the training data is Devanagari, and there is no transliteration step. In manual testing, a clearly negative Romanized comment was predicted **Positive with 98% confidence**:
+- **Dataset size:** 3,720 real comments from one platform. More data, especially for the Neutral class, would help.
+- **Single annotation pass:** labels were assigned once and manually verified, without a second independent annotator, so inter-annotator agreement was not measured.
+- **Romanized Hindi (Hinglish):** most YouTube comments are Hinglish, but both datasets are Devanagari-only. In earlier testing, a clearly negative Romanized comment was predicted **Positive with 98% confidence**:
 
   ![Romanized Hindi failure case](screenshots/romanized-failure.png)
-- **Sports slang:** Phrases such as *"maar di"* (meaning a big win) are not explicitly handled.
-- **Original MuRIL weights** are not in the repository (see [Models](#-models)).
+- **Topic skew:** most real comments are about cricket.
+- **Taunts at opponents** are labeled Negative. Another labeling scheme could treat them as positive pride.
 
 ---
 
@@ -282,6 +285,7 @@ npm run dev
 - **Frontend:** React 19, Vite, lucide-react
 - **Backend:** FastAPI, Uvicorn, Python
 - **ML:** PyTorch, Hugging Face Transformers, scikit-learn, pandas, NumPy
+- **Data:** YouTube Data API v3
 - **Tooling:** Git, GitHub, Git LFS
 
 ---

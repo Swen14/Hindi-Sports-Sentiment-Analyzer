@@ -1,43 +1,18 @@
-from pathlib import Path
-
-import numpy as np
-import pandas as pd
-import torch
-
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from sklearn.metrics import (
-    accuracy_score,
-    precision_recall_fscore_support,
-    classification_report,
-    confusion_matrix,
-    roc_curve,
-    roc_auc_score
-)
-
-from .model_loader import (
-    predict_sentiment,
-    MODEL_PATHS,
-    load_model
+from .benchmark import get_evaluation
+from .model_loader import predict_sentiment, MODEL_PATHS
+from .model_registry import (
+    MODELS,
+    TEST_SETS,
+    TRAINING_GROUPS,
+    model_summary
 )
 
 
-# ============================================================
-# PATHS
-# ============================================================
-
-PROJECT_ROOT = (
-    Path(__file__)
-    .resolve()
-    .parent
-    .parent
-)
-
-DATASET_DIR = (
-    PROJECT_ROOT / "dataset"
-)
+DEFAULT_MODEL = "real_muril"
 
 
 # ============================================================
@@ -45,706 +20,82 @@ DATASET_DIR = (
 # ============================================================
 
 app = FastAPI(
-
     title="Hindi Sports Sentiment Analyzer",
-
     description=(
-        "Hindi / Hinglish Sports Sentiment Analyzer "
-        "with selectable transformer models and "
-        "model evaluation."
+        "Hindi sports sentiment analysis with six transformer models: "
+        "MuRIL, IndicBERT v2 and XLM-RoBERTa, each trained once on "
+        "synthetic data and once on real-world comments."
     ),
-
-    version="4.0"
-
+    version="5.0"
 )
 
-
-# ============================================================
-# CORS
-# ============================================================
-
 app.add_middleware(
-
     CORSMiddleware,
-
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:3000",
         "http://127.0.0.1:3000"
     ],
-
     allow_credentials=True,
-
     allow_methods=["*"],
-
     allow_headers=["*"]
-
 )
 
 
-# ============================================================
-# REQUEST MODEL
-# ============================================================
-
 class SentimentRequest(BaseModel):
-
     text: str
+    model: str = DEFAULT_MODEL
 
-    model: str = "old_muril"
+
+def check_model(model_id: str):
+    if model_id not in MODEL_PATHS:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid model. Available models: {list(MODELS)}"
+        )
 
 
 # ============================================================
-# MODEL INFORMATION
-# ============================================================
-
-MODEL_INFO = {
-
-    "old_muril": {
-        "name": "Original MuRIL",
-        "dataset": "Original test dataset"
-    },
-
-    "research_muril": {
-        "name": "Research MuRIL",
-        "dataset": "Research_12000.csv"
-    },
-
-    "indicbert_v2": {
-        "name": "IndicBERT v2",
-        "dataset": "Research_12000.csv"
-    },
-
-    "xlm_roberta": {
-        "name": "XLM-RoBERTa",
-        "dataset": "Research_12000.csv"
-    }
-
-}
-
-
-# ============================================================
-# LABELS
-# ============================================================
-
-LABEL_NAMES = [
-    "Negative",
-    "Neutral",
-    "Positive"
-]
-
-
-LABEL_MAP = {
-
-    "negative": 0,
-    "neutral": 1,
-    "positive": 2
-
-}
-
-
-# ============================================================
-# LOAD DATASET FOR EVALUATION
-# ============================================================
-
-def load_evaluation_dataset(model_name):
-
-    # --------------------------------------------------------
-    # ORIGINAL MuRIL
-    # --------------------------------------------------------
-
-    if model_name == "old_muril":
-
-        test_path = (
-            DATASET_DIR / "test.csv"
-        )
-
-        if not test_path.exists():
-
-            raise FileNotFoundError(
-                f"Original test dataset not found: "
-                f"{test_path}"
-            )
-
-        df = pd.read_csv(
-            test_path
-        )
-
-        dataset_name = "test.csv"
-
-
-    # --------------------------------------------------------
-    # THREE RESEARCH MODELS
-    # --------------------------------------------------------
-
-    else:
-
-        research_path = (
-            DATASET_DIR /
-            "Research_12000.csv"
-        )
-
-        if not research_path.exists():
-
-            raise FileNotFoundError(
-                f"Research dataset not found: "
-                f"{research_path}"
-            )
-
-        df = pd.read_csv(
-            research_path
-        )
-
-        # Research dataset contains
-        # train / validation / test
-
-        if "split" not in df.columns:
-
-            raise ValueError(
-                "Research_12000.csv does not "
-                "contain a 'split' column."
-            )
-
-        df = df[
-            df["split"].astype(str).str.lower()
-            == "test"
-        ].copy()
-
-        dataset_name = "Research_12000.csv (test split)"
-
-
-    if len(df) == 0:
-
-        raise ValueError(
-            "No test samples found."
-        )
-
-
-    # --------------------------------------------------------
-    # FIND TEXT COLUMN
-    # --------------------------------------------------------
-
-    text_column = None
-
-    for column in [
-        "text",
-        "sentence",
-        "comment"
-    ]:
-
-        if column in df.columns:
-
-            text_column = column
-            break
-
-
-    if text_column is None:
-
-        raise ValueError(
-            "Could not find text column. "
-            "Expected one of: text, sentence, comment."
-        )
-
-
-    # --------------------------------------------------------
-    # FIND LABEL COLUMN
-    # --------------------------------------------------------
-
-    label_column = None
-
-    for column in [
-        "label",
-        "sentiment"
-    ]:
-
-        if column in df.columns:
-
-            label_column = column
-            break
-
-
-    if label_column is None:
-
-        raise ValueError(
-            "Could not find label column. "
-            "Expected label or sentiment."
-        )
-
-
-    texts = (
-        df[text_column]
-        .fillna("")
-        .astype(str)
-        .tolist()
-    )
-
-
-    raw_labels = (
-        df[label_column]
-        .tolist()
-    )
-
-
-    labels = []
-
-
-    for value in raw_labels:
-
-        # Numeric labels
-
-        if isinstance(
-            value,
-            (int, np.integer)
-        ):
-
-            labels.append(
-                int(value)
-            )
-
-            continue
-
-
-        if isinstance(
-            value,
-            (float, np.floating)
-        ):
-
-            labels.append(
-                int(value)
-            )
-
-            continue
-
-
-        # String labels
-
-        value_string = (
-            str(value)
-            .strip()
-            .lower()
-        )
-
-
-        if value_string in LABEL_MAP:
-
-            labels.append(
-                LABEL_MAP[value_string]
-            )
-
-        else:
-
-            try:
-
-                labels.append(
-                    int(float(value_string))
-                )
-
-            except ValueError:
-
-                raise ValueError(
-                    f"Unknown sentiment label: "
-                    f"{value}"
-                )
-
-
-    return (
-        texts,
-        np.array(labels),
-        dataset_name
-    )
-
-
-# ============================================================
-# EVALUATE MODEL
-# ============================================================
-
-def evaluate_model(model_name):
-
-    if model_name not in MODEL_PATHS:
-
-        raise ValueError(
-            f"Invalid model: {model_name}"
-        )
-
-
-    # --------------------------------------------------------
-    # LOAD TEST DATA
-    # --------------------------------------------------------
-
-    texts, true_labels, dataset_name = (
-        load_evaluation_dataset(
-            model_name
-        )
-    )
-
-
-    # --------------------------------------------------------
-    # LOAD MODEL
-    # --------------------------------------------------------
-
-    tokenizer, model = load_model(
-        model_name
-    )
-
-
-    device = next(
-        model.parameters()
-    ).device
-
-
-    all_probabilities = []
-
-
-    # --------------------------------------------------------
-    # BATCH PREDICTION
-    # --------------------------------------------------------
-
-    batch_size = 16
-
-
-    model.eval()
-
-
-    with torch.no_grad():
-
-        for start in range(
-            0,
-            len(texts),
-            batch_size
-        ):
-
-            batch_texts = texts[
-                start:
-                start + batch_size
-            ]
-
-
-            inputs = tokenizer(
-                batch_texts,
-
-                return_tensors="pt",
-
-                padding=True,
-
-                truncation=True,
-
-                max_length=128
-            )
-
-
-            inputs = {
-                key: value.to(device)
-
-                for key, value
-                in inputs.items()
-            }
-
-
-            outputs = model(
-                **inputs
-            )
-
-
-            probabilities = torch.softmax(
-                outputs.logits,
-                dim=-1
-            )
-
-
-            all_probabilities.append(
-                probabilities
-                .cpu()
-                .numpy()
-            )
-
-
-    probabilities = np.concatenate(
-        all_probabilities,
-        axis=0
-    )
-
-
-    predictions = np.argmax(
-        probabilities,
-        axis=1
-    )
-
-
-    # ========================================================
-    # BASIC METRICS
-    # ========================================================
-
-    accuracy = accuracy_score(
-        true_labels,
-        predictions
-    )
-
-
-    precision, recall, f1, _ = (
-        precision_recall_fscore_support(
-
-            true_labels,
-
-            predictions,
-
-            average="macro",
-
-            zero_division=0
-        )
-    )
-
-
-    # ========================================================
-    # CLASSIFICATION REPORT
-    # ========================================================
-
-    report = classification_report(
-
-        true_labels,
-
-        predictions,
-
-        labels=[
-            0,
-            1,
-            2
-        ],
-
-        target_names=LABEL_NAMES,
-
-        output_dict=True,
-
-        zero_division=0
-    )
-
-
-    # ========================================================
-    # CONFUSION MATRIX
-    # ========================================================
-
-    cm = confusion_matrix(
-
-        true_labels,
-
-        predictions,
-
-        labels=[
-            0,
-            1,
-            2
-        ]
-
-    )
-
-
-    # ========================================================
-    # ROC
-    # ========================================================
-
-    roc_data = {}
-
-    roc_auc = {}
-
-
-    for class_id, class_name in enumerate(
-        LABEL_NAMES
-    ):
-
-        binary_labels = (
-            true_labels == class_id
-        ).astype(int)
-
-
-        # ROC curve
-
-        fpr, tpr, _ = roc_curve(
-
-            binary_labels,
-
-            probabilities[:, class_id]
-        )
-
-
-        # AUC
-
-        auc_value = roc_auc_score(
-
-            binary_labels,
-
-            probabilities[:, class_id]
-        )
-
-
-        # ----------------------------------------------------
-        # Reduce number of points for frontend
-        # ----------------------------------------------------
-
-        max_points = 100
-
-
-        if len(fpr) > max_points:
-
-            indexes = np.linspace(
-
-                0,
-
-                len(fpr) - 1,
-
-                max_points,
-
-                dtype=int
-            )
-
-            fpr = fpr[indexes]
-
-            tpr = tpr[indexes]
-
-
-        roc_data[
-            class_name.lower()
-        ] = [
-
-            {
-                "fpr": float(x),
-                "tpr": float(y)
-            }
-
-            for x, y
-            in zip(fpr, tpr)
-
-        ]
-
-
-        roc_auc[
-            class_name.lower()
-        ] = float(
-            auc_value
-        )
-
-
-    # ========================================================
-    # RETURN
-    # ========================================================
-
-    return {
-
-        "model": model_name,
-
-        "model_name":
-            MODEL_INFO[model_name]["name"],
-
-        "dataset":
-            dataset_name,
-
-        "test_samples":
-            int(len(true_labels)),
-
-        "accuracy":
-            float(accuracy),
-
-        "macro_precision":
-            float(precision),
-
-        "macro_recall":
-            float(recall),
-
-        "macro_f1":
-            float(f1),
-
-        "classification_report":
-            report,
-
-        "confusion_matrix":
-            cm.tolist(),
-
-        "roc_auc":
-            roc_auc,
-
-        "roc":
-            roc_data
-
-    }
-
-
-# ============================================================
-# HOME
+# INFO
 # ============================================================
 
 @app.get("/")
 def home():
-
     return {
-
-        "message":
-            "Hindi Sports Sentiment Analyzer API",
-
-        "available_models":
-            list(MODEL_PATHS.keys()),
-
-        "default_model":
-            "old_muril",
-
-        "labels": {
-            "0": "Negative",
-            "1": "Neutral",
-            "2": "Positive"
-        }
-
+        "message": "Hindi Sports Sentiment Analyzer API",
+        "available_models": list(MODELS),
+        "default_model": DEFAULT_MODEL,
+        "labels": {"0": "Negative", "1": "Neutral", "2": "Positive"}
     }
 
-
-# ============================================================
-# AVAILABLE MODELS
-# ============================================================
-
-@app.get("/models")
-def models():
-
-    return {
-
-        "models": [
-
-            {
-                "id": "old_muril",
-                "name": "Original MuRIL"
-            },
-
-            {
-                "id": "research_muril",
-                "name": "Research MuRIL"
-            },
-
-            {
-                "id": "indicbert_v2",
-                "name": "IndicBERT v2"
-            },
-
-            {
-                "id": "xlm_roberta",
-                "name": "XLM-RoBERTa"
-            }
-
-        ]
-
-    }
-
-
-# ============================================================
-# HEALTH
-# ============================================================
 
 @app.get("/health")
 def health():
-
     return {
-
-        "status":
-            "running",
-
-        "available_models":
-            list(MODEL_PATHS.keys())
-
+        "status": "running",
+        "available_models": [
+            model_id for model_id, entry in MODELS.items()
+            if entry["path"].exists()
+        ]
     }
+
+
+@app.get("/models")
+def models():
+    return {
+        "default_model": DEFAULT_MODEL,
+        "groups": TRAINING_GROUPS,
+        "test_sets": TEST_SETS,
+        "models": [model_summary(model_id) for model_id in MODELS]
+    }
+
+
+@app.get("/models/{model_id}")
+def model_details(model_id: str):
+    if model_id not in MODELS:
+        check_model(model_id)
+    return model_summary(model_id)
 
 
 # ============================================================
@@ -752,120 +103,45 @@ def health():
 # ============================================================
 
 @app.post("/predict")
-def predict(
-    request: SentimentRequest
-):
+def predict(request: SentimentRequest):
+
+    if not request.text.strip():
+        raise HTTPException(status_code=400, detail="Text cannot be empty.")
+
+    check_model(request.model)
 
     try:
-
-        if not request.text.strip():
-
-            raise HTTPException(
-
-                status_code=400,
-
-                detail="Text cannot be empty."
-
-            )
-
-
-        if request.model not in MODEL_PATHS:
-
-            raise HTTPException(
-
-                status_code=400,
-
-                detail=(
-                    f"Invalid model. "
-                    f"Available models: "
-                    f"{list(MODEL_PATHS.keys())}"
-                )
-
-            )
-
-
-        result = predict_sentiment(
-
-            request.text,
-
-            request.model
-
-        )
-
-
-        return result
-
-
-    except HTTPException:
-
-        raise
-
-
+        return predict_sentiment(request.text, request.model)
     except Exception as e:
-
-        raise HTTPException(
-
-            status_code=500,
-
-            detail=str(e)
-
-        )
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # ============================================================
-# MODEL EVALUATION
+# EVALUATION
 # ============================================================
 
-@app.get(
-    "/evaluation/{model_name}"
-)
-def evaluation(
-    model_name: str
-):
+@app.get("/evaluation/{model_id}")
+def evaluation(model_id: str, test_set: str = "own", refresh: bool = False):
+    """
+    test_set: "own" (the test split of the model's training data),
+              "synthetic" or "real".
+    Results are cached in research/results/evaluation/.
+    """
+
+    if model_id not in MODELS:
+        check_model(model_id)
+
+    if test_set == "own":
+        test_set = MODELS[model_id]["group"]
+
+    if test_set not in TEST_SETS:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid test set. Use one of: own, {', '.join(TEST_SETS)}"
+        )
 
     try:
-
-        if model_name not in MODEL_PATHS:
-
-            raise HTTPException(
-
-                status_code=400,
-
-                detail=(
-                    f"Invalid model. "
-                    f"Available models: "
-                    f"{list(MODEL_PATHS.keys())}"
-                )
-
-            )
-
-
-        result = evaluate_model(
-            model_name
-        )
-
-
-        return result
-
-
-    except HTTPException:
-
-        raise
-
-
+        return get_evaluation(model_id, test_set, refresh=refresh)
     except Exception as e:
-
-        print(
-            "\nEvaluation error:"
-        )
-
-        print(e)
-
-
-        raise HTTPException(
-
-            status_code=500,
-
-            detail=str(e)
-
-        )
+        print("\nEvaluation error:", e)
+        raise HTTPException(status_code=500, detail=str(e))

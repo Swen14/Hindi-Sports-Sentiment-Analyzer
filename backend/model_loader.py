@@ -7,6 +7,8 @@ from transformers import (
     AutoModelForSequenceClassification
 )
 
+from .model_registry import MODELS
+
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -21,6 +23,7 @@ def resolve_model_path(primary_path: Path, fallback_path: Path | None = None) ->
 
 MODEL_PATHS = {
 
+    # Legacy ID kept for older clients; not shown in the UI.
     "old_muril": resolve_model_path(
         PROJECT_ROOT
         / "model"
@@ -31,23 +34,10 @@ MODEL_PATHS = {
         / "best_model"
     ),
 
-    "research_muril":
-        PROJECT_ROOT
-        / "research"
-        / "muril"
-        / "best_model",
-
-    "indicbert_v2":
-        PROJECT_ROOT
-        / "research"
-        / "indicbert_v2"
-        / "best_model",
-
-    "xlm_roberta":
-        PROJECT_ROOT
-        / "research"
-        / "xlm_roberta"
-        / "best_model"
+    **{
+        model_id: entry["path"]
+        for model_id, entry in MODELS.items()
+    }
 }
 
 
@@ -289,6 +279,14 @@ def predict_sentiment(
                 confidence * 100,
                 2
             ),
+
+        "probabilities": {
+            ID2LABEL[index]: round(
+                probabilities[0, index].item() * 100,
+                2
+            )
+            for index in ID2LABEL
+        },
 
         "model":
             model_name

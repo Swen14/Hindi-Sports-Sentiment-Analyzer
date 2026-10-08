@@ -137,3 +137,17 @@ huggingface/
 *.temp
 *.log
 ~$*
+
+# ============================================================
+# REAL-WORLD DATASET
+# Comment text is not redistributed (YouTube terms of service).
+# Only comment IDs + labels are committed.
+# ============================================================
+
+dataset/real_world/*.csv
+!dataset/real_world/real_world_labels.csv
+
+research/real_world/*/output/
+research/real_world/training_log.txt
+frontend/dist/
+!research/real_world/*/best_model/model.safetensors
