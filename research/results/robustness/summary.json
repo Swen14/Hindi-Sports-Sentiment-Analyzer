@@ -1,0 +1,879 @@
+{
+  "real_comment": {
+    "muril": {
+      "real_comment": {
+        "macro_f1": {
+          "mean": 70.16,
+          "std": 1.85,
+          "runs": [
+            70.83,
+            71.58,
+            68.07
+          ]
+        },
+        "accuracy": {
+          "mean": 74.82,
+          "std": 1.24,
+          "runs": [
+            75.54,
+            75.54,
+            73.39
+          ]
+        },
+        "neutral_f1": {
+          "mean": 52.9,
+          "std": 4.39,
+          "runs": [
+            54.9,
+            55.93,
+            47.86
+          ]
+        },
+        "seeds": 3
+      },
+      "synthetic": {
+        "macro_f1": {
+          "mean": 66.59,
+          "std": 6.79,
+          "runs": [
+            64.89,
+            60.81,
+            74.06
+          ]
+        },
+        "accuracy": {
+          "mean": 70.43,
+          "std": 3.87,
+          "runs": [
+            68.1,
+            68.3,
+            74.9
+          ]
+        },
+        "neutral_f1": {
+          "mean": 72.02,
+          "std": 1.13,
+          "runs": [
+            70.79,
+            72.24,
+            73.02
+          ]
+        },
+        "seeds": 3
+      }
+    },
+    "indicbert_v2": {
+      "real_comment": {
+        "macro_f1": {
+          "mean": 74.89,
+          "std": 1.37,
+          "runs": [
+            73.58,
+            76.31,
+            74.78
+          ]
+        },
+        "accuracy": {
+          "mean": 78.49,
+          "std": 0.81,
+          "runs": [
+            77.69,
+            79.3,
+            78.49
+          ]
+        },
+        "neutral_f1": {
+          "mean": 59.52,
+          "std": 4.21,
+          "runs": [
+            55.64,
+            64.0,
+            58.91
+          ]
+        },
+        "seeds": 3
+      },
+      "synthetic": {
+        "macro_f1": {
+          "mean": 51.03,
+          "std": 11.81,
+          "runs": [
+            61.78,
+            38.38,
+            52.93
+          ]
+        },
+        "accuracy": {
+          "mean": 54.47,
+          "std": 8.64,
+          "runs": [
+            62.6,
+            45.4,
+            55.4
+          ]
+        },
+        "neutral_f1": {
+          "mean": 59.46,
+          "std": 4.34,
+          "runs": [
+            63.66,
+            55.0,
+            59.71
+          ]
+        },
+        "seeds": 3
+      }
+    },
+    "xlm_roberta": {
+      "real_comment": {
+        "macro_f1": {
+          "mean": 70.8,
+          "std": 0.62,
+          "runs": [
+            71.29,
+            71.0,
+            70.11
+          ]
+        },
+        "accuracy": {
+          "mean": 75.9,
+          "std": 1.35,
+          "runs": [
+            76.08,
+            77.15,
+            74.46
+          ]
+        },
+        "neutral_f1": {
+          "mean": 50.78,
+          "std": 1.51,
+          "runs": [
+            52.46,
+            49.52,
+            50.37
+          ]
+        },
+        "seeds": 3
+      },
+      "synthetic": {
+        "macro_f1": {
+          "mean": 66.91,
+          "std": 6.23,
+          "runs": [
+            72.03,
+            68.72,
+            59.98
+          ]
+        },
+        "accuracy": {
+          "mean": 69.2,
+          "std": 3.96,
+          "runs": [
+            72.7,
+            70.0,
+            64.9
+          ]
+        },
+        "neutral_f1": {
+          "mean": 69.59,
+          "std": 0.35,
+          "runs": [
+            69.93,
+            69.23,
+            69.6
+          ]
+        },
+        "seeds": 3
+      }
+    }
+  },
+  "real_video": {
+    "muril": {
+      "real_video": {
+        "macro_f1": {
+          "mean": 67.76,
+          "std": 3.21,
+          "runs": [
+            65.69,
+            66.12,
+            71.46
+          ]
+        },
+        "accuracy": {
+          "mean": 74.93,
+          "std": 2.02,
+          "runs": [
+            73.64,
+            73.9,
+            77.26
+          ]
+        },
+        "neutral_f1": {
+          "mean": 44.91,
+          "std": 7.11,
+          "runs": [
+            40.0,
+            41.67,
+            53.06
+          ]
+        },
+        "seeds": 3
+      },
+      "synthetic": {
+        "macro_f1": {
+          "mean": 62.96,
+          "std": 7.74,
+          "runs": [
+            67.74,
+            54.03,
+            67.11
+          ]
+        },
+        "accuracy": {
+          "mean": 65.57,
+          "std": 7.29,
+          "runs": [
+            71.4,
+            57.4,
+            67.9
+          ]
+        },
+        "neutral_f1": {
+          "mean": 66.65,
+          "std": 9.74,
+          "runs": [
+            75.39,
+            56.15,
+            68.4
+          ]
+        },
+        "seeds": 3
+      }
+    },
+    "indicbert_v2": {
+      "real_video": {
+        "macro_f1": {
+          "mean": 74.4,
+          "std": 0.85,
+          "runs": [
+            73.75,
+            75.36,
+            74.08
+          ]
+        },
+        "accuracy": {
+          "mean": 80.88,
+          "std": 0.68,
+          "runs": [
+            80.62,
+            81.65,
+            80.36
+          ]
+        },
+        "neutral_f1": {
+          "mean": 52.73,
+          "std": 1.7,
+          "runs": [
+            50.98,
+            54.37,
+            52.83
+          ]
+        },
+        "seeds": 3
+      },
+      "synthetic": {
+        "macro_f1": {
+          "mean": 57.55,
+          "std": 1.08,
+          "runs": [
+            57.62,
+            58.6,
+            56.44
+          ]
+        },
+        "accuracy": {
+          "mean": 58.73,
+          "std": 0.76,
+          "runs": [
+            58.4,
+            59.6,
+            58.2
+          ]
+        },
+        "neutral_f1": {
+          "mean": 61.19,
+          "std": 0.65,
+          "runs": [
+            60.44,
+            61.57,
+            61.55
+          ]
+        },
+        "seeds": 3
+      }
+    },
+    "xlm_roberta": {
+      "real_video": {
+        "macro_f1": {
+          "mean": 71.58,
+          "std": 0.28,
+          "runs": [
+            71.88,
+            71.32,
+            71.54
+          ]
+        },
+        "accuracy": {
+          "mean": 78.21,
+          "std": 0.83,
+          "runs": [
+            78.55,
+            78.81,
+            77.26
+          ]
+        },
+        "neutral_f1": {
+          "mean": 49.01,
+          "std": 2.52,
+          "runs": [
+            50.0,
+            46.15,
+            50.88
+          ]
+        },
+        "seeds": 3
+      },
+      "synthetic": {
+        "macro_f1": {
+          "mean": 62.49,
+          "std": 5.11,
+          "runs": [
+            67.16,
+            57.03,
+            63.27
+          ]
+        },
+        "accuracy": {
+          "mean": 65.1,
+          "std": 3.41,
+          "runs": [
+            67.9,
+            61.3,
+            66.1
+          ]
+        },
+        "neutral_f1": {
+          "mean": 68.36,
+          "std": 2.21,
+          "runs": [
+            70.83,
+            67.68,
+            66.57
+          ]
+        },
+        "seeds": 3
+      }
+    }
+  },
+  "synthetic": {
+    "muril": {
+      "synthetic": {
+        "macro_f1": {
+          "mean": 100.0,
+          "std": 0.0,
+          "runs": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "accuracy": {
+          "mean": 100.0,
+          "std": 0.0,
+          "runs": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "neutral_f1": {
+          "mean": 100.0,
+          "std": 0.0,
+          "runs": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "seeds": 3
+      },
+      "real_comment": {
+        "macro_f1": {
+          "mean": 46.05,
+          "std": 2.92,
+          "runs": [
+            44.65,
+            44.1,
+            49.4
+          ]
+        },
+        "accuracy": {
+          "mean": 57.71,
+          "std": 2.71,
+          "runs": [
+            54.84,
+            58.06,
+            60.22
+          ]
+        },
+        "neutral_f1": {
+          "mean": 13.11,
+          "std": 6.14,
+          "runs": [
+            16.0,
+            6.06,
+            17.28
+          ]
+        },
+        "seeds": 3
+      },
+      "real_video": {
+        "macro_f1": {
+          "mean": 48.05,
+          "std": 2.39,
+          "runs": [
+            46.81,
+            46.54,
+            50.8
+          ]
+        },
+        "accuracy": {
+          "mean": 63.31,
+          "std": 2.3,
+          "runs": [
+            60.72,
+            64.08,
+            65.12
+          ]
+        },
+        "neutral_f1": {
+          "mean": 6.51,
+          "std": 5.76,
+          "runs": [
+            8.57,
+            0.0,
+            10.96
+          ]
+        },
+        "seeds": 3
+      }
+    },
+    "indicbert_v2": {
+      "synthetic": {
+        "macro_f1": {
+          "mean": 100.0,
+          "std": 0.0,
+          "runs": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "accuracy": {
+          "mean": 100.0,
+          "std": 0.0,
+          "runs": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "neutral_f1": {
+          "mean": 100.0,
+          "std": 0.0,
+          "runs": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "seeds": 3
+      },
+      "real_comment": {
+        "macro_f1": {
+          "mean": 48.86,
+          "std": 6.17,
+          "runs": [
+            55.86,
+            46.49,
+            44.22
+          ]
+        },
+        "accuracy": {
+          "mean": 60.31,
+          "std": 2.02,
+          "runs": [
+            60.22,
+            62.37,
+            58.33
+          ]
+        },
+        "neutral_f1": {
+          "mean": 15.94,
+          "std": 19.9,
+          "runs": [
+            38.85,
+            2.99,
+            5.97
+          ]
+        },
+        "seeds": 3
+      },
+      "real_video": {
+        "macro_f1": {
+          "mean": 50.98,
+          "std": 4.32,
+          "runs": [
+            55.94,
+            48.05,
+            48.95
+          ]
+        },
+        "accuracy": {
+          "mean": 65.11,
+          "std": 1.13,
+          "runs": [
+            63.82,
+            65.63,
+            65.89
+          ]
+        },
+        "neutral_f1": {
+          "mean": 9.96,
+          "std": 14.74,
+          "runs": [
+            26.89,
+            0.0,
+            2.99
+          ]
+        },
+        "seeds": 3
+      }
+    },
+    "xlm_roberta": {
+      "synthetic": {
+        "macro_f1": {
+          "mean": 99.97,
+          "std": 0.06,
+          "runs": [
+            99.9,
+            100.0,
+            100.0
+          ]
+        },
+        "accuracy": {
+          "mean": 99.97,
+          "std": 0.06,
+          "runs": [
+            99.9,
+            100.0,
+            100.0
+          ]
+        },
+        "neutral_f1": {
+          "mean": 99.95,
+          "std": 0.09,
+          "runs": [
+            99.85,
+            100.0,
+            100.0
+          ]
+        },
+        "seeds": 3
+      },
+      "real_comment": {
+        "macro_f1": {
+          "mean": 44.69,
+          "std": 1.48,
+          "runs": [
+            44.58,
+            43.26,
+            46.22
+          ]
+        },
+        "accuracy": {
+          "mean": 57.8,
+          "std": 3.56,
+          "runs": [
+            56.45,
+            55.11,
+            61.83
+          ]
+        },
+        "neutral_f1": {
+          "mean": 7.72,
+          "std": 4.24,
+          "runs": [
+            9.64,
+            10.67,
+            2.86
+          ]
+        },
+        "seeds": 3
+      },
+      "real_video": {
+        "macro_f1": {
+          "mean": 44.19,
+          "std": 2.16,
+          "runs": [
+            43.43,
+            42.51,
+            46.63
+          ]
+        },
+        "accuracy": {
+          "mean": 58.57,
+          "std": 2.84,
+          "runs": [
+            57.62,
+            56.33,
+            61.76
+          ]
+        },
+        "neutral_f1": {
+          "mean": 3.49,
+          "std": 1.72,
+          "runs": [
+            2.53,
+            2.47,
+            5.48
+          ]
+        },
+        "seeds": 3
+      }
+    }
+  },
+  "tfidf_lr": {
+    "synthetic": {
+      "C": 0.03,
+      "val_macro_f1": 1.0,
+      "test": {
+        "synthetic": {
+          "samples": 1000,
+          "accuracy": 1.0,
+          "macro_precision": 1.0,
+          "macro_recall": 1.0,
+          "macro_f1": 1.0,
+          "class_f1": {
+            "Negative": 1.0,
+            "Neutral": 1.0,
+            "Positive": 1.0
+          },
+          "confusion_matrix": [
+            [
+              334,
+              0,
+              0
+            ],
+            [
+              0,
+              333,
+              0
+            ],
+            [
+              0,
+              0,
+              333
+            ]
+          ]
+        },
+        "real_comment": {
+          "samples": 372,
+          "accuracy": 0.4543,
+          "macro_precision": 0.3752,
+          "macro_recall": 0.3727,
+          "macro_f1": 0.3604,
+          "class_f1": {
+            "Negative": 0.6019,
+            "Neutral": 0.1429,
+            "Positive": 0.3364
+          },
+          "confusion_matrix": [
+            [
+              124,
+              15,
+              33
+            ],
+            [
+              42,
+              8,
+              13
+            ],
+            [
+              74,
+              26,
+              37
+            ]
+          ]
+        },
+        "real_video": {
+          "samples": 387,
+          "accuracy": 0.4212,
+          "macro_precision": 0.3435,
+          "macro_recall": 0.3445,
+          "macro_f1": 0.334,
+          "class_f1": {
+            "Negative": 0.5885,
+            "Neutral": 0.1353,
+            "Positive": 0.278
+          },
+          "confusion_matrix": [
+            [
+              123,
+              30,
+              31
+            ],
+            [
+              33,
+              9,
+              20
+            ],
+            [
+              78,
+              32,
+              31
+            ]
+          ]
+        }
+      }
+    },
+    "real_comment": {
+      "C": 300,
+      "val_macro_f1": 0.6764,
+      "test": {
+        "synthetic": {
+          "samples": 1000,
+          "accuracy": 0.395,
+          "macro_precision": 0.4144,
+          "macro_recall": 0.3949,
+          "macro_f1": 0.3829,
+          "class_f1": {
+            "Negative": 0.4052,
+            "Neutral": 0.4477,
+            "Positive": 0.2958
+          },
+          "confusion_matrix": [
+            [
+              155,
+              146,
+              33
+            ],
+            [
+              121,
+              169,
+              43
+            ],
+            [
+              155,
+              107,
+              71
+            ]
+          ]
+        },
+        "real_comment": {
+          "samples": 372,
+          "accuracy": 0.7366,
+          "macro_precision": 0.6865,
+          "macro_recall": 0.6769,
+          "macro_f1": 0.6807,
+          "class_f1": {
+            "Negative": 0.7877,
+            "Neutral": 0.459,
+            "Positive": 0.7955
+          },
+          "confusion_matrix": [
+            [
+              141,
+              22,
+              9
+            ],
+            [
+              22,
+              28,
+              13
+            ],
+            [
+              23,
+              9,
+              105
+            ]
+          ]
+        }
+      }
+    },
+    "real_video": {
+      "C": 1,
+      "val_macro_f1": 0.5975,
+      "test": {
+        "synthetic": {
+          "samples": 1000,
+          "accuracy": 0.382,
+          "macro_precision": 0.3977,
+          "macro_recall": 0.3819,
+          "macro_f1": 0.3489,
+          "class_f1": {
+            "Negative": 0.4353,
+            "Neutral": 0.4379,
+            "Positive": 0.1735
+          },
+          "confusion_matrix": [
+            [
+              175,
+              150,
+              9
+            ],
+            [
+              125,
+              171,
+              37
+            ],
+            [
+              170,
+              127,
+              36
+            ]
+          ]
+        },
+        "real_video": {
+          "samples": 387,
+          "accuracy": 0.7132,
+          "macro_precision": 0.6393,
+          "macro_recall": 0.6321,
+          "macro_f1": 0.6344,
+          "class_f1": {
+            "Negative": 0.7745,
+            "Neutral": 0.354,
+            "Positive": 0.7746
+          },
+          "confusion_matrix": [
+            [
+              146,
+              18,
+              20
+            ],
+            [
+              29,
+              20,
+              13
+            ],
+            [
+              18,
+              13,
+              110
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

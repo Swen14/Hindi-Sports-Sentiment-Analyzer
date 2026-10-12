@@ -1,0 +1,223 @@
+{
+  "synthetic": {
+    "C": 0.03,
+    "val_macro_f1": 1.0,
+    "test": {
+      "synthetic": {
+        "samples": 1000,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "class_f1": {
+          "Negative": 1.0,
+          "Neutral": 1.0,
+          "Positive": 1.0
+        },
+        "confusion_matrix": [
+          [
+            334,
+            0,
+            0
+          ],
+          [
+            0,
+            333,
+            0
+          ],
+          [
+            0,
+            0,
+            333
+          ]
+        ]
+      },
+      "real_comment": {
+        "samples": 372,
+        "accuracy": 0.4543,
+        "macro_precision": 0.3752,
+        "macro_recall": 0.3727,
+        "macro_f1": 0.3604,
+        "class_f1": {
+          "Negative": 0.6019,
+          "Neutral": 0.1429,
+          "Positive": 0.3364
+        },
+        "confusion_matrix": [
+          [
+            124,
+            15,
+            33
+          ],
+          [
+            42,
+            8,
+            13
+          ],
+          [
+            74,
+            26,
+            37
+          ]
+        ]
+      },
+      "real_video": {
+        "samples": 387,
+        "accuracy": 0.4212,
+        "macro_precision": 0.3435,
+        "macro_recall": 0.3445,
+        "macro_f1": 0.334,
+        "class_f1": {
+          "Negative": 0.5885,
+          "Neutral": 0.1353,
+          "Positive": 0.278
+        },
+        "confusion_matrix": [
+          [
+            123,
+            30,
+            31
+          ],
+          [
+            33,
+            9,
+            20
+          ],
+          [
+            78,
+            32,
+            31
+          ]
+        ]
+      }
+    }
+  },
+  "real_comment": {
+    "C": 300,
+    "val_macro_f1": 0.6764,
+    "test": {
+      "synthetic": {
+        "samples": 1000,
+        "accuracy": 0.395,
+        "macro_precision": 0.4144,
+        "macro_recall": 0.3949,
+        "macro_f1": 0.3829,
+        "class_f1": {
+          "Negative": 0.4052,
+          "Neutral": 0.4477,
+          "Positive": 0.2958
+        },
+        "confusion_matrix": [
+          [
+            155,
+            146,
+            33
+          ],
+          [
+            121,
+            169,
+            43
+          ],
+          [
+            155,
+            107,
+            71
+          ]
+        ]
+      },
+      "real_comment": {
+        "samples": 372,
+        "accuracy": 0.7366,
+        "macro_precision": 0.6865,
+        "macro_recall": 0.6769,
+        "macro_f1": 0.6807,
+        "class_f1": {
+          "Negative": 0.7877,
+          "Neutral": 0.459,
+          "Positive": 0.7955
+        },
+        "confusion_matrix": [
+          [
+            141,
+            22,
+            9
+          ],
+          [
+            22,
+            28,
+            13
+          ],
+          [
+            23,
+            9,
+            105
+          ]
+        ]
+      }
+    }
+  },
+  "real_video": {
+    "C": 1,
+    "val_macro_f1": 0.5975,
+    "test": {
+      "synthetic": {
+        "samples": 1000,
+        "accuracy": 0.382,
+        "macro_precision": 0.3977,
+        "macro_recall": 0.3819,
+        "macro_f1": 0.3489,
+        "class_f1": {
+          "Negative": 0.4353,
+          "Neutral": 0.4379,
+          "Positive": 0.1735
+        },
+        "confusion_matrix": [
+          [
+            175,
+            150,
+            9
+          ],
+          [
+            125,
+            171,
+            37
+          ],
+          [
+            170,
+            127,
+            36
+          ]
+        ]
+      },
+      "real_video": {
+        "samples": 387,
+        "accuracy": 0.7132,
+        "macro_precision": 0.6393,
+        "macro_recall": 0.6321,
+        "macro_f1": 0.6344,
+        "class_f1": {
+          "Negative": 0.7745,
+          "Neutral": 0.354,
+          "Positive": 0.7746
+        },
+        "confusion_matrix": [
+          [
+            146,
+            18,
+            20
+          ],
+          [
+            29,
+            20,
+            13
+          ],
+          [
+            18,
+            13,
+            110
+          ]
+        ]
+      }
+    }
+  }
+}

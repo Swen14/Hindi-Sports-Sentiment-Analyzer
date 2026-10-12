@@ -1,0 +1,118 @@
+{
+  "experiment": "seeds_synthetic",
+  "model_key": "indicbert_v2",
+  "seed": 123,
+  "trained_on": "synthetic",
+  "train_size": 8000,
+  "validation_size": 1000,
+  "epochs": 3,
+  "learning_rate": 2e-05,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "training_minutes": 8.8,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 1.0
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 1.0
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 1.0
+    }
+  ],
+  "test": {
+    "synthetic": {
+      "samples": 1000,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "class_f1": {
+        "Negative": 1.0,
+        "Neutral": 1.0,
+        "Positive": 1.0
+      },
+      "confusion_matrix": [
+        [
+          334,
+          0,
+          0
+        ],
+        [
+          0,
+          333,
+          0
+        ],
+        [
+          0,
+          0,
+          333
+        ]
+      ]
+    },
+    "real_comment": {
+      "samples": 372,
+      "accuracy": 0.5833,
+      "macro_precision": 0.5807,
+      "macro_recall": 0.4881,
+      "macro_f1": 0.4422,
+      "class_f1": {
+        "Negative": 0.6195,
+        "Neutral": 0.0597,
+        "Positive": 0.6474
+      },
+      "confusion_matrix": [
+        [
+          92,
+          1,
+          79
+        ],
+        [
+          20,
+          2,
+          41
+        ],
+        [
+          13,
+          1,
+          123
+        ]
+      ]
+    },
+    "real_video": {
+      "samples": 387,
+      "accuracy": 0.6589,
+      "macro_precision": 0.5247,
+      "macro_recall": 0.5362,
+      "macro_f1": 0.4895,
+      "class_f1": {
+        "Negative": 0.7412,
+        "Neutral": 0.0299,
+        "Positive": 0.6975
+      },
+      "confusion_matrix": [
+        [
+          126,
+          4,
+          54
+        ],
+        [
+          17,
+          1,
+          44
+        ],
+        [
+          13,
+          0,
+          128
+        ]
+      ]
+    }
+  }
+}

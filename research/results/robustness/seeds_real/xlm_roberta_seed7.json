@@ -1,0 +1,97 @@
+{
+  "experiment": "seeds_real",
+  "model_key": "xlm_roberta",
+  "seed": 7,
+  "trained_on": "real",
+  "train_size": 2976,
+  "validation_size": 372,
+  "epochs": 5,
+  "learning_rate": 2e-05,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "training_minutes": 6.0,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 0.5244
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 0.6138
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 0.6994
+    },
+    {
+      "epoch": 4,
+      "val_macro_f1": 0.6808
+    },
+    {
+      "epoch": 5,
+      "val_macro_f1": 0.6849
+    }
+  ],
+  "test": {
+    "real_comment": {
+      "samples": 372,
+      "accuracy": 0.7715,
+      "macro_precision": 0.7369,
+      "macro_recall": 0.6988,
+      "macro_f1": 0.71,
+      "class_f1": {
+        "Negative": 0.8142,
+        "Neutral": 0.4952,
+        "Positive": 0.8205
+      },
+      "confusion_matrix": [
+        [
+          149,
+          11,
+          12
+        ],
+        [
+          25,
+          26,
+          12
+        ],
+        [
+          20,
+          5,
+          112
+        ]
+      ]
+    },
+    "synthetic": {
+      "samples": 1000,
+      "accuracy": 0.7,
+      "macro_precision": 0.7689,
+      "macro_recall": 0.6997,
+      "macro_f1": 0.6872,
+      "class_f1": {
+        "Negative": 0.7503,
+        "Neutral": 0.6923,
+        "Positive": 0.6191
+      },
+      "confusion_matrix": [
+        [
+          332,
+          1,
+          1
+        ],
+        [
+          112,
+          216,
+          5
+        ],
+        [
+          107,
+          74,
+          152
+        ]
+      ]
+    }
+  }
+}

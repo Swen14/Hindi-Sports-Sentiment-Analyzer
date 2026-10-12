@@ -1,0 +1,97 @@
+{
+  "experiment": "seeds_real",
+  "model_key": "muril",
+  "seed": 123,
+  "trained_on": "real",
+  "train_size": 2976,
+  "validation_size": 372,
+  "epochs": 5,
+  "learning_rate": 2e-05,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "training_minutes": 5.4,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 0.4797
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 0.4806
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 0.6544
+    },
+    {
+      "epoch": 4,
+      "val_macro_f1": 0.6421
+    },
+    {
+      "epoch": 5,
+      "val_macro_f1": 0.6709
+    }
+  ],
+  "test": {
+    "real_comment": {
+      "samples": 372,
+      "accuracy": 0.7339,
+      "macro_precision": 0.6866,
+      "macro_recall": 0.6769,
+      "macro_f1": 0.6807,
+      "class_f1": {
+        "Negative": 0.7794,
+        "Neutral": 0.4786,
+        "Positive": 0.7842
+      },
+      "confusion_matrix": [
+        [
+          136,
+          17,
+          19
+        ],
+        [
+          22,
+          28,
+          13
+        ],
+        [
+          19,
+          9,
+          109
+        ]
+      ]
+    },
+    "synthetic": {
+      "samples": 1000,
+      "accuracy": 0.749,
+      "macro_precision": 0.7727,
+      "macro_recall": 0.7489,
+      "macro_f1": 0.7406,
+      "class_f1": {
+        "Negative": 0.8836,
+        "Neutral": 0.7302,
+        "Positive": 0.6079
+      },
+      "confusion_matrix": [
+        [
+          296,
+          36,
+          2
+        ],
+        [
+          6,
+          291,
+          36
+        ],
+        [
+          34,
+          137,
+          162
+        ]
+      ]
+    }
+  }
+}

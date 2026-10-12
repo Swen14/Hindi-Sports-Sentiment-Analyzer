@@ -151,3 +151,8 @@ research/real_world/*/output/
 research/real_world/training_log.txt
 frontend/dist/
 !research/real_world/*/best_model/model.safetensors
+
+# YouTube API key used by data_collection/collect.py
+api_key.txt
+research/robustness/_tmp_output/
+research/results/robustness/run_log.txt

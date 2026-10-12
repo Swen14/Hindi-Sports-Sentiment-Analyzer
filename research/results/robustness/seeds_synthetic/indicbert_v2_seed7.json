@@ -1,0 +1,118 @@
+{
+  "experiment": "seeds_synthetic",
+  "model_key": "indicbert_v2",
+  "seed": 7,
+  "trained_on": "synthetic",
+  "train_size": 8000,
+  "validation_size": 1000,
+  "epochs": 3,
+  "learning_rate": 2e-05,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "training_minutes": 8.9,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 1.0
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 1.0
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 1.0
+    }
+  ],
+  "test": {
+    "synthetic": {
+      "samples": 1000,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "class_f1": {
+        "Negative": 1.0,
+        "Neutral": 1.0,
+        "Positive": 1.0
+      },
+      "confusion_matrix": [
+        [
+          334,
+          0,
+          0
+        ],
+        [
+          0,
+          333,
+          0
+        ],
+        [
+          0,
+          0,
+          333
+        ]
+      ]
+    },
+    "real_comment": {
+      "samples": 372,
+      "accuracy": 0.6237,
+      "macro_precision": 0.5012,
+      "macro_recall": 0.5059,
+      "macro_f1": 0.4649,
+      "class_f1": {
+        "Negative": 0.6832,
+        "Neutral": 0.0299,
+        "Positive": 0.6815
+      },
+      "confusion_matrix": [
+        [
+          124,
+          1,
+          47
+        ],
+        [
+          39,
+          1,
+          23
+        ],
+        [
+          28,
+          2,
+          107
+        ]
+      ]
+    },
+    "real_video": {
+      "samples": 387,
+      "accuracy": 0.6563,
+      "macro_precision": 0.4456,
+      "macro_recall": 0.5231,
+      "macro_f1": 0.4805,
+      "class_f1": {
+        "Negative": 0.7311,
+        "Neutral": 0.0,
+        "Positive": 0.7103
+      },
+      "confusion_matrix": [
+        [
+          140,
+          5,
+          39
+        ],
+        [
+          35,
+          0,
+          27
+        ],
+        [
+          24,
+          3,
+          114
+        ]
+      ]
+    }
+  }
+}

@@ -84,18 +84,20 @@ Real-world training took about 6–7 minutes per model on an RTX 3050 (6 GB).
 
 `dataset/NLP_Project_Final_Dataset.csv`: 10,000 AI-generated Devanagari sentences (cricket, football, kabaddi, badminton, Formula One), balanced classes, split 8,000 / 1,000 / 1,000 (`final_train.csv`, `final_validation.csv`, `final_test.csv`).
 
-The sentences are built from repeated templates: about **142 action phrases and 75 outcome phrases**, and **each phrase always carries the same label**. 628 of the 1,000 test sentences consist entirely of clauses that also appear in training. Emojis and "नहीं" also map almost one-to-one to labels.
+The sentences are built from repeated templates: about **142 action phrases and 77 outcome phrases**, and **each phrase always carries the same label**. 628 of the 1,000 test sentences consist entirely of clauses that also appear in training. Emojis and "नहीं" also map almost one-to-one to labels.
 
 ### Real-world dataset
 
-`dataset/real_world/`: **3,720 real Hindi (Devanagari) comments** from 171 YouTube sports videos (cricket, kabaddi, hockey, wrestling, athletics, badminton, football), collected with the official YouTube Data API v3.
+`dataset/real_world/`: **3,720 real Hindi (Devanagari) comments** from 150 YouTube sports videos (cricket, kabaddi, hockey, wrestling, athletics, badminton, football), collected with the official YouTube Data API v3.
 
 | Property | Value |
 |---|---|
 | Collected | 4,074 Hindi comments (usernames not stored) |
-| Labeled | Positive / Negative / Neutral / Spam, then manually verified |
+| Labeled | Positive / Negative / Neutral / Spam, manually annotated by the authors from fixed rules, with a large language model used only to suggest initial labels |
+| Second annotator | All 3,720 comments labeled independently by a second author: 46 disagreements (98.8% agreement), resolved by a third person. Cohen's κ ≈ 0.98 (estimated; only the number of disagreements was recorded) |
 | After removing spam | 3,720 comments |
 | Split (stratified) | 2,976 train / 372 validation / 372 test |
+| Video-level split (robustness) | 2,960 / 373 / 387 comments from 127 / 9 / 14 videos; no video in two splits (`research/results/robustness/video_split_assignment.csv`) |
 | Class balance | 46% Negative, 37% Positive, 17% Neutral |
 
 Labeling rules: praise and celebration → Positive. Criticism, abuse, and taunts at opponents → Negative. "Who's watching in 2026", facts and questions → Neutral. Off-topic, promotional and non-Hindi comments → Spam (removed).
@@ -128,9 +130,42 @@ Every model is evaluated on **both** test sets (`research/evaluate_all.py`). Mac
 
 1. **The synthetic test score is misleading.** Models trained on synthetic data score ~100% on their own test set but only **44.6–55.9% macro F1** on real comments. They learned the templates, not sentiment.
 2. **Real data generalizes better.** Models trained on 2,976 real comments reach **70.8–73.6% macro F1** on real comments, and still **61.8–72.0%** on the synthetic test set they never saw.
-3. **Best real-world model: IndicBERT v2 (real-world data)**, 77.7% accuracy and 73.6% macro F1.
+3. **Highest-scoring model: IndicBERT v2 (real-world data)**, 77.7% accuracy and 73.6% macro F1. The three real-data models are not significantly different from each other (95% bootstrap intervals overlap; McNemar p > 0.4), but all three are significantly better than every synthetic-data model.
 4. **Neutral is the hardest class** (F1 ≈ 0.56 for the best model): it is the smallest class, and many "neutral" comments carry mild emotion.
 5. **Sarcasm** breaks the synthetic models (see the screenshot above), while the real-data models handle common sarcastic patterns.
+
+### Robustness checks
+
+Three extra experiments test whether these findings hold up (`research/robustness/`, `research/baseline/`):
+
+- **3 random seeds** (42, 7, 123) for every transformer, reported as mean ± std
+- **Video-level split**: no YouTube video appears in both training and test data
+- **TF-IDF + logistic regression baseline** (word 1–2-grams + character 2–5-grams)
+
+Macro F1 (%) on each test set. Real-C / Real-V = trained on the comment-level / video-level split:
+
+| Model | Trained on | Synthetic test | Real test (comment split) | Real test (video split) |
+|---|---|---|---|---|
+| MuRIL | Synthetic | 100.0 ± 0.0 | 46.0 ± 2.9 | 48.0 ± 2.4 |
+| IndicBERT v2 | Synthetic | 100.0 ± 0.0 | 48.9 ± 6.2 | 51.0 ± 4.3 |
+| XLM-RoBERTa | Synthetic | 100.0 ± 0.1 | 44.7 ± 1.5 | 44.2 ± 2.2 |
+| MuRIL | Real-C | 66.6 ± 6.8 | 70.2 ± 1.9 | – |
+| **IndicBERT v2** | **Real-C** | 51.0 ± 11.8 | **74.9 ± 1.4** | – |
+| XLM-RoBERTa | Real-C | 66.9 ± 6.2 | 70.8 ± 0.6 | – |
+| MuRIL | Real-V | 63.0 ± 7.7 | – | 67.8 ± 3.2 |
+| **IndicBERT v2** | **Real-V** | 57.5 ± 1.1 | – | **74.4 ± 0.8** |
+| XLM-RoBERTa | Real-V | 62.5 ± 5.1 | – | 71.6 ± 0.3 |
+| TF-IDF + LR | Synthetic | 100.0 | 36.0 | 33.4 |
+| TF-IDF + LR | Real-C | 38.3 | 68.1 | – |
+| TF-IDF + LR | Real-V | 34.9 | – | 63.4 |
+
+- **The gap is not seed noise.** Real-trained models beat synthetic-trained ones by about 25 points on real comments. The seed standard deviations on the real test sets are at most 6.2 points.
+- **Shared videos did not inflate the results.** With the video-level split the real-trained models score only 0.7 points lower on average (67.8–74.4%).
+- **IndicBERT v2 is consistently best** over 3 seeds with both splits (4.1 and 2.8 points ahead of the next model). The test sets are small, so treat this as promising rather than general.
+- **Even a bag-of-words model gets 100% on the synthetic test set**, which shows how easy it is. Trained on real comments, TF-IDF stays 6.8–11.0 points below the best transformer and transfers much worse to the other domain.
+- Transfer of real-trained models to the synthetic test set varies a lot between seeds (std up to 11.8 points).
+
+Full tables: `research/results/robustness/summary.md`; per-run JSON files in `research/results/robustness/`; baseline in `research/results/baseline/tfidf_lr_results.json`.
 
 Full reports: `research/results/*_results.txt` (classification reports, confusion matrices) and `research/results/evaluation/*.json` (cached metrics and ROC data used by the UI).
 
@@ -179,7 +214,12 @@ NLP-Project/
 │   │   ├── train_real_world.py               # Trains all 3 models on real-world data
 │   │   └── muril/ indicbert_v2/ xlm_roberta/ # Weights + training_info.json
 │   ├── evaluate_all.py       # Evaluates all 6 models on both test sets
-│   └── results/              # Text reports + evaluation/*.json cache
+│   ├── baseline/
+│   │   └── tfidf_baseline.py                 # TF-IDF + logistic regression baseline
+│   ├── robustness/
+│   │   ├── run_robustness.py                 # Video-level split + 3 seeds per model
+│   │   └── summarize.py                      # Mean ± std tables (summary.md)
+│   └── results/              # Text reports, evaluation/*.json cache, baseline/, robustness/
 ├── data_collection/          # YouTube collection, labeling sheets, dataset rebuild
 ├── dataset/                  # Synthetic CSVs + real_world/ (labels only in the repo)
 └── screenshots/
@@ -234,6 +274,11 @@ npm run dev
 # needs dataset/real_world/real_*.csv (see "Real-world dataset")
 python research\real_world\train_real_world.py --model all
 python research\evaluate_all.py
+
+# robustness study: TF-IDF baseline, video-level split, 3 seeds (about 2.5 h on an RTX 3050)
+python research\robustness\run_robustness.py --experiment all
+python research\baseline\tfidf_baseline.py
+python research\robustness\summarize.py
 ```
 
 ---
@@ -271,7 +316,8 @@ python research\evaluate_all.py
 ## 🧭 Limitations & Future Work
 
 - **Dataset size:** 3,720 real comments from one platform. More data, especially for the Neutral class, would help.
-- **Single annotation pass:** labels were assigned once and manually verified, without a second independent annotator, so inter-annotator agreement was not measured.
+- **Annotation:** labels were annotated by the authors with LLM-suggested initial labels and checked by a second annotator (98.8% agreement). Only the number of disagreements was recorded, so Cohen's κ is estimated (≈ 0.98), not computed exactly, and some labels remain debatable.
+- **Small test sets:** 372 (comment split) and 387 (video split) comments. Three seeds per model reduce, but do not remove, the uncertainty; small differences between architectures should be read with caution.
 - **Romanized Hindi (Hinglish):** most YouTube comments are Hinglish, but both datasets are Devanagari-only. In earlier testing, a clearly negative Romanized comment was predicted **Positive with 98% confidence**:
 
   ![Romanized Hindi failure case](screenshots/romanized-failure.png)

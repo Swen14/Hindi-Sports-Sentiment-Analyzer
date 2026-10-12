@@ -1,0 +1,97 @@
+{
+  "experiment": "seeds_real",
+  "model_key": "indicbert_v2",
+  "seed": 123,
+  "trained_on": "real",
+  "train_size": 2976,
+  "validation_size": 372,
+  "epochs": 5,
+  "learning_rate": 2e-05,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "training_minutes": 6.0,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 0.6701
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 0.718
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 0.7283
+    },
+    {
+      "epoch": 4,
+      "val_macro_f1": 0.7206
+    },
+    {
+      "epoch": 5,
+      "val_macro_f1": 0.7282
+    }
+  ],
+  "test": {
+    "real_comment": {
+      "samples": 372,
+      "accuracy": 0.7849,
+      "macro_precision": 0.7452,
+      "macro_recall": 0.7507,
+      "macro_f1": 0.7478,
+      "class_f1": {
+        "Negative": 0.8166,
+        "Neutral": 0.5891,
+        "Positive": 0.8375
+      },
+      "confusion_matrix": [
+        [
+          138,
+          19,
+          15
+        ],
+        [
+          16,
+          38,
+          9
+        ],
+        [
+          12,
+          9,
+          116
+        ]
+      ]
+    },
+    "synthetic": {
+      "samples": 1000,
+      "accuracy": 0.554,
+      "macro_precision": 0.7909,
+      "macro_recall": 0.5541,
+      "macro_f1": 0.5293,
+      "class_f1": {
+        "Negative": 0.587,
+        "Neutral": 0.5971,
+        "Positive": 0.4038
+      },
+      "confusion_matrix": [
+        [
+          140,
+          194,
+          0
+        ],
+        [
+          1,
+          329,
+          3
+        ],
+        [
+          2,
+          246,
+          85
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "experiment": "seeds_synthetic",
+  "model_key": "xlm_roberta",
+  "seed": 123,
+  "trained_on": "synthetic",
+  "train_size": 8000,
+  "validation_size": 1000,
+  "epochs": 3,
+  "learning_rate": 2e-05,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "training_minutes": 8.9,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 1.0
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 1.0
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 1.0
+    }
+  ],
+  "test": {
+    "synthetic": {
+      "samples": 1000,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "class_f1": {
+        "Negative": 1.0,
+        "Neutral": 1.0,
+        "Positive": 1.0
+      },
+      "confusion_matrix": [
+        [
+          334,
+          0,
+          0
+        ],
+        [
+          0,
+          333,
+          0
+        ],
+        [
+          0,
+          0,
+          333
+        ]
+      ]
+    },
+    "real_comment": {
+      "samples": 372,
+      "accuracy": 0.6183,
+      "macro_precision": 0.4651,
+      "macro_recall": 0.5001,
+      "macro_f1": 0.4622,
+      "class_f1": {
+        "Negative": 0.6848,
+        "Neutral": 0.0286,
+        "Positive": 0.6732
+      },
+      "confusion_matrix": [
+        [
+          126,
+          5,
+          41
+        ],
+        [
+          37,
+          1,
+          25
+        ],
+        [
+          33,
+          1,
+          103
+        ]
+      ]
+    },
+    "real_video": {
+      "samples": 387,
+      "accuracy": 0.6176,
+      "macro_precision": 0.478,
+      "macro_recall": 0.4948,
+      "macro_f1": 0.4663,
+      "class_f1": {
+        "Negative": 0.7095,
+        "Neutral": 0.0548,
+        "Positive": 0.6346
+      },
+      "confusion_matrix": [
+        [
+          138,
+          6,
+          40
+        ],
+        [
+          28,
+          2,
+          32
+        ],
+        [
+          39,
+          3,
+          99
+        ]
+      ]
+    }
+  }
+}

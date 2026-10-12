@@ -1,0 +1,36 @@
+{
+  "model_key": "xlm_roberta",
+  "seed": 42,
+  "trained_on": "synthetic",
+  "test": {
+    "real_video": {
+      "samples": 387,
+      "accuracy": 0.5762,
+      "macro_precision": 0.4363,
+      "macro_recall": 0.4727,
+      "macro_f1": 0.4343,
+      "class_f1": {
+        "Negative": 0.638,
+        "Neutral": 0.0253,
+        "Positive": 0.6396
+      },
+      "confusion_matrix": [
+        [
+          104,
+          11,
+          69
+        ],
+        [
+          20,
+          1,
+          41
+        ],
+        [
+          18,
+          5,
+          118
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "experiment": "video_split",
+  "model_key": "indicbert_v2",
+  "seed": 7,
+  "trained_on": "real",
+  "train_size": 2960,
+  "validation_size": 373,
+  "epochs": 5,
+  "learning_rate": 2e-05,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "training_minutes": 6.5,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 0.5804
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 0.6167
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 0.639
+    },
+    {
+      "epoch": 4,
+      "val_macro_f1": 0.6537
+    },
+    {
+      "epoch": 5,
+      "val_macro_f1": 0.6513
+    }
+  ],
+  "test": {
+    "real_video": {
+      "samples": 387,
+      "accuracy": 0.8165,
+      "macro_precision": 0.7823,
+      "macro_recall": 0.7419,
+      "macro_f1": 0.7536,
+      "class_f1": {
+        "Negative": 0.8571,
+        "Neutral": 0.5437,
+        "Positive": 0.8601
+      },
+      "confusion_matrix": [
+        [
+          162,
+          9,
+          13
+        ],
+        [
+          21,
+          28,
+          13
+        ],
+        [
+          11,
+          4,
+          126
+        ]
+      ]
+    },
+    "synthetic": {
+      "samples": 1000,
+      "accuracy": 0.596,
+      "macro_precision": 0.784,
+      "macro_recall": 0.5961,
+      "macro_f1": 0.586,
+      "class_f1": {
+        "Negative": 0.6466,
+        "Neutral": 0.6157,
+        "Positive": 0.4956
+      },
+      "confusion_matrix": [
+        [
+          161,
+          173,
+          0
+        ],
+        [
+          1,
+          322,
+          10
+        ],
+        [
+          2,
+          218,
+          113
+        ]
+      ]
+    }
+  }
+}

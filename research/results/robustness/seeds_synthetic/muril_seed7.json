@@ -1,0 +1,118 @@
+{
+  "experiment": "seeds_synthetic",
+  "model_key": "muril",
+  "seed": 7,
+  "trained_on": "synthetic",
+  "train_size": 8000,
+  "validation_size": 1000,
+  "epochs": 3,
+  "learning_rate": 2e-05,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "training_minutes": 8.0,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 0.995
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 1.0
+    },
+    {
+      "epoch": 3,
+      "val_macro_f1": 1.0
+    }
+  ],
+  "test": {
+    "synthetic": {
+      "samples": 1000,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "class_f1": {
+        "Negative": 1.0,
+        "Neutral": 1.0,
+        "Positive": 1.0
+      },
+      "confusion_matrix": [
+        [
+          334,
+          0,
+          0
+        ],
+        [
+          0,
+          333,
+          0
+        ],
+        [
+          0,
+          0,
+          333
+        ]
+      ]
+    },
+    "real_comment": {
+      "samples": 372,
+      "accuracy": 0.5806,
+      "macro_precision": 0.6254,
+      "macro_recall": 0.4827,
+      "macro_f1": 0.441,
+      "class_f1": {
+        "Negative": 0.6302,
+        "Neutral": 0.0606,
+        "Positive": 0.6322
+      },
+      "confusion_matrix": [
+        [
+          98,
+          1,
+          73
+        ],
+        [
+          20,
+          2,
+          41
+        ],
+        [
+          21,
+          0,
+          116
+        ]
+      ]
+    },
+    "real_video": {
+      "samples": 387,
+      "accuracy": 0.6408,
+      "macro_precision": 0.4386,
+      "macro_recall": 0.5167,
+      "macro_f1": 0.4654,
+      "class_f1": {
+        "Negative": 0.7221,
+        "Neutral": 0.0,
+        "Positive": 0.674
+      },
+      "confusion_matrix": [
+        [
+          126,
+          1,
+          57
+        ],
+        [
+          20,
+          0,
+          42
+        ],
+        [
+          19,
+          0,
+          122
+        ]
+      ]
+    }
+  }
+}

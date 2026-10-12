@@ -1,0 +1,36 @@
+{
+  "model_key": "muril",
+  "seed": 42,
+  "trained_on": "synthetic",
+  "test": {
+    "real_video": {
+      "samples": 387,
+      "accuracy": 0.6072,
+      "macro_precision": 0.5451,
+      "macro_recall": 0.5022,
+      "macro_f1": 0.4681,
+      "class_f1": {
+        "Negative": 0.6667,
+        "Neutral": 0.0857,
+        "Positive": 0.6521
+      },
+      "confusion_matrix": [
+        [
+          113,
+          2,
+          69
+        ],
+        [
+          23,
+          3,
+          36
+        ],
+        [
+          19,
+          3,
+          119
+        ]
+      ]
+    }
+  }
+}

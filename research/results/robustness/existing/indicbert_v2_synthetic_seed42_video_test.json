@@ -1,0 +1,36 @@
+{
+  "model_key": "indicbert_v2",
+  "seed": 42,
+  "trained_on": "synthetic",
+  "test": {
+    "real_video": {
+      "samples": 387,
+      "accuracy": 0.6382,
+      "macro_precision": 0.5744,
+      "macro_recall": 0.5725,
+      "macro_f1": 0.5594,
+      "class_f1": {
+        "Negative": 0.6857,
+        "Neutral": 0.2689,
+        "Positive": 0.7235
+      },
+      "confusion_matrix": [
+        [
+          108,
+          31,
+          45
+        ],
+        [
+          15,
+          16,
+          31
+        ],
+        [
+          8,
+          10,
+          123
+        ]
+      ]
+    }
+  }
+}
