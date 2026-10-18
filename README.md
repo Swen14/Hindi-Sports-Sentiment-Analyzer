@@ -94,7 +94,7 @@ The sentences are built from repeated templates: about **142 action phrases and 
 |---|---|
 | Collected | 4,074 Hindi comments (usernames not stored) |
 | Labeled | Positive / Negative / Neutral / Spam, manually annotated by the authors from fixed rules, with a large language model used only to suggest initial labels |
-| Second annotator | All 3,720 comments labeled independently by a second author: 46 disagreements (98.8% agreement), resolved by a third person. Cohen's κ ≈ 0.98 (estimated; only the number of disagreements was recorded) |
+| Second annotator | All 3,720 comments labeled independently by a second author: 3,437 agreements (92.4%), Cohen's κ = 0.88. 71% of the 283 disagreements involve the Neutral class; unclear cases were resolved by a third person |
 | After removing spam | 3,720 comments |
 | Split (stratified) | 2,976 train / 372 validation / 372 test |
 | Video-level split (robustness) | 2,960 / 373 / 387 comments from 127 / 9 / 14 videos; no video in two splits (`research/results/robustness/video_split_assignment.csv`) |
@@ -220,7 +220,7 @@ NLP-Project/
 │   │   ├── run_robustness.py                 # Video-level split + 3 seeds per model
 │   │   └── summarize.py                      # Mean ± std tables (summary.md)
 │   └── results/              # Text reports, evaluation/*.json cache, baseline/, robustness/
-├── data_collection/          # YouTube collection, labeling sheets, dataset rebuild
+├── data_collection/          # collect.py (YouTube collection + filtering), dataset rebuild
 ├── dataset/                  # Synthetic CSVs + real_world/ (labels only in the repo)
 └── screenshots/
 ```
@@ -316,11 +316,11 @@ python research\robustness\summarize.py
 ## 🧭 Limitations & Future Work
 
 - **Dataset size:** 3,720 real comments from one platform. More data, especially for the Neutral class, would help.
-- **Annotation:** labels were annotated by the authors with LLM-suggested initial labels and checked by a second annotator (98.8% agreement). Only the number of disagreements was recorded, so Cohen's κ is estimated (≈ 0.98), not computed exactly, and some labels remain debatable.
+- **Annotation:** labels were annotated by the authors with LLM-suggested initial labels and checked by a second annotator (92.4% agreement, Cohen's κ = 0.88). Most disagreements involve the Neutral class, and some labels remain debatable.
 - **Small test sets:** 372 (comment split) and 387 (video split) comments. Three seeds per model reduce, but do not remove, the uncertainty; small differences between architectures should be read with caution.
-- **Romanized Hindi (Hinglish):** most YouTube comments are Hinglish, but both datasets are Devanagari-only. In earlier testing, a clearly negative Romanized comment was predicted **Positive with 98% confidence**:
+- **Romanized Hindi (Hinglish):** most YouTube comments are Hinglish, but both datasets are Devanagari-only. On the clearly negative Romanized comment below, the synthetic-data MuRIL and XLM-RoBERTa predict **Positive with 98–100% confidence**, while all three real-data models predict Negative. On a small probe of 24 hand-written Romanized comments, only the two MuRIL models reach 75–79% accuracy; the others collapse towards one class.
 
-  ![Romanized Hindi failure case](screenshots/romanized-failure.png)
+  ![Romanized Hindi comment, all six models](screenshots/romanized-all-models.jpg)
 - **Topic skew:** most real comments are about cricket.
 - **Taunts at opponents** are labeled Negative. Another labeling scheme could treat them as positive pride.
 
